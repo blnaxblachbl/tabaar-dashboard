@@ -8,12 +8,60 @@ import { gql } from '@apollo/client';
 import * as ApolloReactCommon from '@apollo/client/react';
 import * as ApolloReactHooks from '@apollo/client/react';
 const defaultOptions = {} as const;
+export type FiltersInput = {
+  available?: boolean | null | undefined;
+  characterstics?: Record<string, string | number | boolean> | null | undefined;
+  deleted?: boolean | null | undefined;
+  maxPrice?: FloatRangeInput | null | undefined;
+  minPrice?: FloatRangeInput | null | undefined;
+  variants?: VariantFilterInput | null | undefined;
+};
+
+export type FloatRangeInput = {
+  gte?: number | null | undefined;
+  lte?: number | null | undefined;
+};
+
+export type IntRangeInput = {
+  gte?: number | null | undefined;
+  lte?: number | null | undefined;
+};
+
 export type LoginUserInput = {
   email: string;
   password: string;
 };
 
-export type UserFragmentFragment = { id: number, createdAt: unknown, updatedAt: unknown, name: string, email: string };
+export type VariantFilterInput = {
+  characterstics?: Record<string, string | number | boolean> | null | undefined;
+  count?: IntRangeInput | null | undefined;
+  currency?: string | null | undefined;
+  price?: FloatRangeInput | null | undefined;
+};
+
+export type UserFragment = { id: number, createdAt: unknown, updatedAt: unknown, name: string, email: string };
+
+export type ProductListFragment = { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean };
+
+export type ProductFragment = { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> };
+
+export type VariantFragment = { id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> };
+
+export type FindProductsQueryVariables = Exact<{
+  query?: string | null | undefined;
+  take?: number | null | undefined;
+  filters?: FiltersInput | null | undefined;
+}>;
+
+
+export type FindProductsQuery = { findProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean }> } };
+
+export type ScrollProductsQueryVariables = Exact<{
+  scrollId?: string | null | undefined;
+}>;
+
+
+export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean }> } };
 
 export type LoginUserMutationVariables = Exact<{
   data: LoginUserInput;
@@ -27,8 +75,8 @@ export type FindMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type FindMeQuery = { findMe: { id: number, createdAt: unknown, updatedAt: unknown, name: string, email: string } | null };
 
-export const UserFragmentFragmentDoc = gql`
-    fragment UserFragment on User {
+export const UserFragmentDoc = gql`
+    fragment User on User {
   id
   createdAt
   updatedAt
@@ -36,17 +84,146 @@ export const UserFragmentFragmentDoc = gql`
   email
 }
     `;
+export const ProductListFragmentDoc = gql`
+    fragment ProductList on Product {
+  id
+  createdAt
+  updatedAt
+  name
+  characterstics
+  minPrice
+  maxPrice
+  description
+  available
+}
+    `;
+export const VariantFragmentDoc = gql`
+    fragment Variant on Variant {
+  id
+  createdAt
+  updatedAt
+  characterstics
+  price
+  count
+  currency
+  images
+}
+    `;
+export const ProductFragmentDoc = gql`
+    fragment Product on Product {
+  ...ProductList
+  variants {
+    ...Variant
+  }
+}
+    `;
+export const FindProductsDocument = gql`
+    query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
+  findProducts(query: $query, take: $take, filters: $filters) {
+    products {
+      ...ProductList
+    }
+    productsCount
+    scrollId
+  }
+}
+    ${ProductListFragmentDoc}`;
+
+/**
+ * __useFindProductsQuery__
+ *
+ * To run a query within a React component, call `useFindProductsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindProductsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindProductsQuery({
+ *   variables: {
+ *      query: // value for 'query'
+ *      take: // value for 'take'
+ *      filters: // value for 'filters'
+ *   },
+ * });
+ */
+export function useFindProductsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<FindProductsQuery, FindProductsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindProductsQuery, FindProductsQueryVariables>(FindProductsDocument, options);
+      }
+export function useFindProductsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindProductsQuery, FindProductsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindProductsQuery, FindProductsQueryVariables>(FindProductsDocument, options);
+        }
+// @ts-ignore
+export function useFindProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindProductsQuery, FindProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindProductsQuery, FindProductsQueryVariables>;
+export function useFindProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindProductsQuery, FindProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindProductsQuery | undefined, FindProductsQueryVariables>;
+export function useFindProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindProductsQuery, FindProductsQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindProductsQuery, FindProductsQueryVariables>(FindProductsDocument, options);
+        }
+export type FindProductsQueryHookResult = ReturnType<typeof useFindProductsQuery>;
+export type FindProductsLazyQueryHookResult = ReturnType<typeof useFindProductsLazyQuery>;
+export type FindProductsSuspenseQueryHookResult = ReturnType<typeof useFindProductsSuspenseQuery>;
+export type FindProductsQueryResult = ApolloReactCommon.QueryResult<FindProductsQuery, FindProductsQueryVariables>;
+export const ScrollProductsDocument = gql`
+    query ScrollProducts($scrollId: String) {
+  scrollProducts(scrollId: $scrollId) {
+    products {
+      ...ProductList
+    }
+    productsCount
+    scrollId
+  }
+}
+    ${ProductListFragmentDoc}`;
+
+/**
+ * __useScrollProductsQuery__
+ *
+ * To run a query within a React component, call `useScrollProductsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useScrollProductsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useScrollProductsQuery({
+ *   variables: {
+ *      scrollId: // value for 'scrollId'
+ *   },
+ * });
+ */
+export function useScrollProductsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ScrollProductsQuery, ScrollProductsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<ScrollProductsQuery, ScrollProductsQueryVariables>(ScrollProductsDocument, options);
+      }
+export function useScrollProductsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ScrollProductsQuery, ScrollProductsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<ScrollProductsQuery, ScrollProductsQueryVariables>(ScrollProductsDocument, options);
+        }
+// @ts-ignore
+export function useScrollProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<ScrollProductsQuery, ScrollProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<ScrollProductsQuery, ScrollProductsQueryVariables>;
+export function useScrollProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<ScrollProductsQuery, ScrollProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<ScrollProductsQuery | undefined, ScrollProductsQueryVariables>;
+export function useScrollProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<ScrollProductsQuery, ScrollProductsQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<ScrollProductsQuery, ScrollProductsQueryVariables>(ScrollProductsDocument, options);
+        }
+export type ScrollProductsQueryHookResult = ReturnType<typeof useScrollProductsQuery>;
+export type ScrollProductsLazyQueryHookResult = ReturnType<typeof useScrollProductsLazyQuery>;
+export type ScrollProductsSuspenseQueryHookResult = ReturnType<typeof useScrollProductsSuspenseQuery>;
+export type ScrollProductsQueryResult = ApolloReactCommon.QueryResult<ScrollProductsQuery, ScrollProductsQueryVariables>;
 export const LoginUserDocument = gql`
     mutation LoginUser($data: LoginUserInput!) {
   loginUser(data: $data) {
     user {
-      ...UserFragment
+      ...User
     }
     accessToken
     refreshToken
   }
 }
-    ${UserFragmentFragmentDoc}`;
+    ${UserFragmentDoc}`;
 export type LoginUserMutationFn = ApolloReactCommon.MutationFunction<LoginUserMutation, LoginUserMutationVariables>;
 
 /**
@@ -76,10 +253,10 @@ export type LoginUserMutationOptions = ApolloReactCommon.BaseMutationOptions<Log
 export const FindMeDocument = gql`
     query FindMe {
   findMe {
-    ...UserFragment
+    ...User
   }
 }
-    ${UserFragmentFragmentDoc}`;
+    ${UserFragmentDoc}`;
 
 /**
  * __useFindMeQuery__

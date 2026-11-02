@@ -1,7 +1,7 @@
 mutation LoginUser($data: LoginUserInput!) {
     loginUser(data: $data) {
         user {
-            ...UserFragment
+            ...User
         }
         accessToken
         refreshToken
@@ -9,6 +9,6 @@ mutation LoginUser($data: LoginUserInput!) {
 }
 query FindMe {
     findMe {
-        ...UserFragment
+        ...User
     }
 }

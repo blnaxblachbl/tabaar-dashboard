@@ -1,0 +1,18 @@
+query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
+    findProducts(query: $query, take: $take, filters: $filters) {
+        products {
+            ...ProductList
+        }
+        productsCount
+        scrollId
+    }
+}
+query ScrollProducts($scrollId: String) {
+    scrollProducts(scrollId: $scrollId) {
+        products {
+            ...ProductList
+        }
+        productsCount
+        scrollId
+    }
+}

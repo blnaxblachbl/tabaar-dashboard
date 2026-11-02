@@ -1,7 +1,34 @@
-fragment UserFragment on User {
+fragment User on User {
     id
     createdAt
     updatedAt
     name
     email
+}
+fragment ProductList on Product {
+    id
+    createdAt
+    updatedAt
+    name
+    characterstics
+    minPrice
+    maxPrice
+    description
+    available
+}
+fragment Product on Product {
+    ...ProductList
+    variants {
+        ...Variant
+    }
+}
+fragment Variant on Variant {
+    id
+    createdAt
+    updatedAt
+    characterstics
+    price
+    count
+    currency
+    images
 }
