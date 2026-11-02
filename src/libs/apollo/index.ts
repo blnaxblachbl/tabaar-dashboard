@@ -10,7 +10,10 @@ import { ApolloLink } from "@apollo/client";
 import { ErrorLink } from "@apollo/client/link/error";
 import { SetContextLink } from "@apollo/client/link/context";
 
-import { SAVED_ACCESS_TOKEN_KEY } from "@/utils/constants";
+import {
+  SAVED_ACCESS_TOKEN_KEY,
+  SAVED_REFRESH_TOKEN_KEY,
+} from "@/utils/constants";
 
 const withToken = new SetContextLink((prev) => ({
   ...prev,
@@ -35,8 +38,20 @@ const refreshTokenOserver = (
 ) => {
   return new Observable<ApolloLink.Result>((observer) => {
     fetch(`/api/user/refresh-token`, {
+      method: "POST",
       credentials: "include",
+      body: JSON.stringify({
+        refreshToken: localStorage.getItem(SAVED_REFRESH_TOKEN_KEY),
+      }),
     })
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error("Response not ok");
+        }
+        const data = await res.json();
+        localStorage.setItem(SAVED_ACCESS_TOKEN_KEY, data.accessToken);
+        localStorage.setItem(SAVED_REFRESH_TOKEN_KEY, data.refreshToken);
+      })
       .then(() => {
         const subscriber = {
           next: observer.next.bind(observer),

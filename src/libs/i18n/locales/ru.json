@@ -1,4 +1,10 @@
 {
+  "components": {
+    "menu": {
+      "home": "Главная",
+      "products": "Товары"
+    }
+  },
   "pages": {
     "login": {
       "title": "Добро пожаловать в Tabaar",

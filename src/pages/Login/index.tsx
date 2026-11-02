@@ -4,7 +4,10 @@ import { useNavigate } from "react-router";
 import { useApolloClient } from "@apollo/client/react";
 
 import { FindMeDocument, useLoginUserMutation } from "@/graphql/generated";
-import { SAVED_ACCESS_TOKEN_KEY } from "@/utils/constants";
+import {
+  SAVED_ACCESS_TOKEN_KEY,
+  SAVED_REFRESH_TOKEN_KEY,
+} from "@/utils/constants";
 import type { LoginFormData } from "./types";
 
 export default function LoginPage() {
@@ -19,6 +22,7 @@ export default function LoginPage() {
   const [login, { loading }] = useLoginUserMutation({
     onCompleted({ loginUser }) {
       localStorage.setItem(SAVED_ACCESS_TOKEN_KEY, loginUser.accessToken);
+      localStorage.setItem(SAVED_REFRESH_TOKEN_KEY, loginUser.refreshToken);
       messageApi.success("Logged in successfully");
       client.writeQuery({
         query: FindMeDocument,
@@ -38,7 +42,7 @@ export default function LoginPage() {
     <div className="w-full h-dvh flex items-center justify-center">
       {messageContext}
       <Form<LoginFormData>
-        classNames={{ root: "max-w-xl w-full p-6! rounded-md!" }}
+        classNames={{ root: "max-w-md w-full p-6! rounded-md!" }}
         style={{
           backgroundColor: token.colorBgContainer,
           borderWidth: 1,

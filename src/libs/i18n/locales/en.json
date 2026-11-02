@@ -1,4 +1,10 @@
 {
+  "components": {
+    "menu": {
+      "home": "Home",
+      "products": "Products"
+    }
+  },
   "pages": {
     "login": {
       "title": "Welcom to Tabaar Dashboard",
