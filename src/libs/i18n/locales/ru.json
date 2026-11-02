@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "login": {
+      "title": "Добро пожаловать в Tabaar",
+      "email": {
+        "label": "Email",
+        "placeholder": "ivan-ivanov@tabaar.com",
+        "errors": {
+          "required": "Введите email",
+          "invalid": "Не верный формат email"
+        }
+      },
+      "password": {
+        "label": "Пароль",
+        "placeholder": "***********",
+        "errors": {
+          "required": "Введите пароль"
+        }
+      },
+      "submit-button": {
+        "text": "Войти"
+      }
+    }
+  }
+}

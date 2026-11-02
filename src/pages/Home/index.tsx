@@ -1,0 +1,5 @@
+import { PageLayout } from "@/components/PageLayout";
+
+export default function HomePage() {
+  return <PageLayout>asdasd</PageLayout>;
+}

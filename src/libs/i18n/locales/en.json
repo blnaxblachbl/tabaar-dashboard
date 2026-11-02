@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "login": {
+      "title": "Welcom to Tabaar Dashboard",
+      "email": {
+        "label": "Email",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "Email is required",
+          "invalid": "invalid Email"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "***********",
+        "errors": {
+          "required": "Password is required"
+        }
+      },
+      "submit-button": {
+        "text": "Login"
+      }
+    }
+  }
+}

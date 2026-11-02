@@ -1,0 +1,14 @@
+mutation LoginUser($data: LoginUserInput!) {
+    loginUser(data: $data) {
+        user {
+            ...UserFragment
+        }
+        accessToken
+        refreshToken
+    }
+}
+query FindMe {
+    findMe {
+        ...UserFragment
+    }
+}
