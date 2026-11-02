@@ -1,8 +1,14 @@
-import { theme, Typography } from "antd";
+import { Popover, Space, theme, Typography, Avatar } from "antd";
 import { Link } from "react-router";
+
+import { useUser } from "@/hooks/useUser";
+import { Menu } from "@/components/Menu";
 
 export function Header() {
   const { token } = theme.useToken();
+  const { user } = useUser({
+    fetchPolicy: "cache-only",
+  });
 
   return (
     <header
@@ -17,6 +23,21 @@ export function Header() {
             Tabaar
           </Typography.Text>
         </Link>
+        {user && (
+          <Popover
+            content={<Menu />}
+            classNames={{
+              container: "p-0! rounded-md! overflow-hidden",
+            }}
+            arrow={false}
+            placement="bottomRight"
+          >
+            <Space>
+              <Avatar>{user.name.charAt(0)}</Avatar>
+              <Typography.Text>{user.name}</Typography.Text>
+            </Space>
+          </Popover>
+        )}
       </div>
     </header>
   );

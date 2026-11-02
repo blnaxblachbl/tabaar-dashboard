@@ -11,6 +11,7 @@
     "gql:generate": "graphql-codegen --config ./codegen.ts"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.3.4",
     "@apollo/client": "^4.3.5",
     "@tailwindcss/vite": "^4.3.3",
     "antd": "^6.6.8",

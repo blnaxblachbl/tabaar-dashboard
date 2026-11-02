@@ -1,14 +1,15 @@
-import { useFindMeQuery } from "@/graphql/generated";
 import { Navigate, Outlet } from "react-router";
 
+import { useUser } from "@/hooks/useUser";
+
 export function AuthLayout() {
-  const { data, loading } = useFindMeQuery();
+  const { user, loading } = useUser();
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (!data?.findMe) {
+  if (!user) {
     return <Navigate to={"/login"} />;
   }
 

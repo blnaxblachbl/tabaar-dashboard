@@ -9,6 +9,11 @@ export function AntConfigProvider({ children }: PropsWithChildren) {
     <ConfigProvider
       theme={{
         algorithm: theme.darkAlgorithm,
+        components: {
+          Menu: {
+            itemSelectedColor: undefined,
+          },
+        },
       }}
       locale={{
         locale: i18n.language,
