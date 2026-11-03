@@ -43,7 +43,9 @@ export default function ProductsPage() {
         <Row gutter={[15, 15]}>
           {products.map((product) => (
             <Col key={product.id} span={6}>
-              <ProducCard product={product} />
+              <Link to={product.id}>
+                <ProducCard product={product} />
+              </Link>
             </Col>
           ))}
         </Row>

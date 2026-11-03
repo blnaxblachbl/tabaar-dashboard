@@ -3,6 +3,45 @@
     "menu": {
       "home": "Home",
       "products": "Products"
+    },
+    "product-form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "T-shirt",
+        "errors": {
+          "required": "Name is required",
+          "invalid": "Name must be between 3-100 characters"
+        }
+      },
+      "description": {
+        "label": "Description",
+        "placeholder": "Brend new T-shirt with print",
+        "errors": {
+          "required": "Description is required",
+          "invalid": "Description must be between 3-1500 characters"
+        }
+      },
+      "characterstics": {
+        "label": "Characterstics",
+        "key": {
+          "placeholder": "Category",
+          "errors": {
+            "required": "Key is required",
+            "invalid": "Key must be between 1-100 characters"
+          }
+        },
+        "value": {
+          "placeholder": "Cloth",
+          "errors": {
+            "required": "Value is required",
+            "invalid": "Value must be between 1-100 characters"
+          }
+        },
+        "add": "Add Characteristic"
+      },
+      "create-button": {
+        "text": "Submit"
+      }
     }
   },
   "pages": {
@@ -37,6 +76,18 @@
         "button": {
           "text": "Create new Product"
         }
+      }
+    },
+    "create-product": {
+      "title": "Create product",
+      "submit-button": {
+        "text": "Create"
+      }
+    },
+    "edit-product": {
+      "title": "Edeit Product",
+      "submit-button": {
+        "text": "Update"
       }
     }
   }

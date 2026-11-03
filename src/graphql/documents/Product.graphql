@@ -16,3 +16,18 @@ query ScrollProducts($scrollId: String) {
         scrollId
     }
 }
+query FindOneProduct($id: String) {
+    findOneProduct(id: $id) {
+        ...Product
+    }
+}
+mutation CreateProduct($data: CreateProductInput!) {
+    createProduct(data: $data) {
+        ...Product
+    }
+}
+mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
+    updateProduct(id: $id, data: $data) {
+        ...Product
+    }
+}

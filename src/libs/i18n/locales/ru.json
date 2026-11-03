@@ -3,6 +3,45 @@
     "menu": {
       "home": "Главная",
       "products": "Товары"
+    },
+    "product-form": {
+      "name": {
+        "label": "Наименование",
+        "placeholder": "Футбоклка",
+        "errors": {
+          "required": "Введите наименование",
+          "invalid": "Наименование должно быть от 3 до 100 символов"
+        }
+      },
+      "description": {
+        "label": "Описание",
+        "placeholder": "Бредовая футболка с принтом",
+        "errors": {
+          "required": "Введите лписание",
+          "invalid": "Описание должно быть от 3 до 1500 символов"
+        }
+      },
+      "characterstics": {
+        "label": "Характеристики",
+        "key": {
+          "placeholder": "Категория",
+          "errors": {
+            "required": "Введите ключ",
+            "invalid": "Ключ должен быть от 1 до 100 символов"
+          }
+        },
+        "value": {
+          "placeholder": "Одежда",
+          "errors": {
+            "required": "Введите значение",
+            "invalid": "Значение должно быть от 1 до 100 символов"
+          }
+        },
+        "add": "Добавть Характеристику"
+      },
+      "create-button": {
+        "text": "Готово"
+      }
     }
   },
   "pages": {
@@ -37,6 +76,18 @@
         "button": {
           "text": "Создать новый товар"
         }
+      }
+    },
+    "create-product": {
+      "title": "Новый товар",
+      "submit-button": {
+        "text": "Создать"
+      }
+    },
+    "edit-product": {
+      "title": "Редактирование товара",
+      "submit-button": {
+        "text": "Обновить"
       }
     }
   }

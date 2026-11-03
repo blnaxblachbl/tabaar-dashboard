@@ -8,6 +8,12 @@ import { gql } from '@apollo/client';
 import * as ApolloReactCommon from '@apollo/client/react';
 import * as ApolloReactHooks from '@apollo/client/react';
 const defaultOptions = {} as const;
+export type CreateProductInput = {
+  characterstics?: Record<string, string | number | boolean> | null | undefined;
+  description: string;
+  name: string;
+};
+
 export type FiltersInput = {
   available?: boolean | null | undefined;
   characterstics?: Record<string, string | number | boolean> | null | undefined;
@@ -30,6 +36,12 @@ export type IntRangeInput = {
 export type LoginUserInput = {
   email: string;
   password: string;
+};
+
+export type UpdateProductInput = {
+  characterstics?: Record<string, string | number | boolean> | null | undefined;
+  description?: string | null | undefined;
+  name?: string | null | undefined;
 };
 
 export type VariantFilterInput = {
@@ -62,6 +74,28 @@ export type ScrollProductsQueryVariables = Exact<{
 
 
 export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean }> } };
+
+export type FindOneProductQueryVariables = Exact<{
+  id?: string | null | undefined;
+}>;
+
+
+export type FindOneProductQuery = { findOneProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> } };
+
+export type CreateProductMutationVariables = Exact<{
+  data: CreateProductInput;
+}>;
+
+
+export type CreateProductMutation = { createProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> } };
+
+export type UpdateProductMutationVariables = Exact<{
+  id: string;
+  data: UpdateProductInput;
+}>;
+
+
+export type UpdateProductMutation = { updateProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> } };
 
 export type LoginUserMutationVariables = Exact<{
   data: LoginUserInput;
@@ -213,6 +247,122 @@ export type ScrollProductsQueryHookResult = ReturnType<typeof useScrollProductsQ
 export type ScrollProductsLazyQueryHookResult = ReturnType<typeof useScrollProductsLazyQuery>;
 export type ScrollProductsSuspenseQueryHookResult = ReturnType<typeof useScrollProductsSuspenseQuery>;
 export type ScrollProductsQueryResult = ApolloReactCommon.QueryResult<ScrollProductsQuery, ScrollProductsQueryVariables>;
+export const FindOneProductDocument = gql`
+    query FindOneProduct($id: String) {
+  findOneProduct(id: $id) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${ProductListFragmentDoc}
+${VariantFragmentDoc}`;
+
+/**
+ * __useFindOneProductQuery__
+ *
+ * To run a query within a React component, call `useFindOneProductQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindOneProductQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindOneProductQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useFindOneProductQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<FindOneProductQuery, FindOneProductQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindOneProductQuery, FindOneProductQueryVariables>(FindOneProductDocument, options);
+      }
+export function useFindOneProductLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindOneProductQuery, FindOneProductQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindOneProductQuery, FindOneProductQueryVariables>(FindOneProductDocument, options);
+        }
+// @ts-ignore
+export function useFindOneProductSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindOneProductQuery, FindOneProductQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindOneProductQuery, FindOneProductQueryVariables>;
+export function useFindOneProductSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindOneProductQuery, FindOneProductQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindOneProductQuery | undefined, FindOneProductQueryVariables>;
+export function useFindOneProductSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindOneProductQuery, FindOneProductQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindOneProductQuery, FindOneProductQueryVariables>(FindOneProductDocument, options);
+        }
+export type FindOneProductQueryHookResult = ReturnType<typeof useFindOneProductQuery>;
+export type FindOneProductLazyQueryHookResult = ReturnType<typeof useFindOneProductLazyQuery>;
+export type FindOneProductSuspenseQueryHookResult = ReturnType<typeof useFindOneProductSuspenseQuery>;
+export type FindOneProductQueryResult = ApolloReactCommon.QueryResult<FindOneProductQuery, FindOneProductQueryVariables>;
+export const CreateProductDocument = gql`
+    mutation CreateProduct($data: CreateProductInput!) {
+  createProduct(data: $data) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${ProductListFragmentDoc}
+${VariantFragmentDoc}`;
+export type CreateProductMutationFn = ApolloReactCommon.MutationFunction<CreateProductMutation, CreateProductMutationVariables>;
+
+/**
+ * __useCreateProductMutation__
+ *
+ * To run a mutation, you first call `useCreateProductMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateProductMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createProductMutation, { data, loading, error }] = useCreateProductMutation({
+ *   variables: {
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useCreateProductMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateProductMutation, CreateProductMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<CreateProductMutation, CreateProductMutationVariables>(CreateProductDocument, options);
+      }
+export type CreateProductMutationHookResult = ReturnType<typeof useCreateProductMutation>;
+export type CreateProductMutationResult = ApolloReactCommon.MutationResult<CreateProductMutation>;
+export type CreateProductMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateProductMutation, CreateProductMutationVariables>;
+export const UpdateProductDocument = gql`
+    mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
+  updateProduct(id: $id, data: $data) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${ProductListFragmentDoc}
+${VariantFragmentDoc}`;
+export type UpdateProductMutationFn = ApolloReactCommon.MutationFunction<UpdateProductMutation, UpdateProductMutationVariables>;
+
+/**
+ * __useUpdateProductMutation__
+ *
+ * To run a mutation, you first call `useUpdateProductMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateProductMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateProductMutation, { data, loading, error }] = useUpdateProductMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useUpdateProductMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateProductMutation, UpdateProductMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<UpdateProductMutation, UpdateProductMutationVariables>(UpdateProductDocument, options);
+      }
+export type UpdateProductMutationHookResult = ReturnType<typeof useUpdateProductMutation>;
+export type UpdateProductMutationResult = ApolloReactCommon.MutationResult<UpdateProductMutation>;
+export type UpdateProductMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateProductMutation, UpdateProductMutationVariables>;
 export const LoginUserDocument = gql`
     mutation LoginUser($data: LoginUserInput!) {
   loginUser(data: $data) {
