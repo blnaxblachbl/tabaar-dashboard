@@ -1,14 +1,18 @@
 import { Activity } from "react";
 import { Button, Col, Divider, Empty, Row } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
+import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 import { PageLayout } from "@/components/PageLayout";
 import { ProducCard, ProducCardSkeleton } from "@/components/ProductCard";
 import { useFindProductsQuery } from "@/graphql/generated";
 import { Title } from "@/components/Title";
-import { Link } from "react-router";
 
 export default function ProductsPage() {
+  const { t } = useTranslation("", {
+    keyPrefix: "pages.products",
+  });
   const { data, loading } = useFindProductsQuery();
 
   const products = data?.findProducts.products ?? [];
@@ -18,10 +22,10 @@ export default function ProductsPage() {
   return (
     <PageLayout>
       <Title
-        title="Products"
+        title={t("title")}
         actions={
           <Link to={"create"}>
-            <Button icon={<PlusOutlined />}>Create</Button>
+            <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>
           </Link>
         }
       />
@@ -47,13 +51,15 @@ export default function ProductsPage() {
       <Activity mode={productsCount === 0 ? "visible" : "hidden"}>
         <Empty
           image={Empty.PRESENTED_IMAGE_SIMPLE}
-          description="Products not found"
+          description={t("empty.description")}
           classNames={{
             root: "my-21!",
             description: "mb-6!",
           }}
         >
-          <Button type="primary">Create new Product</Button>
+          <Link to={"create"}>
+            <Button type="primary">{t("empty.button.text")}</Button>
+          </Link>
         </Empty>
       </Activity>
     </PageLayout>

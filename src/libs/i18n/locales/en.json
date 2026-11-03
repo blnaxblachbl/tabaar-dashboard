@@ -26,6 +26,18 @@
       "submit-button": {
         "text": "Login"
       }
+    },
+    "products": {
+      "title": "Products",
+      "create-button": {
+        "text": "Create"
+      },
+      "empty": {
+        "description": "Products not found",
+        "button": {
+          "text": "Create new Product"
+        }
+      }
     }
   }
 }

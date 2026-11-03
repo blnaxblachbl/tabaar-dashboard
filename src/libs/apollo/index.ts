@@ -39,13 +39,24 @@ const refreshTokenOserver = (
   return new Observable<ApolloLink.Result>((observer) => {
     fetch(`/api/user/refresh-token`, {
       method: "POST",
-      credentials: "include",
       body: JSON.stringify({
         refreshToken: localStorage.getItem(SAVED_REFRESH_TOKEN_KEY),
       }),
+      headers: {
+        authorization: `Bearer ${localStorage.getItem(SAVED_ACCESS_TOKEN_KEY)}`,
+        "Content-Type": "application/json",
+      },
     })
       .then(async (res) => {
         if (!res.ok) {
+          const error = await res.json();
+          if (import.meta.env.DEV) {
+            console.log("Refrsh token error", error);
+          }
+          if (res.status > 400 && res.status < 500) {
+            localStorage.removeItem(SAVED_ACCESS_TOKEN_KEY);
+            localStorage.removeItem(SAVED_REFRESH_TOKEN_KEY);
+          }
           throw new Error("Response not ok");
         }
         const data = await res.json();

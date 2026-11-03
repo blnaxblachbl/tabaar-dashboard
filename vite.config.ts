@@ -11,7 +11,12 @@ export default defineConfig(({ mode }) => {
       port: 3000,
       proxy: {
         "/graphql": env.GRAPHQL_API_ENDPOINT,
-        "/api": env.REST_API_ENDPOINT,
+        "/api": {
+          target: env.REST_API_ENDPOINT,
+          rewrite: (path) => {
+            return path.replace(/^\/api/, "");
+          },
+        },
       },
     },
     resolve: {

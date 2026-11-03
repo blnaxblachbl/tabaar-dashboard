@@ -26,6 +26,18 @@
       "submit-button": {
         "text": "Войти"
       }
+    },
+    "products": {
+      "title": "Товары",
+      "create-button": {
+        "text": "Создать"
+      },
+      "empty": {
+        "description": "Товары не найдены",
+        "button": {
+          "text": "Создать новый товар"
+        }
+      }
     }
   }
 }
