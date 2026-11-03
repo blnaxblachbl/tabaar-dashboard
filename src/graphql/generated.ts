@@ -87,7 +87,7 @@ export type CreateProductMutationVariables = Exact<{
 }>;
 
 
-export type CreateProductMutation = { createProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> } };
+export type CreateProductMutation = { createProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean } };
 
 export type UpdateProductMutationVariables = Exact<{
   id: string;
@@ -95,7 +95,7 @@ export type UpdateProductMutationVariables = Exact<{
 }>;
 
 
-export type UpdateProductMutation = { updateProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> } };
+export type UpdateProductMutation = { updateProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean } };
 
 export type LoginUserMutationVariables = Exact<{
   data: LoginUserInput;
@@ -295,12 +295,10 @@ export type FindOneProductQueryResult = ApolloReactCommon.QueryResult<FindOnePro
 export const CreateProductDocument = gql`
     mutation CreateProduct($data: CreateProductInput!) {
   createProduct(data: $data) {
-    ...Product
+    ...ProductList
   }
 }
-    ${ProductFragmentDoc}
-${ProductListFragmentDoc}
-${VariantFragmentDoc}`;
+    ${ProductListFragmentDoc}`;
 export type CreateProductMutationFn = ApolloReactCommon.MutationFunction<CreateProductMutation, CreateProductMutationVariables>;
 
 /**
@@ -330,12 +328,10 @@ export type CreateProductMutationOptions = ApolloReactCommon.BaseMutationOptions
 export const UpdateProductDocument = gql`
     mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
   updateProduct(id: $id, data: $data) {
-    ...Product
+    ...ProductList
   }
 }
-    ${ProductFragmentDoc}
-${ProductListFragmentDoc}
-${VariantFragmentDoc}`;
+    ${ProductListFragmentDoc}`;
 export type UpdateProductMutationFn = ApolloReactCommon.MutationFunction<UpdateProductMutation, UpdateProductMutationVariables>;
 
 /**

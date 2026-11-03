@@ -110,5 +110,17 @@ const errorLink = new ErrorLink(({ error, operation, forward }) => {
 
 export const apolloClient = new ApolloClient({
   link: ApolloLink.from([errorLink, authLink]),
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({
+    typePolicies: {
+      Product: {
+        keyFields: ["id"],
+      },
+      User: {
+        keyFields: ["id"],
+      },
+      ApiKey: {
+        keyFields: ["id"],
+      },
+    },
+  }),
 });

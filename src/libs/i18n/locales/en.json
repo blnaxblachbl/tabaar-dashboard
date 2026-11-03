@@ -82,12 +82,27 @@
       "title": "Create product",
       "submit-button": {
         "text": "Create"
+      },
+      "toasts": {
+        "success": "Product created",
+        "error": "Failed to create product"
       }
     },
     "edit-product": {
       "title": "Edeit Product",
+      "variants": "Variants",
       "submit-button": {
         "text": "Update"
+      },
+      "empty": {
+        "description": "Product not found",
+        "button": {
+          "text": "Back to list"
+        }
+      },
+      "toasts": {
+        "success": "Product updated",
+        "error": "Failed to update product"
       }
     }
   }

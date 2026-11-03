@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row } from "antd";
+import { Button, Col, Form, Input, Row, Skeleton, Space } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
 import type { ProductFormData, ProductFormProps } from "./types";
@@ -129,5 +129,22 @@ export function ProductForm({
         {submitText ?? t("create-button.text")}
       </Button>
     </Form>
+  );
+}
+
+export function ProductFormSkeleton() {
+  return (
+    <Space vertical className="w-full">
+      <Skeleton paragraph={false} className="w-1/5!" active />
+      <Skeleton.Input block active />
+      <Skeleton paragraph={false} className="w-1/5!" active />
+      <Skeleton.Input
+        block
+        classNames={{ root: "h-30", content: "h-full!" }}
+        active
+      />
+      <Skeleton.Button block active />
+      <Skeleton.Button block active />
+    </Space>
   );
 }

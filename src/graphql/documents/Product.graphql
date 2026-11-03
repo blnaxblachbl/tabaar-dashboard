@@ -23,11 +23,11 @@ query FindOneProduct($id: String) {
 }
 mutation CreateProduct($data: CreateProductInput!) {
     createProduct(data: $data) {
-        ...Product
+        ...ProductList
     }
 }
 mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
     updateProduct(id: $id, data: $data) {
-        ...Product
+        ...ProductList
     }
 }
