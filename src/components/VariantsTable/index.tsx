@@ -6,14 +6,17 @@ import {
   Button,
   Popconfirm,
   message,
+  Divider,
 } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
-import type { VariantsTableProps } from "./types";
+import { Title } from "@/components/Title";
 import { extractImages } from "@/utils/product/extractImages";
 import { useDeleteVariantMutation } from "@/graphql/generated";
 import { updateProduct } from "@/utils/product/updateQuery";
+import type { VariantsTableProps } from "./types";
+import { Link } from "react-router";
 
 export function VariantsTable({ productId, ...props }: VariantsTableProps) {
   const [messageApi, messageContext] = message.useMessage();
@@ -23,10 +26,10 @@ export function VariantsTable({ productId, ...props }: VariantsTableProps) {
 
   const [deleteVariant, { loading: deleteLoading }] = useDeleteVariantMutation({
     onCompleted() {
-      messageApi.success("Variant deleted");
+      messageApi.success(t("toasts.delete-success"));
     },
     onError() {
-      messageApi.error("Failed to delete Variant");
+      messageApi.error(t("toasts.delete-error"));
     },
     update: (client, { data }) => {
       if (!data?.deleteVariant) {
@@ -42,7 +45,10 @@ export function VariantsTable({ productId, ...props }: VariantsTableProps) {
   return (
     <>
       {messageContext}
+      <Title title={t("title")} />
+      <Divider />
       <Table
+        rowKey={"id"}
         columns={[
           {
             dataIndex: "images",
@@ -84,11 +90,13 @@ export function VariantsTable({ productId, ...props }: VariantsTableProps) {
             title: t("columns.actions.title"),
             render: (_, obj) => (
               <Space.Compact>
-                <Button disabled={deleteLoading} icon={<EditOutlined />} />
+                <Link to={`variants/${obj.id}`}>
+                  <Button disabled={deleteLoading} icon={<EditOutlined />} />
+                </Link>
                 <Popconfirm
-                  title="Delete this vaiant?"
-                  okText="Yes"
-                  cancelText="No"
+                  title={t("delete-popup.title")}
+                  okText={t("delete-popup.okText")}
+                  cancelText={t("delete-popup.cancelText")}
                   disabled={deleteLoading}
                   onConfirm={deleteVariant.bind(null, {
                     variables: { id: productId, variantId: obj.id },

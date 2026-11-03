@@ -112,10 +112,10 @@ export default function EditProductPage() {
           </Link>
         </Empty>
       )}
-      <Title title={t("variants")} className="mt-6" />
-      <Divider />
       {productId && (
-        <VariantsTable dataSource={variants} productId={productId} />
+        <div className="mt-6">
+          <VariantsTable dataSource={variants} productId={productId} />
+        </div>
       )}
     </PageLayout>
   );

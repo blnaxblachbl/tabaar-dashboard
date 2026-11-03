@@ -44,6 +44,7 @@
       }
     },
     "variants-table": {
+      "title": "Variants",
       "columns": {
         "images": {
           "title": "Images"
@@ -60,6 +61,15 @@
         "actions": {
           "title": "Actions"
         }
+      },
+      "toasts": {
+        "delete-success": "Variant deleted",
+        "delete-error": "Failed to delete Variant"
+      },
+      "delete-popup": {
+        "title": "Do you wnt to delete this Variant?",
+        "okText": "Yes",
+        "cancelText": "No"
       }
     }
   },
@@ -109,7 +119,6 @@
     },
     "edit-product": {
       "title": "Edeit Product",
-      "variants": "Variants",
       "submit-button": {
         "text": "Update"
       },

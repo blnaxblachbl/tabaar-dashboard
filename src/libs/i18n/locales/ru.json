@@ -44,6 +44,7 @@
       }
     },
     "variants-table": {
+      "title": "Варианты",
       "columns": {
         "images": {
           "title": "Изображения"
@@ -60,6 +61,15 @@
         "actions": {
           "title": "Действия"
         }
+      },
+      "toasts": {
+        "delete-success": "Вариант удалён",
+        "delete-error": "Произошла ошибка при удалении варианта"
+      },
+      "delete-popup": {
+        "title": "Хотите удалить этот вариант?",
+        "okText": "Да",
+        "cancelText": "Нет"
       }
     }
   },
@@ -109,7 +119,6 @@
     },
     "edit-product": {
       "title": "Редактирование товара",
-      "variants": "Варианты",
       "submit-button": {
         "text": "Обновить"
       },
