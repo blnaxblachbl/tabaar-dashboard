@@ -14,6 +14,13 @@ export type CreateProductInput = {
   name: string;
 };
 
+export type CreateVariantInput = {
+  characterstics: Record<string, string | number | boolean>;
+  count: number;
+  currency: string;
+  price: number;
+};
+
 export type FiltersInput = {
   available?: boolean | null | undefined;
   characterstics?: Record<string, string | number | boolean> | null | undefined;
@@ -44,6 +51,13 @@ export type UpdateProductInput = {
   name?: string | null | undefined;
 };
 
+export type UpdateVariantInput = {
+  characterstics?: Record<string, string | number | boolean> | null | undefined;
+  count?: number | null | undefined;
+  currency?: string | null | undefined;
+  price?: number | null | undefined;
+};
+
 export type VariantFilterInput = {
   characterstics?: Record<string, string | number | boolean> | null | undefined;
   count?: IntRangeInput | null | undefined;
@@ -51,13 +65,11 @@ export type VariantFilterInput = {
   price?: FloatRangeInput | null | undefined;
 };
 
-export type UserFragment = { id: number, createdAt: unknown, updatedAt: unknown, name: string, email: string };
+export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string };
 
-export type ProductListFragment = { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean };
+export type ProductFragment = { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> };
 
-export type ProductFragment = { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> };
-
-export type VariantFragment = { id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> };
+export type VariantFragment = { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> };
 
 export type FindProductsQueryVariables = Exact<{
   query?: string | null | undefined;
@@ -66,28 +78,28 @@ export type FindProductsQueryVariables = Exact<{
 }>;
 
 
-export type FindProductsQuery = { findProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean }> } };
+export type FindProductsQuery = { findProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
 
 export type ScrollProductsQueryVariables = Exact<{
   scrollId?: string | null | undefined;
 }>;
 
 
-export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean }> } };
+export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
 
 export type FindOneProductQueryVariables = Exact<{
   id?: string | null | undefined;
 }>;
 
 
-export type FindOneProductQuery = { findOneProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: unknown, updatedAt: unknown, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> } | null> } };
+export type FindOneProductQuery = { findOneProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type CreateProductMutationVariables = Exact<{
   data: CreateProductInput;
 }>;
 
 
-export type CreateProductMutation = { createProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean } };
+export type CreateProductMutation = { createProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type UpdateProductMutationVariables = Exact<{
   id: string;
@@ -95,19 +107,51 @@ export type UpdateProductMutationVariables = Exact<{
 }>;
 
 
-export type UpdateProductMutation = { updateProduct: { id: string, createdAt: unknown, updatedAt: unknown, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean } };
+export type UpdateProductMutation = { updateProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+
+export type DeleteProductMutationVariables = Exact<{
+  id: string;
+}>;
+
+
+export type DeleteProductMutation = { deleteProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+
+export type DeleteVariantMutationVariables = Exact<{
+  id: string;
+  variantId: string;
+}>;
+
+
+export type DeleteVariantMutation = { deleteVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+
+export type UpdateVariantMutationVariables = Exact<{
+  id: string;
+  variantId: string;
+  data: UpdateVariantInput;
+}>;
+
+
+export type UpdateVariantMutation = { updateVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+
+export type AppendVariantMutationVariables = Exact<{
+  appendVariantId: string;
+  data: CreateVariantInput;
+}>;
+
+
+export type AppendVariantMutation = { appendVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type LoginUserMutationVariables = Exact<{
   data: LoginUserInput;
 }>;
 
 
-export type LoginUserMutation = { loginUser: { accessToken: string, refreshToken: string, user: { id: number, createdAt: unknown, updatedAt: unknown, name: string, email: string } } };
+export type LoginUserMutation = { loginUser: { accessToken: string, refreshToken: string, user: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } } };
 
 export type FindMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindMeQuery = { findMe: { id: number, createdAt: unknown, updatedAt: unknown, name: string, email: string } | null };
+export type FindMeQuery = { findMe: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } | null };
 
 export const UserFragmentDoc = gql`
     fragment User on User {
@@ -116,19 +160,6 @@ export const UserFragmentDoc = gql`
   updatedAt
   name
   email
-}
-    `;
-export const ProductListFragmentDoc = gql`
-    fragment ProductList on Product {
-  id
-  createdAt
-  updatedAt
-  name
-  characterstics
-  minPrice
-  maxPrice
-  description
-  available
 }
     `;
 export const VariantFragmentDoc = gql`
@@ -145,7 +176,15 @@ export const VariantFragmentDoc = gql`
     `;
 export const ProductFragmentDoc = gql`
     fragment Product on Product {
-  ...ProductList
+  id
+  createdAt
+  updatedAt
+  name
+  characterstics
+  minPrice
+  maxPrice
+  description
+  available
   variants {
     ...Variant
   }
@@ -155,13 +194,14 @@ export const FindProductsDocument = gql`
     query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
   findProducts(query: $query, take: $take, filters: $filters) {
     products {
-      ...ProductList
+      ...Product
     }
     productsCount
     scrollId
   }
 }
-    ${ProductListFragmentDoc}`;
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
 
 /**
  * __useFindProductsQuery__
@@ -204,13 +244,14 @@ export const ScrollProductsDocument = gql`
     query ScrollProducts($scrollId: String) {
   scrollProducts(scrollId: $scrollId) {
     products {
-      ...ProductList
+      ...Product
     }
     productsCount
     scrollId
   }
 }
-    ${ProductListFragmentDoc}`;
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
 
 /**
  * __useScrollProductsQuery__
@@ -254,7 +295,6 @@ export const FindOneProductDocument = gql`
   }
 }
     ${ProductFragmentDoc}
-${ProductListFragmentDoc}
 ${VariantFragmentDoc}`;
 
 /**
@@ -295,10 +335,11 @@ export type FindOneProductQueryResult = ApolloReactCommon.QueryResult<FindOnePro
 export const CreateProductDocument = gql`
     mutation CreateProduct($data: CreateProductInput!) {
   createProduct(data: $data) {
-    ...ProductList
+    ...Product
   }
 }
-    ${ProductListFragmentDoc}`;
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
 export type CreateProductMutationFn = ApolloReactCommon.MutationFunction<CreateProductMutation, CreateProductMutationVariables>;
 
 /**
@@ -328,10 +369,11 @@ export type CreateProductMutationOptions = ApolloReactCommon.BaseMutationOptions
 export const UpdateProductDocument = gql`
     mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
   updateProduct(id: $id, data: $data) {
-    ...ProductList
+    ...Product
   }
 }
-    ${ProductListFragmentDoc}`;
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
 export type UpdateProductMutationFn = ApolloReactCommon.MutationFunction<UpdateProductMutation, UpdateProductMutationVariables>;
 
 /**
@@ -359,6 +401,146 @@ export function useUpdateProductMutation(baseOptions?: ApolloReactHooks.Mutation
 export type UpdateProductMutationHookResult = ReturnType<typeof useUpdateProductMutation>;
 export type UpdateProductMutationResult = ApolloReactCommon.MutationResult<UpdateProductMutation>;
 export type UpdateProductMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateProductMutation, UpdateProductMutationVariables>;
+export const DeleteProductDocument = gql`
+    mutation DeleteProduct($id: String!) {
+  deleteProduct(id: $id) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
+export type DeleteProductMutationFn = ApolloReactCommon.MutationFunction<DeleteProductMutation, DeleteProductMutationVariables>;
+
+/**
+ * __useDeleteProductMutation__
+ *
+ * To run a mutation, you first call `useDeleteProductMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useDeleteProductMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [deleteProductMutation, { data, loading, error }] = useDeleteProductMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useDeleteProductMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<DeleteProductMutation, DeleteProductMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<DeleteProductMutation, DeleteProductMutationVariables>(DeleteProductDocument, options);
+      }
+export type DeleteProductMutationHookResult = ReturnType<typeof useDeleteProductMutation>;
+export type DeleteProductMutationResult = ApolloReactCommon.MutationResult<DeleteProductMutation>;
+export type DeleteProductMutationOptions = ApolloReactCommon.BaseMutationOptions<DeleteProductMutation, DeleteProductMutationVariables>;
+export const DeleteVariantDocument = gql`
+    mutation DeleteVariant($id: String!, $variantId: String!) {
+  deleteVariant(id: $id, variantId: $variantId) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
+export type DeleteVariantMutationFn = ApolloReactCommon.MutationFunction<DeleteVariantMutation, DeleteVariantMutationVariables>;
+
+/**
+ * __useDeleteVariantMutation__
+ *
+ * To run a mutation, you first call `useDeleteVariantMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useDeleteVariantMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [deleteVariantMutation, { data, loading, error }] = useDeleteVariantMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *      variantId: // value for 'variantId'
+ *   },
+ * });
+ */
+export function useDeleteVariantMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<DeleteVariantMutation, DeleteVariantMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<DeleteVariantMutation, DeleteVariantMutationVariables>(DeleteVariantDocument, options);
+      }
+export type DeleteVariantMutationHookResult = ReturnType<typeof useDeleteVariantMutation>;
+export type DeleteVariantMutationResult = ApolloReactCommon.MutationResult<DeleteVariantMutation>;
+export type DeleteVariantMutationOptions = ApolloReactCommon.BaseMutationOptions<DeleteVariantMutation, DeleteVariantMutationVariables>;
+export const UpdateVariantDocument = gql`
+    mutation UpdateVariant($id: String!, $variantId: String!, $data: UpdateVariantInput!) {
+  updateVariant(id: $id, variantId: $variantId, data: $data) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
+export type UpdateVariantMutationFn = ApolloReactCommon.MutationFunction<UpdateVariantMutation, UpdateVariantMutationVariables>;
+
+/**
+ * __useUpdateVariantMutation__
+ *
+ * To run a mutation, you first call `useUpdateVariantMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateVariantMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateVariantMutation, { data, loading, error }] = useUpdateVariantMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *      variantId: // value for 'variantId'
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useUpdateVariantMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateVariantMutation, UpdateVariantMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<UpdateVariantMutation, UpdateVariantMutationVariables>(UpdateVariantDocument, options);
+      }
+export type UpdateVariantMutationHookResult = ReturnType<typeof useUpdateVariantMutation>;
+export type UpdateVariantMutationResult = ApolloReactCommon.MutationResult<UpdateVariantMutation>;
+export type UpdateVariantMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateVariantMutation, UpdateVariantMutationVariables>;
+export const AppendVariantDocument = gql`
+    mutation AppendVariant($appendVariantId: String!, $data: CreateVariantInput!) {
+  appendVariant(id: $appendVariantId, data: $data) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${VariantFragmentDoc}`;
+export type AppendVariantMutationFn = ApolloReactCommon.MutationFunction<AppendVariantMutation, AppendVariantMutationVariables>;
+
+/**
+ * __useAppendVariantMutation__
+ *
+ * To run a mutation, you first call `useAppendVariantMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAppendVariantMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [appendVariantMutation, { data, loading, error }] = useAppendVariantMutation({
+ *   variables: {
+ *      appendVariantId: // value for 'appendVariantId'
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useAppendVariantMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<AppendVariantMutation, AppendVariantMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<AppendVariantMutation, AppendVariantMutationVariables>(AppendVariantDocument, options);
+      }
+export type AppendVariantMutationHookResult = ReturnType<typeof useAppendVariantMutation>;
+export type AppendVariantMutationResult = ApolloReactCommon.MutationResult<AppendVariantMutation>;
+export type AppendVariantMutationOptions = ApolloReactCommon.BaseMutationOptions<AppendVariantMutation, AppendVariantMutationVariables>;
 export const LoginUserDocument = gql`
     mutation LoginUser($data: LoginUserInput!) {
   loginUser(data: $data) {

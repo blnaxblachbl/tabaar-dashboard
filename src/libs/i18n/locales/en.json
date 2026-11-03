@@ -42,6 +42,25 @@
       "create-button": {
         "text": "Submit"
       }
+    },
+    "variants-table": {
+      "columns": {
+        "images": {
+          "title": "Images"
+        },
+        "price": {
+          "title": "Price"
+        },
+        "count": {
+          "title": "Count"
+        },
+        "characterstics": {
+          "title": "Characterstics"
+        },
+        "actions": {
+          "title": "Actions"
+        }
+      }
     }
   },
   "pages": {
@@ -102,7 +121,19 @@
       },
       "toasts": {
         "success": "Product updated",
-        "error": "Failed to update product"
+        "error": "Failed to update product",
+        "delete": {
+          "success": "Product deleted",
+          "error": "Failed to delete product"
+        }
+      },
+      "delete": {
+        "title": "Do you wnt to delete this Product?",
+        "okText": "Yes",
+        "cancelText": "No",
+        "button": {
+          "text": "Delete"
+        }
       }
     }
   }

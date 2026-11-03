@@ -1,5 +1,5 @@
-import type { ProductListFragment } from "@/graphql/generated";
+import type { ProductFragment } from "@/graphql/generated";
 
 export type ProductCardProps = {
-  product: ProductListFragment;
+  product: ProductFragment;
 };

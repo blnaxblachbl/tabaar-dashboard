@@ -23,14 +23,18 @@ const DEFAULT_CONFIG = {
     },
     enumType: "native",
     scalars: {
+      DateTime: {
+        input: "Date",
+        output: "Date",
+      },
       Json: {
         input: "Record<string, any>",
         output: "Record<string, any>",
       },
       Characterstic: {
         input: "Record<string, string | number | boolean>",
-        output: "Record<string, string | number | boolean>"
-      }
+        output: "Record<string, string | number | boolean>",
+      },
     },
   },
 };

@@ -12,9 +12,9 @@ export function Header() {
 
   return (
     <header
-      className="h-(--header-height)"
+      className="h-(--header-height) fixed top-0 w-full z-90"
       style={{
-        backgroundColor: token.colorBgContainerDisabled,
+        backgroundColor: token.colorBgElevated,
       }}
     >
       <div className="flex items-center justify-between max-w-6xl w-full px-3 py-6 mx-auto h-full">

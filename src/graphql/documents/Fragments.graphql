@@ -5,7 +5,7 @@ fragment User on User {
     name
     email
 }
-fragment ProductList on Product {
+fragment Product on Product {
     id
     createdAt
     updatedAt
@@ -15,9 +15,6 @@ fragment ProductList on Product {
     maxPrice
     description
     available
-}
-fragment Product on Product {
-    ...ProductList
     variants {
         ...Variant
     }

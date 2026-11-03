@@ -78,6 +78,9 @@ export function deleteProduct({
   });
 
   const prevProducts = prev?.findProducts.products ?? [];
+  if (prevProducts.length === 0) {
+    return;
+  }
   const scrollId = prev?.findProducts.scrollId ?? "";
   const productsCount = prev?.findProducts.productsCount ?? 0;
   const newProducts = prevProducts.filter(
@@ -89,7 +92,7 @@ export function deleteProduct({
     data: {
       findProducts: {
         products: newProducts,
-        productsCount,
+        productsCount: productsCount - 1,
         scrollId,
       },
     },

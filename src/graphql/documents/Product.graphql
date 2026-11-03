@@ -1,7 +1,7 @@
 query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
     findProducts(query: $query, take: $take, filters: $filters) {
         products {
-            ...ProductList
+            ...Product
         }
         productsCount
         scrollId
@@ -10,7 +10,7 @@ query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
 query ScrollProducts($scrollId: String) {
     scrollProducts(scrollId: $scrollId) {
         products {
-            ...ProductList
+            ...Product
         }
         productsCount
         scrollId
@@ -23,11 +23,35 @@ query FindOneProduct($id: String) {
 }
 mutation CreateProduct($data: CreateProductInput!) {
     createProduct(data: $data) {
-        ...ProductList
+        ...Product
     }
 }
 mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
     updateProduct(id: $id, data: $data) {
-        ...ProductList
+        ...Product
+    }
+}
+mutation DeleteProduct($id: String!) {
+    deleteProduct(id: $id) {
+        ...Product
+    }
+}
+mutation DeleteVariant($id: String!, $variantId: String!) {
+    deleteVariant(id: $id, variantId: $variantId) {
+        ...Product
+    }
+}
+mutation UpdateVariant(
+    $id: String!
+    $variantId: String!
+    $data: UpdateVariantInput!
+) {
+    updateVariant(id: $id, variantId: $variantId, data: $data) {
+        ...Product
+    }
+}
+mutation AppendVariant($appendVariantId: String!, $data: CreateVariantInput!) {
+    appendVariant(id: $appendVariantId, data: $data) {
+        ...Product
     }
 }
