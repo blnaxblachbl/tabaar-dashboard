@@ -32,7 +32,7 @@ export function ProducCard({ product }: ProductCardProps) {
             ))}
           </Carousel>
           <div className="absolute top-2 right-2">
-            <Tag color={product.available ? "green-inverse" : "red-inverse"}>
+            <Tag variant="solid" color={product.available ? "green" : "red"}>
               {product.available ? "Available" : "Not Available"}
             </Tag>
           </div>

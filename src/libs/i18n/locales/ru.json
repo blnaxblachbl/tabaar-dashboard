@@ -156,6 +156,9 @@
         "button": {
           "text": "Создать новый товар"
         }
+      },
+      "load-more-button": {
+        "text": "Загрузить ещё"
       }
     },
     "create-product": {

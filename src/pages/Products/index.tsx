@@ -1,23 +1,46 @@
 import { Activity } from "react";
 import { Button, Col, Divider, Empty, Row } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import { useTranslation } from "react-i18next";
 
 import { PageLayout } from "@/components/PageLayout";
 import { ProducCard, ProducCardSkeleton } from "@/components/ProductCard";
-import { useFindProductsQuery } from "@/graphql/generated";
+import {
+  FindProductsDocument,
+  useFindProductsQuery,
+  useScrollProductsLazyQuery,
+  type FindProductsQuery,
+  type FindProductsQueryVariables,
+} from "@/graphql/generated";
 import { Title } from "@/components/Title";
 
 export default function ProductsPage() {
   const { t } = useTranslation("", {
     keyPrefix: "pages.products",
   });
-  const { data, loading } = useFindProductsQuery();
+  const [searchParams] = useSearchParams({
+    take: "50",
+  });
+
+  const variables: FindProductsQueryVariables = {
+    take: Number(searchParams.get("take")),
+  };
+  const { data, loading } = useFindProductsQuery({
+    variables,
+    refetchOn: {
+      windowFocus: true,
+    },
+  });
+  const [scroll, { loading: scrollLoading, client }] =
+    useScrollProductsLazyQuery({
+      fetchPolicy: "no-cache",
+      notifyOnNetworkStatusChange: true,
+    });
 
   const products = data?.findProducts.products ?? [];
   const productsCount = data?.findProducts.productsCount ?? 0;
-  // const scrollId = data?.findProducts.scrollId;
+  const scrollId = data?.findProducts.scrollId;
 
   return (
     <PageLayout>
@@ -49,6 +72,13 @@ export default function ProductsPage() {
             </Col>
           ))}
         </Row>
+        {products.length < productsCount && (
+          <div className="mx-auto mt-6 w-fit">
+            <Button onClick={handleLoadMore} loading={scrollLoading}>
+              {t("load-more-button.text")}
+            </Button>
+          </div>
+        )}
       </Activity>
       <Activity mode={productsCount === 0 ? "visible" : "hidden"}>
         <Empty
@@ -66,4 +96,23 @@ export default function ProductsPage() {
       </Activity>
     </PageLayout>
   );
+  async function handleLoadMore() {
+    if (!scrollId) {
+      return;
+    }
+    const { data } = await scroll({ variables: { scrollId } });
+    if (data?.scrollProducts) {
+      const { products: newProducts, ...rest } = data.scrollProducts;
+      client.writeQuery<FindProductsQuery>({
+        query: FindProductsDocument,
+        variables,
+        data: {
+          findProducts: {
+            ...rest,
+            products: [...products, ...newProducts],
+          },
+        },
+      });
+    }
+  }
 }

@@ -13,7 +13,7 @@ import type {
 
 export function appentProduct({
   client,
-  variables,
+  variables = { take: 50 },
   newProduct,
 }: AppendProductOprions) {
   const prev = client.readQuery<FindProductsQuery>({
@@ -40,7 +40,7 @@ export function appentProduct({
 
 export function updateProduct({
   client,
-  variables,
+  variables = { take: 50 },
   updatedProduct,
 }: UpdateProductOptions) {
   const prev = client.readQuery<FindProductsQuery>({
@@ -75,7 +75,7 @@ export function updateProduct({
 
 export function deleteProduct({
   client,
-  variables,
+  variables = { take: 50 },
   deletedProductId,
 }: DeleteProductOptions) {
   const prev = client.readQuery<FindProductsQuery>({
