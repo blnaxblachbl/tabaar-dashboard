@@ -50,8 +50,8 @@ mutation UpdateVariant(
         ...Product
     }
 }
-mutation AppendVariant($appendVariantId: String!, $data: CreateVariantInput!) {
-    appendVariant(id: $appendVariantId, data: $data) {
+mutation AppendVariant($id: String!, $data: CreateVariantInput!) {
+    appendVariant(id: $id, data: $data) {
         ...Product
     }
 }

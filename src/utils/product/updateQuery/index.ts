@@ -47,10 +47,13 @@ export function updateProduct({
     query: FindProductsDocument,
     variables,
   });
+  if (!prev) {
+    return;
+  }
 
-  const prevProducts = prev?.findProducts.products ?? [];
-  const scrollId = prev?.findProducts.scrollId ?? "";
-  const productsCount = prev?.findProducts.productsCount ?? 0;
+  const prevProducts = prev.findProducts.products;
+  const scrollId = prev.findProducts.scrollId;
+  const productsCount = prev.findProducts.productsCount;
   const newProducts = prevProducts.map((prevProduct) => {
     if (prevProduct.id === updatedProduct.id) {
       return updatedProduct;

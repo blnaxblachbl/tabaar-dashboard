@@ -88,6 +88,7 @@
     },
     "variants-table": {
       "title": "Variants",
+      "create": "Create Variant",
       "columns": {
         "images": {
           "title": "Images"

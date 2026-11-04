@@ -134,7 +134,7 @@ export type UpdateVariantMutationVariables = Exact<{
 export type UpdateVariantMutation = { updateVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type AppendVariantMutationVariables = Exact<{
-  appendVariantId: string;
+  id: string;
   data: CreateVariantInput;
 }>;
 
@@ -507,8 +507,8 @@ export type UpdateVariantMutationHookResult = ReturnType<typeof useUpdateVariant
 export type UpdateVariantMutationResult = ApolloReactCommon.MutationResult<UpdateVariantMutation>;
 export type UpdateVariantMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateVariantMutation, UpdateVariantMutationVariables>;
 export const AppendVariantDocument = gql`
-    mutation AppendVariant($appendVariantId: String!, $data: CreateVariantInput!) {
-  appendVariant(id: $appendVariantId, data: $data) {
+    mutation AppendVariant($id: String!, $data: CreateVariantInput!) {
+  appendVariant(id: $id, data: $data) {
     ...Product
   }
 }
@@ -529,7 +529,7 @@ export type AppendVariantMutationFn = ApolloReactCommon.MutationFunction<AppendV
  * @example
  * const [appendVariantMutation, { data, loading, error }] = useAppendVariantMutation({
  *   variables: {
- *      appendVariantId: // value for 'appendVariantId'
+ *      id: // value for 'id'
  *      data: // value for 'data'
  *   },
  * });

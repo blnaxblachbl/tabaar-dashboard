@@ -49,7 +49,7 @@ export default function CreateProductPage() {
     </PageLayout>
   );
   function onSubmit(values: ProductFormData) {
-    const characterstics = parseCharacteristics(values.characterstics);
+    const characterstics = parseCharacteristics(values.characterstics ?? []);
     createProduct({
       variables: {
         data: {

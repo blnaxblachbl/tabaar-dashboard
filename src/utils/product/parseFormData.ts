@@ -1,6 +1,9 @@
-import type { ProductFormData } from "@/components/ProductForm/types";
+type Characteristics = {
+  key: string;
+  value: string;
+};
 
-export function parseCharacteristics(chats: ProductFormData["characterstics"]) {
+export function parseCharacteristics(chats: Characteristics[]) {
   return chats.reduce(
     (acc: Record<string, string | number | boolean>, item) => {
       if (["true", "false"].includes(item.value)) {
@@ -19,7 +22,7 @@ export function createFormCharacteristics(
   chars: Record<string, string | number | boolean>,
 ) {
   return Object.entries(chars).reduce(
-    (acc: ProductFormData["characterstics"], item) => {
+    (acc: Characteristics[], item) => {
       const [key, value] = item;
       acc.push({
         key,

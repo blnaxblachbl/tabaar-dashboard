@@ -124,7 +124,7 @@ export default function EditProductPage() {
     if (!productId) {
       return;
     }
-    const characterstics = parseCharacteristics(values.characterstics);
+    const characterstics = parseCharacteristics(values.characterstics ?? []);
     updateProduct({
       variables: {
         id: productId,

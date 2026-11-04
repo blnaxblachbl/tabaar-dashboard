@@ -8,7 +8,7 @@ import {
   message,
   Divider,
 } from "antd";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
 import { Title } from "@/components/Title";
@@ -45,7 +45,14 @@ export function VariantsTable({ productId, ...props }: VariantsTableProps) {
   return (
     <>
       {messageContext}
-      <Title title={t("title")} />
+      <Title
+        title={t("title")}
+        actions={
+          <Link to="variants/create">
+            <Button icon={<PlusOutlined />}>{t("create")}</Button>
+          </Link>
+        }
+      />
       <Divider />
       <Table
         rowKey={"id"}

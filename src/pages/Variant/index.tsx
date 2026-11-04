@@ -94,7 +94,7 @@ export default function VariantPage() {
         variantId,
         data: {
           ...values,
-          characterstics: parseCharacteristics(values.characterstics),
+          characterstics: parseCharacteristics(values.characterstics ?? []),
         },
       },
     });
