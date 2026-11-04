@@ -43,6 +43,49 @@
         "text": "Submit"
       }
     },
+    "variant-form": {
+      "price": {
+        "label": "Price",
+        "errors": {
+          "required": "Price is required",
+          "invalid": "Price should be greate or equals 0"
+        }
+      },
+      "count": {
+        "label": "Count",
+        "errors": {
+          "required": "Count is required",
+          "invalid": "Count should be greate or equals 0"
+        }
+      },
+      "currency": {
+        "label": "Currency",
+        "errors": {
+          "required": "Currency is required"
+        }
+      },
+      "characterstics": {
+        "label": "Characterstics",
+        "key": {
+          "placeholder": "Category",
+          "errors": {
+            "required": "Key is required",
+            "invalid": "Key must be between 1-100 characters"
+          }
+        },
+        "value": {
+          "placeholder": "Cloth",
+          "errors": {
+            "required": "Value is required",
+            "invalid": "Value must be between 1-100 characters"
+          }
+        },
+        "add": "Add Characteristic"
+      },
+      "create-button": {
+        "text": "Submit"
+      }
+    },
     "variants-table": {
       "title": "Variants",
       "columns": {
@@ -71,6 +114,13 @@
         "okText": "Yes",
         "cancelText": "No"
       }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "Upload"
+      },
+      "uploading": "Uploading...",
+      "uploadError": "Upload failed"
     }
   },
   "pages": {
@@ -143,6 +193,15 @@
         "button": {
           "text": "Delete"
         }
+      }
+    },
+    "edit-variant": {
+      "title": "Edit Variant",
+      "images": {
+        "label": "Iamges"
+      },
+      "submit-button": {
+        "text": "Update"
       }
     }
   }

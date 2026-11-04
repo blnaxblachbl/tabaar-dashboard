@@ -89,7 +89,7 @@ export default function EditProductPage() {
           <ProductFormSkeleton />
         </div>
       )}
-      {product ? (
+      {!productLoading && product ? (
         <ProductForm
           initialValues={{
             name: product.name,
@@ -102,7 +102,8 @@ export default function EditProductPage() {
           loading={updateLoading}
           onFinish={onSubmit}
         />
-      ) : (
+      ) : null}
+      {!productLoading && !product ? (
         <Empty
           image={Empty.PRESENTED_IMAGE_SIMPLE}
           description={t("empty.description")}
@@ -111,7 +112,7 @@ export default function EditProductPage() {
             <Button>{t("empty.button.text")}</Button>
           </Link>
         </Empty>
-      )}
+      ) : null}
       {productId && (
         <div className="mt-6">
           <VariantsTable dataSource={variants} productId={productId} />

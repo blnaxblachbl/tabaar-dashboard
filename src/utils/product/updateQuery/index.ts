@@ -1,11 +1,14 @@
 import {
+  FindOneProductDocument,
   FindProductsDocument,
+  type FindOneProductQuery,
   type FindProductsQuery,
 } from "@/graphql/generated";
 import type {
   AppendProductOprions,
   DeleteProductOptions,
   UpdateProductOptions,
+  UpdateOneProductOptions,
 } from "./types";
 
 export function appentProduct({
@@ -95,6 +98,20 @@ export function deleteProduct({
         productsCount: productsCount - 1,
         scrollId,
       },
+    },
+  });
+}
+
+export function updateOneProduct({
+  client,
+  variables,
+  updatedProduct,
+}: UpdateOneProductOptions) {
+  client.writeQuery<FindOneProductQuery>({
+    query: FindOneProductDocument,
+    variables,
+    data: {
+      findOneProduct: updatedProduct,
     },
   });
 }

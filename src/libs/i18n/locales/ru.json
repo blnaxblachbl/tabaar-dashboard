@@ -43,6 +43,49 @@
         "text": "Готово"
       }
     },
+    "variant-form": {
+      "price": {
+        "label": "Цена",
+        "errors": {
+          "required": "Введите цену",
+          "invalid": "Цена должна быть больше или равно 0"
+        }
+      },
+      "count": {
+        "label": "Количество",
+        "errors": {
+          "required": "Введите количество",
+          "invalid": "Количество должно быть больше или равно 0"
+        }
+      },
+      "currency": {
+        "label": "Валюта",
+        "errors": {
+          "required": "Введите валюту"
+        }
+      },
+      "characterstics": {
+        "label": "Характеристики",
+        "key": {
+          "placeholder": "Категория",
+          "errors": {
+            "required": "Введите ключ",
+            "invalid": "Ключ должен быть от 1 до 100 символов"
+          }
+        },
+        "value": {
+          "placeholder": "Одежда",
+          "errors": {
+            "required": "Введите значение",
+            "invalid": "Значение должно быть от 1 до 100 символов"
+          }
+        },
+        "add": "Добавть Характеристику"
+      },
+      "create-button": {
+        "text": "Готово"
+      }
+    },
     "variants-table": {
       "title": "Варианты",
       "columns": {
@@ -71,6 +114,13 @@
         "okText": "Да",
         "cancelText": "Нет"
       }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "Загрузить"
+      },
+      "uploading": "Загрузка...",
+      "uploadError": "Ошибка загрузки"
     }
   },
   "pages": {
@@ -143,6 +193,15 @@
         "button": {
           "text": "Удалить"
         }
+      }
+    },
+    "edit-variant": {
+      "title": "Редатирование варианта",
+      "images": {
+        "label": "Изабражения"
+      },
+      "submit-button": {
+        "text": "Обновить"
       }
     }
   }

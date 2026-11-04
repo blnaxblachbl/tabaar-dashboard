@@ -44,13 +44,7 @@ const config: CodegenConfig = {
   generates: {
     "src/graphql/generated.ts": {
       schema: [
-        {
-          "http://localhost:4000/graphql": {
-            headers: {
-              "x-api-key": "osWK9Y6462T4mJ8A",
-            },
-          },
-        },
+        "http://localhost:4000/graphql",
         "./src/graphql/client-schema.graphql",
       ],
       documents: "./src/graphql/documents/*.graphql",

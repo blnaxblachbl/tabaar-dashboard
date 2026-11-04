@@ -1,6 +1,7 @@
 import type { ApolloCache } from "@apollo/client";
 
 import {
+  type FindOneProductQueryVariables,
   type FindProductsQueryVariables,
   type ProductFragment,
 } from "@/graphql/generated";
@@ -13,6 +14,11 @@ export type AppendProductOprions = {
 export type UpdateProductOptions = {
   client: ApolloCache;
   variables?: FindProductsQueryVariables;
+  updatedProduct: ProductFragment;
+};
+export type UpdateOneProductOptions = {
+  client: ApolloCache;
+  variables?: FindOneProductQueryVariables;
   updatedProduct: ProductFragment;
 };
 export type DeleteProductOptions = {

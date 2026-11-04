@@ -15,6 +15,7 @@
     "@apollo/client": "^4.3.5",
     "@tailwindcss/vite": "^4.3.3",
     "antd": "^6.6.8",
+    "apollo-link-rest": "^0.10.0-rc.2",
     "dayjs": "^1.11.23",
     "i18next": "^26.7.1",
     "react": "^19.2.0",
