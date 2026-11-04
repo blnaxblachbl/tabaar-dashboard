@@ -204,6 +204,12 @@
       "submit-button": {
         "text": "Update"
       }
+    },
+    "create-variant": {
+      "title": "Create variant",
+      "submit-button": {
+        "text": "Create"
+      }
     }
   }
 }

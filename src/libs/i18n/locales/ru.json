@@ -204,6 +204,12 @@
       "submit-button": {
         "text": "Обновить"
       }
+    },
+    "create-variant": {
+      "title": "Создание ваиранта",
+      "submit-button": {
+        "text": "Создать"
+      }
     }
   }
 }
