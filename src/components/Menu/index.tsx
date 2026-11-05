@@ -1,6 +1,6 @@
 import { Menu as AntMenu } from "antd";
 import { useLocation, useNavigate } from "react-router";
-import { ProductOutlined, HomeOutlined } from "@ant-design/icons";
+import { ProductOutlined, HomeOutlined, UserOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
 export function Menu() {
@@ -25,6 +25,12 @@ export function Menu() {
           label: t("products"),
           icon: <ProductOutlined />,
           onClick: () => navigate("/products"),
+        },
+        {
+          key: "/users",
+          label: t("users"),
+          icon: <UserOutlined />,
+          onClick: () => navigate("/users"),
         },
       ]}
     />

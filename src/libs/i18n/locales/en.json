@@ -2,7 +2,8 @@
   "components": {
     "menu": {
       "home": "Home",
-      "products": "Products"
+      "products": "Products",
+      "users": "Users"
     },
     "product-form": {
       "name": {
@@ -289,6 +290,23 @@
       "title": "Create variant",
       "submit-button": {
         "text": "Create"
+      }
+    },
+    "users": {
+      "title": "Users",
+      "create-button": {
+        "text": "Create"
+      },
+      "columns": {
+        "name": {
+          "label": "Name"
+        },
+        "email": {
+          "label": "Email"
+        },
+        "createdAt": {
+          "label": "Created"
+        }
       }
     }
   }

@@ -12,3 +12,11 @@ query FindMe {
         ...User
     }
 }
+query FindUsers($skip: Int, $take: Int) {
+    findUsers(skip: $skip, take: $take) {
+        users {
+            ...User
+        }
+        usersCount
+    }
+}

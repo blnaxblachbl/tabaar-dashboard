@@ -9,6 +9,7 @@ import CreateProductPage from "@/pages/Products/Create";
 import EditProductPage from "@/pages/Products/Edit";
 import VariantPage from "@/pages/Variant";
 import CreateVariantPage from "@/pages/Variant/Create";
+import UsersPage from "@/pages/Users";
 
 export function Router() {
   return (
@@ -26,6 +27,10 @@ export function Router() {
           <Route
             path="/products/:productId/variants/:variantId"
             element={<VariantPage />}
+          />
+          <Route
+            path="/users"
+            element={<UsersPage />}
           />
         </Route>
         <Route path="/login" index element={<LoginPage />} />

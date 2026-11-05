@@ -2,7 +2,8 @@
   "components": {
     "menu": {
       "home": "Главная",
-      "products": "Товары"
+      "products": "Товары",
+      "users": "Пользователи"
     },
     "product-form": {
       "name": {
@@ -289,6 +290,23 @@
       "title": "Создание ваиранта",
       "submit-button": {
         "text": "Создать"
+      }
+    },
+    "users": {
+      "title": "Пользователи",
+      "create-button": {
+        "text": "Создать"
+      },
+      "columns": {
+        "name": {
+          "label": "Имя"
+        },
+        "email": {
+          "label": "Эл. почта"
+        },
+        "createdAt": {
+          "label": "Создан"
+        }
       }
     }
   }

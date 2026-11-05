@@ -153,6 +153,14 @@ export type FindMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type FindMeQuery = { findMe: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } | null };
 
+export type FindUsersQueryVariables = Exact<{
+  skip?: number | null | undefined;
+  take?: number | null | undefined;
+}>;
+
+
+export type FindUsersQuery = { findUsers: { usersCount: number, users: Array<{ id: number, createdAt: Date, updatedAt: Date, name: string, email: string }> } };
+
 export const UserFragmentDoc = gql`
     fragment User on User {
   id
@@ -620,3 +628,50 @@ export type FindMeQueryHookResult = ReturnType<typeof useFindMeQuery>;
 export type FindMeLazyQueryHookResult = ReturnType<typeof useFindMeLazyQuery>;
 export type FindMeSuspenseQueryHookResult = ReturnType<typeof useFindMeSuspenseQuery>;
 export type FindMeQueryResult = ApolloReactCommon.QueryResult<FindMeQuery, FindMeQueryVariables>;
+export const FindUsersDocument = gql`
+    query FindUsers($skip: Int, $take: Int) {
+  findUsers(skip: $skip, take: $take) {
+    users {
+      ...User
+    }
+    usersCount
+  }
+}
+    ${UserFragmentDoc}`;
+
+/**
+ * __useFindUsersQuery__
+ *
+ * To run a query within a React component, call `useFindUsersQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindUsersQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindUsersQuery({
+ *   variables: {
+ *      skip: // value for 'skip'
+ *      take: // value for 'take'
+ *   },
+ * });
+ */
+export function useFindUsersQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<FindUsersQuery, FindUsersQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindUsersQuery, FindUsersQueryVariables>(FindUsersDocument, options);
+      }
+export function useFindUsersLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindUsersQuery, FindUsersQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindUsersQuery, FindUsersQueryVariables>(FindUsersDocument, options);
+        }
+// @ts-ignore
+export function useFindUsersSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindUsersQuery, FindUsersQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindUsersQuery, FindUsersQueryVariables>;
+export function useFindUsersSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindUsersQuery, FindUsersQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindUsersQuery | undefined, FindUsersQueryVariables>;
+export function useFindUsersSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindUsersQuery, FindUsersQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindUsersQuery, FindUsersQueryVariables>(FindUsersDocument, options);
+        }
+export type FindUsersQueryHookResult = ReturnType<typeof useFindUsersQuery>;
+export type FindUsersLazyQueryHookResult = ReturnType<typeof useFindUsersLazyQuery>;
+export type FindUsersSuspenseQueryHookResult = ReturnType<typeof useFindUsersSuspenseQuery>;
+export type FindUsersQueryResult = ApolloReactCommon.QueryResult<FindUsersQuery, FindUsersQueryVariables>;
