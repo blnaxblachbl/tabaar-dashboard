@@ -20,3 +20,8 @@ query FindUsers($skip: Int, $take: Int) {
         usersCount
     }
 }
+mutation CreateUser($data: CreateUserInput!) {
+    createUser(data: $data) {
+        ...User
+    }
+}

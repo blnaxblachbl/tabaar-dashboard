@@ -14,6 +14,11 @@ export type CreateProductInput = {
   name: string;
 };
 
+export type CreateUserInput = {
+  email: string;
+  name: string;
+};
+
 export type CreateVariantInput = {
   characterstics: Record<string, string | number | boolean>;
   count: number;
@@ -160,6 +165,13 @@ export type FindUsersQueryVariables = Exact<{
 
 
 export type FindUsersQuery = { findUsers: { usersCount: number, users: Array<{ id: number, createdAt: Date, updatedAt: Date, name: string, email: string }> } };
+
+export type CreateUserMutationVariables = Exact<{
+  data: CreateUserInput;
+}>;
+
+
+export type CreateUserMutation = { createUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
 
 export const UserFragmentDoc = gql`
     fragment User on User {
@@ -675,3 +687,36 @@ export type FindUsersQueryHookResult = ReturnType<typeof useFindUsersQuery>;
 export type FindUsersLazyQueryHookResult = ReturnType<typeof useFindUsersLazyQuery>;
 export type FindUsersSuspenseQueryHookResult = ReturnType<typeof useFindUsersSuspenseQuery>;
 export type FindUsersQueryResult = ApolloReactCommon.QueryResult<FindUsersQuery, FindUsersQueryVariables>;
+export const CreateUserDocument = gql`
+    mutation CreateUser($data: CreateUserInput!) {
+  createUser(data: $data) {
+    ...User
+  }
+}
+    ${UserFragmentDoc}`;
+export type CreateUserMutationFn = ApolloReactCommon.MutationFunction<CreateUserMutation, CreateUserMutationVariables>;
+
+/**
+ * __useCreateUserMutation__
+ *
+ * To run a mutation, you first call `useCreateUserMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateUserMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createUserMutation, { data, loading, error }] = useCreateUserMutation({
+ *   variables: {
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useCreateUserMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateUserMutation, CreateUserMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<CreateUserMutation, CreateUserMutationVariables>(CreateUserDocument, options);
+      }
+export type CreateUserMutationHookResult = ReturnType<typeof useCreateUserMutation>;
+export type CreateUserMutationResult = ApolloReactCommon.MutationResult<CreateUserMutation>;
+export type CreateUserMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateUserMutation, CreateUserMutationVariables>;

@@ -328,7 +328,14 @@
       }
     },
     "create-user": {
-      "title": "Create User"
+      "title": "Create User",
+      "submit-button": {
+        "text": "Create"
+      },
+      "toasts": {
+        "success": "User created",
+        "error": "Failed to create User"
+      }
     }
   }
 }
