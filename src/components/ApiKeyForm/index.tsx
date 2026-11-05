@@ -1,4 +1,4 @@
-import { Button, DatePicker, Form, Input } from "antd";
+import { Button, DatePicker, Form, Input, Skeleton, Space } from "antd";
 import dayjs from "dayjs";
 import { useTranslation } from "react-i18next";
 
@@ -62,5 +62,21 @@ export function ApiKeyForm({
         {submitText}
       </Button>
     </Form>
+  );
+}
+
+export function ApiKeyFormSkeleton() {
+  return (
+    <Space size={"medium"} className="w-full!" vertical>
+      <Space vertical className="w-full!">
+        <Skeleton paragraph={false} className="w-1/5!" active />
+        <Skeleton.Input block active />
+      </Space>
+      <Space vertical className="w-full!">
+        <Skeleton paragraph={false} className="w-1/5!" active />
+        <Skeleton.Input block active />
+      </Space>
+      <Skeleton.Button block active />
+    </Space>
   );
 }

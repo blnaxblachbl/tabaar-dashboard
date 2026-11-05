@@ -14,6 +14,7 @@ import CreateUserPage from "@/pages/Users/Create";
 import { EditUserPage } from "@/pages/Users/Edit";
 import ApiKeysPage from "@/pages/ApiKeys";
 import CreateApiKeyPage from "@/pages/ApiKeys/Create";
+import EditApiKeyPage from "@/pages/ApiKeys/Edit";
 
 export function Router() {
   return (
@@ -37,6 +38,7 @@ export function Router() {
           <Route path="/users/:userId" element={<EditUserPage />} />
           <Route path="/keys" element={<ApiKeysPage />} />
           <Route path="/keys/create" element={<CreateApiKeyPage />} />
+          <Route path="/keys/:apiKeyId" element={<EditApiKeyPage />} />
         </Route>
         <Route path="/login" index element={<LoginPage />} />
       </Routes>

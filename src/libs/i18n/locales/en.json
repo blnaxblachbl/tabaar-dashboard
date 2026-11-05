@@ -406,6 +406,22 @@
         "success": "Api Key created",
         "error": "Failed to create Api Key"
       }
+    },
+    "update-api-key": {
+      "title": "Edit Api Key",
+      "submit-button": {
+        "text": "Update"
+      },
+      "empty": {
+        "description": "Api Key not found",
+        "button": {
+          "text": "Back to list"
+        },
+        "toasts": {
+          "success": "Api Key updated",
+          "error": "Failed to update Api Key"
+        }
+      }
     }
   }
 }

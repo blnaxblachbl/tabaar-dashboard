@@ -115,6 +115,13 @@ export type CreateApiKeyMutationVariables = Exact<{
 
 export type CreateApiKeyMutation = { createApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
 
+export type FindOneApiKeyQueryVariables = Exact<{
+  id: number;
+}>;
+
+
+export type FindOneApiKeyQuery = { findOneApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
+
 export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string };
 
 export type ProductFragment = { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> };
@@ -429,6 +436,49 @@ export function useCreateApiKeyMutation(baseOptions?: ApolloReactHooks.MutationH
 export type CreateApiKeyMutationHookResult = ReturnType<typeof useCreateApiKeyMutation>;
 export type CreateApiKeyMutationResult = ApolloReactCommon.MutationResult<CreateApiKeyMutation>;
 export type CreateApiKeyMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateApiKeyMutation, CreateApiKeyMutationVariables>;
+export const FindOneApiKeyDocument = gql`
+    query FindOneApiKey($id: Int!) {
+  findOneApiKey(id: $id) {
+    ...ApiKey
+  }
+}
+    ${ApiKeyFragmentDoc}`;
+
+/**
+ * __useFindOneApiKeyQuery__
+ *
+ * To run a query within a React component, call `useFindOneApiKeyQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindOneApiKeyQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindOneApiKeyQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useFindOneApiKeyQuery(baseOptions: ApolloReactHooks.QueryHookOptions<FindOneApiKeyQuery, FindOneApiKeyQueryVariables> & ({ variables: FindOneApiKeyQueryVariables; skip?: boolean; } | { skip: boolean; }) ) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>(FindOneApiKeyDocument, options);
+      }
+export function useFindOneApiKeyLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>(FindOneApiKeyDocument, options);
+        }
+// @ts-ignore
+export function useFindOneApiKeySuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>;
+export function useFindOneApiKeySuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindOneApiKeyQuery | undefined, FindOneApiKeyQueryVariables>;
+export function useFindOneApiKeySuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>(FindOneApiKeyDocument, options);
+        }
+export type FindOneApiKeyQueryHookResult = ReturnType<typeof useFindOneApiKeyQuery>;
+export type FindOneApiKeyLazyQueryHookResult = ReturnType<typeof useFindOneApiKeyLazyQuery>;
+export type FindOneApiKeySuspenseQueryHookResult = ReturnType<typeof useFindOneApiKeySuspenseQuery>;
+export type FindOneApiKeyQueryResult = ApolloReactCommon.QueryResult<FindOneApiKeyQuery, FindOneApiKeyQueryVariables>;
 export const FindProductsDocument = gql`
     query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
   findProducts(query: $query, take: $take, filters: $filters) {

@@ -21,3 +21,8 @@ mutation CreateApiKey($data: CreateApiKeyInput!) {
         ...ApiKey
     }
 }
+query FindOneApiKey($id: Int!) {
+    findOneApiKey(id: $id) {
+        ...ApiKey
+    }
+}
