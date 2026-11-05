@@ -200,6 +200,24 @@
       "submit-button": {
         "text": "Submit"
       }
+    },
+    "user-form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "Name is required",
+          "invalid": "Name must be between 1-100 characters"
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "Email is required",
+          "invalid": "invalid Email"
+        }
+      }
     }
   },
   "pages": {

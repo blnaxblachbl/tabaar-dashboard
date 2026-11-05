@@ -200,6 +200,24 @@
       "submit-button": {
         "text": "Применить"
       }
+    },
+    "user-form": {
+      "name": {
+        "label": "Имя",
+        "placeholder": "Иванов Иван",
+        "errors": {
+          "required": "Введите имя",
+          "invalid": "Имя должно быть от 1 до 100 символов"
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "ivan-ivanov@tabaar.com",
+        "errors": {
+          "required": "Введите email",
+          "invalid": "Не верный формат email"
+        }
+      }
     }
   },
   "pages": {
