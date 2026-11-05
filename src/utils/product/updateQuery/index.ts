@@ -10,10 +10,11 @@ import type {
   UpdateProductOptions,
   UpdateOneProductOptions,
 } from "./types";
+import { DEFAULT_PRODUCTS_VARIABLES } from "@/utils/constants";
 
 export function appentProduct({
   client,
-  variables = { take: 50 },
+  variables = DEFAULT_PRODUCTS_VARIABLES,
   newProduct,
 }: AppendProductOprions) {
   const prev = client.readQuery<FindProductsQuery>({
@@ -40,7 +41,7 @@ export function appentProduct({
 
 export function updateProduct({
   client,
-  variables = { take: 50 },
+  variables = DEFAULT_PRODUCTS_VARIABLES,
   updatedProduct,
 }: UpdateProductOptions) {
   const prev = client.readQuery<FindProductsQuery>({
@@ -75,7 +76,7 @@ export function updateProduct({
 
 export function deleteProduct({
   client,
-  variables = { take: 50 },
+  variables = DEFAULT_PRODUCTS_VARIABLES,
   deletedProductId,
 }: DeleteProductOptions) {
   const prev = client.readQuery<FindProductsQuery>({

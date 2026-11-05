@@ -14,23 +14,20 @@ import {
   type FindProductsQueryVariables,
 } from "@/graphql/generated";
 import { Title } from "@/components/Title";
+import { parseProductsSearchParams } from "@/utils/searchParams/products";
+import { CollapsibleProductsFilters } from "@/components/ProductsFilters";
 
 export default function ProductsPage() {
   const { t } = useTranslation("", {
     keyPrefix: "pages.products",
   });
-  const [searchParams] = useSearchParams({
-    take: "50",
-  });
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const variables: FindProductsQueryVariables = {
-    take: Number(searchParams.get("take")),
-  };
+  const variables = parseProductsSearchParams(searchParams);
   const { data, loading } = useFindProductsQuery({
     variables,
-    refetchOn: {
-      windowFocus: true,
-    },
+    fetchPolicy: "cache-and-network",
+    notifyOnNetworkStatusChange: true,
   });
   const [scroll, { loading: scrollLoading, client }] =
     useScrollProductsLazyQuery({
@@ -52,6 +49,12 @@ export default function ProductsPage() {
           </Link>
         }
       />
+      <div className="mt-6">
+        <CollapsibleProductsFilters
+          variables={variables}
+          onChange={onFilterChange}
+        />
+      </div>
       <Divider />
       <Activity mode={loading ? "visible" : "hidden"}>
         <Row gutter={[15, 15]}>
@@ -114,5 +117,24 @@ export default function ProductsPage() {
         },
       });
     }
+  }
+  function onFilterChange({ query, filters }: FindProductsQueryVariables) {
+    if (query) {
+      searchParams.set("query", query);
+    } else {
+      searchParams.delete("query");
+    }
+    if (filters) {
+      const stringFilters = JSON.stringify(filters);
+      if (stringFilters === "{}") {
+        searchParams.delete("filters");
+      } else {
+        const stringFiltersBase64 = btoa(stringFilters);
+        searchParams.set("filters", stringFiltersBase64);
+      }
+    } else {
+      searchParams.delete("filters");
+    }
+    setSearchParams(searchParams);
   }
 }
