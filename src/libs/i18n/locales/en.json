@@ -394,7 +394,8 @@
       },
       "toasts": {
         "success": "Key deleted",
-        "error": "Failed to delete Key"
+        "error": "Failed to delete Key",
+        "copied": "Key copied"
       }
     },
     "create-api-key": {

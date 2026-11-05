@@ -19,7 +19,7 @@ import {
 } from "@/graphql/generated";
 import { useTranslation } from "react-i18next";
 import dayjs from "dayjs";
-import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
+import { CopyOutlined, DeleteOutlined, PlusOutlined } from "@ant-design/icons";
 
 export default function ApiKeysPage() {
   const [searchParams, setSearchParams] = useSearchParams({
@@ -98,20 +98,26 @@ export default function ApiKeysPage() {
           {
             title: t("columns.actions.title"),
             dataIndex: "id",
-            render: (id: number) => (
-              <Popconfirm
-                title={t("delete.title")}
-                okText={t("delete.okText")}
-                cancelText={t("delete.cancelText")}
-                onConfirm={deleteKey.bind(null, id)}
-              >
+            render: (id: number, { key }) => (
+              <Space>
+                <Popconfirm
+                  title={t("delete.title")}
+                  okText={t("delete.okText")}
+                  cancelText={t("delete.cancelText")}
+                  onConfirm={deleteKey.bind(null, id)}
+                >
+                  <Button
+                    loading={deleteLoading}
+                    danger
+                    size="small"
+                    icon={<DeleteOutlined />}
+                  />
+                </Popconfirm>
                 <Button
-                  loading={deleteLoading}
-                  danger
-                  size="small"
-                  icon={<DeleteOutlined />}
+                  onClick={copyKey.bind(null, key)}
+                  icon={<CopyOutlined />}
                 />
-              </Popconfirm>
+              </Space>
             ),
           },
         ]}
@@ -135,5 +141,9 @@ export default function ApiKeysPage() {
     delteApiKey({
       variables: { id },
     });
+  }
+  async function copyKey(key: string) {
+    await navigator.clipboard.writeText(key);
+    messageApi.success(t("toasts.copied"));
   }
 }
