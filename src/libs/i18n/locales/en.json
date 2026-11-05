@@ -122,6 +122,83 @@
       },
       "uploading": "Uploading...",
       "uploadError": "Upload failed"
+    },
+    "products-filteres": {
+      "title": "Filters",
+      "products": {
+        "title": "Product Filters",
+        "query": {
+          "label": "Search",
+          "placeholder": "T-shirt..."
+        },
+        "availability": {
+          "label": "Availability",
+          "placeholder": "Select Availability",
+          "options": {
+            "available": "Available",
+            "not-available": "Not Available"
+          }
+        },
+        "deleted": {
+          "label": "Deleted",
+          "placeholder": "Select Deleted",
+          "options": {
+            "deleted": "Available",
+            "not-deleted": "Not Available"
+          }
+        },
+        "min-price": {
+          "label": "Min Price",
+          "placeholder-from": "From",
+          "placeholder-to": "To"
+        },
+        "max-price": {
+          "label": "Max Price",
+          "placeholder-from": "From",
+          "placeholder-to": "To"
+        },
+        "characterstics": {
+          "label": "Characterstics",
+          "placeholder-key": "Key",
+          "placeholder-value": "Value",
+          "errors": {
+            "key-required": "Key is required",
+            "value-required": "Value is required"
+          }
+        }
+      },
+      "variants": {
+        "title": "Variants Filters",
+        "currency": {
+          "label": "Currency",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "Price",
+          "placeholder-from": "From",
+          "placeholder-to": "To"
+        },
+        "count": {
+          "label": "Count",
+          "placeholder-from": "From",
+          "placeholder-to": "To"
+        },
+        "characterstics": {
+          "label": "Characterstics",
+          "placeholder-key": "Key",
+          "placeholder-value": "Value",
+          "errors": {
+            "key-required": "Key is required",
+            "value-required": "Value is required"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "Reset"
+      },
+      "submit-button": {
+        "text": "Submit"
+      }
     }
   },
   "pages": {

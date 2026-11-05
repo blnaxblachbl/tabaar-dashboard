@@ -13,16 +13,17 @@ import {
   Divider,
 } from "antd";
 import { FilterOutlined, MinusOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 import type {
   FiltersInput,
   FindProductsQueryVariables,
 } from "@/graphql/generated";
-import type { ProductsFiltersProps, ProductsFiltersFormData } from "./types";
 import {
   parseCharacteristics,
   createFormCharacteristics,
 } from "@/utils/product/parseFormData";
+import type { ProductsFiltersProps, ProductsFiltersFormData } from "./types";
 
 function getFiltersCount(variables: FindProductsQueryVariables) {
   let count = 0;
@@ -68,13 +69,16 @@ export function CollapsibleProductsFilters({
   ...props
 }: ProductsFiltersProps) {
   const filtersCount = useMemo(() => getFiltersCount(variables), [variables]);
+  const { t } = useTranslation("", {
+    keyPrefix: "components.products-filteres",
+  });
   return (
     <Collapse
       defaultActiveKey={filtersCount ? [0] : []}
       items={[
         {
           key: 0,
-          label: "Filters",
+          label: t("title"),
           children: <ProductsFilters variables={variables} {...props} />,
           classNames: {
             body: "bg-transparent!",
@@ -96,6 +100,9 @@ export function ProductsFilters({
 }: ProductsFiltersProps) {
   const filtersCount = useMemo(() => getFiltersCount(variables), [variables]);
   const [form] = Form.useForm();
+  const { t } = useTranslation("", {
+    keyPrefix: "components.products-filteres",
+  });
 
   useEffect(() => {
     form.setFieldsValue({
@@ -130,17 +137,17 @@ export function ProductsFilters({
     >
       <Row gutter={[12, 12]}>
         <Col span={24}>
-          <Divider size="small">Product Filters</Divider>
+          <Divider size="small">{t("products.title")}</Divider>
         </Col>
         <Col span={8}>
           <Form.Item
             name="query"
-            label="Search"
+            label={t("products.query.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
             <Input
-              placeholder="T-shirt"
+              placeholder={t("products.query.placeholder")}
               onChange={(e) => {
                 if (!e.currentTarget.value) {
                   form.submit();
@@ -153,20 +160,20 @@ export function ProductsFilters({
         </Col>
         <Col span={8}>
           <Form.Item
-            label="Availability"
+            label={t("products.availability.label")}
             name={["filters", "available"]}
             layout="vertical"
             rootClassName="m-0!"
           >
             <Select
-              placeholder="Select Availability"
+              placeholder={t("products.availability.placeholder")}
               options={[
                 {
-                  label: "Available",
+                  label: t("products.availability.options.available"),
                   value: true,
                 },
                 {
-                  label: "Not Available",
+                  label: t("products.availability.options.not-available"),
                   value: false,
                 },
               ]}
@@ -179,19 +186,19 @@ export function ProductsFilters({
         <Col span={8}>
           <Form.Item
             name={["filters", "deleted"]}
-            label="Deleted"
+            label={t("products.deleted.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
             <Select
-              placeholder="Select Deleted"
+              placeholder={t("products.deleted.placeholder")}
               options={[
                 {
-                  label: "Deleted",
+                  label: t("products.deleted.options.deleted"),
                   value: true,
                 },
                 {
-                  label: "Not Deleted",
+                  label: t("products.deleted.options.not-deleted"),
                   value: false,
                 },
               ]}
@@ -200,12 +207,16 @@ export function ProductsFilters({
           </Form.Item>
         </Col>
         <Col span={8}>
-          <Form.Item label="Min Price" layout="vertical" rootClassName="m-0!">
+          <Form.Item
+            label={t("products.min-price.label")}
+            layout="vertical"
+            rootClassName="m-0!"
+          >
             <Space.Compact rootClassName="w-full!">
               <Form.Item name={["filters", "minPrice", "gte"]} noStyle>
                 <InputNumber
                   min={0}
-                  placeholder="From"
+                  placeholder={t("products.min-price.placeholder-from")}
                   rootClassName="w-full!"
                 />
               </Form.Item>
@@ -214,18 +225,26 @@ export function ProductsFilters({
                 className="pointer-events-none! text-xs!"
               />
               <Form.Item name={["filters", "minPrice", "lte"]} noStyle>
-                <InputNumber min={0} placeholder="To" rootClassName="w-full!" />
+                <InputNumber
+                  min={0}
+                  placeholder={t("products.min-price.placeholder-to")}
+                  rootClassName="w-full!"
+                />
               </Form.Item>
             </Space.Compact>
           </Form.Item>
         </Col>
         <Col span={8}>
-          <Form.Item label="Max Price" layout="vertical" rootClassName="m-0!">
+          <Form.Item
+            label={t("products.max-price.label")}
+            layout="vertical"
+            rootClassName="m-0!"
+          >
             <Space.Compact rootClassName="w-full!">
               <Form.Item name={["filters", "maxPrice", "gte"]} noStyle>
                 <InputNumber
                   min={0}
-                  placeholder="From"
+                  placeholder={t("products.max-price.placeholder-from")}
                   rootClassName="w-full!"
                 />
               </Form.Item>
@@ -234,14 +253,18 @@ export function ProductsFilters({
                 className="pointer-events-none! text-xs!"
               />
               <Form.Item name={["filters", "maxPrice", "lte"]} noStyle>
-                <InputNumber min={0} placeholder="To" rootClassName="w-full!" />
+                <InputNumber
+                  min={0}
+                  placeholder={t("products.max-price.placeholder-to")}
+                  rootClassName="w-full!"
+                />
               </Form.Item>
             </Space.Compact>
           </Form.Item>
         </Col>
         <Col span={8}>
           <Form.Item
-            label="Characterstics"
+            label={t("products.characterstics.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
@@ -252,12 +275,18 @@ export function ProductsFilters({
                 rules={[
                   {
                     validator: (_, value: string | undefined) => {
-                      return charValidator(value, "value", "Key is required");
+                      return charValidator(
+                        value,
+                        "value",
+                        t("products.characterstics.errors.key-required"),
+                      );
                     },
                   },
                 ]}
               >
-                <Input placeholder="Key" />
+                <Input
+                  placeholder={t("products.characterstics.placeholder-key")}
+                />
               </Form.Item>
               <Button className="pointer-events-none! text-xs!">:</Button>
               <Form.Item
@@ -266,28 +295,34 @@ export function ProductsFilters({
                 rules={[
                   {
                     validator: (_, value: string | undefined) => {
-                      return charValidator(value, "key", "Value is required");
+                      return charValidator(
+                        value,
+                        "key",
+                        t("products.characterstics.errors.value-required"),
+                      );
                     },
                   },
                 ]}
               >
-                <Input placeholder="Value" />
+                <Input
+                  placeholder={t("products.characterstics.placeholder-value")}
+                />
               </Form.Item>
             </Space.Compact>
           </Form.Item>
         </Col>
         <Col span={24} className="mt-3">
-          <Divider size="small">Variants Filters</Divider>
+          <Divider size="small">{t("variants.title")}</Divider>
         </Col>
         <Col span={8}>
           <Form.Item
             name={["filters", "variants", "currency"]}
-            label="Currency"
+            label={t("variants.currency.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
             <Input
-              placeholder="USD"
+              placeholder={t("variants.currency.placeholder")}
               onChange={(e) => {
                 if (!e.currentTarget.value) {
                   form.submit();
@@ -299,12 +334,16 @@ export function ProductsFilters({
           </Form.Item>
         </Col>
         <Col span={8}>
-          <Form.Item label="Price" layout="vertical" rootClassName="m-0!">
+          <Form.Item
+            label={t("variants.price.label")}
+            layout="vertical"
+            rootClassName="m-0!"
+          >
             <Space.Compact rootClassName="w-full!">
               <Form.Item name={["filters", "variants", "price", "gte"]} noStyle>
                 <InputNumber
                   min={0}
-                  placeholder="From"
+                  placeholder={t("variants.price.placeholder-from")}
                   rootClassName="w-full!"
                 />
               </Form.Item>
@@ -313,18 +352,26 @@ export function ProductsFilters({
                 className="pointer-events-none! text-xs!"
               />
               <Form.Item name={["filters", "variants", "price", "lte"]} noStyle>
-                <InputNumber min={0} placeholder="To" rootClassName="w-full!" />
+                <InputNumber
+                  min={0}
+                  placeholder={t("variants.price.placeholder-to")}
+                  rootClassName="w-full!"
+                />
               </Form.Item>
             </Space.Compact>
           </Form.Item>
         </Col>
         <Col span={8}>
-          <Form.Item label="Count" layout="vertical" rootClassName="m-0!">
+          <Form.Item
+            label={t("variants.count.label")}
+            layout="vertical"
+            rootClassName="m-0!"
+          >
             <Space.Compact rootClassName="w-full!">
               <Form.Item name={["filters", "variants", "count", "gte"]} noStyle>
                 <InputNumber
                   min={0}
-                  placeholder="From"
+                  placeholder={t("variants.count.placeholder-to")}
                   rootClassName="w-full!"
                 />
               </Form.Item>
@@ -333,14 +380,18 @@ export function ProductsFilters({
                 className="pointer-events-none! text-xs!"
               />
               <Form.Item name={["filters", "variants", "count", "lte"]} noStyle>
-                <InputNumber min={0} placeholder="To" rootClassName="w-full!" />
+                <InputNumber
+                  min={0}
+                  placeholder={t("variants.count.placeholder-to")}
+                  rootClassName="w-full!"
+                />
               </Form.Item>
             </Space.Compact>
           </Form.Item>
         </Col>
         <Col span={8}>
           <Form.Item
-            label="Characterstics"
+            label={t("products.characterstics.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
@@ -351,12 +402,18 @@ export function ProductsFilters({
                 rules={[
                   {
                     validator: (_, value: string | undefined) => {
-                      return charValidator(value, "value", "Key is required");
+                      return variantCharValidator(
+                        value,
+                        "value",
+                        t("variants.characterstics.errors.key-required"),
+                      );
                     },
                   },
                 ]}
               >
-                <Input placeholder="Key" />
+                <Input
+                  placeholder={t("products.characterstics.placeholder-key")}
+                />
               </Form.Item>
               <Button className="pointer-events-none! text-xs!">:</Button>
               <Form.Item
@@ -365,12 +422,18 @@ export function ProductsFilters({
                 rules={[
                   {
                     validator: (_, value: string | undefined) => {
-                      return charValidator(value, "key", "Value is required");
+                      return variantCharValidator(
+                        value,
+                        "key",
+                        t("variants.characterstics.errors.value-required"),
+                      );
                     },
                   },
                 ]}
               >
-                <Input placeholder="Value" />
+                <Input
+                  placeholder={t("products.characterstics.placeholder-value")}
+                />
               </Form.Item>
             </Space.Compact>
           </Form.Item>
@@ -378,10 +441,10 @@ export function ProductsFilters({
         <Col span={8} offset={16}>
           <Space.Compact rootClassName="w-full!">
             <Button disabled={filtersCount === 0} onClick={resetFilters} block>
-              Reset
+              {t("reset-button.text")}
             </Button>
             <Button htmlType="submit" type={"primary"} block>
-              Submit
+              {t("submit-button.text")}
             </Button>
           </Space.Compact>
         </Col>
@@ -459,6 +522,19 @@ export function ProductsFilters({
     errorText: string,
   ): Promise<string | void> {
     if (!value && form.getFieldValue(["filters", "characterstics", peerKey])) {
+      return Promise.reject(errorText);
+    }
+    return Promise.resolve();
+  }
+  function variantCharValidator(
+    value: string | undefined,
+    peerKey: string,
+    errorText: string,
+  ): Promise<string | void> {
+    if (
+      !value &&
+      form.getFieldValue(["filters", "variants", "characterstics", peerKey])
+    ) {
       return Promise.reject(errorText);
     }
     return Promise.resolve();

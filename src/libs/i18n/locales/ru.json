@@ -122,6 +122,83 @@
       },
       "uploading": "Загрузка...",
       "uploadError": "Ошибка загрузки"
+    },
+    "products-filteres": {
+      "title": "Фильтры",
+      "products": {
+        "title": "Фильтры товара",
+        "query": {
+          "label": "Поиск",
+          "placeholder": "Футбоклка..."
+        },
+        "availability": {
+          "label": "Доступность",
+          "placeholder": "Выберите доступность",
+          "options": {
+            "available": "Доступно",
+            "not-available": "Не доступно"
+          }
+        },
+        "deleted": {
+          "label": "Архив",
+          "placeholder": "Выберите статус",
+          "options": {
+            "deleted": "Удалён",
+            "not-deleted": "Не удалён"
+          }
+        },
+        "min-price": {
+          "label": "Мин. цена",
+          "placeholder-from": "От",
+          "placeholder-to": "До"
+        },
+        "max-price": {
+          "label": "Макс. цена",
+          "placeholder-from": "От",
+          "placeholder-to": "До"
+        },
+        "characterstics": {
+          "label": "Характеристики",
+          "placeholder-key": "Ключ",
+          "placeholder-value": "Значение",
+          "errors": {
+            "key-required": "Введите ключ",
+            "value-required": "Введите значение"
+          }
+        }
+      },
+      "variants": {
+        "title": "Фильтры варианта",
+        "currency": {
+          "label": "Валюта",
+          "placeholder": "RUB"
+        },
+        "price": {
+          "label": "Цена",
+          "placeholder-from": "От",
+          "placeholder-to": "До"
+        },
+        "count": {
+          "label": "Количество",
+          "placeholder-from": "От",
+          "placeholder-to": "До"
+        },
+        "characterstics": {
+          "label": "Характеристики",
+          "placeholder-key": "Ключ",
+          "placeholder-value": "Значение",
+          "errors": {
+            "key-required": "Введите ключ",
+            "value-required": "Введите значение"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "Сбросить"
+      },
+      "submit-button": {
+        "text": "Применить"
+      }
     }
   },
   "pages": {
