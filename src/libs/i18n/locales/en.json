@@ -334,14 +334,26 @@
       },
       "columns": {
         "name": {
-          "label": "Name"
+          "title": "Name"
         },
         "email": {
-          "label": "Email"
+          "title": "Email"
         },
         "createdAt": {
-          "label": "Created"
+          "title": "Created"
+        },
+        "actions": {
+          "title": "Actions"
         }
+      },
+      "delete": {
+        "title": "Do you wnt to delete this User?",
+        "okText": "Yes",
+        "cancelText": "No"
+      },
+      "toasts": {
+        "deleted": "User deleted",
+        "delete-error": "Failed to delete User"
       }
     },
     "create-user": {

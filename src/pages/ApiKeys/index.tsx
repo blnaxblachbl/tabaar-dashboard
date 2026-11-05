@@ -14,8 +14,10 @@ import { PageLayout } from "@/components/PageLayout";
 import { Title } from "@/components/Title";
 import { DEFAULT_API_KEYS_VARIABLES } from "@/utils/constants";
 import {
+  FindApiKeysDocument,
   useDeleteApiKeyMutation,
   useFindApiKeysQuery,
+  type FindApiKeysQuery,
 } from "@/graphql/generated";
 import { useTranslation } from "react-i18next";
 import dayjs from "dayjs";
@@ -31,13 +33,18 @@ export default function ApiKeysPage() {
   const [messageApi, messageContext] = message.useMessage();
   const page = Number(searchParams.get("page"));
 
+  const variables = {
+    ...DEFAULT_API_KEYS_VARIABLES,
+    skip: (page - 1) * DEFAULT_API_KEYS_VARIABLES.take!,
+  };
+
   const { data, loading } = useFindApiKeysQuery({
     fetchPolicy: "cache-and-network",
-    variables: {
-      ...DEFAULT_API_KEYS_VARIABLES,
-      skip: (page - 1) * DEFAULT_API_KEYS_VARIABLES.take!,
-    },
+    variables,
   });
+
+  const apiKeys = data?.findApiKeys.apiKeys ?? [];
+  const apiKeysCount = data?.findApiKeys.apiKeysCount ?? 0;
 
   const [delteApiKey, { loading: deleteLoading }] = useDeleteApiKeyMutation({
     onCompleted() {
@@ -46,10 +53,21 @@ export default function ApiKeysPage() {
     onError() {
       messageApi.error(t("toasts.error"));
     },
+    update(client, { data }) {
+      if (data?.deleteApiKey) {
+        client.writeQuery<FindApiKeysQuery>({
+          query: FindApiKeysDocument,
+          variables,
+          data: {
+            findApiKeys: {
+              apiKeys: apiKeys.filter((u) => u.id !== data.deleteApiKey.id),
+              apiKeysCount: apiKeysCount - 1,
+            },
+          },
+        });
+      }
+    },
   });
-
-  const apiKeys = data?.findApiKeys.apiKeys ?? [];
-  const apiKeysCount = data?.findApiKeys.apiKeysCount;
 
   return (
     <PageLayout>
@@ -109,7 +127,6 @@ export default function ApiKeysPage() {
                   <Button
                     loading={deleteLoading}
                     danger
-                    size="small"
                     icon={<DeleteOutlined />}
                   />
                 </Popconfirm>

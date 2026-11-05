@@ -35,3 +35,8 @@ mutation UpdateUser($id: Int!, $data: UpdateUserInput!) {
         ...User
     }
 }
+mutation DeleteUser($id: Int!) {
+    deleteUser(id: $id) {
+        ...User
+    }
+}

@@ -334,14 +334,26 @@
       },
       "columns": {
         "name": {
-          "label": "Имя"
+          "title": "Имя"
         },
         "email": {
-          "label": "Эл. почта"
+          "title": "Эл. почта"
         },
         "createdAt": {
-          "label": "Создан"
+          "title": "Создан"
+        },
+        "actions": {
+          "title": "Действия"
         }
+      },
+      "delete": {
+        "title": "Хотите удалить этого пользователя?",
+        "okText": "Да",
+        "cancelText": "Нет"
+      },
+      "toasts": {
+        "deleted": "Пользователь удалён",
+        "delete-error": "Произошла ошибка при удалении пользователя"
       }
     },
     "create-user": {
