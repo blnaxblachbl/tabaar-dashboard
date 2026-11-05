@@ -53,6 +53,7 @@ export function ApiKeyForm({
         <DatePicker
           allowClear={false}
           minDate={dayjs().add(1, "hour")}
+          maxDate={dayjs().add(90, "days")}
           className="w-full"
           showTime
         />

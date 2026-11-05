@@ -8,6 +8,11 @@ import { gql } from '@apollo/client';
 import * as ApolloReactCommon from '@apollo/client/react';
 import * as ApolloReactHooks from '@apollo/client/react';
 const defaultOptions = {} as const;
+export type CreateApiKeyInput = {
+  expiredAt: Date;
+  name: string;
+};
+
 export type CreateProductInput = {
   characterstics?: Record<string, string | number | boolean> | null | undefined;
   description: string;
@@ -51,7 +56,7 @@ export type LoginUserInput = {
 };
 
 export type UpdateApiKeyInput = {
-  expiresAt?: Date | null | undefined;
+  expiredAt?: Date | null | undefined;
   name?: string | null | undefined;
 };
 
@@ -102,6 +107,13 @@ export type UpdateApiKeyMutationVariables = Exact<{
 
 
 export type UpdateApiKeyMutation = { updateApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
+
+export type CreateApiKeyMutationVariables = Exact<{
+  data: CreateApiKeyInput;
+}>;
+
+
+export type CreateApiKeyMutation = { createApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
 
 export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string };
 
@@ -384,6 +396,39 @@ export function useUpdateApiKeyMutation(baseOptions?: ApolloReactHooks.MutationH
 export type UpdateApiKeyMutationHookResult = ReturnType<typeof useUpdateApiKeyMutation>;
 export type UpdateApiKeyMutationResult = ApolloReactCommon.MutationResult<UpdateApiKeyMutation>;
 export type UpdateApiKeyMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateApiKeyMutation, UpdateApiKeyMutationVariables>;
+export const CreateApiKeyDocument = gql`
+    mutation CreateApiKey($data: CreateApiKeyInput!) {
+  createApiKey(data: $data) {
+    ...ApiKey
+  }
+}
+    ${ApiKeyFragmentDoc}`;
+export type CreateApiKeyMutationFn = ApolloReactCommon.MutationFunction<CreateApiKeyMutation, CreateApiKeyMutationVariables>;
+
+/**
+ * __useCreateApiKeyMutation__
+ *
+ * To run a mutation, you first call `useCreateApiKeyMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateApiKeyMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createApiKeyMutation, { data, loading, error }] = useCreateApiKeyMutation({
+ *   variables: {
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useCreateApiKeyMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateApiKeyMutation, CreateApiKeyMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<CreateApiKeyMutation, CreateApiKeyMutationVariables>(CreateApiKeyDocument, options);
+      }
+export type CreateApiKeyMutationHookResult = ReturnType<typeof useCreateApiKeyMutation>;
+export type CreateApiKeyMutationResult = ApolloReactCommon.MutationResult<CreateApiKeyMutation>;
+export type CreateApiKeyMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateApiKeyMutation, CreateApiKeyMutationVariables>;
 export const FindProductsDocument = gql`
     query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
   findProducts(query: $query, take: $take, filters: $filters) {

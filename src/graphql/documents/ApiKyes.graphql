@@ -16,3 +16,8 @@ mutation UpdateApiKey($id: Int!, $data: UpdateApiKeyInput!) {
         ...ApiKey
     }
 }
+mutation CreateApiKey($data: CreateApiKeyInput!) {
+    createApiKey(data: $data) {
+        ...ApiKey
+    }
+}

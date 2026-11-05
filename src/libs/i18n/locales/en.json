@@ -398,7 +398,14 @@
       }
     },
     "create-api-key": {
-      "title": "Create Api Key"
+      "title": "Create Api Key",
+      "submit-button": {
+        "text": "Create"
+      },
+      "toasts": {
+        "success": "Api Key created",
+        "error": "Failed to create Api Key"
+      }
     }
   }
 }
