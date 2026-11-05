@@ -123,7 +123,8 @@
         "text": "Upload"
       },
       "uploading": "Uploading...",
-      "uploadError": "Upload failed"
+      "uploadError": "Upload failed",
+      "sizeError": "File too large"
     },
     "products-filteres": {
       "title": "Filters",
@@ -263,6 +264,13 @@
       "title": "Products",
       "create-button": {
         "text": "Create"
+      },
+      "file-button": {
+        "text": "With file"
+      },
+      "toasts": {
+        "success": "Products created",
+        "error": "Failed to create Products with file"
       },
       "empty": {
         "description": "Products not found",

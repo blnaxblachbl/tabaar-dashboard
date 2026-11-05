@@ -1,6 +1,6 @@
 import { Activity } from "react";
-import { Button, Col, Divider, Empty, Row } from "antd";
-import { PlusOutlined } from "@ant-design/icons";
+import { Button, Col, Divider, Empty, message, Row, Space, Upload } from "antd";
+import { PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import { Link, useSearchParams } from "react-router";
 import { useTranslation } from "react-i18next";
 
@@ -16,15 +16,17 @@ import {
 import { Title } from "@/components/Title";
 import { parseProductsSearchParams } from "@/utils/searchParams/products";
 import { CollapsibleProductsFilters } from "@/components/ProductsFilters";
+import { useBulkCreate } from "@/hooks/useBulkCreate";
 
 export default function ProductsPage() {
   const { t } = useTranslation("", {
     keyPrefix: "pages.products",
   });
   const [searchParams, setSearchParams] = useSearchParams();
+  const [messageApi, mContext] = message.useMessage();
 
   const variables = parseProductsSearchParams(searchParams);
-  const { data, loading } = useFindProductsQuery({
+  const { data, loading, refetch } = useFindProductsQuery({
     variables,
     fetchPolicy: "cache-and-network",
     notifyOnNetworkStatusChange: true,
@@ -34,6 +36,15 @@ export default function ProductsPage() {
       fetchPolicy: "no-cache",
       notifyOnNetworkStatusChange: true,
     });
+  const { bulkCreate, loading: bulkLoading } = useBulkCreate({
+    onCompleted() {
+      messageApi.success(t("toasts.success"));
+      refetch();
+    },
+    onError() {
+      messageApi.error(t("toasts.error"));
+    },
+  });
 
   const products = data?.findProducts.products ?? [];
   const productsCount = data?.findProducts.productsCount ?? 0;
@@ -41,12 +52,40 @@ export default function ProductsPage() {
 
   return (
     <PageLayout>
+      {mContext}
       <Title
         title={t("title")}
         actions={
-          <Link to={"create"}>
-            <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>
-          </Link>
+          <Space>
+            <Upload
+              disabled={bulkLoading}
+              showUploadList={false}
+              customRequest={({ onError, onSuccess, file }) => {
+                bulkCreate(file as File)
+                  .then(() => {
+                    onSuccess?.("Ok");
+                  })
+                  .catch((e) => {
+                    if (e instanceof Error) {
+                      return onError?.(e);
+                    }
+                    onError?.(new Error("Internal server error"));
+                  });
+              }}
+            >
+              <Button
+                color="primary"
+                variant="outlined"
+                icon={<UploadOutlined />}
+                loading={bulkLoading}
+              >
+                {t("file-button.text")}
+              </Button>
+            </Upload>
+            <Link to={"create"}>
+              <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>
+            </Link>
+          </Space>
         }
       />
       <div className="mt-6">

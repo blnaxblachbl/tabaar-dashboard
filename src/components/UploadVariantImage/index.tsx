@@ -98,19 +98,21 @@ export function UploadVariantImage({
       setFileList((prev) => prev.filter((item) => item.uid !== file.uid));
     }
     if (error) {
+      const errorMessage =
+        error === "File too large" ? t("sizeError") : t("uploadError");
       setFileList((prev) =>
         prev.map((item) => {
           if (item.uid === file.uid) {
             return {
               ...file,
               status: "error",
-              error: new Error(t("uploadError")),
+              error: new Error(errorMessage),
             };
           }
           return item;
         }),
       );
-      onError?.(new Error(t("uploadError")));
+      onError?.(new Error(errorMessage));
     }
   }
   function updateProductQueries(images: string[]) {
