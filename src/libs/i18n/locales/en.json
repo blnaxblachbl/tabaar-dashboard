@@ -219,6 +219,22 @@
           "invalid": "invalid Email"
         }
       }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "My App key",
+        "errors": {
+          "required": "Name is required",
+          "invalid": "Name must be between 3-100 characters"
+        }
+      },
+      "expiration": {
+        "label": "Expiration Date",
+        "errors": {
+          "required": "Expiration Date is required"
+        }
+      }
     }
   },
   "pages": {
@@ -380,6 +396,9 @@
         "success": "Key deleted",
         "error": "Failed to delete Key"
       }
+    },
+    "create-api-key": {
+      "title": "Create Api Key"
     }
   }
 }
