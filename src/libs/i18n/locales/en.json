@@ -308,6 +308,9 @@
           "label": "Created"
         }
       }
+    },
+    "create-user": {
+      "title": "Create User"
     }
   }
 }

@@ -10,6 +10,7 @@ import EditProductPage from "@/pages/Products/Edit";
 import VariantPage from "@/pages/Variant";
 import CreateVariantPage from "@/pages/Variant/Create";
 import UsersPage from "@/pages/Users";
+import CreateUserPage from "@/pages/Users/Create";
 
 export function Router() {
   return (
@@ -31,6 +32,10 @@ export function Router() {
           <Route
             path="/users"
             element={<UsersPage />}
+          />
+          <Route
+            path="/users/create"
+            element={<CreateUserPage />}
           />
         </Route>
         <Route path="/login" index element={<LoginPage />} />

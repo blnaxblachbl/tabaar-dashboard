@@ -34,7 +34,9 @@ export default function UsersPage() {
       <Title
         title={t("title")}
         actions={
-          <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>
+          <Link to="create">
+            <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>
+          </Link>
         }
       />
       <Divider />
