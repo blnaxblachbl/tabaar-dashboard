@@ -3,7 +3,8 @@
     "menu": {
       "home": "Home",
       "products": "Products",
-      "users": "Users"
+      "users": "Users",
+      "api-keys": "API Keys"
     },
     "product-form": {
       "name": {
@@ -351,6 +352,33 @@
         "button": {
           "text": "Back to Users"
         }
+      }
+    },
+    "api-keys": {
+      "title": "Api Keys",
+      "create-button": {
+        "text": "Create"
+      },
+      "columns": {
+        "name": {
+          "title": "Name"
+        },
+        "expiration": {
+          "title": "Expiration Date",
+          "expired": "Expired"
+        },
+        "actions": {
+          "title": "Actions"
+        }
+      },
+      "delete": {
+        "title": "Do you wnt to delete this Key?",
+        "okText": "Yes",
+        "cancelText": "No"
+      },
+      "toasts": {
+        "success": "Key deleted",
+        "error": "Failed to delete Key"
       }
     }
   }

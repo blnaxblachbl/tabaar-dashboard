@@ -3,7 +3,8 @@
     "menu": {
       "home": "Главная",
       "products": "Товары",
-      "users": "Пользователи"
+      "users": "Пользователи",
+      "api-keys": "Ключи API"
     },
     "product-form": {
       "name": {
@@ -351,6 +352,33 @@
         "button": {
           "text": "Назад к списку"
         }
+      }
+    },
+    "api-keys": {
+      "title": "Ключи API",
+      "create-button": {
+        "text": "Создать"
+      },
+      "columns": {
+        "name": {
+          "title": "Название"
+        },
+        "expiration": {
+          "title": "Дата окончания",
+          "expired": "Истёк"
+        },
+        "actions": {
+          "title": "Действия"
+        }
+      },
+      "delete": {
+        "title": "Хотите удалить этот ключ?",
+        "okText": "Да",
+        "cancelText": "Нет"
+      },
+      "toasts": {
+        "success": "Ключ удалён",
+        "error": "Произошла ошибка при удалении ключа"
       }
     }
   }

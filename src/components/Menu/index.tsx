@@ -32,6 +32,12 @@ export function Menu() {
           icon: <UserOutlined />,
           onClick: () => navigate("/users"),
         },
+        {
+          key: "/keys",
+          label: t("api-keys"),
+          icon: <UserOutlined />,
+          onClick: () => navigate("/keys"),
+        },
       ]}
     />
   );

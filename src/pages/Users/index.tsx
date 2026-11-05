@@ -1,13 +1,13 @@
 import { Button, Divider, Table } from "antd";
 import { useTranslation } from "react-i18next";
 import { Link, useSearchParams } from "react-router";
+import { PlusOutlined } from "@ant-design/icons";
 
 import { PageLayout } from "@/components/PageLayout";
 import { Title } from "@/components/Title";
 import { useFindUsersQuery } from "@/graphql/generated";
 import { DEFAULT_USERS_VARIABLES } from "@/utils/constants";
 import { toLocaleDate } from "@/utils/date";
-import { PlusOutlined } from "@ant-design/icons";
 
 export default function UsersPage() {
   const [searchParams, setSearchParams] = useSearchParams({

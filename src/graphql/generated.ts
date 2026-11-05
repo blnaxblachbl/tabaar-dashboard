@@ -50,6 +50,11 @@ export type LoginUserInput = {
   password: string;
 };
 
+export type UpdateApiKeyInput = {
+  expiresAt?: Date | null | undefined;
+  name?: string | null | undefined;
+};
+
 export type UpdateProductInput = {
   characterstics?: Record<string, string | number | boolean> | null | undefined;
   description?: string | null | undefined;
@@ -75,11 +80,36 @@ export type VariantFilterInput = {
   price?: FloatRangeInput | null | undefined;
 };
 
+export type FindApiKeysQueryVariables = Exact<{
+  skip?: number | null | undefined;
+  take?: number | null | undefined;
+}>;
+
+
+export type FindApiKeysQuery = { findApiKeys: { apiKeysCount: number, apiKeys: Array<{ id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null }> } };
+
+export type DeleteApiKeyMutationVariables = Exact<{
+  id: number;
+}>;
+
+
+export type DeleteApiKeyMutation = { deleteApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
+
+export type UpdateApiKeyMutationVariables = Exact<{
+  id: number;
+  data: UpdateApiKeyInput;
+}>;
+
+
+export type UpdateApiKeyMutation = { updateApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
+
 export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string };
 
 export type ProductFragment = { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> };
 
 export type VariantFragment = { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> };
+
+export type ApiKeyFragment = { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null };
 
 export type FindProductsQueryVariables = Exact<{
   query?: string | null | undefined;
@@ -230,6 +260,130 @@ export const ProductFragmentDoc = gql`
   }
 }
     `;
+export const ApiKeyFragmentDoc = gql`
+    fragment ApiKey on ApiKey {
+  id
+  createdAt
+  updatedAt
+  key
+  name
+  expiredAt
+}
+    `;
+export const FindApiKeysDocument = gql`
+    query FindApiKeys($skip: Int, $take: Int) {
+  findApiKeys(skip: $skip, take: $take) {
+    apiKeys {
+      ...ApiKey
+    }
+    apiKeysCount
+  }
+}
+    ${ApiKeyFragmentDoc}`;
+
+/**
+ * __useFindApiKeysQuery__
+ *
+ * To run a query within a React component, call `useFindApiKeysQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindApiKeysQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindApiKeysQuery({
+ *   variables: {
+ *      skip: // value for 'skip'
+ *      take: // value for 'take'
+ *   },
+ * });
+ */
+export function useFindApiKeysQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<FindApiKeysQuery, FindApiKeysQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindApiKeysQuery, FindApiKeysQueryVariables>(FindApiKeysDocument, options);
+      }
+export function useFindApiKeysLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindApiKeysQuery, FindApiKeysQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindApiKeysQuery, FindApiKeysQueryVariables>(FindApiKeysDocument, options);
+        }
+// @ts-ignore
+export function useFindApiKeysSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindApiKeysQuery, FindApiKeysQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindApiKeysQuery, FindApiKeysQueryVariables>;
+export function useFindApiKeysSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindApiKeysQuery, FindApiKeysQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindApiKeysQuery | undefined, FindApiKeysQueryVariables>;
+export function useFindApiKeysSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindApiKeysQuery, FindApiKeysQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindApiKeysQuery, FindApiKeysQueryVariables>(FindApiKeysDocument, options);
+        }
+export type FindApiKeysQueryHookResult = ReturnType<typeof useFindApiKeysQuery>;
+export type FindApiKeysLazyQueryHookResult = ReturnType<typeof useFindApiKeysLazyQuery>;
+export type FindApiKeysSuspenseQueryHookResult = ReturnType<typeof useFindApiKeysSuspenseQuery>;
+export type FindApiKeysQueryResult = ApolloReactCommon.QueryResult<FindApiKeysQuery, FindApiKeysQueryVariables>;
+export const DeleteApiKeyDocument = gql`
+    mutation DeleteApiKey($id: Int!) {
+  deleteApiKey(id: $id) {
+    ...ApiKey
+  }
+}
+    ${ApiKeyFragmentDoc}`;
+export type DeleteApiKeyMutationFn = ApolloReactCommon.MutationFunction<DeleteApiKeyMutation, DeleteApiKeyMutationVariables>;
+
+/**
+ * __useDeleteApiKeyMutation__
+ *
+ * To run a mutation, you first call `useDeleteApiKeyMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useDeleteApiKeyMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [deleteApiKeyMutation, { data, loading, error }] = useDeleteApiKeyMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useDeleteApiKeyMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<DeleteApiKeyMutation, DeleteApiKeyMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<DeleteApiKeyMutation, DeleteApiKeyMutationVariables>(DeleteApiKeyDocument, options);
+      }
+export type DeleteApiKeyMutationHookResult = ReturnType<typeof useDeleteApiKeyMutation>;
+export type DeleteApiKeyMutationResult = ApolloReactCommon.MutationResult<DeleteApiKeyMutation>;
+export type DeleteApiKeyMutationOptions = ApolloReactCommon.BaseMutationOptions<DeleteApiKeyMutation, DeleteApiKeyMutationVariables>;
+export const UpdateApiKeyDocument = gql`
+    mutation UpdateApiKey($id: Int!, $data: UpdateApiKeyInput!) {
+  updateApiKey(id: $id, data: $data) {
+    ...ApiKey
+  }
+}
+    ${ApiKeyFragmentDoc}`;
+export type UpdateApiKeyMutationFn = ApolloReactCommon.MutationFunction<UpdateApiKeyMutation, UpdateApiKeyMutationVariables>;
+
+/**
+ * __useUpdateApiKeyMutation__
+ *
+ * To run a mutation, you first call `useUpdateApiKeyMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateApiKeyMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateApiKeyMutation, { data, loading, error }] = useUpdateApiKeyMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useUpdateApiKeyMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateApiKeyMutation, UpdateApiKeyMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<UpdateApiKeyMutation, UpdateApiKeyMutationVariables>(UpdateApiKeyDocument, options);
+      }
+export type UpdateApiKeyMutationHookResult = ReturnType<typeof useUpdateApiKeyMutation>;
+export type UpdateApiKeyMutationResult = ApolloReactCommon.MutationResult<UpdateApiKeyMutation>;
+export type UpdateApiKeyMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateApiKeyMutation, UpdateApiKeyMutationVariables>;
 export const FindProductsDocument = gql`
     query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
   findProducts(query: $query, take: $take, filters: $filters) {

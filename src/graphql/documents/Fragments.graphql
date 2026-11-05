@@ -29,3 +29,11 @@ fragment Variant on Variant {
     currency
     images
 }
+fragment ApiKey on ApiKey {
+    id
+    createdAt
+    updatedAt
+    key
+    name
+    expiredAt
+}

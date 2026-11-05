@@ -1,0 +1,18 @@
+query FindApiKeys($skip: Int, $take: Int) {
+    findApiKeys(skip: $skip, take: $take) {
+        apiKeys {
+            ...ApiKey
+        }
+        apiKeysCount
+    }
+}
+mutation DeleteApiKey($id: Int!) {
+    deleteApiKey(id: $id) {
+        ...ApiKey
+    }
+}
+mutation UpdateApiKey($id: Int!, $data: UpdateApiKeyInput!) {
+    updateApiKey(id: $id, data: $data) {
+        ...ApiKey
+    }
+}
