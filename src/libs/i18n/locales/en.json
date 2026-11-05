@@ -336,6 +336,22 @@
         "success": "User created",
         "error": "Failed to create User"
       }
+    },
+    "update-user": {
+      "title": "Update User",
+      "submit-button": {
+        "text": "Update"
+      },
+      "toasts": {
+        "success": "User updated",
+        "error": "Failed to update User"
+      },
+      "empty": {
+        "description": "User not found",
+        "button": {
+          "text": "Back to Users"
+        }
+      }
     }
   }
 }

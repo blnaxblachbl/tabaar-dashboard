@@ -1,4 +1,4 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Skeleton, Space } from "antd";
 import { useTranslation } from "react-i18next";
 
 import type { UserFormProps } from "./types";
@@ -51,5 +51,21 @@ export function UserForm({
         {submitText}
       </Button>
     </Form>
+  );
+}
+
+export function UserFormSkeleton() {
+  return (
+    <Space size={"medium"} className="w-full!" vertical>
+      <Space vertical className="w-full!">
+        <Skeleton paragraph={false} className="w-1/5!" active />
+        <Skeleton.Input block active />
+      </Space>
+      <Space vertical className="w-full!">
+        <Skeleton paragraph={false} className="w-1/5!" active />
+        <Skeleton.Input block active />
+      </Space>
+      <Skeleton.Button block active />
+    </Space>
   );
 }

@@ -56,6 +56,11 @@ export type UpdateProductInput = {
   name?: string | null | undefined;
 };
 
+export type UpdateUserInput = {
+  email?: string | null | undefined;
+  name?: string | null | undefined;
+};
+
 export type UpdateVariantInput = {
   characterstics?: Record<string, string | number | boolean> | null | undefined;
   count?: number | null | undefined;
@@ -172,6 +177,21 @@ export type CreateUserMutationVariables = Exact<{
 
 
 export type CreateUserMutation = { createUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
+
+export type FindOneUserQueryVariables = Exact<{
+  id: number;
+}>;
+
+
+export type FindOneUserQuery = { findOneUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
+
+export type UpdateUserMutationVariables = Exact<{
+  id: number;
+  data: UpdateUserInput;
+}>;
+
+
+export type UpdateUserMutation = { updateUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
 
 export const UserFragmentDoc = gql`
     fragment User on User {
@@ -720,3 +740,80 @@ export function useCreateUserMutation(baseOptions?: ApolloReactHooks.MutationHoo
 export type CreateUserMutationHookResult = ReturnType<typeof useCreateUserMutation>;
 export type CreateUserMutationResult = ApolloReactCommon.MutationResult<CreateUserMutation>;
 export type CreateUserMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateUserMutation, CreateUserMutationVariables>;
+export const FindOneUserDocument = gql`
+    query FindOneUser($id: Int!) {
+  findOneUser(id: $id) {
+    ...User
+  }
+}
+    ${UserFragmentDoc}`;
+
+/**
+ * __useFindOneUserQuery__
+ *
+ * To run a query within a React component, call `useFindOneUserQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindOneUserQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindOneUserQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useFindOneUserQuery(baseOptions: ApolloReactHooks.QueryHookOptions<FindOneUserQuery, FindOneUserQueryVariables> & ({ variables: FindOneUserQueryVariables; skip?: boolean; } | { skip: boolean; }) ) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindOneUserQuery, FindOneUserQueryVariables>(FindOneUserDocument, options);
+      }
+export function useFindOneUserLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindOneUserQuery, FindOneUserQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindOneUserQuery, FindOneUserQueryVariables>(FindOneUserDocument, options);
+        }
+// @ts-ignore
+export function useFindOneUserSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindOneUserQuery, FindOneUserQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindOneUserQuery, FindOneUserQueryVariables>;
+export function useFindOneUserSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindOneUserQuery, FindOneUserQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindOneUserQuery | undefined, FindOneUserQueryVariables>;
+export function useFindOneUserSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindOneUserQuery, FindOneUserQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindOneUserQuery, FindOneUserQueryVariables>(FindOneUserDocument, options);
+        }
+export type FindOneUserQueryHookResult = ReturnType<typeof useFindOneUserQuery>;
+export type FindOneUserLazyQueryHookResult = ReturnType<typeof useFindOneUserLazyQuery>;
+export type FindOneUserSuspenseQueryHookResult = ReturnType<typeof useFindOneUserSuspenseQuery>;
+export type FindOneUserQueryResult = ApolloReactCommon.QueryResult<FindOneUserQuery, FindOneUserQueryVariables>;
+export const UpdateUserDocument = gql`
+    mutation UpdateUser($id: Int!, $data: UpdateUserInput!) {
+  updateUser(id: $id, data: $data) {
+    ...User
+  }
+}
+    ${UserFragmentDoc}`;
+export type UpdateUserMutationFn = ApolloReactCommon.MutationFunction<UpdateUserMutation, UpdateUserMutationVariables>;
+
+/**
+ * __useUpdateUserMutation__
+ *
+ * To run a mutation, you first call `useUpdateUserMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateUserMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateUserMutation, { data, loading, error }] = useUpdateUserMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *      data: // value for 'data'
+ *   },
+ * });
+ */
+export function useUpdateUserMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateUserMutation, UpdateUserMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<UpdateUserMutation, UpdateUserMutationVariables>(UpdateUserDocument, options);
+      }
+export type UpdateUserMutationHookResult = ReturnType<typeof useUpdateUserMutation>;
+export type UpdateUserMutationResult = ApolloReactCommon.MutationResult<UpdateUserMutation>;
+export type UpdateUserMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateUserMutation, UpdateUserMutationVariables>;
