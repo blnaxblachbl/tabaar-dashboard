@@ -1,10 +1,14 @@
-import { Popover, Space, theme, Typography, Avatar } from "antd";
+import { Popover, Space, theme, Typography, Avatar, Button } from "antd";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 import { useUser } from "@/hooks/useUser";
 import { Menu } from "@/components/Menu";
 
 export function Header() {
+  const { t } = useTranslation("", {
+    keyPrefix: "components.header",
+  });
   const { token } = theme.useToken();
   const { user } = useUser({
     fetchPolicy: "cache-only",
@@ -23,7 +27,7 @@ export function Header() {
             Tabaar
           </Typography.Text>
         </Link>
-        {user && (
+        {user ? (
           <Popover
             content={<Menu />}
             classNames={{
@@ -37,6 +41,10 @@ export function Header() {
               <Typography.Text>{user.name}</Typography.Text>
             </Space>
           </Popover>
+        ) : (
+          <Link to="/login">
+            <Button>{t("login-button.text")}</Button>
+          </Link>
         )}
       </div>
     </header>

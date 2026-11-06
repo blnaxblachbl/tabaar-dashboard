@@ -64,7 +64,7 @@ export default function UsersPage() {
     <PageLayout>
       {mContext}
       <Title
-        title={t("title")}
+        title={t("title") + ` (${usersCount})`}
         actions={
           <Link to="create">
             <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>

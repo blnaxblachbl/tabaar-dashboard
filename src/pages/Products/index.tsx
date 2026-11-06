@@ -54,7 +54,7 @@ export default function ProductsPage() {
     <PageLayout>
       {mContext}
       <Title
-        title={t("title")}
+        title={t("title") + ` (${productsCount})`}
         actions={
           <Space>
             <Upload

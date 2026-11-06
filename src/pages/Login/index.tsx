@@ -26,7 +26,7 @@ export default function LoginPage() {
       messageApi.success("Logged in successfully");
       client.writeQuery({
         query: FindMeDocument,
-        data: { findMe: loginUser },
+        data: { findMe: loginUser.user },
       });
       navigate("/", { replace: true });
     },

@@ -4,7 +4,15 @@
       "home": "Главная",
       "products": "Товары",
       "users": "Пользователи",
-      "api-keys": "Ключи API"
+      "api-keys": "Ключи API",
+      "logout": {
+        "label": "Выйти",
+        "modal": {
+          "title": "Вы уверены, что хотите выйти из аккаунта?",
+          "okText": "Да, уверен",
+          "cancelText": "Нет"
+        }
+      }
     },
     "product-form": {
       "name": {
@@ -235,6 +243,11 @@
         "errors": {
           "required": "Выберите дату окончания"
         }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "Войти"
       }
     }
   },

@@ -20,8 +20,8 @@ export function Router() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" index element={<HomePage />} />
         <Route element={<AuthLayout />}>
-          <Route path="/" index element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/create" element={<CreateProductPage />} />
           <Route path="/products/:productId" element={<EditProductPage />} />

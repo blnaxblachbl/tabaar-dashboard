@@ -73,7 +73,7 @@ export default function ApiKeysPage() {
     <PageLayout>
       {messageContext}
       <Title
-        title={t("title")}
+        title={t("title") + ` (${apiKeysCount})`}
         actions={
           <Link to="create">
             <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>

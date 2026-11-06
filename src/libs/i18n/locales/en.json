@@ -4,7 +4,15 @@
       "home": "Home",
       "products": "Products",
       "users": "Users",
-      "api-keys": "API Keys"
+      "api-keys": "API Keys",
+      "logout": {
+        "label": "Logout",
+        "modal": {
+          "title": "Do you want to logout?",
+          "okText": "Yes, log me out!",
+          "cancelText": "No"
+        }
+      }
     },
     "product-form": {
       "name": {
@@ -235,6 +243,11 @@
         "errors": {
           "required": "Expiration Date is required"
         }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "Login"
       }
     }
   },
