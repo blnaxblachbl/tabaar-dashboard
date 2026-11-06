@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 
 import { AuthLayout } from "@/components/AuthLayout";
 
@@ -17,15 +17,18 @@ import CreateApiKeyPage from "@/pages/ApiKeys/Create";
 import EditApiKeyPage from "@/pages/ApiKeys/Edit";
 import RestApiDocsPage from "@/pages/RestApiDocs";
 import GraphQLDocsPage from "@/pages/GraphQLDocs";
+import GrpcDocsPage from "@/pages/GrpcDocs";
 
 export function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" index element={<HomePage />} />
-        <Route path="/login" index element={<LoginPage />} />
-        <Route path="/docs/rest" index element={<RestApiDocsPage />} />
-        <Route path="/docs/graphql" index element={<GraphQLDocsPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/docs" index element={<Navigate to="/" />} />
+        <Route path="/docs/rest" element={<RestApiDocsPage />} />
+        <Route path="/docs/graphql" element={<GraphQLDocsPage />} />
+        <Route path="/docs/grpc" element={<GrpcDocsPage />} />
         <Route element={<AuthLayout />}>
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/create" element={<CreateProductPage />} />
