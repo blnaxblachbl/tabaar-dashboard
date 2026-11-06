@@ -456,6 +456,9 @@
           "error": "Failed to update Api Key"
         }
       }
+    },
+    "rest-docs": {
+      "title": "Rest API Docs"
     }
   }
 }
