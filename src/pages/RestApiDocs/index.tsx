@@ -14,7 +14,7 @@ export default function RestApiDocsPage() {
         backgroundColor: token.colorBgSolid,
       }}
     >
-      <SwaggerUI url="/api/swagger" />
+      <SwaggerUI url="/swagger.json" />
     </PageLayout>
   );
 }
