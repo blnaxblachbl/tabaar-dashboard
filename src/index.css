@@ -17,6 +17,7 @@
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
   --header-height: 72px;
+  --screen-height: calc(100dvh - 72px);
 
   --orange: #ff7f4f;
   --blue: #273b7a;

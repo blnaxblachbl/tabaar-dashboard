@@ -16,6 +16,7 @@ import ApiKeysPage from "@/pages/ApiKeys";
 import CreateApiKeyPage from "@/pages/ApiKeys/Create";
 import EditApiKeyPage from "@/pages/ApiKeys/Edit";
 import RestApiDocsPage from "@/pages/RestApiDocs";
+import GraphQLDocsPage from "@/pages/GraphQLDocs";
 
 export function Router() {
   return (
@@ -24,6 +25,7 @@ export function Router() {
         <Route path="/" index element={<HomePage />} />
         <Route path="/login" index element={<LoginPage />} />
         <Route path="/docs/rest" index element={<RestApiDocsPage />} />
+        <Route path="/docs/graphql" index element={<GraphQLDocsPage />} />
         <Route element={<AuthLayout />}>
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/create" element={<CreateProductPage />} />

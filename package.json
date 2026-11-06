@@ -13,6 +13,7 @@
   "dependencies": {
     "@ant-design/icons": "^6.3.4",
     "@apollo/client": "^4.3.5",
+    "@apollo/sandbox": "^2.7.4",
     "@tailwindcss/vite": "^4.3.3",
     "antd": "^6.6.8",
     "apollo-link-rest": "^0.10.0-rc.2",
