@@ -8,7 +8,7 @@ export function PageLayout({ className, children, ...props }: PageLayoutProps) {
     <>
       <Header />
       <div
-        className={`max-w-6xl w-full px-3 py-6 mx-auto  mt-(--header-height) ${className}`}
+        className={`max-w-6xl w-full px-3 py-6 mx-auto  mt-(--header-height) min-h-(--screen-height) ${className}`}
         {...props}
       >
         {children}
