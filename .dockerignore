@@ -6,3 +6,4 @@ dist
 .env.*
 *.md
 docker-compose.yml
+images
