@@ -6,7 +6,7 @@ export default function GraphQLDocsPage() {
   return (
     <PageLayout className="max-w-full p-0!">
       <ApolloSandbox
-        initialEndpoint="/graphql"
+        initialEndpoint={`${window.location.protocol}//${window.location.host}/graphql`}
         className="w-full h-(--screen-height)!"
       />
     </PageLayout>
