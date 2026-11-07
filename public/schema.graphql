@@ -1,0 +1,178 @@
+scalar DateTime
+
+scalar Json
+
+"""Characterstic custom JSON scalar type"""
+scalar Characterstic
+
+input IntRangeInput {
+  lte: Int
+  gte: Int
+}
+
+input FloatRangeInput {
+  lte: Float
+  gte: Float
+}
+
+input CreateUserInput {
+  email: String!
+  name: String!
+}
+
+input UpdateUserInput {
+  name: String
+  email: String
+}
+
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
+input RefreshTokenInput {
+  refreshToken: String!
+}
+
+input CreateApiKeyInput {
+  name: String!
+  expiredAt: DateTime!
+}
+
+input UpdateApiKeyInput {
+  name: String
+  expiredAt: DateTime
+}
+
+input CreateProductInput {
+  name: String!
+  description: String!
+  characterstics: Characterstic
+}
+
+input UpdateProductInput {
+  name: String
+  description: String
+  characterstics: Characterstic
+}
+
+input CreateVariantInput {
+  characterstics: Characterstic!
+  price: Float!
+  count: Int!
+  currency: String!
+}
+
+input UpdateVariantInput {
+  characterstics: Characterstic
+  price: Float
+  count: Int
+  currency: String
+}
+
+input FiltersInput {
+  deleted: Boolean
+  available: Boolean
+  minPrice: FloatRangeInput
+  maxPrice: FloatRangeInput
+  characterstics: Characterstic
+  variants: VariantFilterInput
+}
+
+input VariantFilterInput {
+  characterstics: Characterstic
+  currency: String
+  price: FloatRangeInput
+  count: IntRangeInput
+}
+
+type User {
+  id: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  email: String!
+}
+
+type FindUsersResult {
+  users: [User!]!
+  usersCount: Int!
+}
+
+type LoginUserResult {
+  user: User!
+  accessToken: String!
+  refreshToken: String!
+}
+
+type Query {
+  findUsers(skip: Int, take: Int): FindUsersResult!
+  findOneUser(id: Int!): User!
+  findMe: User
+  findApiKeys(skip: Int, take: Int): ApiKeysResult!
+  findOneApiKey(id: Int!): ApiKey!
+  findProducts(query: String, take: Int, filters: FiltersInput): ProductResult!
+  scrollProducts(scrollId: String): ProductResult!
+  findOneProduct(id: String): Product!
+}
+
+type Mutation {
+  createUser(data: CreateUserInput!): User!
+  updateUser(id: Int!, data: UpdateUserInput!): User!
+  loginUser(data: LoginUserInput!): LoginUserResult!
+  refreshToken(data: RefreshTokenInput!): LoginUserResult!
+  deleteUser(id: Int!): User!
+  createApiKey(data: CreateApiKeyInput!): ApiKey!
+  updateApiKey(id: Int!, data: UpdateApiKeyInput!): ApiKey!
+  deleteApiKey(id: Int!): ApiKey!
+  createProduct(data: CreateProductInput!): Product!
+  updateProduct(id: String!, data: UpdateProductInput!): Product!
+  deleteProduct(id: String!): Product!
+  appendVariant(id: String!, data: CreateVariantInput!): Product!
+  deleteVariant(id: String!, variantId: String!): Product!
+  updateVariant(id: String!, variantId: String!, data: UpdateVariantInput!): Product!
+}
+
+type ApiKey {
+  id: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  key: String!
+  name: String!
+  expiredAt: DateTime
+}
+
+type ApiKeysResult {
+  apiKeys: [ApiKey!]!
+  apiKeysCount: Int!
+}
+
+type Product {
+  id: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  description: String!
+  characterstics: Characterstic
+  variants: [Variant!]!
+  minPrice: Float!
+  maxPrice: Float!
+  available: Boolean!
+}
+
+type Variant {
+  id: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  characterstics: Characterstic!
+  price: Float!
+  count: Int!
+  currency: String!
+  images: [String!]!
+}
+
+type ProductResult {
+  products: [Product!]!
+  productsCount: Int!
+  scrollId: String!
+}

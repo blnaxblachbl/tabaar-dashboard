@@ -18,6 +18,7 @@ import EditApiKeyPage from "@/pages/ApiKeys/Edit";
 import RestApiDocsPage from "@/pages/RestApiDocs";
 import GraphQLDocsPage from "@/pages/GraphQLDocs";
 import GrpcDocsPage from "@/pages/GrpcDocs";
+import AboutPage from "@/pages/About";
 
 export function Router() {
   return (
@@ -29,6 +30,7 @@ export function Router() {
         <Route path="/docs/rest" element={<RestApiDocsPage />} />
         <Route path="/docs/graphql" element={<GraphQLDocsPage />} />
         <Route path="/docs/grpc" element={<GrpcDocsPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route element={<AuthLayout />}>
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/create" element={<CreateProductPage />} />

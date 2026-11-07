@@ -249,6 +249,11 @@
       "login-button": {
         "text": "Login"
       }
+    },
+    "footer": {
+      "about": "About",
+      "source": "Source Code",
+      "author": "Author"
     }
   },
   "pages": {
@@ -454,6 +459,24 @@
         "toasts": {
           "success": "Api Key updated",
           "error": "Failed to update Api Key"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — Open-Source Product Management Service",
+      "description": "Tabaar is a modern, high-performance, open-source Product Information and Catalog Management (PIM) service designed to serve high-throughput e-commerce and multi-channel applications. Built from the ground up to support modern distributed systems, Tabaar simultaneously exposes REST, GraphQL, and gRPC interfaces powered by a hybrid PostgreSQL + Elasticsearch data architecture and S3-compatible media storage.",
+      "exlain": "In contemporary e-commerce and microservices architectures, different clients require different communication paradigms: mobile apps crave lightweight REST/GraphQL endpoints, web dashboards demand flexible GraphQL queries, and internal microservices need high-speed, low-latency gRPC RPCs. Tabaar unifies product catalog management into a single, cohesive engine. Instead of forcing teams to pick one API style or maintain brittle adapter layers, Tabaar delivers all three protocols concurrently from a single core, backed by dedicated storage engines optimized for both transactional integrity and sub-millisecond search at scale.",
+      "docs": {
+        "title": "API Documentation",
+        "docs": "Docs",
+        "rest": {
+          "description": "Rest API includes User, Products Image and API Keys endpoints. Also images and files uploads. Support Bearer token authorization and Api Key access."
+        },
+        "graphql": {
+          "description": "GraphQL API includes User, Product and Api Key queries and mutations. Support Bearer token authorization."
+        },
+        "grpc": {
+          "description": "gRPC API includes User, Product and Api Keys Services. Support Api Key access."
         }
       }
     }
