@@ -1,6 +1,18 @@
 import { Activity } from "react";
-import { Button, Col, Divider, Empty, message, Row, Space, Upload } from "antd";
-import { PlusOutlined, UploadOutlined } from "@ant-design/icons";
+import {
+  Button,
+  Col,
+  Divider,
+  Empty,
+  message,
+  Popover,
+  Row,
+  Space,
+  Upload,
+  Typography,
+  theme,
+} from "antd";
+import { InfoOutlined, PlusOutlined, UploadOutlined } from "@ant-design/icons";
 import { Link, useSearchParams } from "react-router";
 import { useTranslation } from "react-i18next";
 
@@ -22,6 +34,7 @@ export default function ProductsPage() {
   const { t } = useTranslation("", {
     keyPrefix: "pages.products",
   });
+  const { token } = theme.useToken();
   const [searchParams, setSearchParams] = useSearchParams();
   const [messageApi, mContext] = message.useMessage();
 
@@ -57,31 +70,54 @@ export default function ProductsPage() {
         title={t("title") + ` (${productsCount})`}
         actions={
           <Space>
-            <Upload
-              disabled={bulkLoading}
-              showUploadList={false}
-              customRequest={({ onError, onSuccess, file }) => {
-                bulkCreate(file as File)
-                  .then(() => {
-                    onSuccess?.("Ok");
-                  })
-                  .catch((e) => {
-                    if (e instanceof Error) {
-                      return onError?.(e);
-                    }
-                    onError?.(new Error("Internal server error"));
-                  });
-              }}
-            >
-              <Button
-                color="primary"
-                variant="outlined"
-                icon={<UploadOutlined />}
-                loading={bulkLoading}
+            <Space.Compact>
+              <Popover
+                content={
+                  <Space vertical className="max-w-md!">
+                    <Typography.Text>
+                      {t("file-button.info.text")}
+                    </Typography.Text>
+                    <Button
+                      type="link"
+                      href="/prducts-sample.json"
+                      download={"prducts-sample.json"}
+                      className="p-0!"
+                    >
+                      {t("file-button.info.download-button.text")}
+                    </Button>
+                  </Space>
+                }
+                trigger={"hover"}
+                placement="leftTop"
+                styles={{
+                  container: {
+                    backgroundColor: token.colorBgContainer,
+                  },
+                }}
               >
-                {t("file-button.text")}
-              </Button>
-            </Upload>
+                <Button shape="square" icon={<InfoOutlined />} />
+              </Popover>
+              <Upload
+                disabled={bulkLoading}
+                showUploadList={false}
+                customRequest={({ onError, onSuccess, file }) => {
+                  bulkCreate(file as File)
+                    .then(() => {
+                      onSuccess?.("Ok");
+                    })
+                    .catch((e) => {
+                      if (e instanceof Error) {
+                        return onError?.(e);
+                      }
+                      onError?.(new Error("Internal server error"));
+                    });
+                }}
+              >
+                <Button icon={<UploadOutlined />} loading={bulkLoading}>
+                  {t("file-button.text")}
+                </Button>
+              </Upload>
+            </Space.Compact>
             <Link to={"create"}>
               <Button icon={<PlusOutlined />}>{t("create-button.text")}</Button>
             </Link>

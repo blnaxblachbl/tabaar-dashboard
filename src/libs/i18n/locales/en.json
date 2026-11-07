@@ -287,7 +287,13 @@
         "text": "Create"
       },
       "file-button": {
-        "text": "With file"
+        "text": "With file",
+        "info": {
+          "text": "Upload Special JSON file to create multiple products",
+          "download-button": {
+            "text": "Download Sample File"
+          }
+        }
       },
       "toasts": {
         "success": "Products created",
