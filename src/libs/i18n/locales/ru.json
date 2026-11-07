@@ -254,6 +254,9 @@
       "about": "О проекте",
       "source": "Исходный код",
       "author": "Автор"
+    },
+    "product-card": {
+      "created": "Создано"
     }
   },
   "pages": {

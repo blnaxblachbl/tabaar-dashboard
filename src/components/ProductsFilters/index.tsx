@@ -139,7 +139,7 @@ export function ProductsFilters({
         <Col span={24}>
           <Divider size="small">{t("products.title")}</Divider>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             name="query"
             label={t("products.query.label")}
@@ -158,7 +158,7 @@ export function ProductsFilters({
             />
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("products.availability.label")}
             name={["filters", "available"]}
@@ -183,7 +183,7 @@ export function ProductsFilters({
             />
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             name={["filters", "deleted"]}
             label={t("products.deleted.label")}
@@ -206,7 +206,7 @@ export function ProductsFilters({
             />
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("products.min-price.label")}
             layout="vertical"
@@ -234,7 +234,7 @@ export function ProductsFilters({
             </Space.Compact>
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("products.max-price.label")}
             layout="vertical"
@@ -262,7 +262,7 @@ export function ProductsFilters({
             </Space.Compact>
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("products.characterstics.label")}
             layout="vertical"
@@ -314,7 +314,7 @@ export function ProductsFilters({
         <Col span={24} className="mt-3">
           <Divider size="small">{t("variants.title")}</Divider>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             name={["filters", "variants", "currency"]}
             label={t("variants.currency.label")}
@@ -333,7 +333,7 @@ export function ProductsFilters({
             />
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("variants.price.label")}
             layout="vertical"
@@ -361,7 +361,7 @@ export function ProductsFilters({
             </Space.Compact>
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("variants.count.label")}
             layout="vertical"
@@ -389,7 +389,7 @@ export function ProductsFilters({
             </Space.Compact>
           </Form.Item>
         </Col>
-        <Col span={8}>
+        <Col xs={24} md={12} lg={8}>
           <Form.Item
             label={t("products.characterstics.label")}
             layout="vertical"
@@ -438,15 +438,21 @@ export function ProductsFilters({
             </Space.Compact>
           </Form.Item>
         </Col>
-        <Col span={8} offset={16}>
-          <Space.Compact rootClassName="w-full!">
-            <Button disabled={filtersCount === 0} onClick={resetFilters} block>
-              {t("reset-button.text")}
-            </Button>
-            <Button htmlType="submit" type={"primary"} block>
-              {t("submit-button.text")}
-            </Button>
-          </Space.Compact>
+        <Col span={24}>
+          <div className="flex justify-end">
+            <Space.Compact rootClassName="w-full md:max-w-md!">
+              <Button
+                disabled={filtersCount === 0}
+                onClick={resetFilters}
+                block
+              >
+                {t("reset-button.text")}
+              </Button>
+              <Button htmlType="submit" type={"primary"} block>
+                {t("submit-button.text")}
+              </Button>
+            </Space.Compact>
+          </div>
         </Col>
       </Row>
     </Form>

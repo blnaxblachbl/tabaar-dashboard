@@ -33,7 +33,7 @@ export default function HomePage() {
           <Title title={t("docs.title")} />
           <Divider />
           <Row gutter={[12, 12]}>
-            <Col span={8}>
+            <Col xs={24} md={12} lg={8}>
               <Card
                 cover={
                   <ApiSvg className="aspect-video max-w-1/2 mx-auto w-full" />
@@ -79,7 +79,7 @@ export default function HomePage() {
                 />
               </Card>
             </Col>
-            <Col span={8}>
+            <Col xs={24} md={12} lg={8}>
               <Card
                 cover={
                   <GraphQLIcon className="aspect-video max-w-1/2 mx-auto" />
@@ -125,7 +125,7 @@ export default function HomePage() {
                 />
               </Card>
             </Col>
-            <Col span={8}>
+            <Col xs={24} md={12} lg={8}>
               <Card
                 cover={<GrpcSvg className="aspect-video max-w-1/2 mx-auto" />}
                 classNames={{

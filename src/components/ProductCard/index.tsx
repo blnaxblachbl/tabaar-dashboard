@@ -7,8 +7,8 @@ import { toLocaleDate } from "@/utils/date";
 import { extractImages } from "@/utils/product/extractImages";
 
 export function ProducCard({ product }: ProductCardProps) {
-  const { i18n } = useTranslation("", {
-    keyPrefix: "",
+  const { i18n, t } = useTranslation("", {
+    keyPrefix: "components.product-card",
   });
 
   const images = useMemo(
@@ -26,7 +26,10 @@ export function ProducCard({ product }: ProductCardProps) {
                 <Image
                   src={image}
                   preview={false}
-                  classNames={{ image: "aspect-5/3! object-cover" }}
+                  classNames={{
+                    image: "aspect-5/3! object-cover w-full!",
+                    root: "w-full!",
+                  }}
                 />
               </div>
             ))}
@@ -63,7 +66,7 @@ export function ProducCard({ product }: ProductCardProps) {
               : "N/A"}
           </Typography.Text>
           <Typography.Text type="secondary">
-            Created: {toLocaleDate(product.createdAt, i18n.language)}
+            {t("created")} {toLocaleDate(product.createdAt, i18n.language)}
           </Typography.Text>
         </div>
       </div>

@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 
 import { useUser } from "@/hooks/useUser";
 import { Menu } from "@/components/Menu";
+import { LanguageSelector } from "@/components/LanguageSelector";
 
 export function Header() {
   const { t } = useTranslation("", {
@@ -33,32 +34,35 @@ export function Header() {
             Tabaar
           </Typography.Text>
         </Link>
-        {loading && (
-          <Space>
-            <Skeleton.Avatar active />
-            <Skeleton paragraph={false} active className="w-20!" />
-          </Space>
-        )}
-        {user && !loading ? (
-          <Popover
-            content={<Menu />}
-            classNames={{
-              container: "p-0! rounded-md! overflow-hidden",
-            }}
-            arrow={false}
-            placement="bottomRight"
-          >
+        <Space>
+          <LanguageSelector />
+          {loading && (
             <Space>
-              <Avatar>{user.name.charAt(0)}</Avatar>
-              <Typography.Text>{user.name}</Typography.Text>
+              <Skeleton.Avatar active />
+              <Skeleton paragraph={false} active className="w-20!" />
             </Space>
-          </Popover>
-        ) : null}
-        {!user && !loading ? (
-          <Link to="/login">
-            <Button>{t("login-button.text")}</Button>
-          </Link>
-        ) : null}
+          )}
+          {user && !loading ? (
+            <Popover
+              content={<Menu />}
+              classNames={{
+                container: "p-0! rounded-md! overflow-hidden",
+              }}
+              arrow={false}
+              placement="bottomRight"
+            >
+              <Space>
+                <Avatar>{user.name.charAt(0)}</Avatar>
+                <Typography.Text>{user.name}</Typography.Text>
+              </Space>
+            </Popover>
+          ) : null}
+          {!user && !loading ? (
+            <Link to="/login">
+              <Button>{t("login-button.text")}</Button>
+            </Link>
+          ) : null}
+        </Space>
       </div>
     </header>
   );

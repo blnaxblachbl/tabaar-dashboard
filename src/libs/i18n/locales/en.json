@@ -254,6 +254,9 @@
       "about": "About",
       "source": "Source Code",
       "author": "Author"
+    },
+    "product-card": {
+      "created": "Created"
     }
   },
   "pages": {

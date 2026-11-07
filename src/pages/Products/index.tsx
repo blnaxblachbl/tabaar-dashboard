@@ -98,7 +98,7 @@ export default function ProductsPage() {
       <Activity mode={loading ? "visible" : "hidden"}>
         <Row gutter={[15, 15]}>
           {new Array(12).fill({}).map((_, index) => (
-            <Col key={index} span={6}>
+            <Col key={index} xs={24} md={12} lg={6}>
               <ProducCardSkeleton />
             </Col>
           ))}
@@ -107,7 +107,7 @@ export default function ProductsPage() {
       <Activity mode={productsCount > 0 ? "visible" : "hidden"}>
         <Row gutter={[15, 15]}>
           {products.map((product) => (
-            <Col key={product.id} span={6}>
+            <Col key={product.id} xs={24} md={12} lg={6}>
               <Link to={product.id}>
                 <ProducCard product={product} />
               </Link>

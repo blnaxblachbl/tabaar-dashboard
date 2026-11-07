@@ -1,0 +1,3711 @@
+[
+  {
+    "name": "Pullover",
+    "description": "Pullover with turtle print",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "yellow"
+        },
+        "price": 1900,
+        "count": 20,
+        "currency": "RUB"
+      }
+    ]
+  },
+  {
+    "name": "T-shirt",
+    "description": "Super puper T-shirt for Him",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "yellow"
+        },
+        "price": 250,
+        "count": 4,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "indigo"
+        },
+        "price": 250,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "T-shirt",
+    "description": "Super puper T-shirt for Her",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "red"
+        },
+        "price": 200,
+        "count": 2,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "blue"
+        },
+        "price": 200,
+        "count": 2,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Hoodie",
+    "description": "Cozy oversized fleece hoodie with kangaroo pocket",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "black"
+        },
+        "price": 320,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "grey"
+        },
+        "price": 320,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 320,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "olive"
+        },
+        "price": 320,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Jeans",
+    "description": "Slim fit stretch denim jeans with five pockets",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "30",
+          "color": "blue"
+        },
+        "price": 450,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "32",
+          "color": "dark blue"
+        },
+        "price": 450,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "34",
+          "color": "black"
+        },
+        "price": 450,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Denim Jacket",
+    "description": "Vintage wash button-up denim jacket with chest pockets",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "light wash"
+        },
+        "price": 750,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "medium wash"
+        },
+        "price": 750,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "dark wash"
+        },
+        "price": 750,
+        "count": 6,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Cardigan",
+    "description": "Soft knitted button-front cardigan sweater",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "cream"
+        },
+        "price": 400,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "beige"
+        },
+        "price": 400,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "mocha"
+        },
+        "price": 400,
+        "count": 7,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Cargo Pants",
+    "description": "Tactical multi-pocket durable cargo pants",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "khaki"
+        },
+        "price": 520,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "olive"
+        },
+        "price": 520,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 520,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "camo"
+        },
+        "price": 520,
+        "count": 6,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Bomber Jacket",
+    "description": "Classic nylon flight bomber jacket with ribbed collar",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "army green"
+        },
+        "price": 890,
+        "count": 6,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 890,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "navy"
+        },
+        "price": 890,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Polo Shirt",
+    "description": "Breathable pique cotton classic polo shirt",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "white"
+        },
+        "price": 280,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 280,
+        "count": 22,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "burgundy"
+        },
+        "price": 280,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "forest green"
+        },
+        "price": 280,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Summer Dress",
+    "description": "Floral pattern lightweight chiffon dress",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "floral pink"
+        },
+        "price": 450,
+        "count": 7,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "floral yellow"
+        },
+        "price": 450,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "floral blue"
+        },
+        "price": 450,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Trench Coat",
+    "description": "Double-breasted water-repellent trench coat",
+    "characterstics": {
+      "sex": "F",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "beige"
+        },
+        "price": 1200,
+        "count": 5,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "camel"
+        },
+        "price": 1200,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 1200,
+        "count": 4,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Chino Pants",
+    "description": "Casual regular fit stretch chinos",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "30",
+          "color": "tan"
+        },
+        "price": 380,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "32",
+          "color": "navy"
+        },
+        "price": 380,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "34",
+          "color": "charcoal"
+        },
+        "price": 380,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Turtleneck Sweater",
+    "description": "Fine merino wool turtleneck sweater",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 620,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "off-white"
+        },
+        "price": 620,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "charcoal"
+        },
+        "price": 620,
+        "count": 7,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Windbreaker",
+    "description": "Lightweight hooded water-resistant windbreaker",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "teal"
+        },
+        "price": 490,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 490,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "orange"
+        },
+        "price": 490,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Sweatpants",
+    "description": "Comfortable organic cotton fleece joggers",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "heather grey"
+        },
+        "price": 310,
+        "count": 22,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 310,
+        "count": 26,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "navy"
+        },
+        "price": 310,
+        "count": 17,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Leather Jacket",
+    "description": "Genuine sheepskin moto leather jacket",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 2400,
+        "count": 4,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "dark brown"
+        },
+        "price": 2400,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Pleated Skirt",
+    "description": "High-waisted A-line pleated midi skirt",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "plaid"
+        },
+        "price": 340,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 340,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "emerald green"
+        },
+        "price": 340,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Oxford Shirt",
+    "description": "Classic button-down long-sleeve oxford shirt",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "light blue"
+        },
+        "price": 360,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "white"
+        },
+        "price": 360,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "pink"
+        },
+        "price": 360,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "grey"
+        },
+        "price": 360,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Flannel Shirt",
+    "description": "Soft plaid check brushed cotton flannel shirt",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "red plaid"
+        },
+        "price": 330,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "green plaid"
+        },
+        "price": 330,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "blue plaid"
+        },
+        "price": 330,
+        "count": 7,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Puffer Jacket",
+    "description": "Insulated quilted down puffer jacket",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "yellow"
+        },
+        "price": 1150,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 1150,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "royal blue"
+        },
+        "price": 1150,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Tank Top",
+    "description": "Ribbed athletic stretch cotton tank top",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "white"
+        },
+        "price": 140,
+        "count": 25,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 140,
+        "count": 28,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "coral"
+        },
+        "price": 140,
+        "count": 16,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Blazer",
+    "description": "Tailored single-breasted formal blazer",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "48",
+          "color": "charcoal"
+        },
+        "price": 980,
+        "count": 7,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "50",
+          "color": "navy"
+        },
+        "price": 980,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "52",
+          "color": "black"
+        },
+        "price": 980,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Wool Coat",
+    "description": "Minimalist long wool blend overcoat",
+    "characterstics": {
+      "sex": "F",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "camel"
+        },
+        "price": 1600,
+        "count": 6,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "dark grey"
+        },
+        "price": 1600,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Bermuda Shorts",
+    "description": "Relaxed cotton twill bermuda shorts",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "30",
+          "color": "sand"
+        },
+        "price": 260,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "32",
+          "color": "khaki"
+        },
+        "price": 260,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "34",
+          "color": "navy"
+        },
+        "price": 260,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Knit Beanie",
+    "description": "Warm ribbed cuff winter knit beanie",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "black"
+        },
+        "price": 120,
+        "count": 30,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "mustard"
+        },
+        "price": 120,
+        "count": 25,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "burgundy"
+        },
+        "price": 120,
+        "count": 22,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "grey"
+        },
+        "price": 120,
+        "count": 35,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Graphic T-shirt",
+    "description": "Retro wave print vintage cotton tee",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "washed black"
+        },
+        "price": 240,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "washed white"
+        },
+        "price": 240,
+        "count": 24,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "vintage violet"
+        },
+        "price": 240,
+        "count": 15,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Linen Shirt",
+    "description": "Breathable pure linen summer shirt",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "white"
+        },
+        "price": 410,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "sky blue"
+        },
+        "price": 410,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "olive"
+        },
+        "price": 410,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Wrap Dress",
+    "description": "V-neck floral belted wrap midi dress",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "ruby red"
+        },
+        "price": 480,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "polka dot"
+        },
+        "price": 480,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "botanical green"
+        },
+        "price": 480,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Track Jacket",
+    "description": "Retro colorblock zip-up athletic track jacket",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "white/navy"
+        },
+        "price": 510,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black/gold"
+        },
+        "price": 510,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "red/white"
+        },
+        "price": 510,
+        "count": 7,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Denim Shorts",
+    "description": "Distressed high-rise cutoff denim shorts",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "26",
+          "color": "light wash"
+        },
+        "price": 270,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "28",
+          "color": "vintage blue"
+        },
+        "price": 270,
+        "count": 21,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "30",
+          "color": "white"
+        },
+        "price": 270,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Cable Knit Sweater",
+    "description": "Chunky textured cable knit crewneck sweater",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "ivory"
+        },
+        "price": 580,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "peach"
+        },
+        "price": 580,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "sage"
+        },
+        "price": 580,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Parka",
+    "description": "Fleece-lined winter parka with faux fur hood",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "olive drab"
+        },
+        "price": 1450,
+        "count": 5,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 1450,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "dark navy"
+        },
+        "price": 1450,
+        "count": 4,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Henley Shirt",
+    "description": "Waffle-knit three-button long sleeve henley",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "oatmeal"
+        },
+        "price": 290,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "charcoal"
+        },
+        "price": 290,
+        "count": 23,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "olive"
+        },
+        "price": 290,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Maxi Skirt",
+    "description": "Flowy tiered bohemian cotton maxi skirt",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "terracotta"
+        },
+        "price": 390,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "dusty rose"
+        },
+        "price": 390,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "teal"
+        },
+        "price": 390,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Fleece Vest",
+    "description": "Sleeveless zip-front sherpa fleece vest",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "beige"
+        },
+        "price": 420,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "forest green"
+        },
+        "price": 420,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 420,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Striped T-shirt",
+    "description": "Nautical Breton stripe crewneck cotton t-shirt",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "navy/white"
+        },
+        "price": 220,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "navy/white"
+        },
+        "price": 220,
+        "count": 21,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "red/white"
+        },
+        "price": 220,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black/white"
+        },
+        "price": 220,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Corduroy Pants",
+    "description": "Wide leg retro ribbed corduroy trousers",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "26",
+          "color": "rust"
+        },
+        "price": 460,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "28",
+          "color": "brown"
+        },
+        "price": 460,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "30",
+          "color": "dark green"
+        },
+        "price": 460,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Kimono Cardigan",
+    "description": "Lightweight printed open-front summer kimono",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "paisley"
+        },
+        "price": 310,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "floral black"
+        },
+        "price": 310,
+        "count": 18,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Anorak Jacket",
+    "description": "Half-zip pullover anorak with kangaroo pouch",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "yellow/navy"
+        },
+        "price": 560,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "olive/black"
+        },
+        "price": 560,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "purple/black"
+        },
+        "price": 560,
+        "count": 7,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Athletic Leggings",
+    "description": "High-waist seamless moisture-wicking athletic leggings",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "lavender"
+        },
+        "price": 280,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 280,
+        "count": 35,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "charcoal"
+        },
+        "price": 280,
+        "count": 24,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "plum"
+        },
+        "price": 280,
+        "count": 15,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Silk Blouse",
+    "description": "Elegant buttoned silk button-down blouse",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "champagne"
+        },
+        "price": 720,
+        "count": 6,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 720,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "emerald"
+        },
+        "price": 720,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Raincoat",
+    "description": "Waterproof hooded rubberized long raincoat",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "bright yellow"
+        },
+        "price": 490,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 490,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "transparent"
+        },
+        "price": 490,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Sports Bra",
+    "description": "Medium-impact cross-back workout sports bra",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "mint"
+        },
+        "price": 180,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 180,
+        "count": 28,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "coral"
+        },
+        "price": 180,
+        "count": 15,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Jogger Pants",
+    "description": "Tapered athletic sweatpants with cuffed hem",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "dark grey"
+        },
+        "price": 330,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "heather grey"
+        },
+        "price": 330,
+        "count": 25,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 330,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "navy"
+        },
+        "price": 330,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "V-Neck Sweater",
+    "description": "Soft cashmere touch v-neck knit sweater",
+    "characterstics": {
+      "sex": "M",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "camel"
+        },
+        "price": 540,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "charcoal"
+        },
+        "price": 540,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "burgundy"
+        },
+        "price": 540,
+        "count": 6,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Slip Dress",
+    "description": "Satin bias-cut camisole midi slip dress",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "emerald"
+        },
+        "price": 470,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "champagne"
+        },
+        "price": 470,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "midnight black"
+        },
+        "price": 470,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Harrington Jacket",
+    "description": "Classic plaid-lined zip Harrington jacket",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 780,
+        "count": 7,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "stone beige"
+        },
+        "price": 780,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "black"
+        },
+        "price": 780,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Linen Pants",
+    "description": "Drawstring relaxed fit breathable linen trousers",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "beige"
+        },
+        "price": 420,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "white"
+        },
+        "price": 420,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "olive"
+        },
+        "price": 420,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Crop Hoodie",
+    "description": "Cropped raw hem fleece pullover hoodie",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "pastel pink"
+        },
+        "price": 290,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "lilac"
+        },
+        "price": 290,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "light grey"
+        },
+        "price": 290,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Overalls",
+    "description": "Classic vintage denim bib dungarees",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "medium blue"
+        },
+        "price": 610,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "light wash"
+        },
+        "price": 610,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "hickory stripe"
+        },
+        "price": 610,
+        "count": 6,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Peacoat",
+    "description": "Double-breasted naval wool blend peacoat",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "40",
+          "color": "navy"
+        },
+        "price": 1350,
+        "count": 5,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "42",
+          "color": "charcoal"
+        },
+        "price": 1350,
+        "count": 7,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "44",
+          "color": "black"
+        },
+        "price": 1350,
+        "count": 4,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Shirt Dress",
+    "description": "Belted button-up utility midi shirt dress",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "khaki"
+        },
+        "price": 440,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 440,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "terracotta"
+        },
+        "price": 440,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Zip Hoodie",
+    "description": "Full-zip heavy cotton fleece hoodie",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "charcoal"
+        },
+        "price": 350,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "heather grey"
+        },
+        "price": 350,
+        "count": 24,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 350,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "maroon"
+        },
+        "price": 350,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Swim Trunks",
+    "description": "Quick-dry drawstring patterned swim trunks",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "palm print"
+        },
+        "price": 210,
+        "count": 22,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy stripe"
+        },
+        "price": 210,
+        "count": 28,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "coral red"
+        },
+        "price": 210,
+        "count": 15,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "One-Piece Swimsuit",
+    "description": "Ribbed scoop neck cutout one-piece swimsuit",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "olive"
+        },
+        "price": 290,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 290,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "terracotta"
+        },
+        "price": 290,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Scarf",
+    "description": "Warm wool fringed oversized blanket scarf",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "tartan red"
+        },
+        "price": 160,
+        "count": 25,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "beige check"
+        },
+        "price": 160,
+        "count": 29,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "grey houndstooth"
+        },
+        "price": 160,
+        "count": 18,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Leather Belt",
+    "description": "Full-grain leather belt with antique brass buckle",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "85",
+          "color": "cognac brown"
+        },
+        "price": 190,
+        "count": 30,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "95",
+          "color": "dark brown"
+        },
+        "price": 190,
+        "count": 35,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "105",
+          "color": "black"
+        },
+        "price": 190,
+        "count": 28,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Baseball Cap",
+    "description": "Six-panel washed cotton twill baseball cap",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "vintage green"
+        },
+        "price": 130,
+        "count": 35,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "washed navy"
+        },
+        "price": 130,
+        "count": 42,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "washed black"
+        },
+        "price": 130,
+        "count": 38,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "beige"
+        },
+        "price": 130,
+        "count": 25,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Wool Socks Pack",
+    "description": "Thick knit thermal winter crew socks 3-pack",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "mixed neutrals"
+        },
+        "price": 95,
+        "count": 40,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "mixed earthy tones"
+        },
+        "price": 95,
+        "count": 48,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Sleeveless Hoodie",
+    "description": "Athletic cut-off sleeveless gym hoodie",
+    "characterstics": {
+      "sex": "M",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 260,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "heather grey"
+        },
+        "price": 260,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "army green"
+        },
+        "price": 260,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Pencil Skirt",
+    "description": "High-rise tailored stretch office pencil skirt",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "black"
+        },
+        "price": 320,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "navy"
+        },
+        "price": 320,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "houndstooth"
+        },
+        "price": 320,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Corduroy Overshirt",
+    "description": "Button-down ribbed corduroy shacket",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "cinnamon"
+        },
+        "price": 460,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "dark pine"
+        },
+        "price": 460,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "charcoal"
+        },
+        "price": 460,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Biker Shorts",
+    "description": "High-waisted compressive athletic biker shorts",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "black"
+        },
+        "price": 190,
+        "count": 23,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "dusty mauve"
+        },
+        "price": 190,
+        "count": 29,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "slate blue"
+        },
+        "price": 190,
+        "count": 17,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Mock Neck Top",
+    "description": "Form-fitting ribbed long-sleeve mock neck top",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "chocolate brown"
+        },
+        "price": 210,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 210,
+        "count": 25,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "off-white"
+        },
+        "price": 210,
+        "count": 14,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Quilted Vest",
+    "description": "Diamond-quilted lightweight stand collar vest",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 480,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "dark olive"
+        },
+        "price": 480,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "black"
+        },
+        "price": 480,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Palazzo Pants",
+    "description": "High-waist wide-leg flowy pleated palazzo pants",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "cream"
+        },
+        "price": 380,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "sage"
+        },
+        "price": 380,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 380,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Chunky Cardigan",
+    "description": "Oversized buttonless chunky knit cardigan",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S/M",
+          "color": "oatmeal"
+        },
+        "price": 590,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M/L",
+          "color": "mauve"
+        },
+        "price": 590,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Long Sleeve T-shirt",
+    "description": "Heavyweight regular fit crewneck long sleeve",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "white"
+        },
+        "price": 230,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 230,
+        "count": 27,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "forest green"
+        },
+        "price": 230,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "mustard"
+        },
+        "price": 230,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Trench Vest",
+    "description": "Sleeveless long duster trench coat vest",
+    "characterstics": {
+      "sex": "F",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "camel"
+        },
+        "price": 710,
+        "count": 7,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "stone"
+        },
+        "price": 710,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Denim Skirt",
+    "description": "Front-slit raw hem denim midi skirt",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "26",
+          "color": "light indigo"
+        },
+        "price": 360,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "28",
+          "color": "vintage blue"
+        },
+        "price": 360,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "30",
+          "color": "washed black"
+        },
+        "price": 360,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Rugby Shirt",
+    "description": "Striped heavyweight cotton collar rugby shirt",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy/yellow"
+        },
+        "price": 370,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "dark green/white"
+        },
+        "price": 370,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "burgundy/navy"
+        },
+        "price": 370,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Poncho",
+    "description": "Fringed geometric pattern warm knit poncho",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "charcoal/grey"
+        },
+        "price": 430,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "beige/brown"
+        },
+        "price": 430,
+        "count": 14,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Cargo Shorts",
+    "description": "Multi-pocket relaxed utility cargo shorts",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "32",
+          "color": "desert sand"
+        },
+        "price": 280,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "34",
+          "color": "camouflage"
+        },
+        "price": 280,
+        "count": 22,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "36",
+          "color": "shadow black"
+        },
+        "price": 280,
+        "count": 13,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Silk Scarf",
+    "description": "Printed square mulberry silk neckerchief",
+    "characterstics": {
+      "sex": "F",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "baroque gold"
+        },
+        "price": 220,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "floral emerald"
+        },
+        "price": 220,
+        "count": 21,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "retro chain"
+        },
+        "price": 220,
+        "count": 14,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Shearling Jacket",
+    "description": "Faux suede jacket with warm sherpa shearling lining",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "tan"
+        },
+        "price": 1390,
+        "count": 6,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "dark brown"
+        },
+        "price": 1390,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 1390,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Tennis Skirt",
+    "description": "Pleated athletic mini tennis skirt with inner shorts",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "pure white"
+        },
+        "price": 250,
+        "count": 21,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "baby blue"
+        },
+        "price": 250,
+        "count": 26,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "navy"
+        },
+        "price": 250,
+        "count": 18,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Zip Polo",
+    "description": "Fine gauge quarter-zip knit polo sweater",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "midnight blue"
+        },
+        "price": 410,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "heather charcoal"
+        },
+        "price": 410,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "wine"
+        },
+        "price": 410,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Bucket Hat",
+    "description": "Reversible cotton twill festival bucket hat",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "black/camo"
+        },
+        "price": 140,
+        "count": 28,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "navy/yellow"
+        },
+        "price": 140,
+        "count": 31,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "beige/plaid"
+        },
+        "price": 140,
+        "count": 22,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Leather Gloves",
+    "description": "Cashmere-lined touch-screen leather dress gloves",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 290,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 290,
+        "count": 24,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "cognac brown"
+        },
+        "price": 290,
+        "count": 15,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Poplin Dress",
+    "description": "Tiered sleeveless poplin midi sun dress",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "sun yellow"
+        },
+        "price": 420,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "crisp white"
+        },
+        "price": 420,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "lavender"
+        },
+        "price": 420,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Camp Collar Shirt",
+    "description": "Retro tropical print relaxed camp collar shirt",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "palm green"
+        },
+        "price": 310,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "ocean blue"
+        },
+        "price": 310,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "sunset orange"
+        },
+        "price": 310,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Fleece Pullover",
+    "description": "Quarter-snap retro colorblock fleece pullover",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "teal/purple"
+        },
+        "price": 530,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "oatmeal/navy"
+        },
+        "price": 530,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "forest/clay"
+        },
+        "price": 530,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Tailored Trousers",
+    "description": "High-rise pleated front straight-leg trousers",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "36",
+          "color": "stone beige"
+        },
+        "price": 490,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "38",
+          "color": "black"
+        },
+        "price": 490,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "40",
+          "color": "navy"
+        },
+        "price": 490,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Teddy Jacket",
+    "description": "Plush fuzzy teddy fleece hooded jacket",
+    "characterstics": {
+      "sex": "F",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "cream"
+        },
+        "price": 670,
+        "count": 8,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "caramel"
+        },
+        "price": 670,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "dusty pink"
+        },
+        "price": 670,
+        "count": 6,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Compression Top",
+    "description": "Long sleeve quick-dry athletic compression rashguard",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "slate"
+        },
+        "price": 240,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "carbon black"
+        },
+        "price": 240,
+        "count": 26,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "royal blue"
+        },
+        "price": 240,
+        "count": 14,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Mom Jeans",
+    "description": "Vintage high-waist tapered leg mom jeans",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "25",
+          "color": "light stone wash"
+        },
+        "price": 430,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "27",
+          "color": "mid blue"
+        },
+        "price": 430,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "29",
+          "color": "black"
+        },
+        "price": 430,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Shawl Collar Cardigan",
+    "description": "Chunky ribbed knit cardigan with shawl collar",
+    "characterstics": {
+      "sex": "M",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "dark heather"
+        },
+        "price": 740,
+        "count": 7,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "navy"
+        },
+        "price": 740,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "olive"
+        },
+        "price": 740,
+        "count": 6,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Linen Blazer",
+    "description": "Unstructured lightweight summer linen blazer",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "48",
+          "color": "natural flax"
+        },
+        "price": 890,
+        "count": 6,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "50",
+          "color": "light navy"
+        },
+        "price": 890,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "52",
+          "color": "olive"
+        },
+        "price": 890,
+        "count": 5,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Ruffle Blouse",
+    "description": "Long sleeve chiffon ruffle front romantic blouse",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "ivory"
+        },
+        "price": 330,
+        "count": 13,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "blush"
+        },
+        "price": 330,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "black"
+        },
+        "price": 330,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Running Shorts",
+    "description": "Ultra-lightweight reflective split running shorts",
+    "characterstics": {
+      "sex": "M",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "neon lime"
+        },
+        "price": 190,
+        "count": 26,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "stealth black"
+        },
+        "price": 190,
+        "count": 34,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "deep navy"
+        },
+        "price": 190,
+        "count": 20,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Knit Polo",
+    "description": "Short sleeve open-knit textured resort polo",
+    "characterstics": {
+      "sex": "M",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "ecru"
+        },
+        "price": 360,
+        "count": 12,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "sage green"
+        },
+        "price": 360,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "terracotta"
+        },
+        "price": 360,
+        "count": 9,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Dungaree Dress",
+    "description": "Corduroy pinafore dungaree overall dress",
+    "characterstics": {
+      "sex": "F",
+      "category": 5
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "mustard"
+        },
+        "price": 370,
+        "count": 11,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "rust brown"
+        },
+        "price": 370,
+        "count": 17,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "forest green"
+        },
+        "price": 370,
+        "count": 10,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Down Vest",
+    "description": "Packable ultralight duck down sleeveless vest",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "graphite"
+        },
+        "price": 650,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "cobalt blue"
+        },
+        "price": 650,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "matte black"
+        },
+        "price": 650,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Flare Pants",
+    "description": "Retro 70s stretch ribbed high-rise flare pants",
+    "characterstics": {
+      "sex": "F",
+      "category": 3
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "chocolate brown"
+        },
+        "price": 310,
+        "count": 16,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "jet black"
+        },
+        "price": 310,
+        "count": 22,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "deep burgundy"
+        },
+        "price": 310,
+        "count": 13,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Baseball Jersey",
+    "description": "Button-front mesh stripe baseball team jersey",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "pinstripe white"
+        },
+        "price": 290,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "pinstripe black"
+        },
+        "price": 290,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "navy"
+        },
+        "price": 290,
+        "count": 12,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Peplum Top",
+    "description": "Sleeveless structured peplum waist top",
+    "characterstics": {
+      "sex": "F",
+      "category": 1
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "XS",
+          "color": "scarlet"
+        },
+        "price": 260,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "black"
+        },
+        "price": 260,
+        "count": 19,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "royal blue"
+        },
+        "price": 260,
+        "count": 11,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Quilted Overshirt",
+    "description": "Lightly padded snap-front utility overshirt",
+    "characterstics": {
+      "sex": "M",
+      "category": 4
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "dark olive"
+        },
+        "price": 590,
+        "count": 9,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "navy"
+        },
+        "price": 590,
+        "count": 14,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "XL",
+          "color": "charcoal"
+        },
+        "price": 590,
+        "count": 7,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Maxi Cardigan",
+    "description": "Floor-length fine ribbed knit duster cardigan",
+    "characterstics": {
+      "sex": "F",
+      "category": 2
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "S",
+          "color": "heather grey"
+        },
+        "price": 520,
+        "count": 10,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "M",
+          "color": "taupe"
+        },
+        "price": 520,
+        "count": 15,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "L",
+          "color": "black"
+        },
+        "price": 520,
+        "count": 8,
+        "currency": "USD"
+      }
+    ]
+  },
+  {
+    "name": "Wool Beanie & Scarf Set",
+    "description": "Matching ribbed merino wool winter gift set",
+    "characterstics": {
+      "sex": "Unisex",
+      "category": 6
+    },
+    "variants": [
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "charcoal grey"
+        },
+        "price": 280,
+        "count": 20,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "navy"
+        },
+        "price": 280,
+        "count": 25,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "forest green"
+        },
+        "price": 280,
+        "count": 18,
+        "currency": "USD"
+      },
+      {
+        "characterstics": {
+          "size": "OneSize",
+          "color": "camel"
+        },
+        "price": 280,
+        "count": 22,
+        "currency": "USD"
+      }
+    ]
+  }
+]
