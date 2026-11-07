@@ -479,6 +479,47 @@
           "description": "gRPC API includes User, Product and Api Keys Services. Support Api Key access."
         }
       }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 Primary Use Cases",
+        "use-case": "Use Case",
+        "description": "Description",
+        "omnichannel": "Omnichannel E-Commerce",
+        "omnichannel-description": "Omnichannel E-Commerce Centralize product catalog, variants, pricing, and assets across web, mobile, in-store POS, and partner marketplaces.",
+        "microservices": "Microservices Catalog Backbone",
+        "microservices-description": "Serve internal ordering and inventory services over gRPC while exposing GraphQL to client applications.",
+        "search": "High-Faceted Search Catalogs",
+        "search-description": "High-Faceted Search Catalogs Deliver fast, complex attribute filtering (e.g., brand, price ranges, technical specs, categories) powered by Elasticsearch.",
+        "dam": "Digital Asset Management (DAM)",
+        "dam-description": "Digital Asset Management (DAM) Store and link high-resolution product photography and assets reliably via S3-compatible storage."
+      },
+      "arch": {
+        "title": "🏗️ Architecture Overview"
+      },
+      "tech": {
+        "title": "💻 Tech Stack Summary",
+        "point1": {
+          "title": "Runtime & Language",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "APIs",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "Databases",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "Asset Storage",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "Validation & Security",
+          "text": "Zod schemas, GraphQL Shield, JWT authentication, UUIDv7 API keys"
+        }
+      }
     }
   }
 }

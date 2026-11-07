@@ -1,91 +1,93 @@
 import { Divider } from "antd";
+import { useTranslation } from "react-i18next";
 
 import ArchitectureSvg from "@/assets/architecture.svg?react";
 import { PageLayout } from "@/components/PageLayout";
 import { Title } from "@/components/Title";
 
 export default function AboutPage() {
+  const { t } = useTranslation("", {
+    keyPrefix: "pages.about",
+  });
+
   return (
     <PageLayout className="space-y-21">
       <section>
-        <Title title="🎯 Primary Use Cases" />
+        <Title title={t("use-cases.title")} />
         <Divider />
         <table className="ring ring-gray-600 rounded-md overflow-hidden text-sm">
           <thead>
             <tr>
-              <th className="ring ring-gray-600 p-3">Use Case</th>
-              <th className="ring ring-gray-600 p-3">Description</th>
+              <th className="ring ring-gray-600 p-3">
+                {t("use-cases.use-case")}
+              </th>
+              <th className="ring ring-gray-600 p-3">
+                {t("use-cases.description")}
+              </th>
             </tr>
           </thead>
           <tbody className="text-left font-normal!">
             <tr>
-              <th className="ring ring-gray-600 p-3">Omnichannel E-Commerce</th>
               <th className="ring ring-gray-600 p-3">
-                Omnichannel E-Commerce Centralize product catalog, variants,
-                pricing, and assets across web, mobile, in-store POS, and
-                partner marketplaces.
+                {t("use-cases.omnichannel")}
+              </th>
+              <th className="ring ring-gray-600 p-3">
+                {t("use-cases.omnichannel-description")}
               </th>
             </tr>
             <tr>
               <th className="ring ring-gray-600 p-3">
-                Microservices Catalog Backbone
+                {t("use-cases.microservices")}
               </th>
               <th className="ring ring-gray-600 p-3">
-                Serve internal ordering and inventory services over gRPC while
-                exposing GraphQL to client applications.
-              </th>
-            </tr>
-            <tr>
-              <th className="ring ring-gray-600 p-3">
-                High-Faceted Search Catalogs
-              </th>
-              <th className="ring ring-gray-600 p-3">
-                High-Faceted Search Catalogs Deliver fast, complex attribute
-                filtering (e.g., brand, price ranges, technical specs,
-                categories) powered by Elasticsearch.
+                {t("use-cases.microservices-description")}
               </th>
             </tr>
             <tr>
               <th className="ring ring-gray-600 p-3">
-                Digital Asset Management (DAM)
+                {t("use-cases.search")}
               </th>
               <th className="ring ring-gray-600 p-3">
-                Digital Asset Management (DAM) Store and link high-resolution
-                product photography and assets reliably via S3-compatible
-                storage.
+                {t("use-cases.search-description")}
+              </th>
+            </tr>
+            <tr>
+              <th className="ring ring-gray-600 p-3">{t("use-cases.dam")}</th>
+              <th className="ring ring-gray-600 p-3">
+                {t("use-cases.dam-description")}
               </th>
             </tr>
           </tbody>
         </table>
       </section>
       <section>
-        <Title title="🏗️ Architecture Overview" />
+        <Title title={t("arch.title")} />
         <Divider />
         <ArchitectureSvg />
       </section>
       <section>
-        <Title title="💻 Tech Stack Summary" />
+        <Title title={t("tech.title")} />
         <Divider />
         <ul className="pl-3 space-y-3">
           <li>
-            <span className="font-bold">Runtime & Language</span>: Node.js,
-            TypeScript
+            <span className="font-bold">{t("tech.point1.title")}</span>:{" "}
+            {t("tech.point1.text")}
           </li>
           <li>
-            <span className="font-bold">APIs</span>: Apollo Server (GraphQL),
-            Express 5 (REST), @grpc/grpc-js (gRPC)
+            <span className="font-bold">{t("tech.point2.title")}</span>:{" "}
+            {t("tech.point2.text")}
           </li>
           <li>
-            <span className="font-bold">Databases</span>: PostgreSQL (Prisma
-            ORM), Elasticsearch 9
+            <span className="font-bold">{t("tech.point3.title")}</span>:{" "}
+            {t("tech.point3.text")}
           </li>
           <li>
-            <span className="font-bold">Asset Storage</span>: MinIO / AWS S3
-            SDK, Sharp
+            <span className="font-bold">{t("tech.point4.title")}</span>:{" "}
+            {t("tech.point4.text")}
           </li>
           <li>
-            <span className="font-bold">Validation & Security</span>: Zod
-            schemas, GraphQL Shield, JWT authentication, UUIDv7 API keys
+            <span className="font-bold">{t("tech.point5.title")}</span>:{" "}
+            {t("tech.point5.text")}
           </li>
         </ul>
       </section>
