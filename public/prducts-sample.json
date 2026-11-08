@@ -1,7 +1,9 @@
 [
   {
-    "name": "Pullover",
-    "description": "Pullover with turtle print",
+    "name": [{ "locale": "en", "content": "Pullover" }],
+    "description": [
+      { "locale": "en", "content": "Pullover with turtle print" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -19,8 +21,10 @@
     ]
   },
   {
-    "name": "T-shirt",
-    "description": "Super puper T-shirt for Him",
+    "name": [{ "locale": "en", "content": "T-shirt" }],
+    "description": [
+      { "locale": "en", "content": "Super puper T-shirt for Him" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -47,8 +51,10 @@
     ]
   },
   {
-    "name": "T-shirt",
-    "description": "Super puper T-shirt for Her",
+    "name": [{ "locale": "en", "content": "T-shirt" }],
+    "description": [
+      { "locale": "en", "content": "Super puper T-shirt for Her" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -75,8 +81,13 @@
     ]
   },
   {
-    "name": "Hoodie",
-    "description": "Cozy oversized fleece hoodie with kangaroo pocket",
+    "name": [{ "locale": "en", "content": "Hoodie" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Cozy oversized fleece hoodie with kangaroo pocket"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 2
@@ -121,8 +132,13 @@
     ]
   },
   {
-    "name": "Jeans",
-    "description": "Slim fit stretch denim jeans with five pockets",
+    "name": [{ "locale": "en", "content": "Jeans" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Slim fit stretch denim jeans with five pockets"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -158,8 +174,13 @@
     ]
   },
   {
-    "name": "Denim Jacket",
-    "description": "Vintage wash button-up denim jacket with chest pockets",
+    "name": [{ "locale": "en", "content": "Denim Jacket" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Vintage wash button-up denim jacket with chest pockets"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -195,8 +216,13 @@
     ]
   },
   {
-    "name": "Cardigan",
-    "description": "Soft knitted button-front cardigan sweater",
+    "name": [{ "locale": "en", "content": "Cardigan" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Soft knitted button-front cardigan sweater"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -232,8 +258,10 @@
     ]
   },
   {
-    "name": "Cargo Pants",
-    "description": "Tactical multi-pocket durable cargo pants",
+    "name": [{ "locale": "en", "content": "Cargo Pants" }],
+    "description": [
+      { "locale": "en", "content": "Tactical multi-pocket durable cargo pants" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -278,8 +306,13 @@
     ]
   },
   {
-    "name": "Bomber Jacket",
-    "description": "Classic nylon flight bomber jacket with ribbed collar",
+    "name": [{ "locale": "en", "content": "Bomber Jacket" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Classic nylon flight bomber jacket with ribbed collar"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -315,8 +348,13 @@
     ]
   },
   {
-    "name": "Polo Shirt",
-    "description": "Breathable pique cotton classic polo shirt",
+    "name": [{ "locale": "en", "content": "Polo Shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Breathable pique cotton classic polo shirt"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -361,8 +399,10 @@
     ]
   },
   {
-    "name": "Summer Dress",
-    "description": "Floral pattern lightweight chiffon dress",
+    "name": [{ "locale": "en", "content": "Summer Dress" }],
+    "description": [
+      { "locale": "en", "content": "Floral pattern lightweight chiffon dress" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -398,8 +438,13 @@
     ]
   },
   {
-    "name": "Trench Coat",
-    "description": "Double-breasted water-repellent trench coat",
+    "name": [{ "locale": "en", "content": "Trench Coat" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Double-breasted water-repellent trench coat"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 4
@@ -435,8 +480,10 @@
     ]
   },
   {
-    "name": "Chino Pants",
-    "description": "Casual regular fit stretch chinos",
+    "name": [{ "locale": "en", "content": "Chino Pants" }],
+    "description": [
+      { "locale": "en", "content": "Casual regular fit stretch chinos" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -472,8 +519,10 @@
     ]
   },
   {
-    "name": "Turtleneck Sweater",
-    "description": "Fine merino wool turtleneck sweater",
+    "name": [{ "locale": "en", "content": "Turtleneck Sweater" }],
+    "description": [
+      { "locale": "en", "content": "Fine merino wool turtleneck sweater" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 2
@@ -509,8 +558,13 @@
     ]
   },
   {
-    "name": "Windbreaker",
-    "description": "Lightweight hooded water-resistant windbreaker",
+    "name": [{ "locale": "en", "content": "Windbreaker" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Lightweight hooded water-resistant windbreaker"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -546,8 +600,10 @@
     ]
   },
   {
-    "name": "Sweatpants",
-    "description": "Comfortable organic cotton fleece joggers",
+    "name": [{ "locale": "en", "content": "Sweatpants" }],
+    "description": [
+      { "locale": "en", "content": "Comfortable organic cotton fleece joggers" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 3
@@ -583,8 +639,10 @@
     ]
   },
   {
-    "name": "Leather Jacket",
-    "description": "Genuine sheepskin moto leather jacket",
+    "name": [{ "locale": "en", "content": "Leather Jacket" }],
+    "description": [
+      { "locale": "en", "content": "Genuine sheepskin moto leather jacket" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -611,8 +669,10 @@
     ]
   },
   {
-    "name": "Pleated Skirt",
-    "description": "High-waisted A-line pleated midi skirt",
+    "name": [{ "locale": "en", "content": "Pleated Skirt" }],
+    "description": [
+      { "locale": "en", "content": "High-waisted A-line pleated midi skirt" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -648,8 +708,13 @@
     ]
   },
   {
-    "name": "Oxford Shirt",
-    "description": "Classic button-down long-sleeve oxford shirt",
+    "name": [{ "locale": "en", "content": "Oxford Shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Classic button-down long-sleeve oxford shirt"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -694,8 +759,13 @@
     ]
   },
   {
-    "name": "Flannel Shirt",
-    "description": "Soft plaid check brushed cotton flannel shirt",
+    "name": [{ "locale": "en", "content": "Flannel Shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Soft plaid check brushed cotton flannel shirt"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 1
@@ -731,8 +801,10 @@
     ]
   },
   {
-    "name": "Puffer Jacket",
-    "description": "Insulated quilted down puffer jacket",
+    "name": [{ "locale": "en", "content": "Puffer Jacket" }],
+    "description": [
+      { "locale": "en", "content": "Insulated quilted down puffer jacket" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -768,8 +840,10 @@
     ]
   },
   {
-    "name": "Tank Top",
-    "description": "Ribbed athletic stretch cotton tank top",
+    "name": [{ "locale": "en", "content": "Tank Top" }],
+    "description": [
+      { "locale": "en", "content": "Ribbed athletic stretch cotton tank top" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -805,8 +879,10 @@
     ]
   },
   {
-    "name": "Blazer",
-    "description": "Tailored single-breasted formal blazer",
+    "name": [{ "locale": "en", "content": "Blazer" }],
+    "description": [
+      { "locale": "en", "content": "Tailored single-breasted formal blazer" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -842,8 +918,10 @@
     ]
   },
   {
-    "name": "Wool Coat",
-    "description": "Minimalist long wool blend overcoat",
+    "name": [{ "locale": "en", "content": "Wool Coat" }],
+    "description": [
+      { "locale": "en", "content": "Minimalist long wool blend overcoat" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 4
@@ -870,8 +948,10 @@
     ]
   },
   {
-    "name": "Bermuda Shorts",
-    "description": "Relaxed cotton twill bermuda shorts",
+    "name": [{ "locale": "en", "content": "Bermuda Shorts" }],
+    "description": [
+      { "locale": "en", "content": "Relaxed cotton twill bermuda shorts" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -907,8 +987,10 @@
     ]
   },
   {
-    "name": "Knit Beanie",
-    "description": "Warm ribbed cuff winter knit beanie",
+    "name": [{ "locale": "en", "content": "Knit Beanie" }],
+    "description": [
+      { "locale": "en", "content": "Warm ribbed cuff winter knit beanie" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -953,8 +1035,10 @@
     ]
   },
   {
-    "name": "Graphic T-shirt",
-    "description": "Retro wave print vintage cotton tee",
+    "name": [{ "locale": "en", "content": "Graphic T-shirt" }],
+    "description": [
+      { "locale": "en", "content": "Retro wave print vintage cotton tee" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 1
@@ -990,8 +1074,10 @@
     ]
   },
   {
-    "name": "Linen Shirt",
-    "description": "Breathable pure linen summer shirt",
+    "name": [{ "locale": "en", "content": "Linen Shirt" }],
+    "description": [
+      { "locale": "en", "content": "Breathable pure linen summer shirt" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -1027,8 +1113,10 @@
     ]
   },
   {
-    "name": "Wrap Dress",
-    "description": "V-neck floral belted wrap midi dress",
+    "name": [{ "locale": "en", "content": "Wrap Dress" }],
+    "description": [
+      { "locale": "en", "content": "V-neck floral belted wrap midi dress" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -1064,8 +1152,13 @@
     ]
   },
   {
-    "name": "Track Jacket",
-    "description": "Retro colorblock zip-up athletic track jacket",
+    "name": [{ "locale": "en", "content": "Track Jacket" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Retro colorblock zip-up athletic track jacket"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -1101,8 +1194,10 @@
     ]
   },
   {
-    "name": "Denim Shorts",
-    "description": "Distressed high-rise cutoff denim shorts",
+    "name": [{ "locale": "en", "content": "Denim Shorts" }],
+    "description": [
+      { "locale": "en", "content": "Distressed high-rise cutoff denim shorts" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -1138,8 +1233,13 @@
     ]
   },
   {
-    "name": "Cable Knit Sweater",
-    "description": "Chunky textured cable knit crewneck sweater",
+    "name": [{ "locale": "en", "content": "Cable Knit Sweater" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Chunky textured cable knit crewneck sweater"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -1175,8 +1275,13 @@
     ]
   },
   {
-    "name": "Parka",
-    "description": "Fleece-lined winter parka with faux fur hood",
+    "name": [{ "locale": "en", "content": "Parka" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Fleece-lined winter parka with faux fur hood"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -1212,8 +1317,13 @@
     ]
   },
   {
-    "name": "Henley Shirt",
-    "description": "Waffle-knit three-button long sleeve henley",
+    "name": [{ "locale": "en", "content": "Henley Shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Waffle-knit three-button long sleeve henley"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -1249,8 +1359,10 @@
     ]
   },
   {
-    "name": "Maxi Skirt",
-    "description": "Flowy tiered bohemian cotton maxi skirt",
+    "name": [{ "locale": "en", "content": "Maxi Skirt" }],
+    "description": [
+      { "locale": "en", "content": "Flowy tiered bohemian cotton maxi skirt" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -1286,8 +1398,10 @@
     ]
   },
   {
-    "name": "Fleece Vest",
-    "description": "Sleeveless zip-front sherpa fleece vest",
+    "name": [{ "locale": "en", "content": "Fleece Vest" }],
+    "description": [
+      { "locale": "en", "content": "Sleeveless zip-front sherpa fleece vest" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -1323,8 +1437,13 @@
     ]
   },
   {
-    "name": "Striped T-shirt",
-    "description": "Nautical Breton stripe crewneck cotton t-shirt",
+    "name": [{ "locale": "en", "content": "Striped T-shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Nautical Breton stripe crewneck cotton t-shirt"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 1
@@ -1369,8 +1488,10 @@
     ]
   },
   {
-    "name": "Corduroy Pants",
-    "description": "Wide leg retro ribbed corduroy trousers",
+    "name": [{ "locale": "en", "content": "Corduroy Pants" }],
+    "description": [
+      { "locale": "en", "content": "Wide leg retro ribbed corduroy trousers" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -1406,8 +1527,13 @@
     ]
   },
   {
-    "name": "Kimono Cardigan",
-    "description": "Lightweight printed open-front summer kimono",
+    "name": [{ "locale": "en", "content": "Kimono Cardigan" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Lightweight printed open-front summer kimono"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -1434,8 +1560,13 @@
     ]
   },
   {
-    "name": "Anorak Jacket",
-    "description": "Half-zip pullover anorak with kangaroo pouch",
+    "name": [{ "locale": "en", "content": "Anorak Jacket" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Half-zip pullover anorak with kangaroo pouch"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -1471,8 +1602,13 @@
     ]
   },
   {
-    "name": "Athletic Leggings",
-    "description": "High-waist seamless moisture-wicking athletic leggings",
+    "name": [{ "locale": "en", "content": "Athletic Leggings" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "High-waist seamless moisture-wicking athletic leggings"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -1517,8 +1653,10 @@
     ]
   },
   {
-    "name": "Silk Blouse",
-    "description": "Elegant buttoned silk button-down blouse",
+    "name": [{ "locale": "en", "content": "Silk Blouse" }],
+    "description": [
+      { "locale": "en", "content": "Elegant buttoned silk button-down blouse" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -1554,8 +1692,13 @@
     ]
   },
   {
-    "name": "Raincoat",
-    "description": "Waterproof hooded rubberized long raincoat",
+    "name": [{ "locale": "en", "content": "Raincoat" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Waterproof hooded rubberized long raincoat"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -1591,8 +1734,13 @@
     ]
   },
   {
-    "name": "Sports Bra",
-    "description": "Medium-impact cross-back workout sports bra",
+    "name": [{ "locale": "en", "content": "Sports Bra" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Medium-impact cross-back workout sports bra"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -1628,8 +1776,13 @@
     ]
   },
   {
-    "name": "Jogger Pants",
-    "description": "Tapered athletic sweatpants with cuffed hem",
+    "name": [{ "locale": "en", "content": "Jogger Pants" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Tapered athletic sweatpants with cuffed hem"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -1674,8 +1827,10 @@
     ]
   },
   {
-    "name": "V-Neck Sweater",
-    "description": "Soft cashmere touch v-neck knit sweater",
+    "name": [{ "locale": "en", "content": "V-Neck Sweater" }],
+    "description": [
+      { "locale": "en", "content": "Soft cashmere touch v-neck knit sweater" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 2
@@ -1711,8 +1866,10 @@
     ]
   },
   {
-    "name": "Slip Dress",
-    "description": "Satin bias-cut camisole midi slip dress",
+    "name": [{ "locale": "en", "content": "Slip Dress" }],
+    "description": [
+      { "locale": "en", "content": "Satin bias-cut camisole midi slip dress" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -1748,8 +1905,10 @@
     ]
   },
   {
-    "name": "Harrington Jacket",
-    "description": "Classic plaid-lined zip Harrington jacket",
+    "name": [{ "locale": "en", "content": "Harrington Jacket" }],
+    "description": [
+      { "locale": "en", "content": "Classic plaid-lined zip Harrington jacket" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -1785,8 +1944,13 @@
     ]
   },
   {
-    "name": "Linen Pants",
-    "description": "Drawstring relaxed fit breathable linen trousers",
+    "name": [{ "locale": "en", "content": "Linen Pants" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Drawstring relaxed fit breathable linen trousers"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 3
@@ -1822,8 +1986,10 @@
     ]
   },
   {
-    "name": "Crop Hoodie",
-    "description": "Cropped raw hem fleece pullover hoodie",
+    "name": [{ "locale": "en", "content": "Crop Hoodie" }],
+    "description": [
+      { "locale": "en", "content": "Cropped raw hem fleece pullover hoodie" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -1859,8 +2025,10 @@
     ]
   },
   {
-    "name": "Overalls",
-    "description": "Classic vintage denim bib dungarees",
+    "name": [{ "locale": "en", "content": "Overalls" }],
+    "description": [
+      { "locale": "en", "content": "Classic vintage denim bib dungarees" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 3
@@ -1896,8 +2064,10 @@
     ]
   },
   {
-    "name": "Peacoat",
-    "description": "Double-breasted naval wool blend peacoat",
+    "name": [{ "locale": "en", "content": "Peacoat" }],
+    "description": [
+      { "locale": "en", "content": "Double-breasted naval wool blend peacoat" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -1933,8 +2103,10 @@
     ]
   },
   {
-    "name": "Shirt Dress",
-    "description": "Belted button-up utility midi shirt dress",
+    "name": [{ "locale": "en", "content": "Shirt Dress" }],
+    "description": [
+      { "locale": "en", "content": "Belted button-up utility midi shirt dress" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -1970,8 +2142,10 @@
     ]
   },
   {
-    "name": "Zip Hoodie",
-    "description": "Full-zip heavy cotton fleece hoodie",
+    "name": [{ "locale": "en", "content": "Zip Hoodie" }],
+    "description": [
+      { "locale": "en", "content": "Full-zip heavy cotton fleece hoodie" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 2
@@ -2016,8 +2190,13 @@
     ]
   },
   {
-    "name": "Swim Trunks",
-    "description": "Quick-dry drawstring patterned swim trunks",
+    "name": [{ "locale": "en", "content": "Swim Trunks" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Quick-dry drawstring patterned swim trunks"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -2053,8 +2232,13 @@
     ]
   },
   {
-    "name": "One-Piece Swimsuit",
-    "description": "Ribbed scoop neck cutout one-piece swimsuit",
+    "name": [{ "locale": "en", "content": "One-Piece Swimsuit" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Ribbed scoop neck cutout one-piece swimsuit"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -2090,8 +2274,10 @@
     ]
   },
   {
-    "name": "Scarf",
-    "description": "Warm wool fringed oversized blanket scarf",
+    "name": [{ "locale": "en", "content": "Scarf" }],
+    "description": [
+      { "locale": "en", "content": "Warm wool fringed oversized blanket scarf" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -2127,8 +2313,13 @@
     ]
   },
   {
-    "name": "Leather Belt",
-    "description": "Full-grain leather belt with antique brass buckle",
+    "name": [{ "locale": "en", "content": "Leather Belt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Full-grain leather belt with antique brass buckle"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -2164,8 +2355,13 @@
     ]
   },
   {
-    "name": "Baseball Cap",
-    "description": "Six-panel washed cotton twill baseball cap",
+    "name": [{ "locale": "en", "content": "Baseball Cap" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Six-panel washed cotton twill baseball cap"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -2210,8 +2406,13 @@
     ]
   },
   {
-    "name": "Wool Socks Pack",
-    "description": "Thick knit thermal winter crew socks 3-pack",
+    "name": [{ "locale": "en", "content": "Wool Socks Pack" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Thick knit thermal winter crew socks 3-pack"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -2238,8 +2439,10 @@
     ]
   },
   {
-    "name": "Sleeveless Hoodie",
-    "description": "Athletic cut-off sleeveless gym hoodie",
+    "name": [{ "locale": "en", "content": "Sleeveless Hoodie" }],
+    "description": [
+      { "locale": "en", "content": "Athletic cut-off sleeveless gym hoodie" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 2
@@ -2275,8 +2478,13 @@
     ]
   },
   {
-    "name": "Pencil Skirt",
-    "description": "High-rise tailored stretch office pencil skirt",
+    "name": [{ "locale": "en", "content": "Pencil Skirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "High-rise tailored stretch office pencil skirt"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -2312,8 +2520,10 @@
     ]
   },
   {
-    "name": "Corduroy Overshirt",
-    "description": "Button-down ribbed corduroy shacket",
+    "name": [{ "locale": "en", "content": "Corduroy Overshirt" }],
+    "description": [
+      { "locale": "en", "content": "Button-down ribbed corduroy shacket" }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 1
@@ -2349,8 +2559,13 @@
     ]
   },
   {
-    "name": "Biker Shorts",
-    "description": "High-waisted compressive athletic biker shorts",
+    "name": [{ "locale": "en", "content": "Biker Shorts" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "High-waisted compressive athletic biker shorts"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -2386,8 +2601,13 @@
     ]
   },
   {
-    "name": "Mock Neck Top",
-    "description": "Form-fitting ribbed long-sleeve mock neck top",
+    "name": [{ "locale": "en", "content": "Mock Neck Top" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Form-fitting ribbed long-sleeve mock neck top"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -2423,8 +2643,13 @@
     ]
   },
   {
-    "name": "Quilted Vest",
-    "description": "Diamond-quilted lightweight stand collar vest",
+    "name": [{ "locale": "en", "content": "Quilted Vest" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Diamond-quilted lightweight stand collar vest"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -2460,8 +2685,13 @@
     ]
   },
   {
-    "name": "Palazzo Pants",
-    "description": "High-waist wide-leg flowy pleated palazzo pants",
+    "name": [{ "locale": "en", "content": "Palazzo Pants" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "High-waist wide-leg flowy pleated palazzo pants"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -2497,8 +2727,10 @@
     ]
   },
   {
-    "name": "Chunky Cardigan",
-    "description": "Oversized buttonless chunky knit cardigan",
+    "name": [{ "locale": "en", "content": "Chunky Cardigan" }],
+    "description": [
+      { "locale": "en", "content": "Oversized buttonless chunky knit cardigan" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -2525,8 +2757,13 @@
     ]
   },
   {
-    "name": "Long Sleeve T-shirt",
-    "description": "Heavyweight regular fit crewneck long sleeve",
+    "name": [{ "locale": "en", "content": "Long Sleeve T-shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Heavyweight regular fit crewneck long sleeve"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 1
@@ -2571,8 +2808,10 @@
     ]
   },
   {
-    "name": "Trench Vest",
-    "description": "Sleeveless long duster trench coat vest",
+    "name": [{ "locale": "en", "content": "Trench Vest" }],
+    "description": [
+      { "locale": "en", "content": "Sleeveless long duster trench coat vest" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 4
@@ -2599,8 +2838,10 @@
     ]
   },
   {
-    "name": "Denim Skirt",
-    "description": "Front-slit raw hem denim midi skirt",
+    "name": [{ "locale": "en", "content": "Denim Skirt" }],
+    "description": [
+      { "locale": "en", "content": "Front-slit raw hem denim midi skirt" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -2636,8 +2877,13 @@
     ]
   },
   {
-    "name": "Rugby Shirt",
-    "description": "Striped heavyweight cotton collar rugby shirt",
+    "name": [{ "locale": "en", "content": "Rugby Shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Striped heavyweight cotton collar rugby shirt"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -2673,8 +2919,13 @@
     ]
   },
   {
-    "name": "Poncho",
-    "description": "Fringed geometric pattern warm knit poncho",
+    "name": [{ "locale": "en", "content": "Poncho" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Fringed geometric pattern warm knit poncho"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -2701,8 +2952,10 @@
     ]
   },
   {
-    "name": "Cargo Shorts",
-    "description": "Multi-pocket relaxed utility cargo shorts",
+    "name": [{ "locale": "en", "content": "Cargo Shorts" }],
+    "description": [
+      { "locale": "en", "content": "Multi-pocket relaxed utility cargo shorts" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -2738,8 +2991,10 @@
     ]
   },
   {
-    "name": "Silk Scarf",
-    "description": "Printed square mulberry silk neckerchief",
+    "name": [{ "locale": "en", "content": "Silk Scarf" }],
+    "description": [
+      { "locale": "en", "content": "Printed square mulberry silk neckerchief" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 6
@@ -2775,8 +3030,13 @@
     ]
   },
   {
-    "name": "Shearling Jacket",
-    "description": "Faux suede jacket with warm sherpa shearling lining",
+    "name": [{ "locale": "en", "content": "Shearling Jacket" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Faux suede jacket with warm sherpa shearling lining"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -2812,8 +3072,13 @@
     ]
   },
   {
-    "name": "Tennis Skirt",
-    "description": "Pleated athletic mini tennis skirt with inner shorts",
+    "name": [{ "locale": "en", "content": "Tennis Skirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Pleated athletic mini tennis skirt with inner shorts"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -2849,8 +3114,10 @@
     ]
   },
   {
-    "name": "Zip Polo",
-    "description": "Fine gauge quarter-zip knit polo sweater",
+    "name": [{ "locale": "en", "content": "Zip Polo" }],
+    "description": [
+      { "locale": "en", "content": "Fine gauge quarter-zip knit polo sweater" }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -2886,8 +3153,13 @@
     ]
   },
   {
-    "name": "Bucket Hat",
-    "description": "Reversible cotton twill festival bucket hat",
+    "name": [{ "locale": "en", "content": "Bucket Hat" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Reversible cotton twill festival bucket hat"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -2923,8 +3195,13 @@
     ]
   },
   {
-    "name": "Leather Gloves",
-    "description": "Cashmere-lined touch-screen leather dress gloves",
+    "name": [{ "locale": "en", "content": "Leather Gloves" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Cashmere-lined touch-screen leather dress gloves"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
@@ -2960,8 +3237,10 @@
     ]
   },
   {
-    "name": "Poplin Dress",
-    "description": "Tiered sleeveless poplin midi sun dress",
+    "name": [{ "locale": "en", "content": "Poplin Dress" }],
+    "description": [
+      { "locale": "en", "content": "Tiered sleeveless poplin midi sun dress" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -2997,8 +3276,13 @@
     ]
   },
   {
-    "name": "Camp Collar Shirt",
-    "description": "Retro tropical print relaxed camp collar shirt",
+    "name": [{ "locale": "en", "content": "Camp Collar Shirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Retro tropical print relaxed camp collar shirt"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -3034,8 +3318,13 @@
     ]
   },
   {
-    "name": "Fleece Pullover",
-    "description": "Quarter-snap retro colorblock fleece pullover",
+    "name": [{ "locale": "en", "content": "Fleece Pullover" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Quarter-snap retro colorblock fleece pullover"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 2
@@ -3071,8 +3360,13 @@
     ]
   },
   {
-    "name": "Tailored Trousers",
-    "description": "High-rise pleated front straight-leg trousers",
+    "name": [{ "locale": "en", "content": "Tailored Trousers" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "High-rise pleated front straight-leg trousers"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -3108,8 +3402,10 @@
     ]
   },
   {
-    "name": "Teddy Jacket",
-    "description": "Plush fuzzy teddy fleece hooded jacket",
+    "name": [{ "locale": "en", "content": "Teddy Jacket" }],
+    "description": [
+      { "locale": "en", "content": "Plush fuzzy teddy fleece hooded jacket" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 4
@@ -3145,8 +3441,13 @@
     ]
   },
   {
-    "name": "Compression Top",
-    "description": "Long sleeve quick-dry athletic compression rashguard",
+    "name": [{ "locale": "en", "content": "Compression Top" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Long sleeve quick-dry athletic compression rashguard"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -3182,8 +3483,10 @@
     ]
   },
   {
-    "name": "Mom Jeans",
-    "description": "Vintage high-waist tapered leg mom jeans",
+    "name": [{ "locale": "en", "content": "Mom Jeans" }],
+    "description": [
+      { "locale": "en", "content": "Vintage high-waist tapered leg mom jeans" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -3219,8 +3522,13 @@
     ]
   },
   {
-    "name": "Shawl Collar Cardigan",
-    "description": "Chunky ribbed knit cardigan with shawl collar",
+    "name": [{ "locale": "en", "content": "Shawl Collar Cardigan" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Chunky ribbed knit cardigan with shawl collar"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 2
@@ -3256,8 +3564,13 @@
     ]
   },
   {
-    "name": "Linen Blazer",
-    "description": "Unstructured lightweight summer linen blazer",
+    "name": [{ "locale": "en", "content": "Linen Blazer" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Unstructured lightweight summer linen blazer"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -3293,8 +3606,13 @@
     ]
   },
   {
-    "name": "Ruffle Blouse",
-    "description": "Long sleeve chiffon ruffle front romantic blouse",
+    "name": [{ "locale": "en", "content": "Ruffle Blouse" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Long sleeve chiffon ruffle front romantic blouse"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -3330,8 +3648,13 @@
     ]
   },
   {
-    "name": "Running Shorts",
-    "description": "Ultra-lightweight reflective split running shorts",
+    "name": [{ "locale": "en", "content": "Running Shorts" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Ultra-lightweight reflective split running shorts"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 3
@@ -3367,8 +3690,13 @@
     ]
   },
   {
-    "name": "Knit Polo",
-    "description": "Short sleeve open-knit textured resort polo",
+    "name": [{ "locale": "en", "content": "Knit Polo" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Short sleeve open-knit textured resort polo"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 1
@@ -3404,8 +3732,10 @@
     ]
   },
   {
-    "name": "Dungaree Dress",
-    "description": "Corduroy pinafore dungaree overall dress",
+    "name": [{ "locale": "en", "content": "Dungaree Dress" }],
+    "description": [
+      { "locale": "en", "content": "Corduroy pinafore dungaree overall dress" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 5
@@ -3441,8 +3771,13 @@
     ]
   },
   {
-    "name": "Down Vest",
-    "description": "Packable ultralight duck down sleeveless vest",
+    "name": [{ "locale": "en", "content": "Down Vest" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Packable ultralight duck down sleeveless vest"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 4
@@ -3478,8 +3813,13 @@
     ]
   },
   {
-    "name": "Flare Pants",
-    "description": "Retro 70s stretch ribbed high-rise flare pants",
+    "name": [{ "locale": "en", "content": "Flare Pants" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Retro 70s stretch ribbed high-rise flare pants"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 3
@@ -3515,8 +3855,13 @@
     ]
   },
   {
-    "name": "Baseball Jersey",
-    "description": "Button-front mesh stripe baseball team jersey",
+    "name": [{ "locale": "en", "content": "Baseball Jersey" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Button-front mesh stripe baseball team jersey"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 1
@@ -3552,8 +3897,10 @@
     ]
   },
   {
-    "name": "Peplum Top",
-    "description": "Sleeveless structured peplum waist top",
+    "name": [{ "locale": "en", "content": "Peplum Top" }],
+    "description": [
+      { "locale": "en", "content": "Sleeveless structured peplum waist top" }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 1
@@ -3589,8 +3936,13 @@
     ]
   },
   {
-    "name": "Quilted Overshirt",
-    "description": "Lightly padded snap-front utility overshirt",
+    "name": [{ "locale": "en", "content": "Quilted Overshirt" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Lightly padded snap-front utility overshirt"
+      }
+    ],
     "characterstics": {
       "sex": "M",
       "category": 4
@@ -3626,8 +3978,13 @@
     ]
   },
   {
-    "name": "Maxi Cardigan",
-    "description": "Floor-length fine ribbed knit duster cardigan",
+    "name": [{ "locale": "en", "content": "Maxi Cardigan" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Floor-length fine ribbed knit duster cardigan"
+      }
+    ],
     "characterstics": {
       "sex": "F",
       "category": 2
@@ -3663,8 +4020,13 @@
     ]
   },
   {
-    "name": "Wool Beanie & Scarf Set",
-    "description": "Matching ribbed merino wool winter gift set",
+    "name": [{ "locale": "en", "content": "Wool Beanie & Scarf Set" }],
+    "description": [
+      {
+        "locale": "en",
+        "content": "Matching ribbed merino wool winter gift set"
+      }
+    ],
     "characterstics": {
       "sex": "Unisex",
       "category": 6
