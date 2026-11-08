@@ -79,7 +79,7 @@ export default function ProductsPage() {
                     </Typography.Text>
                     {import.meta.env.VITE_DEMO_MODE && (
                       <Typography.Text type="danger">
-                        Bulk Poroduct creating disabled in DEMO mode
+                        Bulk Poroduct creating disabled on DEMO mode
                       </Typography.Text>
                     )}
                     <Button

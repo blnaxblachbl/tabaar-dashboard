@@ -1,4 +1,4 @@
-import { Divider, Form, message } from "antd";
+import { Divider, Form, message, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 
 import { PageLayout } from "@/components/PageLayout";
@@ -30,6 +30,11 @@ export default function CreateUserPage() {
       <Title title={t("title")} />
       <Divider />
       <div className="max-w-md mx-auto">
+        {import.meta.env.VITE_DEMO_MODE && (
+          <Typography.Paragraph type="danger">
+            Access Details will not be sended on DEMO mode
+          </Typography.Paragraph>
+        )}
         <UserForm
           form={form}
           loading={loading}
