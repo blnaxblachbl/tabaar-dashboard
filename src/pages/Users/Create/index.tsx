@@ -20,7 +20,7 @@ export default function CreateUserPage() {
       messageApi.success(t("toasts.success"));
     },
     onError() {
-      messageApi.error("toasts.error");
+      messageApi.error(t("toasts.error"));
     },
   });
 

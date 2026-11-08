@@ -77,6 +77,11 @@ export default function ProductsPage() {
                     <Typography.Text>
                       {t("file-button.info.text")}
                     </Typography.Text>
+                    {import.meta.env.VITE_DEMO_MODE && (
+                      <Typography.Text type="danger">
+                        Bulk Poroduct creating disabled in DEMO mode
+                      </Typography.Text>
+                    )}
                     <Button
                       type="link"
                       href="/prducts-sample.json"
@@ -112,6 +117,7 @@ export default function ProductsPage() {
                       onError?.(new Error("Internal server error"));
                     });
                 }}
+                accept={"application/json"}
               >
                 <Button icon={<UploadOutlined />} loading={bulkLoading}>
                   {t("file-button.text")}

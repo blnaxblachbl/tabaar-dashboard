@@ -8,7 +8,7 @@ interface ViteTypeOptions {
 }
 
 interface ImportMetaEnv {
-  readonly VITE_TEST: string;
+  readonly VITE_DEMO_MODE: boolean;
 }
 
 interface ImportMeta {

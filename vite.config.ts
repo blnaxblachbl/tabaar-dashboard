@@ -1,4 +1,9 @@
-import { defineConfig, loadEnv, type CommonServerOptions, type ProxyOptions } from "vite";
+import {
+  defineConfig,
+  loadEnv,
+  type CommonServerOptions,
+  type ProxyOptions,
+} from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import svgr from "vite-plugin-svgr";
@@ -22,7 +27,7 @@ export default defineConfig(({ mode }) => {
     host: true,
     cors: true,
     allowedHosts: true,
-  }
+  };
 
   return {
     plugins: [react(), tailwindcss(), svgr()],
@@ -30,6 +35,9 @@ export default defineConfig(({ mode }) => {
     preview: server,
     resolve: {
       tsconfigPaths: true,
+    },
+    define: {
+      "import.meta.env.VITE_DEMO_MODE": env.DEMO_MODE === "true",
     },
   };
 });
