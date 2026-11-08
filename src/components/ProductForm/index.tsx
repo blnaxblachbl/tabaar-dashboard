@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row, Skeleton, Space } from "antd";
+import { Button, Col, Form, Input, Row, Select, Skeleton, Space } from "antd";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
 import type { ProductFormData, ProductFormProps } from "./types";
@@ -18,44 +18,151 @@ export function ProductForm({
       classNames={{
         root: "max-w-md mx-auto!",
       }}
+      initialValues={{
+        name: [
+          {
+            content: "",
+            locale: "en",
+          },
+        ],
+        description: [
+          {
+            content: "",
+            locale: "en",
+          },
+        ],
+      }}
       layout="vertical"
       {...props}
     >
-      <Form.Item
-        name={"name"}
-        label={t("name.label")}
-        rules={[
-          {
-            required: true,
-            message: t("name.errors.required"),
-          },
-          {
-            type: "string",
-            min: 3,
-            max: 100,
-            message: t("name.errors.invalid"),
-          },
-        ]}
-      >
-        <Input placeholder={t("name.placeholder")} />
+      <Form.Item label={t("name.label")} required>
+        <Form.List name={"name"}>
+          {(fields, { add, remove }) => (
+            <>
+              {fields.map((field, index) => (
+                <div key={field.key}>
+                  <Space.Compact className="w-full!">
+                    <Form.Item
+                      name={[field.name, "locale"]}
+                      className="w-20! mb-3!"
+                    >
+                      <Select
+                        options={[
+                          {
+                            label: "RU",
+                            value: "ru",
+                          },
+                          {
+                            label: "EN",
+                            value: "en",
+                          },
+                        ]}
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      name={[field.name, "content"]}
+                      className="w-full! mb-3!"
+                      rules={[
+                        {
+                          required: true,
+                          message: t("name.errors.required"),
+                        },
+                        {
+                          type: "string",
+                          min: 3,
+                          max: 1500,
+                          message: t("name.errors.invalid"),
+                        },
+                      ]}
+                    >
+                      <Input placeholder={t("name.placeholder")} />
+                    </Form.Item>
+                    <Button
+                      onClick={() => remove(index)}
+                      type="text"
+                      icon={<MinusCircleOutlined />}
+                      disabled={fields.length <= 1}
+                      danger
+                    />
+                  </Space.Compact>
+                </div>
+              ))}
+              <Button
+                type="dashed"
+                block
+                icon={<PlusOutlined />}
+                onClick={() => add({ content: "", locale: "en" })}
+              >
+                {t("name.add")}
+              </Button>
+            </>
+          )}
+        </Form.List>
       </Form.Item>
-      <Form.Item
-        name={"description"}
-        label={t("description.label")}
-        rules={[
-          {
-            required: true,
-            message: t("description.errors.required"),
-          },
-          {
-            type: "string",
-            min: 3,
-            max: 1500,
-            message: t("description.errors.invalid"),
-          },
-        ]}
-      >
-        <Input.TextArea placeholder={t("description.placeholder")} rows={5} />
+      <Form.Item label={t("description.label")} required>
+        <Form.List name={"description"}>
+          {(fields, { add, remove }) => (
+            <>
+              {fields.map((field, index) => (
+                <Space.Compact key={field.key} className="w-full!">
+                  <Form.Item
+                    name={[field.name, "locale"]}
+                    className="w-20! mb-3!"
+                  >
+                    <Select
+                      options={[
+                        {
+                          label: "RU",
+                          value: "ru",
+                        },
+                        {
+                          label: "EN",
+                          value: "en",
+                        },
+                      ]}
+                    />
+                  </Form.Item>
+                  <Form.Item
+                    name={[field.name, "content"]}
+                    rules={[
+                      {
+                        required: true,
+                        message: t("description.errors.required"),
+                      },
+                      {
+                        type: "string",
+                        min: 3,
+                        max: 1500,
+                        message: t("description.errors.invalid"),
+                      },
+                    ]}
+                    className="w-full!"
+                  >
+                    <Input.TextArea
+                      placeholder={t("description.placeholder")}
+                      rows={5}
+                    />
+                  </Form.Item>
+                  <Button
+                    onClick={() => remove(index)}
+                    type="text"
+                    icon={<MinusCircleOutlined />}
+                    disabled={fields.length <= 1}
+                    danger
+                  />
+                </Space.Compact>
+              ))}
+              <Button
+                type="dashed"
+                block
+                icon={<PlusOutlined />}
+                onClick={() => add({ content: "", locale: "en" })}
+              >
+                {t("description.add")}
+              </Button>
+            </>
+          )}
+        </Form.List>
       </Form.Item>
       <Form.Item label={t("characterstics.label")}>
         <Form.List name="characterstics">

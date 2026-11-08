@@ -15,8 +15,8 @@ export type CreateApiKeyInput = {
 
 export type CreateProductInput = {
   characterstics?: Record<string, string | number | boolean> | null | undefined;
-  description: string;
-  name: string;
+  description: Array<LocaleContentInput>;
+  name: Array<LocaleContentInput>;
 };
 
 export type CreateUserInput = {
@@ -50,6 +50,11 @@ export type IntRangeInput = {
   lte?: number | null | undefined;
 };
 
+export type LocaleContentInput = {
+  content: string;
+  locale: string;
+};
+
 export type LoginUserInput = {
   email: string;
   password: string;
@@ -62,8 +67,8 @@ export type UpdateApiKeyInput = {
 
 export type UpdateProductInput = {
   characterstics?: Record<string, string | number | boolean> | null | undefined;
-  description?: string | null | undefined;
-  name?: string | null | undefined;
+  description?: Array<LocaleContentInput> | null | undefined;
+  name?: Array<LocaleContentInput> | null | undefined;
 };
 
 export type UpdateUserInput = {
@@ -124,7 +129,9 @@ export type FindOneApiKeyQuery = { findOneApiKey: { id: number, createdAt: Date,
 
 export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string };
 
-export type ProductFragment = { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> };
+export type ProductFragment = { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> };
+
+export type LocaleContentFragment = { locale: string, content: string };
 
 export type VariantFragment = { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> };
 
@@ -137,28 +144,28 @@ export type FindProductsQueryVariables = Exact<{
 }>;
 
 
-export type FindProductsQuery = { findProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
+export type FindProductsQuery = { findProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
 
 export type ScrollProductsQueryVariables = Exact<{
   scrollId?: string | null | undefined;
 }>;
 
 
-export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
+export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
 
 export type FindOneProductQueryVariables = Exact<{
   id?: string | null | undefined;
 }>;
 
 
-export type FindOneProductQuery = { findOneProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type FindOneProductQuery = { findOneProduct: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type CreateProductMutationVariables = Exact<{
   data: CreateProductInput;
 }>;
 
 
-export type CreateProductMutation = { createProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type CreateProductMutation = { createProduct: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type UpdateProductMutationVariables = Exact<{
   id: string;
@@ -166,14 +173,14 @@ export type UpdateProductMutationVariables = Exact<{
 }>;
 
 
-export type UpdateProductMutation = { updateProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type UpdateProductMutation = { updateProduct: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type DeleteProductMutationVariables = Exact<{
   id: string;
 }>;
 
 
-export type DeleteProductMutation = { deleteProduct: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type DeleteProductMutation = { deleteProduct: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type DeleteVariantMutationVariables = Exact<{
   id: string;
@@ -181,7 +188,7 @@ export type DeleteVariantMutationVariables = Exact<{
 }>;
 
 
-export type DeleteVariantMutation = { deleteVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type DeleteVariantMutation = { deleteVariant: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type UpdateVariantMutationVariables = Exact<{
   id: string;
@@ -190,7 +197,7 @@ export type UpdateVariantMutationVariables = Exact<{
 }>;
 
 
-export type UpdateVariantMutation = { updateVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type UpdateVariantMutation = { updateVariant: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type AppendVariantMutationVariables = Exact<{
   id: string;
@@ -198,7 +205,7 @@ export type AppendVariantMutationVariables = Exact<{
 }>;
 
 
-export type AppendVariantMutation = { appendVariant: { id: string, createdAt: Date, updatedAt: Date, name: string, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, description: string, available: boolean, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+export type AppendVariantMutation = { appendVariant: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type LoginUserMutationVariables = Exact<{
   data: LoginUserInput;
@@ -258,6 +265,12 @@ export const UserFragmentDoc = gql`
   email
 }
     `;
+export const LocaleContentFragmentDoc = gql`
+    fragment LocaleContent on LocaleContent {
+  locale
+  content
+}
+    `;
 export const VariantFragmentDoc = gql`
     fragment Variant on Variant {
   id
@@ -275,11 +288,15 @@ export const ProductFragmentDoc = gql`
   id
   createdAt
   updatedAt
-  name
+  name {
+    ...LocaleContent
+  }
+  description {
+    ...LocaleContent
+  }
   characterstics
   minPrice
   maxPrice
-  description
   available
   variants {
     ...Variant
@@ -497,6 +514,7 @@ export const FindProductsDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 
 /**
@@ -547,6 +565,7 @@ export const ScrollProductsDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 
 /**
@@ -591,6 +610,7 @@ export const FindOneProductDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 
 /**
@@ -635,6 +655,7 @@ export const CreateProductDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 export type CreateProductMutationFn = ApolloReactCommon.MutationFunction<CreateProductMutation, CreateProductMutationVariables>;
 
@@ -669,6 +690,7 @@ export const UpdateProductDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 export type UpdateProductMutationFn = ApolloReactCommon.MutationFunction<UpdateProductMutation, UpdateProductMutationVariables>;
 
@@ -704,6 +726,7 @@ export const DeleteProductDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 export type DeleteProductMutationFn = ApolloReactCommon.MutationFunction<DeleteProductMutation, DeleteProductMutationVariables>;
 
@@ -738,6 +761,7 @@ export const DeleteVariantDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 export type DeleteVariantMutationFn = ApolloReactCommon.MutationFunction<DeleteVariantMutation, DeleteVariantMutationVariables>;
 
@@ -773,6 +797,7 @@ export const UpdateVariantDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 export type UpdateVariantMutationFn = ApolloReactCommon.MutationFunction<UpdateVariantMutation, UpdateVariantMutationVariables>;
 
@@ -809,6 +834,7 @@ export const AppendVariantDocument = gql`
   }
 }
     ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
 ${VariantFragmentDoc}`;
 export type AppendVariantMutationFn = ApolloReactCommon.MutationFunction<AppendVariantMutation, AppendVariantMutationVariables>;
 

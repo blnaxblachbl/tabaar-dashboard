@@ -21,7 +21,8 @@
         "errors": {
           "required": "Name is required",
           "invalid": "Name must be between 3-100 characters"
-        }
+        },
+        "add": "Add Name locale"
       },
       "description": {
         "label": "Description",
@@ -29,7 +30,8 @@
         "errors": {
           "required": "Description is required",
           "invalid": "Description must be between 3-1500 characters"
-        }
+        },
+        "add": "Add Description locale"
       },
       "characterstics": {
         "label": "Characterstics",

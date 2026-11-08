@@ -5,7 +5,9 @@ export default function GrpcDocsPage() {
   return (
     <PageLayout className="grpc-container">
       <h1 id="title">Protocol Documentation</h1>
+
       <h2>Table of Contents</h2>
+
       <div id="toc-container">
         <ul id="toc">
           <li>
@@ -13,80 +15,80 @@ export default function GrpcDocsPage() {
             <ul>
               <li>
                 <a href="#.ApiKey">
-                  <span className="grpc-badge">M</span>ApiKey
+                  <span className="badge">M</span>ApiKey
                 </a>
               </li>
 
               <li>
                 <a href="#.CreateApiKeyRequest">
-                  <span className="grpc-badge">M</span>CreateApiKeyRequest
+                  <span className="badge">M</span>CreateApiKeyRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.CreateApiKeyResponse">
-                  <span className="grpc-badge">M</span>CreateApiKeyResponse
+                  <span className="badge">M</span>CreateApiKeyResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteApiKeyRequest">
-                  <span className="grpc-badge">M</span>DeleteApiKeyRequest
+                  <span className="badge">M</span>DeleteApiKeyRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteApiKeyResponse">
-                  <span className="grpc-badge">M</span>DeleteApiKeyResponse
+                  <span className="badge">M</span>DeleteApiKeyResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.GetApiKeysRequest">
-                  <span className="grpc-badge">M</span>GetApiKeysRequest
+                  <span className="badge">M</span>GetApiKeysRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.GetApiKeysResponse">
-                  <span className="grpc-badge">M</span>GetApiKeysResponse
+                  <span className="badge">M</span>GetApiKeysResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.GetOneApiKeyRequest">
-                  <span className="grpc-badge">M</span>GetOneApiKeyRequest
+                  <span className="badge">M</span>GetOneApiKeyRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.GetOneApiKeyResponse">
-                  <span className="grpc-badge">M</span>GetOneApiKeyResponse
+                  <span className="badge">M</span>GetOneApiKeyResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateApiKeyRequest">
-                  <span className="grpc-badge">M</span>UpdateApiKeyRequest
+                  <span className="badge">M</span>UpdateApiKeyRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateApiKeyRequest.UpdateApiKeyRequestData">
-                  <span className="grpc-badge">M</span>
+                  <span className="badge">M</span>
                   UpdateApiKeyRequest.UpdateApiKeyRequestData
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateApiKeyResponse">
-                  <span className="grpc-badge">M</span>UpdateApiKeyResponse
+                  <span className="badge">M</span>UpdateApiKeyResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.ApiKeyService">
-                  <span className="grpc-badge">S</span>ApiKeyService
+                  <span className="badge">S</span>ApiKeyService
                 </a>
               </li>
             </ul>
@@ -97,172 +99,178 @@ export default function GrpcDocsPage() {
             <ul>
               <li>
                 <a href="#.AppendVariantRequest">
-                  <span className="grpc-badge">M</span>AppendVariantRequest
+                  <span className="badge">M</span>AppendVariantRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.AppendVariantRequest.AppendVariantData">
-                  <span className="grpc-badge">M</span>
+                  <span className="badge">M</span>
                   AppendVariantRequest.AppendVariantData
                 </a>
               </li>
 
               <li>
                 <a href="#.AppendVariantResponse">
-                  <span className="grpc-badge">M</span>AppendVariantResponse
+                  <span className="badge">M</span>AppendVariantResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.CreateProductRequest">
-                  <span className="grpc-badge">M</span>CreateProductRequest
+                  <span className="badge">M</span>CreateProductRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.CreateProductResponse">
-                  <span className="grpc-badge">M</span>CreateProductResponse
+                  <span className="badge">M</span>CreateProductResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteProductRequest">
-                  <span className="grpc-badge">M</span>DeleteProductRequest
+                  <span className="badge">M</span>DeleteProductRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteProductResponse">
-                  <span className="grpc-badge">M</span>DeleteProductResponse
+                  <span className="badge">M</span>DeleteProductResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteVariantRequest">
-                  <span className="grpc-badge">M</span>DeleteVariantRequest
+                  <span className="badge">M</span>DeleteVariantRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteVariantResponse">
-                  <span className="grpc-badge">M</span>DeleteVariantResponse
+                  <span className="badge">M</span>DeleteVariantResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.FloatRangeInput">
-                  <span className="grpc-badge">M</span>FloatRangeInput
+                  <span className="badge">M</span>FloatRangeInput
                 </a>
               </li>
 
               <li>
                 <a href="#.GetOneProductRequest">
-                  <span className="grpc-badge">M</span>GetOneProductRequest
+                  <span className="badge">M</span>GetOneProductRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.GetOneProductResponse">
-                  <span className="grpc-badge">M</span>GetOneProductResponse
+                  <span className="badge">M</span>GetOneProductResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.GetProductsRequest">
-                  <span className="grpc-badge">M</span>GetProductsRequest
+                  <span className="badge">M</span>GetProductsRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.GetProductsResponse">
-                  <span className="grpc-badge">M</span>GetProductsResponse
+                  <span className="badge">M</span>GetProductsResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.IntRangeInput">
-                  <span className="grpc-badge">M</span>IntRangeInput
+                  <span className="badge">M</span>IntRangeInput
+                </a>
+              </li>
+
+              <li>
+                <a href="#.LocaleContent">
+                  <span className="badge">M</span>LocaleContent
                 </a>
               </li>
 
               <li>
                 <a href="#.Product">
-                  <span className="grpc-badge">M</span>Product
-                </a>
-              </li>
-
-              <li>
-                <a href="#.Product.Variant">
-                  <span className="grpc-badge">M</span>Product.Variant
+                  <span className="badge">M</span>Product
                 </a>
               </li>
 
               <li>
                 <a href="#.ProductsFilter">
-                  <span className="grpc-badge">M</span>ProductsFilter
+                  <span className="badge">M</span>ProductsFilter
                 </a>
               </li>
 
               <li>
                 <a href="#.ScrollProductsRequest">
-                  <span className="grpc-badge">M</span>ScrollProductsRequest
+                  <span className="badge">M</span>ScrollProductsRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.ScrollProductsResponse">
-                  <span className="grpc-badge">M</span>ScrollProductsResponse
+                  <span className="badge">M</span>ScrollProductsResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateProductRequest">
-                  <span className="grpc-badge">M</span>UpdateProductRequest
+                  <span className="badge">M</span>UpdateProductRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateProductRequest.UpdateProductRequestData">
-                  <span className="grpc-badge">M</span>
+                  <span className="badge">M</span>
                   UpdateProductRequest.UpdateProductRequestData
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateProductResponse">
-                  <span className="grpc-badge">M</span>UpdateProductResponse
+                  <span className="badge">M</span>UpdateProductResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateVariantRequest">
-                  <span className="grpc-badge">M</span>UpdateVariantRequest
+                  <span className="badge">M</span>UpdateVariantRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateVariantRequest.UpdateVariantData">
-                  <span className="grpc-badge">M</span>
+                  <span className="badge">M</span>
                   UpdateVariantRequest.UpdateVariantData
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateVariantResponse">
-                  <span className="grpc-badge">M</span>UpdateVariantResponse
+                  <span className="badge">M</span>UpdateVariantResponse
+                </a>
+              </li>
+
+              <li>
+                <a href="#.Variant">
+                  <span className="badge">M</span>Variant
                 </a>
               </li>
 
               <li>
                 <a href="#.VariantFilterInput">
-                  <span className="grpc-badge">M</span>VariantFilterInput
+                  <span className="badge">M</span>VariantFilterInput
                 </a>
               </li>
 
               <li>
                 <a href="#.ProductService">
-                  <span className="grpc-badge">S</span>ProductService
+                  <span className="badge">S</span>ProductService
                 </a>
               </li>
             </ul>
@@ -273,80 +281,80 @@ export default function GrpcDocsPage() {
             <ul>
               <li>
                 <a href="#.CreateUserRequest">
-                  <span className="grpc-badge">M</span>CreateUserRequest
+                  <span className="badge">M</span>CreateUserRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.CreateUserResponse">
-                  <span className="grpc-badge">M</span>CreateUserResponse
+                  <span className="badge">M</span>CreateUserResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteUserRequest">
-                  <span className="grpc-badge">M</span>DeleteUserRequest
+                  <span className="badge">M</span>DeleteUserRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.DeleteUserResponse">
-                  <span className="grpc-badge">M</span>DeleteUserResponse
+                  <span className="badge">M</span>DeleteUserResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.GetOneUserRequest">
-                  <span className="grpc-badge">M</span>GetOneUserRequest
+                  <span className="badge">M</span>GetOneUserRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.GetOneUserResponse">
-                  <span className="grpc-badge">M</span>GetOneUserResponse
+                  <span className="badge">M</span>GetOneUserResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.GetUsersRequest">
-                  <span className="grpc-badge">M</span>GetUsersRequest
+                  <span className="badge">M</span>GetUsersRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.GetUsersResponse">
-                  <span className="grpc-badge">M</span>GetUsersResponse
+                  <span className="badge">M</span>GetUsersResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateUserRequest">
-                  <span className="grpc-badge">M</span>UpdateUserRequest
+                  <span className="badge">M</span>UpdateUserRequest
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateUserRequest.UpdateUserRequestData">
-                  <span className="grpc-badge">M</span>
+                  <span className="badge">M</span>
                   UpdateUserRequest.UpdateUserRequestData
                 </a>
               </li>
 
               <li>
                 <a href="#.UpdateUserResponse">
-                  <span className="grpc-badge">M</span>UpdateUserResponse
+                  <span className="badge">M</span>UpdateUserResponse
                 </a>
               </li>
 
               <li>
                 <a href="#.User">
-                  <span className="grpc-badge">M</span>User
+                  <span className="badge">M</span>User
                 </a>
               </li>
 
               <li>
                 <a href="#.UserService">
-                  <span className="grpc-badge">S</span>UserService
+                  <span className="badge">S</span>UserService
                 </a>
               </li>
             </ul>
@@ -358,7 +366,7 @@ export default function GrpcDocsPage() {
         </ul>
       </div>
 
-      <div className="grpc-file-heading">
+      <div className="file-heading">
         <h2 id="apiKey.proto">apiKey.proto</h2>
         <a href="#title">Top</a>
       </div>
@@ -367,7 +375,7 @@ export default function GrpcDocsPage() {
       <h3 id=".ApiKey">ApiKey</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -384,7 +392,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -395,7 +403,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -406,7 +414,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -417,7 +425,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -428,7 +436,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -439,7 +447,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -448,7 +456,7 @@ export default function GrpcDocsPage() {
       <h3 id=".CreateApiKeyRequest">CreateApiKeyRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -465,7 +473,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -476,7 +484,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -485,7 +493,7 @@ export default function GrpcDocsPage() {
       <h3 id=".CreateApiKeyResponse">CreateApiKeyResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -502,7 +510,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -511,7 +519,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteApiKeyRequest">DeleteApiKeyRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -528,7 +536,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -537,7 +545,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteApiKeyResponse">DeleteApiKeyResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -554,7 +562,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -563,7 +571,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetApiKeysRequest">GetApiKeysRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -580,7 +588,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -591,7 +599,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -600,7 +608,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetApiKeysResponse">GetApiKeysResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -617,7 +625,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -628,7 +636,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -637,7 +645,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetOneApiKeyRequest">GetOneApiKeyRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -654,7 +662,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -663,7 +671,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetOneApiKeyResponse">GetOneApiKeyResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -680,7 +688,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -689,7 +697,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateApiKeyRequest">UpdateApiKeyRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -706,7 +714,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -719,7 +727,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -730,7 +738,7 @@ export default function GrpcDocsPage() {
       </h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -747,7 +755,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -758,7 +766,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -767,7 +775,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateApiKeyResponse">UpdateApiKeyResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -784,7 +792,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -792,7 +800,7 @@ export default function GrpcDocsPage() {
 
       <h3 id=".ApiKeyService">ApiKeyService</h3>
       <p></p>
-      <table className="grpc-enum-table">
+      <table className="enum-table">
         <thead>
           <tr>
             <td>Method Name</td>
@@ -869,7 +877,7 @@ export default function GrpcDocsPage() {
         </tbody>
       </table>
 
-      <div className="grpc-file-heading">
+      <div className="file-heading">
         <h2 id="product.proto">product.proto</h2>
         <a href="#title">Top</a>
       </div>
@@ -878,7 +886,7 @@ export default function GrpcDocsPage() {
       <h3 id=".AppendVariantRequest">AppendVariantRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -895,7 +903,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -908,7 +916,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -919,7 +927,7 @@ export default function GrpcDocsPage() {
       </h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -936,7 +944,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -947,7 +955,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -958,7 +966,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -969,7 +977,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -978,7 +986,7 @@ export default function GrpcDocsPage() {
       <h3 id=".AppendVariantResponse">AppendVariantResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -995,7 +1003,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1004,7 +1012,7 @@ export default function GrpcDocsPage() {
       <h3 id=".CreateProductRequest">CreateProductRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1017,22 +1025,22 @@ export default function GrpcDocsPage() {
           <tr>
             <td>name</td>
             <td>
-              <a href="#string">string</a>
+              <a href="#LocaleContent">LocaleContent</a>
             </td>
-            <td></td>
+            <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
           <tr>
             <td>description</td>
             <td>
-              <a href="#string">string</a>
+              <a href="#LocaleContent">LocaleContent</a>
             </td>
-            <td></td>
+            <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1043,7 +1051,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1052,7 +1060,7 @@ export default function GrpcDocsPage() {
       <h3 id=".CreateProductResponse">CreateProductResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1069,7 +1077,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1078,7 +1086,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteProductRequest">DeleteProductRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1095,7 +1103,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1104,7 +1112,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteProductResponse">DeleteProductResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1121,7 +1129,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1130,7 +1138,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteVariantRequest">DeleteVariantRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1147,7 +1155,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1158,7 +1166,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1167,7 +1175,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteVariantResponse">DeleteVariantResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1184,7 +1192,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1193,7 +1201,7 @@ export default function GrpcDocsPage() {
       <h3 id=".FloatRangeInput">FloatRangeInput</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1210,7 +1218,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1221,7 +1229,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1230,7 +1238,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetOneProductRequest">GetOneProductRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1247,7 +1255,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1256,7 +1264,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetOneProductResponse">GetOneProductResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1273,7 +1281,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1282,7 +1290,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetProductsRequest">GetProductsRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1299,7 +1307,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1310,7 +1318,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1321,7 +1329,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1330,7 +1338,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetProductsResponse">GetProductsResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1347,7 +1355,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1358,7 +1366,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1369,7 +1377,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1378,7 +1386,7 @@ export default function GrpcDocsPage() {
       <h3 id=".IntRangeInput">IntRangeInput</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1395,7 +1403,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1406,7 +1414,44 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id=".LocaleContent">LocaleContent</h3>
+      <p></p>
+
+      <table className="field-table">
+        <thead>
+          <tr>
+            <td>Field</td>
+            <td>Type</td>
+            <td>Label</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>locale</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>content</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1415,7 +1460,7 @@ export default function GrpcDocsPage() {
       <h3 id=".Product">Product</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1432,7 +1477,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1443,7 +1488,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1454,29 +1499,29 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
           <tr>
             <td>name</td>
             <td>
-              <a href="#string">string</a>
+              <a href="#LocaleContent">LocaleContent</a>
             </td>
-            <td></td>
+            <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
           <tr>
             <td>description</td>
             <td>
-              <a href="#string">string</a>
+              <a href="#LocaleContent">LocaleContent</a>
             </td>
-            <td></td>
+            <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1487,7 +1532,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1498,7 +1543,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1509,7 +1554,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1520,121 +1565,18 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
           <tr>
             <td>variants</td>
             <td>
-              <a href="#Product.Variant">Product.Variant</a>
+              <a href="#Variant">Variant</a>
             </td>
             <td>repeated</td>
             <td>
-              <p></p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3 id=".Product.Variant">Product.Variant</h3>
-      <p></p>
-
-      <table className="grpc-field-table">
-        <thead>
-          <tr>
-            <td>Field</td>
-            <td>Type</td>
-            <td>Label</td>
-            <td>Description</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>id</td>
-            <td>
-              <a href="#string">string</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>created_at</td>
-            <td>
-              <a href="#string">string</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>updated_at</td>
-            <td>
-              <a href="#string">string</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>characterstics</td>
-            <td>
-              <a href="#google.protobuf.Struct">google.protobuf.Struct</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>price</td>
-            <td>
-              <a href="#double">double</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>count</td>
-            <td>
-              <a href="#int32">int32</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>currency</td>
-            <td>
-              <a href="#string">string</a>
-            </td>
-            <td></td>
-            <td>
-              <p></p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>images</td>
-            <td>
-              <a href="#string">string</a>
-            </td>
-            <td>repeated</td>
-            <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1643,7 +1585,7 @@ export default function GrpcDocsPage() {
       <h3 id=".ProductsFilter">ProductsFilter</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1660,7 +1602,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1671,7 +1613,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1682,7 +1624,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1693,7 +1635,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1704,7 +1646,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1715,7 +1657,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1724,7 +1666,7 @@ export default function GrpcDocsPage() {
       <h3 id=".ScrollProductsRequest">ScrollProductsRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1741,7 +1683,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1750,7 +1692,7 @@ export default function GrpcDocsPage() {
       <h3 id=".ScrollProductsResponse">ScrollProductsResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1767,7 +1709,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1778,7 +1720,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1789,7 +1731,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1798,7 +1740,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateProductRequest">UpdateProductRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1815,7 +1757,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1828,7 +1770,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1839,7 +1781,7 @@ export default function GrpcDocsPage() {
       </h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1852,22 +1794,22 @@ export default function GrpcDocsPage() {
           <tr>
             <td>name</td>
             <td>
-              <a href="#string">string</a>
+              <a href="#LocaleContent">LocaleContent</a>
             </td>
-            <td>optional</td>
+            <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
           <tr>
             <td>description</td>
             <td>
-              <a href="#string">string</a>
+              <a href="#LocaleContent">LocaleContent</a>
             </td>
-            <td>optional</td>
+            <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1878,7 +1820,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1887,7 +1829,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateProductResponse">UpdateProductResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1904,7 +1846,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1913,7 +1855,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateVariantRequest">UpdateVariantRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1930,7 +1872,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1943,7 +1885,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -1954,7 +1896,7 @@ export default function GrpcDocsPage() {
       </h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -1971,7 +1913,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1982,7 +1924,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -1993,7 +1935,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2004,7 +1946,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2015,7 +1957,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2024,7 +1966,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateVariantResponse">UpdateVariantResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2041,7 +1983,110 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 id=".Variant">Variant</h3>
+      <p></p>
+
+      <table className="field-table">
+        <thead>
+          <tr>
+            <td>Field</td>
+            <td>Type</td>
+            <td>Label</td>
+            <td>Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>created_at</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>updated_at</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>characterstics</td>
+            <td>
+              <a href="#google.protobuf.Struct">google.protobuf.Struct</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>price</td>
+            <td>
+              <a href="#double">double</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>count</td>
+            <td>
+              <a href="#int32">int32</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>currency</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td></td>
+            <td>
+              <p> </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>images</td>
+            <td>
+              <a href="#string">string</a>
+            </td>
+            <td>repeated</td>
+            <td>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2050,7 +2095,7 @@ export default function GrpcDocsPage() {
       <h3 id=".VariantFilterInput">VariantFilterInput</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2067,7 +2112,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2078,7 +2123,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2089,7 +2134,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2100,7 +2145,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2108,7 +2153,7 @@ export default function GrpcDocsPage() {
 
       <h3 id=".ProductService">ProductService</h3>
       <p></p>
-      <table className="grpc-enum-table">
+      <table className="enum-table">
         <thead>
           <tr>
             <td>Method Name</td>
@@ -2237,7 +2282,7 @@ export default function GrpcDocsPage() {
         </tbody>
       </table>
 
-      <div className="grpc-file-heading">
+      <div className="file-heading">
         <h2 id="user.proto">user.proto</h2>
         <a href="#title">Top</a>
       </div>
@@ -2246,7 +2291,7 @@ export default function GrpcDocsPage() {
       <h3 id=".CreateUserRequest">CreateUserRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2263,7 +2308,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2274,7 +2319,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2283,7 +2328,7 @@ export default function GrpcDocsPage() {
       <h3 id=".CreateUserResponse">CreateUserResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2300,7 +2345,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2309,7 +2354,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteUserRequest">DeleteUserRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2326,7 +2371,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2335,7 +2380,7 @@ export default function GrpcDocsPage() {
       <h3 id=".DeleteUserResponse">DeleteUserResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2352,7 +2397,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2361,7 +2406,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetOneUserRequest">GetOneUserRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2378,7 +2423,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2387,7 +2432,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetOneUserResponse">GetOneUserResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2404,7 +2449,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2413,7 +2458,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetUsersRequest">GetUsersRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2430,7 +2475,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2441,7 +2486,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2450,7 +2495,7 @@ export default function GrpcDocsPage() {
       <h3 id=".GetUsersResponse">GetUsersResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2467,7 +2512,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>repeated</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2478,7 +2523,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2487,7 +2532,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateUserRequest">UpdateUserRequest</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2504,7 +2549,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2517,7 +2562,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2528,7 +2573,7 @@ export default function GrpcDocsPage() {
       </h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2545,7 +2590,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2556,7 +2601,7 @@ export default function GrpcDocsPage() {
             </td>
             <td>optional</td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2565,7 +2610,7 @@ export default function GrpcDocsPage() {
       <h3 id=".UpdateUserResponse">UpdateUserResponse</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2582,7 +2627,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2591,7 +2636,7 @@ export default function GrpcDocsPage() {
       <h3 id=".User">User</h3>
       <p></p>
 
-      <table className="grpc-field-table">
+      <table className="field-table">
         <thead>
           <tr>
             <td>Field</td>
@@ -2608,7 +2653,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2619,7 +2664,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2630,7 +2675,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2641,7 +2686,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
 
@@ -2652,7 +2697,7 @@ export default function GrpcDocsPage() {
             </td>
             <td></td>
             <td>
-              <p></p>
+              <p> </p>
             </td>
           </tr>
         </tbody>
@@ -2660,7 +2705,7 @@ export default function GrpcDocsPage() {
 
       <h3 id=".UserService">UserService</h3>
       <p></p>
-      <table className="grpc-enum-table">
+      <table className="enum-table">
         <thead>
           <tr>
             <td>Method Name</td>
@@ -2738,7 +2783,7 @@ export default function GrpcDocsPage() {
       </table>
 
       <h2 id="scalar-value-types">Scalar Value Types</h2>
-      <table className="grpc-scalar-value-types-table">
+      <table className="scalar-value-types-table">
         <thead>
           <tr>
             <td>.proto Type</td>
@@ -2926,7 +2971,7 @@ export default function GrpcDocsPage() {
             <td>bool</td>
             <td>bool</td>
             <td>boolean</td>
-            <td>TrueClass/FalseClass</td>
+            <td>TrueclassName/FalseclassName</td>
           </tr>
 
           <tr id="string">

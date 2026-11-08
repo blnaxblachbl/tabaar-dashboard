@@ -9,15 +9,23 @@ fragment Product on Product {
     id
     createdAt
     updatedAt
-    name
+    name {
+        ...LocaleContent
+    }
+    description {
+        ...LocaleContent
+    }
     characterstics
     minPrice
     maxPrice
-    description
     available
     variants {
         ...Variant
     }
+}
+fragment LocaleContent on LocaleContent {
+    locale
+    content
 }
 fragment Variant on Variant {
     id

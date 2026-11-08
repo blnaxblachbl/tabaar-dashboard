@@ -1,8 +1,9 @@
+import type { LocaleContentFragment } from "@/graphql/generated";
 import type { FormProps } from "antd";
 
 export type ProductFormData = {
-  name: string;
-  description: string;
+  name: LocaleContentFragment[];
+  description: LocaleContentFragment[];
   characterstics?: {
     key: string;
     value: string;

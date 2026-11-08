@@ -1,10 +1,11 @@
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { Card, Typography, Skeleton, Image, Carousel, Tag } from "antd";
 import { useTranslation } from "react-i18next";
 
 import type { ProductCardProps } from "./types";
 import { toLocaleDate } from "@/utils/date";
 import { extractImages } from "@/utils/product/extractImages";
+import type { LocaleContentFragment } from "@/graphql/generated";
 
 export function ProducCard({ product }: ProductCardProps) {
   const { i18n, t } = useTranslation("", {
@@ -14,6 +15,14 @@ export function ProducCard({ product }: ProductCardProps) {
   const images = useMemo(
     () => extractImages(product.id, product.variants),
     [product],
+  );
+
+  const getContent = useCallback(
+    (locales: LocaleContentFragment[]) => {
+      const exist = locales.find((n) => n.locale === i18n.language);
+      return exist?.content ?? locales[0].content;
+    },
+    [i18n.language],
   );
 
   return (
@@ -47,14 +56,14 @@ export function ProducCard({ product }: ProductCardProps) {
       }}
     >
       <Card.Meta
-        title={product.name}
+        title={getContent(product.name)}
         description={
           <Typography.Paragraph
             type="secondary"
             ellipsis={{ rows: 2 }}
             className="mb-0!"
           >
-            {product.description}
+            {getContent(product.description)}
           </Typography.Paragraph>
         }
       />

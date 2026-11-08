@@ -2449,12 +2449,16 @@
                         "example": "cm35n1234000008jp8p842abc"
                     },
                     "name": {
-                        "type": "string",
-                        "example": "Wireless Noise-Canceling Headphones"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocaleContent"
+                        }
                     },
                     "description": {
-                        "type": "string",
-                        "example": "Over-ear headphones with premium sound quality"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocaleContent"
+                        }
                     },
                     "characterstics": {
                         "type": "object",
@@ -2510,6 +2514,23 @@
                     }
                 }
             },
+            "LocaleContent": {
+                "type": "object",
+                "required": [
+                    "locale",
+                    "content"
+                ],
+                "properties": {
+                    "locale": {
+                        "type": "string",
+                        "example": "ru"
+                    },
+                    "content": {
+                        "type": "string",
+                        "example": "Wireless Noise-Canceling Headphones"
+                    }
+                }
+            },
             "CreateProductInput": {
                 "type": "object",
                 "required": [
@@ -2518,12 +2539,16 @@
                 ],
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "example": "Mechanical Gaming Keyboard"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocaleContent"
+                        }
                     },
                     "description": {
-                        "type": "string",
-                        "example": "RGB Backlit tactile mechanical switches"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocaleContent"
+                        }
                     },
                     "characterstics": {
                         "type": "object",
@@ -2551,12 +2576,16 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "example": "Updated Mechanical Keyboard"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocaleContent"
+                        }
                     },
                     "description": {
-                        "type": "string",
-                        "example": "Updated description"
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LocaleContent"
+                        }
                     },
                     "characterstics": {
                         "type": "object",
