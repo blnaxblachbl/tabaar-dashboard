@@ -1,0 +1,536 @@
+{
+  "components": {
+    "menu": {
+      "home": "Strona główna",
+      "products": "Produkty",
+      "users": "Użytkownicy",
+      "api-keys": "Klucze API",
+      "logout": {
+        "label": "Wyloguj",
+        "modal": {
+          "title": "Czy na pewno chcesz się wylogować?",
+          "okText": "Tak, wyloguj mnie!",
+          "cancelText": "Nie"
+        }
+      }
+    },
+    "product-form": {
+      "name": {
+        "label": "Nazwa",
+        "placeholder": "Koszulka",
+        "errors": {
+          "required": "Nazwa jest wymagana",
+          "invalid": "Nazwa musi mieć od 3 do 100 znaków"
+        },
+        "add": "Dodaj wersję językową nazwy"
+      },
+      "description": {
+        "label": "Opis",
+        "placeholder": "Fabrycznie nowa koszulka z nadrukiem",
+        "errors": {
+          "required": "Opis jest wymagany",
+          "invalid": "Opis musi mieć od 3 do 1500 znaków"
+        },
+        "add": "Dodaj wersję językową opisu"
+      },
+      "characterstics": {
+        "label": "Cechy",
+        "key": {
+          "placeholder": "Kategoria",
+          "errors": {
+            "required": "Klucz jest wymagany",
+            "invalid": "Klucz musi mieć od 1 do 100 znaków"
+          }
+        },
+        "value": {
+          "placeholder": "Odzież",
+          "errors": {
+            "required": "Wartość jest wymagana",
+            "invalid": "Wartość musi mieć od 1 do 100 znaków"
+          }
+        },
+        "add": "Dodaj cechę"
+      },
+      "create-button": {
+        "text": "Zatwierdź"
+      }
+    },
+    "variant-form": {
+      "price": {
+        "label": "Cena",
+        "errors": {
+          "required": "Cena jest wymagana",
+          "invalid": "Cena musi być większa lub równa 0"
+        }
+      },
+      "count": {
+        "label": "Ilość",
+        "errors": {
+          "required": "Ilość jest wymagana",
+          "invalid": "Ilość musi być większa lub równa 0"
+        }
+      },
+      "currency": {
+        "label": "Waluta",
+        "errors": {
+          "required": "Waluta jest wymagana"
+        }
+      },
+      "characterstics": {
+        "label": "Cechy",
+        "key": {
+          "placeholder": "Kategoria",
+          "errors": {
+            "required": "Klucz jest wymagany",
+            "invalid": "Klucz musi mieć od 1 do 100 znaków"
+          }
+        },
+        "value": {
+          "placeholder": "Odzież",
+          "errors": {
+            "required": "Wartość jest wymagana",
+            "invalid": "Wartość musi mieć od 1 do 100 znaków"
+          }
+        },
+        "add": "Dodaj cechę"
+      },
+      "create-button": {
+        "text": "Zatwierdź"
+      }
+    },
+    "variants-table": {
+      "title": "Warianty",
+      "create": "Utwórz wariant",
+      "columns": {
+        "images": {
+          "title": "Zdjęcia"
+        },
+        "price": {
+          "title": "Cena"
+        },
+        "count": {
+          "title": "Ilość"
+        },
+        "characterstics": {
+          "title": "Cechy"
+        },
+        "actions": {
+          "title": "Działania"
+        }
+      },
+      "toasts": {
+        "delete-success": "Wariant usunięty",
+        "delete-error": "Nie udało się usunąć wariantu"
+      },
+      "delete-popup": {
+        "title": "Czy chcesz usunąć ten wariant?",
+        "okText": "Tak",
+        "cancelText": "Nie"
+      }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "Prześlij"
+      },
+      "uploading": "Przesyłanie...",
+      "uploadError": "Przesyłanie nie powiodło się",
+      "sizeError": "Plik jest zbyt duży"
+    },
+    "products-filteres": {
+      "title": "Filtry",
+      "products": {
+        "title": "Filtry produktów",
+        "query": {
+          "label": "Szukaj",
+          "placeholder": "Koszulka..."
+        },
+        "availability": {
+          "label": "Dostępność",
+          "placeholder": "Wybierz dostępność",
+          "options": {
+            "available": "Dostępne",
+            "not-available": "Niedostępne"
+          }
+        },
+        "deleted": {
+          "label": "Status usunięcia",
+          "placeholder": "Wybierz status",
+          "options": {
+            "deleted": "Dostępne",
+            "not-deleted": "Niedostępne"
+          }
+        },
+        "min-price": {
+          "label": "Cena min.",
+          "placeholder-from": "Od",
+          "placeholder-to": "Do"
+        },
+        "max-price": {
+          "label": "Cena maks.",
+          "placeholder-from": "Od",
+          "placeholder-to": "Do"
+        },
+        "characterstics": {
+          "label": "Cechy",
+          "placeholder-key": "Klucz",
+          "placeholder-value": "Wartość",
+          "errors": {
+            "key-required": "Klucz jest wymagany",
+            "value-required": "Wartość jest wymagana"
+          }
+        }
+      },
+      "variants": {
+        "title": "Filtry wariantów",
+        "currency": {
+          "label": "Waluta",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "Cena",
+          "placeholder-from": "Od",
+          "placeholder-to": "Do"
+        },
+        "count": {
+          "label": "Ilość",
+          "placeholder-from": "Od",
+          "placeholder-to": "Do"
+        },
+        "characterstics": {
+          "label": "Cechy",
+          "placeholder-key": "Klucz",
+          "placeholder-value": "Wartość",
+          "errors": {
+            "key-required": "Klucz jest wymagany",
+            "value-required": "Wartość jest wymagana"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "Resetuj"
+      },
+      "submit-button": {
+        "text": "Zatwierdź"
+      }
+    },
+    "user-form": {
+      "name": {
+        "label": "Imię i nazwisko",
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "Imię i nazwisko jest wymagane",
+          "invalid": "Musi mieć od 1 do 100 znaków"
+        }
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "E-mail jest wymagany",
+          "invalid": "Nieprawidłowy adres e-mail"
+        }
+      }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "Nazwa",
+        "placeholder": "Klucz mojej aplikacji",
+        "errors": {
+          "required": "Nazwa jest wymagana",
+          "invalid": "Nazwa musi mieć od 3 do 100 znaków"
+        }
+      },
+      "expiration": {
+        "label": "Data wygaśnięcia",
+        "errors": {
+          "required": "Data wygaśnięcia jest wymagana"
+        }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "Zaloguj się"
+      }
+    },
+    "footer": {
+      "about": "O projekcie",
+      "source": "Kod źródłowy",
+      "author": "Autor"
+    },
+    "product-card": {
+      "created": "Utworzono"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "Witamy w panelu Tabaar",
+      "email": {
+        "label": "E-mail",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "E-mail jest wymagany",
+          "invalid": "Nieprawidłowy adres e-mail"
+        }
+      },
+      "password": {
+        "label": "Hasło",
+        "placeholder": "***********",
+        "errors": {
+          "required": "Hasło jest wymagane"
+        }
+      },
+      "submit-button": {
+        "text": "Zaloguj się"
+      }
+    },
+    "products": {
+      "title": "Produkty",
+      "create-button": {
+        "text": "Utwórz"
+      },
+      "file-button": {
+        "text": "Z pliku",
+        "info": {
+          "text": "Prześlij specjalny plik JSON, aby utworzyć wiele produktów",
+          "download-button": {
+            "text": "Pobierz przykładowy plik"
+          }
+        }
+      },
+      "toasts": {
+        "success": "Produkty utworzone",
+        "error": "Nie udało się utworzyć produktów z pliku"
+      },
+      "empty": {
+        "description": "Nie znaleziono produktów",
+        "button": {
+          "text": "Utwórz nowy produkt"
+        }
+      },
+      "load-more-button": {
+        "text": "Załaduj więcej"
+      }
+    },
+    "create-product": {
+      "title": "Utwórz produkt",
+      "submit-button": {
+        "text": "Utwórz"
+      },
+      "toasts": {
+        "success": "Produkt został utworzony",
+        "error": "Nie udało się utworzyć produktu"
+      }
+    },
+    "edit-product": {
+      "title": "Edytuj produkt",
+      "submit-button": {
+        "text": "Zaktualizuj"
+      },
+      "empty": {
+        "description": "Nie znaleziono produktu",
+        "button": {
+          "text": "Wróć do listy"
+        }
+      },
+      "toasts": {
+        "success": "Produkt zaktualizowany",
+        "error": "Nie udało się zaktualizować produktu",
+        "delete": {
+          "success": "Produkt usunięty",
+          "error": "Nie udało się usunąć produktu"
+        }
+      },
+      "delete": {
+        "title": "Czy chcesz usunąć ten produkt?",
+        "okText": "Tak",
+        "cancelText": "Nie",
+        "button": {
+          "text": "Usuń"
+        }
+      }
+    },
+    "edit-variant": {
+      "title": "Edytuj wariant",
+      "images": {
+        "label": "Zdjęcia"
+      },
+      "submit-button": {
+        "text": "Zaktualizuj"
+      }
+    },
+    "create-variant": {
+      "title": "Utwórz wariant",
+      "submit-button": {
+        "text": "Utwórz"
+      }
+    },
+    "users": {
+      "title": "Użytkownicy",
+      "create-button": {
+        "text": "Utwórz"
+      },
+      "columns": {
+        "name": {
+          "title": "Nazwa"
+        },
+        "email": {
+          "title": "E-mail"
+        },
+        "createdAt": {
+          "title": "Utworzono"
+        },
+        "actions": {
+          "title": "Działania"
+        }
+      },
+      "delete": {
+        "title": "Czy chcesz usunąć tego użytkownika?",
+        "okText": "Tak",
+        "cancelText": "Nie"
+      },
+      "toasts": {
+        "deleted": "Użytkownik usunięty",
+        "delete-error": "Nie udało się usunąć użytkownika"
+      }
+    },
+    "create-user": {
+      "title": "Utwórz użytkownika",
+      "submit-button": {
+        "text": "Utwórz"
+      },
+      "toasts": {
+        "success": "Użytkownik został utworzony",
+        "error": "Nie udało się utworzyć użytkownika"
+      }
+    },
+    "update-user": {
+      "title": "Zaktualizuj użytkownika",
+      "submit-button": {
+        "text": "Zaktualizuj"
+      },
+      "toasts": {
+        "success": "Użytkownik zaktualizowany",
+        "error": "Nie udało się zaktualizować użytkownika"
+      },
+      "empty": {
+        "description": "Nie znaleziono użytkownika",
+        "button": {
+          "text": "Wróć do użytkowników"
+        }
+      }
+    },
+    "api-keys": {
+      "title": "Klucze API",
+      "create-button": {
+        "text": "Utwórz"
+      },
+      "columns": {
+        "name": {
+          "title": "Nazwa"
+        },
+        "expiration": {
+          "title": "Data wygaśnięcia",
+          "expired": "Wygasł"
+        },
+        "actions": {
+          "title": "Działania"
+        }
+      },
+      "delete": {
+        "title": "Czy chcesz usunąć ten klucz?",
+        "okText": "Tak",
+        "cancelText": "Nie"
+      },
+      "toasts": {
+        "success": "Klucz usunięty",
+        "error": "Nie udało się usunąć klucza",
+        "copied": "Klucz skopiowany"
+      }
+    },
+    "create-api-key": {
+      "title": "Utwórz klucz API",
+      "submit-button": {
+        "text": "Utwórz"
+      },
+      "toasts": {
+        "success": "Klucz API utworzony",
+        "error": "Nie udało się utworzyć klucza API"
+      }
+    },
+    "update-api-key": {
+      "title": "Edytuj klucz API",
+      "submit-button": {
+        "text": "Zaktualizuj"
+      },
+      "empty": {
+        "description": "Nie znaleziono klucza API",
+        "button": {
+          "text": "Wróć do listy"
+        },
+        "toasts": {
+          "success": "Klucz API zaktualizowany",
+          "error": "Nie udało się zaktualizować klucza API"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — Usługa zarządzania produktami typu open-source",
+      "description": "Tabaar to nowoczesna, wysoce wydajna usługa zarządzania informacjami o produktach i katalogami (PIM) o otwartym kodzie źródłowym, zaprojektowana z myślą o platformach e-commerce o wysokiej przepustowości i aplikacjach wielokanałowych. Zbudowany od podstaw z myślą o nowoczesnych systemach rozproszonych, Tabaar udostępnia jednocześnie interfejsy REST, GraphQL i gRPC oparte na hybrydowej architekturze danych PostgreSQL + Elasticsearch oraz pamięci masowej zgodnej z S3.",
+      "explain": "We współczesnym e-commerce i architekturach mikrousług różni klienci wymagają odmiennych paradygmatów komunikacji: aplikacje mobilne potrzebują lekkich punktów końcowych REST/GraphQL, panele webowe wymagają elastycznych zapytań GraphQL, a wewnętrzne mikrousługi potrzebują szybkich wywołań gRPC o niskich opóźnieniach. Tabaar łączy zarządzanie katalogiem produktów w jeden spójny silnik. Zamiast zmuszać zespoły do wyboru jednego stylu API lub utrzymywania niestabilnych warstw adapterów, Tabaar zapewnia równolegle wszystkie trzy protokoły z jednego rdzenia, wspieranego przez dedykowane silniki pamięci zoptymalizowane pod kątem integralności transakcyjnej oraz wyszukiwania w ułamkach milisekund na dużą skalę.",
+      "docs": {
+        "title": "Dokumentacja API",
+        "docs": "Dokumentacja",
+        "rest": {
+          "description": "REST API obejmuje punkty końcowe użytkowników, zdjęć produktów i kluczy API, a także przesyłanie plików i obrazów. Obsługuje autoryzację tokenem Bearer oraz dostęp za pomocą klucza API."
+        },
+        "graphql": {
+          "description": "GraphQL API obejmuje zapytania i mutacje dotyczące użytkowników, produktów i kluczy API. Obsługuje autoryzację tokenem Bearer."
+        },
+        "grpc": {
+          "description": "gRPC API obejmuje usługi użytkowników, produktów i kluczy API. Obsługuje dostęp za pomocą klucza API."
+        }
+      }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 Główne przypadki użycia",
+        "use-case": "Przypadek użycia",
+        "description": "Opis",
+        "omnichannel": "Wielokanałowy e-commerce (Omnichannel)",
+        "omnichannel-description": "Wielokanałowy e-commerce: scentralizuj katalog produktów, warianty, ceny i zasoby w internecie, na urządzeniach mobilnych, w stacjonarnych punktach sprzedaży (POS) oraz na platformach partnerskich.",
+        "microservices": "Rdzeń katalogowy dla mikrousług",
+        "microservices-description": "Obsługuj wewnętrzne usługi zamówień i magazynowe przez gRPC, udostępniając jednocześnie interfejs GraphQL aplikacjom klienckim.",
+        "search": "Katalogi z wyszukiwaniem wieloaspektowym",
+        "search-description": "Katalogi z zaawansowanym wyszukiwaniem: zapewnij szybkie, złożone filtrowanie atrybutów (np. marka, zakresy cenowe, dane techniczne, kategorie) oparte na Elasticsearch.",
+        "dam": "Zarządzanie zasobami cyfrowymi (DAM)",
+        "dam-description": "Zarządzanie zasobami cyfrowymi (DAM): niezawodnie przechowuj i łącz wysokiej rozdzielczości zdjęcia produktów i zasoby multimedialne za pośrednictwem pamięci zgodnej z S3."
+      },
+      "arch": {
+        "title": "🏗️ Przegląd architektury"
+      },
+      "tech": {
+        "title": "💻 Podsumowanie stosu technologicznego",
+        "point1": {
+          "title": "Środowisko i język",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "Interfejsy API",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "Bazy danych",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "Przechowywanie zasobów",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "Walidacja i bezpieczeństwo",
+          "text": "Schematy Zod, GraphQL Shield, uwierzytelnianie JWT, klucze API UUIDv7"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "components": {
+    "menu": {
+      "home": "홈",
+      "products": "상품",
+      "users": "사용자",
+      "api-keys": "API 키",
+      "logout": {
+        "label": "로그아웃",
+        "modal": {
+          "title": "로그아웃하시겠습니까?",
+          "okText": "예, 로그아웃합니다!",
+          "cancelText": "아니요"
+        }
+      }
+    },
+    "product-form": {
+      "name": {
+        "label": "이름",
+        "placeholder": "티셔츠",
+        "errors": {
+          "required": "이름은 필수 항목입니다",
+          "invalid": "이름은 3~100자 사이여야 합니다"
+        },
+        "add": "이름 언어 추가"
+      },
+      "description": {
+        "label": "설명",
+        "placeholder": "프린트가 있는 새로운 티셔츠",
+        "errors": {
+          "required": "설명은 필수 항목입니다",
+          "invalid": "설명은 3~1500자 사이여야 합니다"
+        },
+        "add": "설명 언어 추가"
+      },
+      "characterstics": {
+        "label": "특성",
+        "key": {
+          "placeholder": "카테고리",
+          "errors": {
+            "required": "키는 필수 항목입니다",
+            "invalid": "키는 1~100자 사이여야 합니다"
+          }
+        },
+        "value": {
+          "placeholder": "의류",
+          "errors": {
+            "required": "값은 필수 항목입니다",
+            "invalid": "값은 1~100자 사이여야 합니다"
+          }
+        },
+        "add": "특성 추가"
+      },
+      "create-button": {
+        "text": "제출"
+      }
+    },
+    "variant-form": {
+      "price": {
+        "label": "가격",
+        "errors": {
+          "required": "가격은 필수 항목입니다",
+          "invalid": "가격은 0 이상이어야 합니다"
+        }
+      },
+      "count": {
+        "label": "수량",
+        "errors": {
+          "required": "수량은 필수 항목입니다",
+          "invalid": "수량은 0 이상이어야 합니다"
+        }
+      },
+      "currency": {
+        "label": "통화",
+        "errors": {
+          "required": "통화는 필수 항목입니다"
+        }
+      },
+      "characterstics": {
+        "label": "특성",
+        "key": {
+          "placeholder": "카테고리",
+          "errors": {
+            "required": "키는 필수 항목입니다",
+            "invalid": "키는 1~100자 사이여야 합니다"
+          }
+        },
+        "value": {
+          "placeholder": "의류",
+          "errors": {
+            "required": "값은 필수 항목입니다",
+            "invalid": "값은 1~100자 사이여야 합니다"
+          }
+        },
+        "add": "특성 추가"
+      },
+      "create-button": {
+        "text": "제출"
+      }
+    },
+    "variants-table": {
+      "title": "변체",
+      "create": "변체 생성",
+      "columns": {
+        "images": {
+          "title": "이미지"
+        },
+        "price": {
+          "title": "가격"
+        },
+        "count": {
+          "title": "수량"
+        },
+        "characterstics": {
+          "title": "특성"
+        },
+        "actions": {
+          "title": "작업"
+        }
+      },
+      "toasts": {
+        "delete-success": "변체가 삭제되었습니다",
+        "delete-error": "변체 삭제에 실패했습니다"
+      },
+      "delete-popup": {
+        "title": "이 변체를 삭제하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
+      }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "업로드"
+      },
+      "uploading": "업로드 중...",
+      "uploadError": "업로드 실패",
+      "sizeError": "파일 크기가 너무 큽니다"
+    },
+    "products-filteres": {
+      "title": "필터",
+      "products": {
+        "title": "상품 필터",
+        "query": {
+          "label": "검색",
+          "placeholder": "티셔츠..."
+        },
+        "availability": {
+          "label": "재고 상태",
+          "placeholder": "재고 상태 선택",
+          "options": {
+            "available": "재고 있음",
+            "not-available": "품절"
+          }
+        },
+        "deleted": {
+          "label": "삭제 상태",
+          "placeholder": "상태 선택",
+          "options": {
+            "deleted": "재고 있음",
+            "not-deleted": "품절"
+          }
+        },
+        "min-price": {
+          "label": "최소 가격",
+          "placeholder-from": "최소",
+          "placeholder-to": "최대"
+        },
+        "max-price": {
+          "label": "최대 가격",
+          "placeholder-from": "최소",
+          "placeholder-to": "최대"
+        },
+        "characterstics": {
+          "label": "특성",
+          "placeholder-key": "키",
+          "placeholder-value": "값",
+          "errors": {
+            "key-required": "키는 필수 항목입니다",
+            "value-required": "값은 필수 항목입니다"
+          }
+        }
+      },
+      "variants": {
+        "title": "변체 필터",
+        "currency": {
+          "label": "통화",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "가격",
+          "placeholder-from": "최소",
+          "placeholder-to": "최대"
+        },
+        "count": {
+          "label": "수량",
+          "placeholder-from": "최소",
+          "placeholder-to": "최대"
+        },
+        "characterstics": {
+          "label": "특성",
+          "placeholder-key": "키",
+          "placeholder-value": "값",
+          "errors": {
+            "key-required": "키는 필수 항목입니다",
+            "value-required": "값은 필수 항목입니다"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "초기화"
+      },
+      "submit-button": {
+        "text": "제출"
+      }
+    },
+    "user-form": {
+      "name": {
+        "label": "이름",
+        "placeholder": "홍길동",
+        "errors": {
+          "required": "이름은 필수 항목입니다",
+          "invalid": "이름은 1~100자 사이여야 합니다"
+        }
+      },
+      "email": {
+        "label": "이메일",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "이메일은 필수 항목입니다",
+          "invalid": "유효하지 않은 이메일입니다"
+        }
+      }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "이름",
+        "placeholder": "내 앱 키",
+        "errors": {
+          "required": "이름은 필수 항목입니다",
+          "invalid": "이름은 3~100자 사이여야 합니다"
+        }
+      },
+      "expiration": {
+        "label": "만료일",
+        "errors": {
+          "required": "만료일은 필수 항목입니다"
+        }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "로그인"
+      }
+    },
+    "footer": {
+      "about": "소개",
+      "source": "소스 코드",
+      "author": "작성자"
+    },
+    "product-card": {
+      "created": "생성일"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "Tabaar 대시보드에 오신 것을 환영합니다",
+      "email": {
+        "label": "이메일",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "이메일은 필수 항목입니다",
+          "invalid": "유효하지 않은 이메일입니다"
+        }
+      },
+      "password": {
+        "label": "비밀번호",
+        "placeholder": "***********",
+        "errors": {
+          "required": "비밀번호는 필수 항목입니다"
+        }
+      },
+      "submit-button": {
+        "text": "로그인"
+      }
+    },
+    "products": {
+      "title": "상품",
+      "create-button": {
+        "text": "생성"
+      },
+      "file-button": {
+        "text": "파일로 등록",
+        "info": {
+          "text": "여러 상품을 한 번에 생성하려면 전용 JSON 파일을 업로드하세요",
+          "download-button": {
+            "text": "샘플 파일 다운로드"
+          }
+        }
+      },
+      "toasts": {
+        "success": "상품이 생성되었습니다",
+        "error": "파일을 통한 상품 생성에 실패했습니다"
+      },
+      "empty": {
+        "description": "상품을 찾을 수 없습니다",
+        "button": {
+          "text": "새 상품 만들기"
+        }
+      },
+      "load-more-button": {
+        "text": "더 보기"
+      }
+    },
+    "create-product": {
+      "title": "상품 생성",
+      "submit-button": {
+        "text": "생성"
+      },
+      "toasts": {
+        "success": "상품이 생성되었습니다",
+        "error": "상품 생성에 실패했습니다"
+      }
+    },
+    "edit-product": {
+      "title": "상품 수정",
+      "submit-button": {
+        "text": "업데이트"
+      },
+      "empty": {
+        "description": "상품을 찾을 수 없습니다",
+        "button": {
+          "text": "목록으로 돌아가기"
+        }
+      },
+      "toasts": {
+        "success": "상품이 업데이트되었습니다",
+        "error": "상품 업데이트에 실패했습니다",
+        "delete": {
+          "success": "상품이 삭제되었습니다",
+          "error": "상품 삭제에 실패했습니다"
+        }
+      },
+      "delete": {
+        "title": "이 상품을 삭제하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요",
+        "button": {
+          "text": "삭제"
+        }
+      }
+    },
+    "edit-variant": {
+      "title": "변체 수정",
+      "images": {
+        "label": "이미지"
+      },
+      "submit-button": {
+        "text": "업데이트"
+      }
+    },
+    "create-variant": {
+      "title": "변체 생성",
+      "submit-button": {
+        "text": "생성"
+      }
+    },
+    "users": {
+      "title": "사용자",
+      "create-button": {
+        "text": "생성"
+      },
+      "columns": {
+        "name": {
+          "title": "이름"
+        },
+        "email": {
+          "title": "이메일"
+        },
+        "createdAt": {
+          "title": "생성일"
+        },
+        "actions": {
+          "title": "작업"
+        }
+      },
+      "delete": {
+        "title": "이 사용자를 삭제하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
+      },
+      "toasts": {
+        "deleted": "사용자가 삭제되었습니다",
+        "delete-error": "사용자 삭제에 실패했습니다"
+      }
+    },
+    "create-user": {
+      "title": "사용자 생성",
+      "submit-button": {
+        "text": "생성"
+      },
+      "toasts": {
+        "success": "사용자가 생성되었습니다",
+        "error": "사용자 생성에 실패했습니다"
+      }
+    },
+    "update-user": {
+      "title": "사용자 정보 수정",
+      "submit-button": {
+        "text": "업데이트"
+      },
+      "toasts": {
+        "success": "사용자 정보가 업데이트되었습니다",
+        "error": "사용자 정보 업데이트에 실패했습니다"
+      },
+      "empty": {
+        "description": "사용자를 찾을 수 없습니다",
+        "button": {
+          "text": "사용자 목록으로 돌아가기"
+        }
+      }
+    },
+    "api-keys": {
+      "title": "API 키",
+      "create-button": {
+        "text": "생성"
+      },
+      "columns": {
+        "name": {
+          "title": "이름"
+        },
+        "expiration": {
+          "title": "만료일",
+          "expired": "만료됨"
+        },
+        "actions": {
+          "title": "작업"
+        }
+      },
+      "delete": {
+        "title": "이 키를 삭제하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
+      },
+      "toasts": {
+        "success": "키가 삭제되었습니다",
+        "error": "키 삭제에 실패했습니다",
+        "copied": "키가 복사되었습니다"
+      }
+    },
+    "create-api-key": {
+      "title": "API 키 생성",
+      "submit-button": {
+        "text": "생성"
+      },
+      "toasts": {
+        "success": "API 키가 생성되었습니다",
+        "error": "API 키 생성에 실패했습니다"
+      }
+    },
+    "update-api-key": {
+      "title": "API 키 수정",
+      "submit-button": {
+        "text": "업데이트"
+      },
+      "empty": {
+        "description": "API 키를 찾을 수 없습니다",
+        "button": {
+          "text": "목록으로 돌아가기"
+        },
+        "toasts": {
+          "success": "API 키가 업데이트되었습니다",
+          "error": "API 키 업데이트에 실패했습니다"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — 오픈 소스 상품 관리 서비스",
+      "description": "Tabaar는 대규모 전자상거래 및 멀티채널 애플리케이션을 위해 설계된 최신의 고성능 오픈 소스 상품 정보 및 카탈로그 관리(PIM) 서비스입니다. 현대적인 분산 시스템을 지원하도록 처음부터 설계된 Tabaar는 하이브리드 PostgreSQL + Elasticsearch 데이터 아키텍처와 S3 호환 미디어 스토리지를 기반으로 REST, GraphQL 및 gRPC 인터페이스를 동시에 제공합니다.",
+      "explain": "현대의 전자상거래 및 마이크로서비스 아키텍처에서는 클라이언트에 따라 서로 다른 통신 패러다임이 필요합니다. 모바일 앱은 경량 REST/GraphQL 엔드포인트를 원하고, 웹 대시보드는 유연한 GraphQL 쿼리를 필요로 하며, 내부 마이크로서비스는 빠르고 지연 시간이 짧은 gRPC RPC를 요구합니다. Tabaar는 상품 카탈로그 관리를 단일하고 응집력 있는 엔진으로 통합합니다. 팀에게 단 하나의 API 스타일을 강요하거나 취약한 어댑터 계층을 유지하도록 요구하는 대신, Tabaar는 트랜잭션 무결성과 대규모 서브밀리초 검색 모두에 최적화된 전용 스토리지 엔진을 기반으로 단일 코어에서 3가지 프로토콜을 동시에 제공합니다.",
+      "docs": {
+        "title": "API 문서",
+        "docs": "문서",
+        "rest": {
+          "description": "REST API에는 사용자, 상품 이미지 및 API 키 엔드포인트가 포함됩니다. 이미지 및 파일 업로드도 지원하며, Bearer 토큰 인증 및 API 키 액세스를 지원합니다."
+        },
+        "graphql": {
+          "description": "GraphQL API에는 사용자, 상품 및 API 키 쿼리와 뮤테이션이 포함됩니다. Bearer 토큰 인증을 지원합니다."
+        },
+        "grpc": {
+          "description": "gRPC API에는 사용자, 상품 및 API 키 서비스가 포함됩니다. API 키 액세스를 지원합니다."
+        }
+      }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 주요 사용 사례",
+        "use-case": "사용 사례",
+        "description": "설명",
+        "omnichannel": "옴니채널 전자상거래",
+        "omnichannel-description": "옴니채널 전자상거래: 웹, 모바일, 오프라인 매장 POS 및 파트너 마켓플레이스 전반에서 상품 카탈로그, 변체, 가격 및 자산을 중앙 집중식으로 관리합니다.",
+        "microservices": "마이크로서비스 카탈로그 백본",
+        "microservices-description": "클라이언트 애플리케이션에 GraphQL을 제공하는 동시에 gRPC를 통해 내부 주문 및 재고 서비스를 처리합니다.",
+        "search": "다양한 속성 기반 검색 카탈로그",
+        "search-description": "다양한 속성 기반 검색 카탈로그: Elasticsearch 기반으로 빠르고 정교한 속성 필터링(예: 브랜드, 가격 범위, 기술 사양, 카테고리)을 제공합니다.",
+        "dam": "디지털 자산 관리 (DAM)",
+        "dam-description": "디지털 자산 관리 (DAM): S3 호환 스토리지를 통해 고해상도 상품 사진 및 자산을 안정적으로 저장하고 연결합니다."
+      },
+      "arch": {
+        "title": "🏗️ 아키텍처 개요"
+      },
+      "tech": {
+        "title": "💻 기술 스택 요약",
+        "point1": {
+          "title": "런타임 및 언어",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "APIs",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "데이터베이스",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "자산 스토리지",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "유효성 검사 및 보안",
+          "text": "Zod 스키마, GraphQL Shield, JWT 인증, UUIDv7 API 키"
+        }
+      }
+    }
+  }
+}

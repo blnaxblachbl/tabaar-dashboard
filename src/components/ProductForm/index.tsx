@@ -3,15 +3,21 @@ import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
 import type { ProductFormData, ProductFormProps } from "./types";
 import { useTranslation } from "react-i18next";
+import { Language } from "@/libs/i18n/types";
 
 export function ProductForm({
   loading,
   submitText,
   ...props
 }: ProductFormProps) {
-  const { t } = useTranslation("", {
+  const { t, i18n } = useTranslation("", {
     keyPrefix: "components.product-form",
   });
+
+  const localeOptions = Object.values(Language).map((key) => ({
+    label: key.toUpperCase(),
+    value: key,
+  }));
 
   return (
     <Form<ProductFormData>
@@ -22,13 +28,13 @@ export function ProductForm({
         name: [
           {
             content: "",
-            locale: "en",
+            locale: i18n.language,
           },
         ],
         description: [
           {
             content: "",
-            locale: "en",
+            locale: i18n.language,
           },
         ],
       }}
@@ -46,18 +52,7 @@ export function ProductForm({
                       name={[field.name, "locale"]}
                       className="w-20! mb-3!"
                     >
-                      <Select
-                        options={[
-                          {
-                            label: "RU",
-                            value: "ru",
-                          },
-                          {
-                            label: "EN",
-                            value: "en",
-                          },
-                        ]}
-                      />
+                      <Select options={localeOptions} />
                     </Form.Item>
                     <Form.Item
                       name={[field.name, "content"]}
@@ -91,7 +86,7 @@ export function ProductForm({
                 type="dashed"
                 block
                 icon={<PlusOutlined />}
-                onClick={() => add({ content: "", locale: "en" })}
+                onClick={() => add({ content: "", locale: i18n.language })}
               >
                 {t("name.add")}
               </Button>
@@ -109,18 +104,7 @@ export function ProductForm({
                     name={[field.name, "locale"]}
                     className="w-20! mb-3!"
                   >
-                    <Select
-                      options={[
-                        {
-                          label: "RU",
-                          value: "ru",
-                        },
-                        {
-                          label: "EN",
-                          value: "en",
-                        },
-                      ]}
-                    />
+                    <Select options={localeOptions} />
                   </Form.Item>
                   <Form.Item
                     name={[field.name, "content"]}
@@ -156,7 +140,7 @@ export function ProductForm({
                 type="dashed"
                 block
                 icon={<PlusOutlined />}
-                onClick={() => add({ content: "", locale: "en" })}
+                onClick={() => add({ content: "", locale: i18n.language })}
               >
                 {t("description.add")}
               </Button>

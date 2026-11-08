@@ -1,0 +1,536 @@
+{
+  "components": {
+    "menu": {
+      "home": "होम",
+      "products": "उत्पाद",
+      "users": "उपयोगकर्ता",
+      "api-keys": "एपीआई कुंजियाँ",
+      "logout": {
+        "label": "लॉगआउट",
+        "modal": {
+          "title": "क्या आप लॉगआउट करना चाहते हैं?",
+          "okText": "हाँ, मुझे लॉगआउट करें!",
+          "cancelText": "नहीं"
+        }
+      }
+    },
+    "product-form": {
+      "name": {
+        "label": "नाम",
+        "placeholder": "टी-शर्ट",
+        "errors": {
+          "required": "नाम आवश्यक है",
+          "invalid": "नाम 3-100 वर्णों के बीच होना चाहिए"
+        },
+        "add": "नाम भाषा जोड़ें"
+      },
+      "description": {
+        "label": "विवरण",
+        "placeholder": "प्रिंट वाली ब्रांड न्यू टी-शर्ट",
+        "errors": {
+          "required": "विवरण आवश्यक है",
+          "invalid": "विवरण 3-1500 वर्णों के बीच होना चाहिए"
+        },
+        "add": "विवरण भाषा जोड़ें"
+      },
+      "characterstics": {
+        "label": "विशेषताएँ",
+        "key": {
+          "placeholder": "श्रेणी",
+          "errors": {
+            "required": "कुंजी आवश्यक है",
+            "invalid": "कुंजी 1-100 वर्णों के बीच होनी चाहिए"
+          }
+        },
+        "value": {
+          "placeholder": "कपड़े",
+          "errors": {
+            "required": "मान आवश्यक है",
+            "invalid": "मान 1-100 वर्णों के बीच होना चाहिए"
+          }
+        },
+        "add": "विशेषता जोड़ें"
+      },
+      "create-button": {
+        "text": "जमा करें"
+      }
+    },
+    "variant-form": {
+      "price": {
+        "label": "कीमत",
+        "errors": {
+          "required": "कीमत आवश्यक है",
+          "invalid": "कीमत 0 या उससे अधिक होनी चाहिए"
+        }
+      },
+      "count": {
+        "label": "मात्रा",
+        "errors": {
+          "required": "मात्रा आवश्यक है",
+          "invalid": "मात्रा 0 या उससे अधिक होनी चाहिए"
+        }
+      },
+      "currency": {
+        "label": "मुद्रा",
+        "errors": {
+          "required": "मुद्रा आवश्यक है"
+        }
+      },
+      "characterstics": {
+        "label": "विशेषताएँ",
+        "key": {
+          "placeholder": "श्रेणी",
+          "errors": {
+            "required": "कुंजी आवश्यक है",
+            "invalid": "कुंजी 1-100 वर्णों के बीच होनी चाहिए"
+          }
+        },
+        "value": {
+          "placeholder": "कपड़े",
+          "errors": {
+            "required": "मान आवश्यक है",
+            "invalid": "मान 1-100 वर्णों के बीच होना चाहिए"
+          }
+        },
+        "add": "विशेषता जोड़ें"
+      },
+      "create-button": {
+        "text": "जमा करें"
+      }
+    },
+    "variants-table": {
+      "title": "वेरिएंट्स",
+      "create": "वेरिएंट बनाएं",
+      "columns": {
+        "images": {
+          "title": "छवियाँ"
+        },
+        "price": {
+          "title": "कीमत"
+        },
+        "count": {
+          "title": "मात्रा"
+        },
+        "characterstics": {
+          "title": "विशेषताएँ"
+        },
+        "actions": {
+          "title": "कार्रवाइयाँ"
+        }
+      },
+      "toasts": {
+        "delete-success": "वेरिएंट हटा दिया गया",
+        "delete-error": "वेरिएंट हटाने में विफल"
+      },
+      "delete-popup": {
+        "title": "क्या आप इस वेरिएंट को हटाना चाहते हैं?",
+        "okText": "हाँ",
+        "cancelText": "नहीं"
+      }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "अपलोड करें"
+      },
+      "uploading": "अपलोड हो रहा है...",
+      "uploadError": "अपलोड विफल रहा",
+      "sizeError": "फ़ाइल बहुत बड़ी है"
+    },
+    "products-filteres": {
+      "title": "फ़िल्टर",
+      "products": {
+        "title": "उत्पाद फ़िल्टर",
+        "query": {
+          "label": "खोजें",
+          "placeholder": "टी-शर्ट..."
+        },
+        "availability": {
+          "label": "उपलब्धता",
+          "placeholder": "उपलब्धता चुनें",
+          "options": {
+            "available": "उपलब्ध",
+            "not-available": "उपलब्ध नहीं"
+          }
+        },
+        "deleted": {
+          "label": "हटाया गया",
+          "placeholder": "स्थिति चुनें",
+          "options": {
+            "deleted": "उपलब्ध",
+            "not-deleted": "उपलब्ध नहीं"
+          }
+        },
+        "min-price": {
+          "label": "न्यूनतम कीमत",
+          "placeholder-from": "से",
+          "placeholder-to": "तक"
+        },
+        "max-price": {
+          "label": "अधिकतम कीमत",
+          "placeholder-from": "से",
+          "placeholder-to": "तक"
+        },
+        "characterstics": {
+          "label": "विशेषताएँ",
+          "placeholder-key": "कुंजी",
+          "placeholder-value": "मान",
+          "errors": {
+            "key-required": "कुंजी आवश्यक है",
+            "value-required": "मान आवश्यक है"
+          }
+        }
+      },
+      "variants": {
+        "title": "वेरिएंट फ़िल्टर",
+        "currency": {
+          "label": "मुद्रा",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "कीमत",
+          "placeholder-from": "से",
+          "placeholder-to": "तक"
+        },
+        "count": {
+          "label": "मात्रा",
+          "placeholder-from": "से",
+          "placeholder-to": "तक"
+        },
+        "characterstics": {
+          "label": "विशेषताएँ",
+          "placeholder-key": "कुंजी",
+          "placeholder-value": "मान",
+          "errors": {
+            "key-required": "कुंजी आवश्यक है",
+            "value-required": "मान आवश्यक है"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "रीसेट करें"
+      },
+      "submit-button": {
+        "text": "जमा करें"
+      }
+    },
+    "user-form": {
+      "name": {
+        "label": "नाम",
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "नाम आवश्यक है",
+          "invalid": "नाम 1-100 वर्णों के बीच होना चाहिए"
+        }
+      },
+      "email": {
+        "label": "ईमेल",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "ईमेल आवश्यक है",
+          "invalid": "अमान्य ईमेल"
+        }
+      }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "नाम",
+        "placeholder": "मेरी ऐप कुंजी",
+        "errors": {
+          "required": "नाम आवश्यक है",
+          "invalid": "नाम 3-100 वर्णों के बीच होना चाहिए"
+        }
+      },
+      "expiration": {
+        "label": "समाप्ति तिथि",
+        "errors": {
+          "required": "समाप्ति तिथि आवश्यक है"
+        }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "लॉगिन करें"
+      }
+    },
+    "footer": {
+      "about": "के बारे में",
+      "source": "स्रोत कोड",
+      "author": "लेखक"
+    },
+    "product-card": {
+      "created": "निर्मित"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "Tabaar डैशबोर्ड में आपका स्वागत है",
+      "email": {
+        "label": "ईमेल",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "ईमेल आवश्यक है",
+          "invalid": "अमान्य ईमेल"
+        }
+      },
+      "password": {
+        "label": "पासवर्ड",
+        "placeholder": "***********",
+        "errors": {
+          "required": "पासवर्ड आवश्यक है"
+        }
+      },
+      "submit-button": {
+        "text": "लॉगिन करें"
+      }
+    },
+    "products": {
+      "title": "उत्पाद",
+      "create-button": {
+        "text": "बनाएं"
+      },
+      "file-button": {
+        "text": "फ़ाइल के साथ",
+        "info": {
+          "text": "एकाधिक उत्पाद बनाने के लिए विशेष JSON फ़ाइल अपलोड करें",
+          "download-button": {
+            "text": "नमूना फ़ाइल डाउनलोड करें"
+          }
+        }
+      },
+      "toasts": {
+        "success": "उत्पाद बनाए गए",
+        "error": "फ़ाइल के साथ उत्पाद बनाने में विफल"
+      },
+      "empty": {
+        "description": "कोई उत्पाद नहीं मिला",
+        "button": {
+          "text": "नया उत्पाद बनाएं"
+        }
+      },
+      "load-more-button": {
+        "text": "और लोड करें"
+      }
+    },
+    "create-product": {
+      "title": "उत्पाद बनाएं",
+      "submit-button": {
+        "text": "बनाएं"
+      },
+      "toasts": {
+        "success": "उत्पाद बनाया गया",
+        "error": "उत्पाद बनाने में विफल"
+      }
+    },
+    "edit-product": {
+      "title": "उत्पाद संपादित करें",
+      "submit-button": {
+        "text": "अपडेट करें"
+      },
+      "empty": {
+        "description": "उत्पाद नहीं मिला",
+        "button": {
+          "text": "सूची पर वापस जाएं"
+        }
+      },
+      "toasts": {
+        "success": "उत्पाद अपडेट किया गया",
+        "error": "उत्पाद अपडेट करने में विफल",
+        "delete": {
+          "success": "उत्पाद हटा दिया गया",
+          "error": "उत्पाद हटाने में विफल"
+        }
+      },
+      "delete": {
+        "title": "क्या आप इस उत्पाद को हटाना चाहते हैं?",
+        "okText": "हाँ",
+        "cancelText": "नहीं",
+        "button": {
+          "text": "हटाएं"
+        }
+      }
+    },
+    "edit-variant": {
+      "title": "वेरिएंट संपादित करें",
+      "images": {
+        "label": "छवियाँ"
+      },
+      "submit-button": {
+        "text": "अपडेट करें"
+      }
+    },
+    "create-variant": {
+      "title": "वेरिएंट बनाएं",
+      "submit-button": {
+        "text": "बनाएं"
+      }
+    },
+    "users": {
+      "title": "उपयोगकर्ता",
+      "create-button": {
+        "text": "बनाएं"
+      },
+      "columns": {
+        "name": {
+          "title": "नाम"
+        },
+        "email": {
+          "title": "ईमेल"
+        },
+        "createdAt": {
+          "title": "निर्मित तिथि"
+        },
+        "actions": {
+          "title": "कार्रवाइयाँ"
+        }
+      },
+      "delete": {
+        "title": "क्या आप इस उपयोगकर्ता को हटाना चाहते हैं?",
+        "okText": "हाँ",
+        "cancelText": "नहीं"
+      },
+      "toasts": {
+        "deleted": "उपयोगकर्ता हटा दिया गया",
+        "delete-error": "उपयोगकर्ता हटाने में विफल"
+      }
+    },
+    "create-user": {
+      "title": "उपयोगकर्ता बनाएं",
+      "submit-button": {
+        "text": "बनाएं"
+      },
+      "toasts": {
+        "success": "उपयोगकर्ता बनाया गया",
+        "error": "उपयोगकर्ता बनाने में विफल"
+      }
+    },
+    "update-user": {
+      "title": "उपयोगकर्ता अपडेट करें",
+      "submit-button": {
+        "text": "अपडेट करें"
+      },
+      "toasts": {
+        "success": "उपयोगकर्ता अपडेट किया गया",
+        "error": "उपयोगकर्ता अपडेट करने में विफल"
+      },
+      "empty": {
+        "description": "उपयोगकर्ता नहीं मिला",
+        "button": {
+          "text": "उपयोगकर्ताओं पर वापस जाएं"
+        }
+      }
+    },
+    "api-keys": {
+      "title": "एपीआई कुंजियाँ",
+      "create-button": {
+        "text": "बनाएं"
+      },
+      "columns": {
+        "name": {
+          "title": "नाम"
+        },
+        "expiration": {
+          "title": "समाप्ति तिथि",
+          "expired": "समाप्त"
+        },
+        "actions": {
+          "title": "कार्रवाइयाँ"
+        }
+      },
+      "delete": {
+        "title": "क्या आप इस कुंजी को हटाना चाहते हैं?",
+        "okText": "हाँ",
+        "cancelText": "नहीं"
+      },
+      "toasts": {
+        "success": "कुंजी हटा दी गई",
+        "error": "कुंजी हटाने में विफल",
+        "copied": "कुंजी कॉपी हो गई"
+      }
+    },
+    "create-api-key": {
+      "title": "एपीआई कुंजी बनाएं",
+      "submit-button": {
+        "text": "बनाएं"
+      },
+      "toasts": {
+        "success": "एपीआई कुंजी बनाई गई",
+        "error": "एपीआई कुंजी बनाने में विफल"
+      }
+    },
+    "update-api-key": {
+      "title": "एपीआई कुंजी संपादित करें",
+      "submit-button": {
+        "text": "अपडेट करें"
+      },
+      "empty": {
+        "description": "एपीआई कुंजी नहीं मिली",
+        "button": {
+          "text": "सूची पर वापस जाएं"
+        },
+        "toasts": {
+          "success": "एपीआई कुंजी अपडेट की गई",
+          "error": "एपीआई कुंजी अपडेट करने में विफल"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — ओपन-सोर्स उत्पाद प्रबंधन सेवा",
+      "description": "Tabaar एक आधुनिक, उच्च-प्रदर्शन, ओपन-सोर्स उत्पाद सूचना और कैटलॉग प्रबंधन (PIM) सेवा है जिसे उच्च-थ्रूपुट ई-कॉमर्स और बहु-चैनल अनुप्रयोगों के लिए डिज़ाइन किया गया है। आधुनिक वितरित प्रणालियों का समर्थन करने के लिए शुरू से निर्मित, Tabaar हाइब्रिड PostgreSQL + Elasticsearch डेटा आर्किटेक्चर और S3-संगत मीडिया स्टोरेज द्वारा संचालित REST, GraphQL और gRPC इंटरफ़ेस एक साथ प्रदान करता है।",
+      "explain": "समकालीन ई-कॉमर्स और माइक्रोसर्विस आर्किटेक्चर में, विभिन्न क्लाइंट्स को अलग-अलग संचार प्रतिमानों की आवश्यकता होती है: मोबाइल ऐप्स को हल्के REST/GraphQL एंडपॉइंट्स चाहिए, वेब डैशबोर्ड को लचीली GraphQL क्वेरी की आवश्यकता होती है, और आंतरिक माइक्रोसर्विस को उच्च-गति, कम-विलंबता वाली gRPC RPCs की आवश्यकता होती है। Tabaar उत्पाद कैटलॉग प्रबंधन को एक एकल, एकीकृत इंजन में समाहित करता है। टीमों को किसी एक एपीआई शैली को चुनने या कमजोर एडेप्टर परतों को बनाए रखने के लिए बाध्य करने के बजाय, Tabaar एक ही कोर से तीनों प्रोटोकॉल समवर्ती रूप से वितरित करता है, जो लेन-देन अखंडता और बड़े पैमाने पर सब-मिलीसेकंड खोज दोनों के लिए अनुकूलित समर्पित स्टोरेज इंजनों द्वारा समर्थित है।",
+      "docs": {
+        "title": "एपीआई दस्तावेज़ीकरण",
+        "docs": "दस्तावेज़",
+        "rest": {
+          "description": "REST API में उपयोगकर्ता, उत्पाद छवि और एपीआई कुंजियाँ एंडपॉइंट शामिल हैं। छवियों और फ़ाइलों के अपलोड का भी समर्थन करता है। Bearer टोकन प्राधिकरण और API कुंजी पहुँच का समर्थन करता है।"
+        },
+        "graphql": {
+          "description": "GraphQL API में उपयोगकर्ता, उत्पाद और एपीआई कुंजी क्वेरी और म्यूटेशन शामिल हैं। Bearer टोकन प्राधिकरण का समर्थन करता है।"
+        },
+        "grpc": {
+          "description": "gRPC API में उपयोगकर्ता, उत्पाद और एपीआई कुंजी सेवाएँ शामिल हैं। API कुंजी पहुँच का समर्थन करता है।"
+        }
+      }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 प्राथमिक उपयोग के मामले",
+        "use-case": "उपयोग का मामला",
+        "description": "विवरण",
+        "omnichannel": "ओमनीचैनल ई-कॉमर्स",
+        "omnichannel-description": "ओमनीचैनल ई-कॉमर्स: वेब, मोबाइल, इन-स्टोर पीओएस और पार्टनर मार्केटप्लेस में उत्पाद कैटलॉग, वेरिएंट, मूल्य निर्धारण और संपत्तियों को केंद्रीकृत करें।",
+        "microservices": "माइक्रोसर्विस कैटलॉग बैकबोन",
+        "microservices-description": "क्लाइंट अनुप्रयोगों के लिए GraphQL को प्रदर्शित करते हुए gRPC पर आंतरिक ऑर्डरिंग और इन्वेंट्री सेवाएँ प्रदान करें।",
+        "search": "उच्च-पहलू खोज कैटलॉग",
+        "search-description": "उच्च-पहलू खोज कैटलॉग: Elasticsearch द्वारा संचालित तेज़, जटिल विशेषता फ़िल्टरिंग (उदा., ब्रांड, मूल्य सीमा, तकनीकी विनिर्देश, श्रेणियां) प्रदान करें।",
+        "dam": "डिजिटल एसेट मैनेजमेंट (DAM)",
+        "dam-description": "डिजिटल एसेट मैनेजमेंट (DAM): S3-संगत स्टोरेज के माध्यम से उच्च-रिज़ॉल्यूशन उत्पाद फ़ोटोग्राफ़ी और संपत्तियों को विश्वसनीय रूप से संग्रहीत और लिंक करें।"
+      },
+      "arch": {
+        "title": "🏗️ आर्किटेक्चर अवलोकन"
+      },
+      "tech": {
+        "title": "💻 टेक स्टैक सारांश",
+        "point1": {
+          "title": "रनटाइम और भाषा",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "APIs",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "डेटाबेस",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "एसेट स्टोरेज",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "सत्यापन और सुरक्षा",
+          "text": "Zod स्कीमा, GraphQL Shield, JWT प्रमाणीकरण, UUIDv7 API कुंजियाँ"
+        }
+      }
+    }
+  }
+}

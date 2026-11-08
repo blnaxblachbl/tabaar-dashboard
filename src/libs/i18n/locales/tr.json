@@ -1,0 +1,536 @@
+{
+  "components": {
+    "menu": {
+      "home": "Ana Sayfa",
+      "products": "Ürünler",
+      "users": "Kullanıcılar",
+      "api-keys": "API Anahtarları",
+      "logout": {
+        "label": "Çıkış Yap",
+        "modal": {
+          "title": "Çıkış yapmak istiyor musunuz?",
+          "okText": "Evet, çıkış yap!",
+          "cancelText": "Hayır"
+        }
+      }
+    },
+    "product-form": {
+      "name": {
+        "label": "Ad",
+        "placeholder": "Tişört",
+        "errors": {
+          "required": "Ad alanı zorunludur",
+          "invalid": "Ad 3-100 karakter arasında olmalıdır"
+        },
+        "add": "Ad dili ekle"
+      },
+      "description": {
+        "label": "Açıklama",
+        "placeholder": "Baskılı yeni tişört",
+        "errors": {
+          "required": "Açıklama alanı zorunludur",
+          "invalid": "Açıklama 3-1500 karakter arasında olmalıdır"
+        },
+        "add": "Açıklama dili ekle"
+      },
+      "characterstics": {
+        "label": "Özellikler",
+        "key": {
+          "placeholder": "Kategori",
+          "errors": {
+            "required": "Anahtar zorunludur",
+            "invalid": "Anahtar 1-100 karakter arasında olmalıdır"
+          }
+        },
+        "value": {
+          "placeholder": "Giyim",
+          "errors": {
+            "required": "Değer zorunludur",
+            "invalid": "Değer 1-100 karakter arasında olmalıdır"
+          }
+        },
+        "add": "Özellik Ekle"
+      },
+      "create-button": {
+        "text": "Gönder"
+      }
+    },
+    "variant-form": {
+      "price": {
+        "label": "Fiyat",
+        "errors": {
+          "required": "Fiyat zorunludur",
+          "invalid": "Fiyat 0 veya daha büyük olmalıdır"
+        }
+      },
+      "count": {
+        "label": "Adet",
+        "errors": {
+          "required": "Adet zorunludur",
+          "invalid": "Adet 0 veya daha büyük olmalıdır"
+        }
+      },
+      "currency": {
+        "label": "Para Birimi",
+        "errors": {
+          "required": "Para birimi zorunludur"
+        }
+      },
+      "characterstics": {
+        "label": "Özellikler",
+        "key": {
+          "placeholder": "Kategori",
+          "errors": {
+            "required": "Anahtar zorunludur",
+            "invalid": "Anahtar 1-100 karakter arasında olmalıdır"
+          }
+        },
+        "value": {
+          "placeholder": "Giyim",
+          "errors": {
+            "required": "Değer zorunludur",
+            "invalid": "Değer 1-100 karakter arasında olmalıdır"
+          }
+        },
+        "add": "Özellik Ekle"
+      },
+      "create-button": {
+        "text": "Gönder"
+      }
+    },
+    "variants-table": {
+      "title": "Varyantlar",
+      "create": "Varyant Oluştur",
+      "columns": {
+        "images": {
+          "title": "Görseller"
+        },
+        "price": {
+          "title": "Fiyat"
+        },
+        "count": {
+          "title": "Adet"
+        },
+        "characterstics": {
+          "title": "Özellikler"
+        },
+        "actions": {
+          "title": "İşlemler"
+        }
+      },
+      "toasts": {
+        "delete-success": "Varyant silindi",
+        "delete-error": "Varyant silinemedi"
+      },
+      "delete-popup": {
+        "title": "Bu varyantı silmek istiyor musunuz?",
+        "okText": "Evet",
+        "cancelText": "Hayır"
+      }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "Yükle"
+      },
+      "uploading": "Yükleniyor...",
+      "uploadError": "Yükleme başarısız oldu",
+      "sizeError": "Dosya çok büyük"
+    },
+    "products-filteres": {
+      "title": "Filtreler",
+      "products": {
+        "title": "Ürün Filtreleri",
+        "query": {
+          "label": "Ara",
+          "placeholder": "Tişört..."
+        },
+        "availability": {
+          "label": "Stok Durumu",
+          "placeholder": "Stok Durumu Seçin",
+          "options": {
+            "available": "Mevcut",
+            "not-available": "Mevcut Değil"
+          }
+        },
+        "deleted": {
+          "label": "Silinme Durumu",
+          "placeholder": "Durum Seçin",
+          "options": {
+            "deleted": "Mevcut",
+            "not-deleted": "Mevcut Değil"
+          }
+        },
+        "min-price": {
+          "label": "Min Fiyat",
+          "placeholder-from": "En az",
+          "placeholder-to": "En çok"
+        },
+        "max-price": {
+          "label": "Max Fiyat",
+          "placeholder-from": "En az",
+          "placeholder-to": "En çok"
+        },
+        "characterstics": {
+          "label": "Özellikler",
+          "placeholder-key": "Anahtar",
+          "placeholder-value": "Değer",
+          "errors": {
+            "key-required": "Anahtar zorunludur",
+            "value-required": "Değer zorunludur"
+          }
+        }
+      },
+      "variants": {
+        "title": "Varyant Filtreleri",
+        "currency": {
+          "label": "Para Birimi",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "Fiyat",
+          "placeholder-from": "En az",
+          "placeholder-to": "En çok"
+        },
+        "count": {
+          "label": "Adet",
+          "placeholder-from": "En az",
+          "placeholder-to": "En çok"
+        },
+        "characterstics": {
+          "label": "Özellikler",
+          "placeholder-key": "Anahtar",
+          "placeholder-value": "Değer",
+          "errors": {
+            "key-required": "Anahtar zorunludur",
+            "value-required": "Değer zorunludur"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "Sıfırla"
+      },
+      "submit-button": {
+        "text": "Gönder"
+      }
+    },
+    "user-form": {
+      "name": {
+        "label": "Ad",
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "Ad zorunludur",
+          "invalid": "Ad 1-100 karakter arasında olmalıdır"
+        }
+      },
+      "email": {
+        "label": "E-posta",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "E-posta zorunludur",
+          "invalid": "Geçersiz e-posta"
+        }
+      }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "Ad",
+        "placeholder": "Uygulama anahtarım",
+        "errors": {
+          "required": "Ad zorunludur",
+          "invalid": "Ad 3-100 karakter arasında olmalıdır"
+        }
+      },
+      "expiration": {
+        "label": "Son Kullanma Tarihi",
+        "errors": {
+          "required": "Son kullanma tarihi zorunludur"
+        }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "Giriş Yap"
+      }
+    },
+    "footer": {
+      "about": "Hakkında",
+      "source": "Kaynak Kodu",
+      "author": "Geliştirici"
+    },
+    "product-card": {
+      "created": "Oluşturuldu"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "Tabaar Paneline Hoş Geldiniz",
+      "email": {
+        "label": "E-posta",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "E-posta zorunludur",
+          "invalid": "Geçersiz e-posta"
+        }
+      },
+      "password": {
+        "label": "Şifre",
+        "placeholder": "***********",
+        "errors": {
+          "required": "Şifre zorunludur"
+        }
+      },
+      "submit-button": {
+        "text": "Giriş Yap"
+      }
+    },
+    "products": {
+      "title": "Ürünler",
+      "create-button": {
+        "text": "Oluştur"
+      },
+      "file-button": {
+        "text": "Dosya ile",
+        "info": {
+          "text": "Birden fazla ürün oluşturmak için özel JSON dosyası yükleyin",
+          "download-button": {
+            "text": "Örnek Dosyayı İndir"
+          }
+        }
+      },
+      "toasts": {
+        "success": "Ürünler oluşturuldu",
+        "error": "Dosya ile ürünler oluşturulamadı"
+      },
+      "empty": {
+        "description": "Ürün bulunamadı",
+        "button": {
+          "text": "Yeni Ürün Oluştur"
+        }
+      },
+      "load-more-button": {
+        "text": "Daha fazla yükle"
+      }
+    },
+    "create-product": {
+      "title": "Ürün oluştur",
+      "submit-button": {
+        "text": "Oluştur"
+      },
+      "toasts": {
+        "success": "Ürün oluşturuldu",
+        "error": "Ürün oluşturulamadı"
+      }
+    },
+    "edit-product": {
+      "title": "Ürünü Düzenle",
+      "submit-button": {
+        "text": "Güncelle"
+      },
+      "empty": {
+        "description": "Ürün bulunamadı",
+        "button": {
+          "text": "Listeye dön"
+        }
+      },
+      "toasts": {
+        "success": "Ürün güncellendi",
+        "error": "Ürün güncellenemedi",
+        "delete": {
+          "success": "Ürün silindi",
+          "error": "Ürün silinemedi"
+        }
+      },
+      "delete": {
+        "title": "Bu ürünü silmek istiyor musunuz?",
+        "okText": "Evet",
+        "cancelText": "Hayır",
+        "button": {
+          "text": "Sil"
+        }
+      }
+    },
+    "edit-variant": {
+      "title": "Varyantı Düzenle",
+      "images": {
+        "label": "Görseller"
+      },
+      "submit-button": {
+        "text": "Güncelle"
+      }
+    },
+    "create-variant": {
+      "title": "Varyant oluştur",
+      "submit-button": {
+        "text": "Oluştur"
+      }
+    },
+    "users": {
+      "title": "Kullanıcılar",
+      "create-button": {
+        "text": "Oluştur"
+      },
+      "columns": {
+        "name": {
+          "title": "Ad"
+        },
+        "email": {
+          "title": "E-posta"
+        },
+        "createdAt": {
+          "title": "Oluşturulma Tarihi"
+        },
+        "actions": {
+          "title": "İşlemler"
+        }
+      },
+      "delete": {
+        "title": "Bu kullanıcıyı silmek istiyor musunuz?",
+        "okText": "Evet",
+        "cancelText": "Hayır"
+      },
+      "toasts": {
+        "deleted": "Kullanıcı silindi",
+        "delete-error": "Kullanıcı silinemedi"
+      }
+    },
+    "create-user": {
+      "title": "Kullanıcı Oluştur",
+      "submit-button": {
+        "text": "Oluştur"
+      },
+      "toasts": {
+        "success": "Kullanıcı oluşturuldu",
+        "error": "Kullanıcı oluşturulamadı"
+      }
+    },
+    "update-user": {
+      "title": "Kullanıcıyı Güncelle",
+      "submit-button": {
+        "text": "Güncelle"
+      },
+      "toasts": {
+        "success": "Kullanıcı güncellendi",
+        "error": "Kullanıcı güncellenemedi"
+      },
+      "empty": {
+        "description": "Kullanıcı bulunamadı",
+        "button": {
+          "text": "Kullanıcılara dön"
+        }
+      }
+    },
+    "api-keys": {
+      "title": "API Anahtarları",
+      "create-button": {
+        "text": "Oluştur"
+      },
+      "columns": {
+        "name": {
+          "title": "Ad"
+        },
+        "expiration": {
+          "title": "Son Kullanma Tarihi",
+          "expired": "Süresi Dolmuş"
+        },
+        "actions": {
+          "title": "İşlemler"
+        }
+      },
+      "delete": {
+        "title": "Bu anahtarı silmek istiyor musunuz?",
+        "okText": "Evet",
+        "cancelText": "Hayır"
+      },
+      "toasts": {
+        "success": "Anahtar silindi",
+        "error": "Anahtar silinemedi",
+        "copied": "Anahtar kopyalandı"
+      }
+    },
+    "create-api-key": {
+      "title": "API Anahtarı Oluştur",
+      "submit-button": {
+        "text": "Oluştur"
+      },
+      "toasts": {
+        "success": "API Anahtarı oluşturuldu",
+        "error": "API Anahtarı oluşturulamadı"
+      }
+    },
+    "update-api-key": {
+      "title": "API Anahtarını Düzenle",
+      "submit-button": {
+        "text": "Güncelle"
+      },
+      "empty": {
+        "description": "API Anahtarı bulunamadı",
+        "button": {
+          "text": "Listeye dön"
+        },
+        "toasts": {
+          "success": "API Anahtarı güncellendi",
+          "error": "API Anahtarı güncellenemedi"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — Açık Kaynaklı Ürün Yönetim Servisi",
+      "description": "Tabaar, yüksek verimli e-ticaret ve çok kanallı uygulamalara hizmet etmek için tasarlanmış modern, yüksek performanslı ve açık kaynaklı bir Ürün Bilgi ve Katalog Yönetimi (PIM) servisidir. Modern dağıtık sistemleri desteklemek üzere sıfırdan inşa edilen Tabaar, hibrit PostgreSQL + Elasticsearch veri mimarisi ve S3 uyumlu medya depolamasıyla REST, GraphQL ve gRPC arayüzlerini eşzamanlı olarak sunar.",
+      "explain": "Çağdaş e-ticaret ve mikroservis mimarilerinde farklı istemciler farklı iletişim modellerine ihtiyaç duyar: mobil uygulamalar hafif REST/GraphQL uç noktalarına, web panelleri esnek GraphQL sorgularına ve dahili mikroservisler yüksek hızlı, düşük gecikmeli gRPC RPC'lerine gereksinim duyar. Tabaar, ürün kataloğu yönetimini tek ve bütünleşik bir motorda birleştirir. Ekipleri tek bir API stili seçmeye veya kırılgan adaptör katmanları sürdürmeye zorlamak yerine, Tabaar tek bir çekirdekten her üç protokolü aynı anda sağlar; bu çekirdek hem işlemsel bütünlük hem de büyük ölçekte milisaniyenin altında arama için optimize edilmiş özel depolama motorlarıyla desteklenir.",
+      "docs": {
+        "title": "API Dokümantasyonu",
+        "docs": "Dokümanlar",
+        "rest": {
+          "description": "REST API; Kullanıcı, Ürün Görseli ve API Anahtarları uç noktalarını içerir. Ayrıca görsel ve dosya yüklemelerini destekler. Bearer token yetkilendirmesini ve API Anahtarı erişimini destekler."
+        },
+        "graphql": {
+          "description": "GraphQL API; Kullanıcı, Ürün ve API Anahtarı sorgularını ve mutasyonlarını içerir. Bearer token yetkilendirmesini destekler."
+        },
+        "grpc": {
+          "description": "gRPC API; Kullanıcı, Ürün ve API Anahtarları servislerini içerir. API Anahtarı erişimini destekler."
+        }
+      }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 Temel Kullanım Senaryoları",
+        "use-case": "Kullanım Senaryosu",
+        "description": "Açıklama",
+        "omnichannel": "Çok Kanallı E-Ticaret",
+        "omnichannel-description": "Çok Kanallı E-Ticaret: Ürün kataloğunu, varyantları, fiyatlandırmayı ve dijital varlıkları web, mobil, mağaza içi POS ve iş ortağı pazaryerleri genelinde merkezileştirin.",
+        "microservices": "Mikroservis Katalog Omurgası",
+        "microservices-description": "İstemci uygulamalarına GraphQL sunarken, dahili sipariş ve stok servislerine gRPC üzerinden hizmet verin.",
+        "search": "Çok Yönlü Arama Katalogları",
+        "search-description": "Çok Yönlü Arama Katalogları: Elasticsearch destekli hızlı ve karmaşık özellik filtreleme (örn. marka, fiyat aralıkları, teknik özellikler, kategoriler) sağlayın.",
+        "dam": "Dijital Varlık Yönetimi (DAM)",
+        "dam-description": "Dijital Varlık Yönetimi (DAM): Yüksek çözünürlüklü ürün fotoğraflarını ve varlıklarını S3 uyumlu depolama aracılığıyla güvenilir şekilde saklayın ve bağlayın."
+      },
+      "arch": {
+        "title": "🏗️ Mimariye Genel Bakış"
+      },
+      "tech": {
+        "title": "💻 Teknoloji Yığını Özeti",
+        "point1": {
+          "title": "Çalışma Zamanı ve Dil",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "API'ler",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "Veritabanları",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "Varlık Depolama",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "Doğrulama ve Güvenlik",
+          "text": "Zod şemaları, GraphQL Shield, JWT kimlik doğrulama, UUIDv7 API anahtarları"
+        }
+      }
+    }
+  }
+}

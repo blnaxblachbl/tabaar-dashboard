@@ -1,0 +1,536 @@
+{
+  "components": {
+    "menu": {
+      "home": "Home",
+      "products": "Prodotti",
+      "users": "Utenti",
+      "api-keys": "Chiavi API",
+      "logout": {
+        "label": "Disconnetti",
+        "modal": {
+          "title": "Vuoi disconnetterti?",
+          "okText": "Sì, disconnettiti!",
+          "cancelText": "No"
+        }
+      }
+    },
+    "product-form": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Maglietta",
+        "errors": {
+          "required": "Il nome è obbligatorio",
+          "invalid": "Il nome deve contenere tra 3 e 100 caratteri"
+        },
+        "add": "Aggiungi lingua del nome"
+      },
+      "description": {
+        "label": "Descrizione",
+        "placeholder": "Nuova maglietta con stampa",
+        "errors": {
+          "required": "La descrizione è obbligatoria",
+          "invalid": "La descrizione deve contenere tra 3 e 1500 caratteri"
+        },
+        "add": "Aggiungi lingua della descrizione"
+      },
+      "characterstics": {
+        "label": "Caratteristiche",
+        "key": {
+          "placeholder": "Categoria",
+          "errors": {
+            "required": "La chiave è obbligatoria",
+            "invalid": "La chiave deve contenere tra 1 e 100 caratteri"
+          }
+        },
+        "value": {
+          "placeholder": "Abbigliamento",
+          "errors": {
+            "required": "Il valore è obbligatorio",
+            "invalid": "Il valore deve contenere tra 1 e 100 caratteri"
+          }
+        },
+        "add": "Aggiungi caratteristica"
+      },
+      "create-button": {
+        "text": "Invia"
+      }
+    },
+    "variant-form": {
+      "price": {
+        "label": "Prezzo",
+        "errors": {
+          "required": "Il prezzo è obbligatorio",
+          "invalid": "Il prezzo deve essere maggiore o uguale a 0"
+        }
+      },
+      "count": {
+        "label": "Quantità",
+        "errors": {
+          "required": "La quantità è obbligatoria",
+          "invalid": "La quantità deve essere maggiore o uguale a 0"
+        }
+      },
+      "currency": {
+        "label": "Valuta",
+        "errors": {
+          "required": "La valuta è obbligatoria"
+        }
+      },
+      "characterstics": {
+        "label": "Caratteristiche",
+        "key": {
+          "placeholder": "Categoria",
+          "errors": {
+            "required": "La chiave è obbligatoria",
+            "invalid": "La chiave deve contenere tra 1 e 100 caratteri"
+          }
+        },
+        "value": {
+          "placeholder": "Abbigliamento",
+          "errors": {
+            "required": "Il valore è obbligatorio",
+            "invalid": "Il valore deve contenere tra 1 e 100 caratteri"
+          }
+        },
+        "add": "Aggiungi caratteristica"
+      },
+      "create-button": {
+        "text": "Invia"
+      }
+    },
+    "variants-table": {
+      "title": "Varianti",
+      "create": "Crea variante",
+      "columns": {
+        "images": {
+          "title": "Immagini"
+        },
+        "price": {
+          "title": "Prezzo"
+        },
+        "count": {
+          "title": "Quantità"
+        },
+        "characterstics": {
+          "title": "Caratteristiche"
+        },
+        "actions": {
+          "title": "Azioni"
+        }
+      },
+      "toasts": {
+        "delete-success": "Variante eliminata",
+        "delete-error": "Impossibile eliminare la variante"
+      },
+      "delete-popup": {
+        "title": "Vuoi eliminare questa variante?",
+        "okText": "Sì",
+        "cancelText": "No"
+      }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "Carica"
+      },
+      "uploading": "Caricamento in corso...",
+      "uploadError": "Caricamento non riuscito",
+      "sizeError": "File troppo grande"
+    },
+    "products-filteres": {
+      "title": "Filtri",
+      "products": {
+        "title": "Filtri prodotti",
+        "query": {
+          "label": "Cerca",
+          "placeholder": "Maglietta..."
+        },
+        "availability": {
+          "label": "Disponibilità",
+          "placeholder": "Seleziona disponibilità",
+          "options": {
+            "available": "Disponibile",
+            "not-available": "Non disponibile"
+          }
+        },
+        "deleted": {
+          "label": "Eliminato",
+          "placeholder": "Seleziona stato",
+          "options": {
+            "deleted": "Disponibile",
+            "not-deleted": "Non disponibile"
+          }
+        },
+        "min-price": {
+          "label": "Prezzo minimo",
+          "placeholder-from": "Da",
+          "placeholder-to": "A"
+        },
+        "max-price": {
+          "label": "Prezzo massimo",
+          "placeholder-from": "Da",
+          "placeholder-to": "A"
+        },
+        "characterstics": {
+          "label": "Caratteristiche",
+          "placeholder-key": "Chiave",
+          "placeholder-value": "Valore",
+          "errors": {
+            "key-required": "La chiave è obbligatoria",
+            "value-required": "Il valore è obbligatorio"
+          }
+        }
+      },
+      "variants": {
+        "title": "Filtri varianti",
+        "currency": {
+          "label": "Valuta",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "Prezzo",
+          "placeholder-from": "Da",
+          "placeholder-to": "A"
+        },
+        "count": {
+          "label": "Quantità",
+          "placeholder-from": "Da",
+          "placeholder-to": "A"
+        },
+        "characterstics": {
+          "label": "Caratteristiche",
+          "placeholder-key": "Chiave",
+          "placeholder-value": "Valore",
+          "errors": {
+            "key-required": "La chiave è obbligatoria",
+            "value-required": "Il valore è obbligatorio"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "Reimposta"
+      },
+      "submit-button": {
+        "text": "Invia"
+      }
+    },
+    "user-form": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "Il nome è obbligatorio",
+          "invalid": "Il nome deve contenere tra 1 e 100 caratteri"
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "L'email è obbligatoria",
+          "invalid": "Email non valida"
+        }
+      }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Chiave della mia app",
+        "errors": {
+          "required": "Il nome è obbligatorio",
+          "invalid": "Il nome deve contenere tra 3 e 100 caratteri"
+        }
+      },
+      "expiration": {
+        "label": "Data di scadenza",
+        "errors": {
+          "required": "La data di scadenza è obbligatoria"
+        }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "Accedi"
+      }
+    },
+    "footer": {
+      "about": "Chi siamo",
+      "source": "Codice sorgente",
+      "author": "Autore"
+    },
+    "product-card": {
+      "created": "Creato"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "Benvenuto nella dashboard di Tabaar",
+      "email": {
+        "label": "Email",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "L'email è obbligatoria",
+          "invalid": "Email non valida"
+        }
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "***********",
+        "errors": {
+          "required": "La password è obbligatoria"
+        }
+      },
+      "submit-button": {
+        "text": "Accedi"
+      }
+    },
+    "products": {
+      "title": "Prodotti",
+      "create-button": {
+        "text": "Crea"
+      },
+      "file-button": {
+        "text": "Con file",
+        "info": {
+          "text": "Carica un file JSON speciale per creare più prodotti",
+          "download-button": {
+            "text": "Scarica file di esempio"
+          }
+        }
+      },
+      "toasts": {
+        "success": "Prodotti creati",
+        "error": "Impossibile creare i prodotti con il file"
+      },
+      "empty": {
+        "description": "Nessun prodotto trovato",
+        "button": {
+          "text": "Crea nuovo prodotto"
+        }
+      },
+      "load-more-button": {
+        "text": "Carica altri"
+      }
+    },
+    "create-product": {
+      "title": "Crea prodotto",
+      "submit-button": {
+        "text": "Crea"
+      },
+      "toasts": {
+        "success": "Prodotto creato",
+        "error": "Impossibile creare il prodotto"
+      }
+    },
+    "edit-product": {
+      "title": "Modifica prodotto",
+      "submit-button": {
+        "text": "Aggiorna"
+      },
+      "empty": {
+        "description": "Prodotto non trovato",
+        "button": {
+          "text": "Torna all'elenco"
+        }
+      },
+      "toasts": {
+        "success": "Prodotto aggiornato",
+        "error": "Impossibile aggiornare il prodotto",
+        "delete": {
+          "success": "Prodotto eliminato",
+          "error": "Impossibile eliminare il prodotto"
+        }
+      },
+      "delete": {
+        "title": "Vuoi eliminare questo prodotto?",
+        "okText": "Sì",
+        "cancelText": "No",
+        "button": {
+          "text": "Elimina"
+        }
+      }
+    },
+    "edit-variant": {
+      "title": "Modifica variante",
+      "images": {
+        "label": "Immagini"
+      },
+      "submit-button": {
+        "text": "Aggiorna"
+      }
+    },
+    "create-variant": {
+      "title": "Crea variante",
+      "submit-button": {
+        "text": "Crea"
+      }
+    },
+    "users": {
+      "title": "Utenti",
+      "create-button": {
+        "text": "Crea"
+      },
+      "columns": {
+        "name": {
+          "title": "Nome"
+        },
+        "email": {
+          "title": "Email"
+        },
+        "createdAt": {
+          "title": "Creato"
+        },
+        "actions": {
+          "title": "Azioni"
+        }
+      },
+      "delete": {
+        "title": "Vuoi eliminare questo utente?",
+        "okText": "Sì",
+        "cancelText": "No"
+      },
+      "toasts": {
+        "deleted": "Utente eliminato",
+        "delete-error": "Impossibile eliminare l'utente"
+      }
+    },
+    "create-user": {
+      "title": "Crea utente",
+      "submit-button": {
+        "text": "Crea"
+      },
+      "toasts": {
+        "success": "Utente creato",
+        "error": "Impossibile creare l'utente"
+      }
+    },
+    "update-user": {
+      "title": "Aggiorna utente",
+      "submit-button": {
+        "text": "Aggiorna"
+      },
+      "toasts": {
+        "success": "Utente aggiornato",
+        "error": "Impossibile aggiornare l'utente"
+      },
+      "empty": {
+        "description": "Utente non trovato",
+        "button": {
+          "text": "Torna agli utenti"
+        }
+      }
+    },
+    "api-keys": {
+      "title": "Chiavi API",
+      "create-button": {
+        "text": "Crea"
+      },
+      "columns": {
+        "name": {
+          "title": "Nome"
+        },
+        "expiration": {
+          "title": "Data di scadenza",
+          "expired": "Scaduta"
+        },
+        "actions": {
+          "title": "Azioni"
+        }
+      },
+      "delete": {
+        "title": "Vuoi eliminare questa chiave?",
+        "okText": "Sì",
+        "cancelText": "No"
+      },
+      "toasts": {
+        "success": "Chiave eliminata",
+        "error": "Impossibile eliminare la chiave",
+        "copied": "Chiave copiata"
+      }
+    },
+    "create-api-key": {
+      "title": "Crea chiave API",
+      "submit-button": {
+        "text": "Crea"
+      },
+      "toasts": {
+        "success": "Chiave API creata",
+        "error": "Impossibile creare la chiave API"
+      }
+    },
+    "update-api-key": {
+      "title": "Modifica chiave API",
+      "submit-button": {
+        "text": "Aggiorna"
+      },
+      "empty": {
+        "description": "Chiave API non trovata",
+        "button": {
+          "text": "Torna all'elenco"
+        },
+        "toasts": {
+          "success": "Chiave API aggiornata",
+          "error": "Impossibile aggiornare la chiave API"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — Servizio open-source per la gestione dei prodotti",
+      "description": "Tabaar è un servizio moderno, ad alte prestazioni e open-source per la gestione delle informazioni sui prodotti e dei cataloghi (PIM), progettato per supportare applicazioni e-commerce multicanale ad alto rendimento. Costruito da zero per i moderni sistemi distribuiti, Tabaar espone simultaneamente interfacce REST, GraphQL e gRPC basate su un'architettura dati ibrida PostgreSQL + Elasticsearch e archiviazione multimediale compatibile con S3.",
+      "explain": "Nelle architetture contemporanee di e-commerce e microservizi, client diversi richiedono paradigmi di comunicazione differenti: le app mobili necessitano di endpoint REST/GraphQL leggeri, le dashboard web richiedono query GraphQL flessibili e i microservizi interni richiedono RPC gRPC veloci e a bassa latenza. Tabaar unifica la gestione del catalogo prodotti in un unico motore coerente. Invece di costringere i team a scegliere un solo stile di API o mantenere fragili layer di adattamento, Tabaar fornisce tutti e tre i protocolli simultaneamente da un unico nucleo, supportato da motori di archiviazione dedicati e ottimizzati sia per l'integrità transazionale che per ricerche su scala in tempi inferiori al millisecondo.",
+      "docs": {
+        "title": "Documentazione API",
+        "docs": "Docs",
+        "rest": {
+          "description": "L'API REST include endpoint per utenti, immagini dei prodotti e chiavi API. Supporta anche il caricamento di immagini e file. Supporta l'autorizzazione tramite Bearer token e l'accesso con chiave API."
+        },
+        "graphql": {
+          "description": "L'API GraphQL include query e mutazioni per utenti, prodotti e chiavi API. Supporta l'autorizzazione tramite Bearer token."
+        },
+        "grpc": {
+          "description": "L'API gRPC include servizi per utenti, prodotti e chiavi API. Supporta l'accesso con chiave API."
+        }
+      }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 Casi d'uso principali",
+        "use-case": "Caso d'uso",
+        "description": "Descrizione",
+        "omnichannel": "E-Commerce omnicanale",
+        "omnichannel-description": "E-Commerce omnicanale: centralizza il catalogo prodotti, le varianti, i prezzi e gli asset tra web, mobile, POS in negozio e marketplace partner.",
+        "microservices": "Dorsale di catalogo per microservizi",
+        "microservices-description": "Offri servizi interni per ordini e inventario tramite gRPC esponendo al contempo GraphQL alle applicazioni client.",
+        "search": "Cataloghi con ricerca a faccette avanzata",
+        "search-description": "Cataloghi con ricerca a faccette: fornisci filtri rapidi e complessi per attributi (es. marca, fasce di prezzo, specifiche tecniche, categorie) basati su Elasticsearch.",
+        "dam": "Gestione delle risorse digitali (DAM)",
+        "dam-description": "Gestione delle risorse digitali (DAM): archivia e collega in modo affidabile fotografie e risorse di prodotti ad alta risoluzione tramite storage compatibile con S3."
+      },
+      "arch": {
+        "title": "🏗️ Panoramica dell'architettura"
+      },
+      "tech": {
+        "title": "💻 Riepilogo dello stack tecnologico",
+        "point1": {
+          "title": "Runtime e linguaggio",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "API",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "Database",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "Archiviazione risorse",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "Validazione e sicurezza",
+          "text": "Schemi Zod, GraphQL Shield, autenticazione JWT, chiavi API UUIDv7"
+        }
+      }
+    }
+  }
+}

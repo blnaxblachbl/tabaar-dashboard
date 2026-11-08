@@ -1,0 +1,536 @@
+{
+  "components": {
+    "menu": {
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "users": "المستخدمون",
+      "api-keys": "مفاتيح API",
+      "logout": {
+        "label": "تسجيل الخروج",
+        "modal": {
+          "title": "هل تريد تسجيل الخروج؟",
+          "okText": "نعم، سجّل خروجي!",
+          "cancelText": "لا"
+        }
+      }
+    },
+    "product-form": {
+      "name": {
+        "label": "الاسم",
+        "placeholder": "قميص",
+        "errors": {
+          "required": "الاسم مطلوب",
+          "invalid": "يجب أن يتراوح الاسم بين 3 و 100 حرف"
+        },
+        "add": "إضافة لغة للاسم"
+      },
+      "description": {
+        "label": "الوصف",
+        "placeholder": "قميص جديد بطبعة",
+        "errors": {
+          "required": "الوصف مطلوب",
+          "invalid": "يجب أن يتراوح الوصف بين 3 و 1500 حرف"
+        },
+        "add": "إضافة لغة للوصف"
+      },
+      "characterstics": {
+        "label": "الخصائص",
+        "key": {
+          "placeholder": "الفئة",
+          "errors": {
+            "required": "المفتاح مطلوب",
+            "invalid": "يجب أن يتراوح المفتاح بين 1 و 100 حرف"
+          }
+        },
+        "value": {
+          "placeholder": "ملابس",
+          "errors": {
+            "required": "القيمة مطلوبة",
+            "invalid": "يجب أن تتراوح القيمة بين 1 و 100 حرف"
+          }
+        },
+        "add": "إضافة خاصية"
+      },
+      "create-button": {
+        "text": "إرسال"
+      }
+    },
+    "variant-form": {
+      "price": {
+        "label": "السعر",
+        "errors": {
+          "required": "السعر مطلوب",
+          "invalid": "يجب أن يكون السعر أكبر من أو يساوي 0"
+        }
+      },
+      "count": {
+        "label": "الكمية",
+        "errors": {
+          "required": "الكمية مطلوبة",
+          "invalid": "يجب أن تكون الكمية أكبر من أو تساوي 0"
+        }
+      },
+      "currency": {
+        "label": "العملة",
+        "errors": {
+          "required": "العملة مطلوبة"
+        }
+      },
+      "characterstics": {
+        "label": "الخصائص",
+        "key": {
+          "placeholder": "الفئة",
+          "errors": {
+            "required": "المفتاح مطلوب",
+            "invalid": "يجب أن يتراوح المفتاح بين 1 و 100 حرف"
+          }
+        },
+        "value": {
+          "placeholder": "ملابس",
+          "errors": {
+            "required": "القيمة مطلوبة",
+            "invalid": "يجب أن تتراوح القيمة بين 1 و 100 حرف"
+          }
+        },
+        "add": "إضافة خاصية"
+      },
+      "create-button": {
+        "text": "إرسال"
+      }
+    },
+    "variants-table": {
+      "title": "المتغيرات",
+      "create": "إنشاء متغير",
+      "columns": {
+        "images": {
+          "title": "الصور"
+        },
+        "price": {
+          "title": "السعر"
+        },
+        "count": {
+          "title": "الكمية"
+        },
+        "characterstics": {
+          "title": "الخصائص"
+        },
+        "actions": {
+          "title": "الإجراءات"
+        }
+      },
+      "toasts": {
+        "delete-success": "تم حذف المتغير",
+        "delete-error": "فشل حذف المتغير"
+      },
+      "delete-popup": {
+        "title": "هل تريد حذف هذا المتغير؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      }
+    },
+    "upload-vairant-images": {
+      "upload-button": {
+        "text": "رفع"
+      },
+      "uploading": "جارٍ الرفع...",
+      "uploadError": "فشل الرفع",
+      "sizeError": "حجم الملف كبير جداً"
+    },
+    "products-filteres": {
+      "title": "التصفيات",
+      "products": {
+        "title": "تصفيات المنتجات",
+        "query": {
+          "label": "بحث",
+          "placeholder": "قميص..."
+        },
+        "availability": {
+          "label": "التوفر",
+          "placeholder": "حدد التوفر",
+          "options": {
+            "available": "متوفر",
+            "not-available": "غير متوفر"
+          }
+        },
+        "deleted": {
+          "label": "حالة الحذف",
+          "placeholder": "حدد الحالة",
+          "options": {
+            "deleted": "متوفر",
+            "not-deleted": "غير متوفر"
+          }
+        },
+        "min-price": {
+          "label": "أدنى سعر",
+          "placeholder-from": "من",
+          "placeholder-to": "إلى"
+        },
+        "max-price": {
+          "label": "أقصى سعر",
+          "placeholder-from": "من",
+          "placeholder-to": "إلى"
+        },
+        "characterstics": {
+          "label": "الخصائص",
+          "placeholder-key": "المفتاح",
+          "placeholder-value": "القيمة",
+          "errors": {
+            "key-required": "المفتاح مطلوب",
+            "value-required": "القيمة مطلوبة"
+          }
+        }
+      },
+      "variants": {
+        "title": "تصفيات المتغيرات",
+        "currency": {
+          "label": "العملة",
+          "placeholder": "USD"
+        },
+        "price": {
+          "label": "السعر",
+          "placeholder-from": "من",
+          "placeholder-to": "إلى"
+        },
+        "count": {
+          "label": "الكمية",
+          "placeholder-from": "من",
+          "placeholder-to": "إلى"
+        },
+        "characterstics": {
+          "label": "الخصائص",
+          "placeholder-key": "المفتاح",
+          "placeholder-value": "القيمة",
+          "errors": {
+            "key-required": "المفتاح مطلوب",
+            "value-required": "القيمة مطلوبة"
+          }
+        }
+      },
+      "reset-button": {
+        "text": "إعادة ضبط"
+      },
+      "submit-button": {
+        "text": "إرسال"
+      }
+    },
+    "user-form": {
+      "name": {
+        "label": "الاسم",
+        "placeholder": "John Doe",
+        "errors": {
+          "required": "الاسم مطلوب",
+          "invalid": "يجب أن يتراوح الاسم بين 1 و 100 حرف"
+        }
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "البريد الإلكتروني مطلوب",
+          "invalid": "بريد إلكتروني غير صالح"
+        }
+      }
+    },
+    "api-key-form": {
+      "name": {
+        "label": "الاسم",
+        "placeholder": "مفتاح تطبيقي",
+        "errors": {
+          "required": "الاسم مطلوب",
+          "invalid": "يجب أن يتراوح الاسم بين 3 و 100 حرف"
+        }
+      },
+      "expiration": {
+        "label": "تاريخ انتهاء الصلاحية",
+        "errors": {
+          "required": "تاريخ انتهاء الصلاحية مطلوب"
+        }
+      }
+    },
+    "header": {
+      "login-button": {
+        "text": "تسجيل الدخول"
+      }
+    },
+    "footer": {
+      "about": "حول",
+      "source": "المصدر البرمجي",
+      "author": "المؤلف"
+    },
+    "product-card": {
+      "created": "تم الإنشاء"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "مرحباً بك في لوحة تحكم Tabaar",
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "john-doe@tabaar.com",
+        "errors": {
+          "required": "البريد الإلكتروني مطلوب",
+          "invalid": "بريد إلكتروني غير صالح"
+        }
+      },
+      "password": {
+        "label": "كلمة المرور",
+        "placeholder": "***********",
+        "errors": {
+          "required": "كلمة المرور مطلوبة"
+        }
+      },
+      "submit-button": {
+        "text": "تسجيل الدخول"
+      }
+    },
+    "products": {
+      "title": "المنتجات",
+      "create-button": {
+        "text": "إنشاء"
+      },
+      "file-button": {
+        "text": "عبر ملف",
+        "info": {
+          "text": "قم برفع ملف JSON خاص لإنشاء منتجات متعددة",
+          "download-button": {
+            "text": "تنزيل ملف نموذجي"
+          }
+        }
+      },
+      "toasts": {
+        "success": "تم إنشاء المنتجات",
+        "error": "فشل إنشاء المنتجات بواسطة الملف"
+      },
+      "empty": {
+        "description": "لم يتم العثور على منتجات",
+        "button": {
+          "text": "إنشاء منتج جديد"
+        }
+      },
+      "load-more-button": {
+        "text": "تحميل المزيد"
+      }
+    },
+    "create-product": {
+      "title": "إنشاء منتج",
+      "submit-button": {
+        "text": "إنشاء"
+      },
+      "toasts": {
+        "success": "تم إنشاء المنتج",
+        "error": "فشل إنشاء المنتج"
+      }
+    },
+    "edit-product": {
+      "title": "تعديل المنتج",
+      "submit-button": {
+        "text": "تحديث"
+      },
+      "empty": {
+        "description": "المنتج غير موجود",
+        "button": {
+          "text": "العودة إلى القائمة"
+        }
+      },
+      "toasts": {
+        "success": "تم تحديث المنتج",
+        "error": "فشل تحديث المنتج",
+        "delete": {
+          "success": "تم حذف المنتج",
+          "error": "فشل حذف المنتج"
+        }
+      },
+      "delete": {
+        "title": "هل تريد حذف هذا المنتج؟",
+        "okText": "نعم",
+        "cancelText": "لا",
+        "button": {
+          "text": "حذف"
+        }
+      }
+    },
+    "edit-variant": {
+      "title": "تعديل المتغير",
+      "images": {
+        "label": "الصور"
+      },
+      "submit-button": {
+        "text": "تحديث"
+      }
+    },
+    "create-variant": {
+      "title": "إنشاء متغير",
+      "submit-button": {
+        "text": "إنشاء"
+      }
+    },
+    "users": {
+      "title": "المستخدمون",
+      "create-button": {
+        "text": "إنشاء"
+      },
+      "columns": {
+        "name": {
+          "title": "الاسم"
+        },
+        "email": {
+          "title": "البريد الإلكتروني"
+        },
+        "createdAt": {
+          "title": "تاريخ الإنشاء"
+        },
+        "actions": {
+          "title": "الإجراءات"
+        }
+      },
+      "delete": {
+        "title": "هل تريد حذف هذا المستخدم؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      },
+      "toasts": {
+        "deleted": "تم حذف المستخدم",
+        "delete-error": "فشل حذف المستخدم"
+      }
+    },
+    "create-user": {
+      "title": "إنشاء مستخدم",
+      "submit-button": {
+        "text": "إنشاء"
+      },
+      "toasts": {
+        "success": "تم إنشاء المستخدم",
+        "error": "فشل إنشاء المستخدم"
+      }
+    },
+    "update-user": {
+      "title": "تحديث المستخدم",
+      "submit-button": {
+        "text": "تحديث"
+      },
+      "toasts": {
+        "success": "تم تحديث المستخدم",
+        "error": "فشل تحديث المستخدم"
+      },
+      "empty": {
+        "description": "المستخدم غير موجود",
+        "button": {
+          "text": "العودة إلى المستخدمين"
+        }
+      }
+    },
+    "api-keys": {
+      "title": "مفاتيح API",
+      "create-button": {
+        "text": "إنشاء"
+      },
+      "columns": {
+        "name": {
+          "title": "الاسم"
+        },
+        "expiration": {
+          "title": "تاريخ انتهاء الصلاحية",
+          "expired": "منتهي الصلاحية"
+        },
+        "actions": {
+          "title": "الإجراءات"
+        }
+      },
+      "delete": {
+        "title": "هل تريد حذف هذا المفتاح؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      },
+      "toasts": {
+        "success": "تم حذف المفتاح",
+        "error": "فشل حذف المفتاح",
+        "copied": "تم نسخ المفتاح"
+      }
+    },
+    "create-api-key": {
+      "title": "إنشاء مفتاح API",
+      "submit-button": {
+        "text": "إنشاء"
+      },
+      "toasts": {
+        "success": "تم إنشاء مفتاح API",
+        "error": "فشل إنشاء مفتاح API"
+      }
+    },
+    "update-api-key": {
+      "title": "تعديل مفتاح API",
+      "submit-button": {
+        "text": "تحديث"
+      },
+      "empty": {
+        "description": "مفتاح API غير موجود",
+        "button": {
+          "text": "العودة إلى القائمة"
+        },
+        "toasts": {
+          "success": "تم تحديث مفتاح API",
+          "error": "فشل تحديث مفتاح API"
+        }
+      }
+    },
+    "home": {
+      "tabaar-title": "Tabaar — خدمة إدارة المنتجات مفتوحة المصدر",
+      "description": "Tabaar هي خدمة حديثة وعالية الأداء ومفتوحة المصدر لإدارة معلومات وكتالوجات المنتجات (PIM)، مصممة لخدمة تطبيقات التجارة الإلكترونية ذات الإنتاجية العالية والتطبيقات متعددة القنوات. تم بناء Tabaar من الأساس لدعم الأنظمة الموزعة الحديثة، حيث تتيح بالتزامن واجهات REST و GraphQL و gRPC المدعومة ببنية بيانات هجينة تجمع بين PostgreSQL و Elasticsearch، بالإضافة إلى تخزين وسائط متوافق مع S3.",
+      "explain": "في التجارة الإلكترونية المعاصرة وبنى الخدمات المصغرة، تتطلب التطبيقات المختلفة نماذج تواصل متباينة: تحتاج تطبيقات الهاتف المحمول إلى نقاط نهاية REST/GraphQL خفيفة، وتتطلب لوحات التحكم عبر الويب استعلامات GraphQL مرنة، في حين تحتاج الخدمات المصغرة الداخلية إلى استدعاءات gRPC RPC سريعة ومنخفضة التأخير. يوحّد Tabaar إدارة كتالوج المنتجات في محرك واحد متماسك. بدلاً من إجبار الفرق على اختيار نمط API واحد أو صيانة طبقات مهايئة هشة، يقدّم Tabaar البروتوكولات الثلاثة في آنٍ واحد من نواة واحدة، مدعومة بمحركات تخزين مخصصة ومحسّنة لكلٍ من السلامة المعاملاتية والبحث في أجزاء من الميلي ثانية على نطاق واسع.",
+      "docs": {
+        "title": "توثيق واجهة برمجة التطبيقات (API)",
+        "docs": "التوثيق",
+        "rest": {
+          "description": "تتضمن واجهة REST API نقاط نهاية للمستخدمين وصور المنتجات ومفاتيح API، بالإضافة إلى رفع الصور والملفات. تدعم مصادقة Bearer token والوصول عبر مفتاح API."
+        },
+        "graphql": {
+          "description": "تتضمن واجهة GraphQL API استعلامات وعمليات تعديل للمستخدمين والمنتجات ومفاتيح API. تدعم مصادقة Bearer token."
+        },
+        "grpc": {
+          "description": "تتضمن واجهة gRPC API خدمات المستخدمين والمنتجات ومفاتيح API. تدعم الوصول عبر مفتاح API."
+        }
+      }
+    },
+    "about": {
+      "use-cases": {
+        "title": "🎯 حالات الاستخدام الأساسية",
+        "use-case": "حالة الاستخدام",
+        "description": "الوصف",
+        "omnichannel": "التجارة الإلكترونية متعددة القنوات (Omnichannel)",
+        "omnichannel-description": "التجارة الإلكترونية متعددة القنوات: مركزية كتالوج المنتجات، والمتغيرات، والتسعير، والأصول عبر الويب، والهاتف المحمول، ونقاط البيع في المتاجر، وأسواق الشركاء.",
+        "microservices": "العمود الفقري لكتالوج الخدمات المصغرة",
+        "microservices-description": "تقديم خدمات الطلبات والمخزون الداخلية عبر gRPC مع إتاحة واجهة GraphQL لتطبيقات العملاء.",
+        "search": "كتالوجات بحث متعددة الأوجه",
+        "search-description": "كتالوجات بحث متعددة الأوجه: توفير تصفية سريعة ومعقدة للسمات (مثل العلامة التجارية، ونطاقات الأسعار، والمواصفات الفنية، والفئات) مدعومة بمحرك Elasticsearch.",
+        "dam": "إدارة الأصول الرقمية (DAM)",
+        "dam-description": "إدارة الأصول الرقمية (DAM): تخزين وربط صور المنتجات عالية الدقة والأصول بموثوقية عبر تخزين متوافق مع S3."
+      },
+      "arch": {
+        "title": "🏗️ نظرة عامة على البنية الهندسية"
+      },
+      "tech": {
+        "title": "💻 ملخص الحزمة التقنية",
+        "point1": {
+          "title": "بيئة التشغيل واللغة",
+          "text": "Node.js, TypeScript"
+        },
+        "point2": {
+          "title": "واجهات برمجة التطبيقات (APIs)",
+          "text": "Apollo Server (GraphQL), Express 5 (REST), @grpc/grpc-js (gRPC)"
+        },
+        "point3": {
+          "title": "قواعد البيانات",
+          "text": "PostgreSQL (Prisma ORM), Elasticsearch 9"
+        },
+        "point4": {
+          "title": "تخزين الأصول",
+          "text": "MinIO / AWS S3 SDK, Sharp"
+        },
+        "point5": {
+          "title": "التحقق والأمان",
+          "text": "مخططات Zod, GraphQL Shield, مصادقة JWT, مفاتيح API بتنسيق UUIDv7"
+        }
+      }
+    }
+  }
+}
