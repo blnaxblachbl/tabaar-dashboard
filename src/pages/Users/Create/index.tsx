@@ -1,4 +1,4 @@
-import { Divider, Form, message, Typography } from "antd";
+import { Divider, Form, message } from "antd";
 import { useTranslation } from "react-i18next";
 
 import { PageLayout } from "@/components/PageLayout";
