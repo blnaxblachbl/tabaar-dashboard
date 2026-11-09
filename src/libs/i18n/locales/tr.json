@@ -156,8 +156,8 @@
           "label": "Silinme Durumu",
           "placeholder": "Durum Seçin",
           "options": {
-            "deleted": "Mevcut",
-            "not-deleted": "Mevcut Değil"
+            "deleted": "Silindi",
+            "not-deleted": "Silinmedi"
           }
         },
         "min-price": {

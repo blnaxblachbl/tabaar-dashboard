@@ -156,8 +156,8 @@
           "label": "Eliminado",
           "placeholder": "Seleccionar estado",
           "options": {
-            "deleted": "Disponible",
-            "not-deleted": "No disponible"
+            "deleted": "Eliminado",
+            "not-deleted": "No eliminado"
           }
         },
         "min-price": {

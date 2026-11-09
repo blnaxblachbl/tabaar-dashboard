@@ -156,8 +156,8 @@
           "label": "Status usunięcia",
           "placeholder": "Wybierz status",
           "options": {
-            "deleted": "Dostępne",
-            "not-deleted": "Niedostępne"
+            "deleted": "Usunięto",
+            "not-deleted": "Nie usunięto"
           }
         },
         "min-price": {

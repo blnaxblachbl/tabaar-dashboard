@@ -156,8 +156,8 @@
           "label": "Statut de suppression",
           "placeholder": "Sélectionner le statut",
           "options": {
-            "deleted": "Disponible",
-            "not-deleted": "Non disponible"
+            "deleted": "Supprimé",
+            "not-deleted": "Non supprimé"
           }
         },
         "min-price": {

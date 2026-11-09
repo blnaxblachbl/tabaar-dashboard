@@ -156,8 +156,8 @@
           "label": "حالة الحذف",
           "placeholder": "حدد الحالة",
           "options": {
-            "deleted": "متوفر",
-            "not-deleted": "غير متوفر"
+            "deleted": "محذوف",
+            "not-deleted": "غير محذوف"
           }
         },
         "min-price": {

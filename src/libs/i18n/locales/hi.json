@@ -156,8 +156,8 @@
           "label": "हटाया गया",
           "placeholder": "स्थिति चुनें",
           "options": {
-            "deleted": "उपलब्ध",
-            "not-deleted": "उपलब्ध नहीं"
+            "deleted": "हटाया गया",
+            "not-deleted": "नहीं हटाया गया"
           }
         },
         "min-price": {

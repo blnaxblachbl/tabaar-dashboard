@@ -156,8 +156,8 @@
           "label": "删除状态",
           "placeholder": "选择状态",
           "options": {
-            "deleted": "有货",
-            "not-deleted": "缺货"
+            "deleted": "已删除",
+            "not-deleted": "未删除"
           }
         },
         "min-price": {

@@ -156,8 +156,8 @@
           "label": "삭제 상태",
           "placeholder": "상태 선택",
           "options": {
-            "deleted": "재고 있음",
-            "not-deleted": "품절"
+            "deleted": "삭제됨",
+            "not-deleted": "삭제되지 않음"
           }
         },
         "min-price": {
