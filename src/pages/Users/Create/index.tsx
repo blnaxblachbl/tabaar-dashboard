@@ -30,11 +30,6 @@ export default function CreateUserPage() {
       <Title title={t("title")} />
       <Divider />
       <div className="max-w-md mx-auto">
-        {import.meta.env.VITE_DEMO_MODE && (
-          <Typography.Paragraph type="danger">
-            Access Details will not be sended on DEMO mode
-          </Typography.Paragraph>
-        )}
         <UserForm
           form={form}
           loading={loading}

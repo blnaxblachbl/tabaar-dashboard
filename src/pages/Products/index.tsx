@@ -77,11 +77,6 @@ export default function ProductsPage() {
                     <Typography.Text>
                       {t("file-button.info.text")}
                     </Typography.Text>
-                    {import.meta.env.VITE_DEMO_MODE && (
-                      <Typography.Text type="danger">
-                        Bulk Poroduct creating disabled on DEMO mode
-                      </Typography.Text>
-                    )}
                     <Button
                       type="link"
                       href="/prducts-sample.json"

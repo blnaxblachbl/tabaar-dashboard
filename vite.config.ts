@@ -36,8 +36,5 @@ export default defineConfig(({ mode }) => {
     resolve: {
       tsconfigPaths: true,
     },
-    define: {
-      "import.meta.env.VITE_DEMO_MODE": env.DEMO_MODE === "true",
-    },
   };
 });
