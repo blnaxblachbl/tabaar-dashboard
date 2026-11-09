@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "Создано"
+    },
+    "products-table": {
+      "images": {
+        "title": "Изображения"
+      },
+      "name": {
+        "title": "Наименование"
+      },
+      "description": {
+        "title": "Описание"
+      },
+      "availability": {
+        "title": "Доступность",
+        "available": "Доступно",
+        "not-available": "Не доступно"
+      },
+      "created": {
+        "title": "Создано"
+      },
+      "actions": {
+        "title": "Действия"
+      }
     }
   },
   "pages": {

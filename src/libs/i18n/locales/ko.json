@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "생성일"
+    },
+    "products-table": {
+      "images": {
+        "title": "이미지"
+      },
+      "name": {
+        "title": "이름"
+      },
+      "description": {
+        "title": "설명"
+      },
+      "availability": {
+        "title": "재고 상태",
+        "available": "재고 있음",
+        "not-available": "재고 없음"
+      },
+      "created": {
+        "title": "생성일"
+      },
+      "actions": {
+        "title": "작업"
+      }
     }
   },
   "pages": {

@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "Oluşturuldu"
+    },
+    "products-table": {
+      "images": {
+        "title": "Görseller"
+      },
+      "name": {
+        "title": "Ad"
+      },
+      "description": {
+        "title": "Açıklama"
+      },
+      "availability": {
+        "title": "Durum",
+        "available": "Mevcut",
+        "not-available": "Mevcut Değil"
+      },
+      "created": {
+        "title": "Oluşturulma Tarihi"
+      },
+      "actions": {
+        "title": "İşlemler"
+      }
     }
   },
   "pages": {

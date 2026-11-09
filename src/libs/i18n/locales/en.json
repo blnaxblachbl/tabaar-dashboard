@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "Created"
+    },
+    "products-table": {
+      "images": {
+        "title": "Images"
+      },
+      "name": {
+        "title": "Name"
+      },
+      "description": {
+        "title": "Description"
+      },
+      "availability": {
+        "title": "Availability",
+        "available": "Available",
+        "not-available": "Not Available"
+      },
+      "created": {
+        "title": "Created"
+      },
+      "actions": {
+        "title": "Actions"
+      }
     }
   },
   "pages": {

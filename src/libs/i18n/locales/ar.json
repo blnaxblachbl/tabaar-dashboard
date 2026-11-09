@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "تم الإنشاء"
+    },
+    "products-table": {
+      "images": {
+        "title": "الصور"
+      },
+      "name": {
+        "title": "الاسم"
+      },
+      "description": {
+        "title": "الوصف"
+      },
+      "availability": {
+        "title": "التوفر",
+        "available": "متوفر",
+        "not-available": "غير متوفر"
+      },
+      "created": {
+        "title": "تاريخ الإنشاء"
+      },
+      "actions": {
+        "title": "الإجراءات"
+      }
     }
   },
   "pages": {

@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "创建时间"
+    },
+    "products-table": {
+      "images": {
+        "title": "图片"
+      },
+      "name": {
+        "title": "名称"
+      },
+      "description": {
+        "title": "描述"
+      },
+      "availability": {
+        "title": "可用状态",
+        "available": "可用",
+        "not-available": "不可用"
+      },
+      "created": {
+        "title": "创建时间"
+      },
+      "actions": {
+        "title": "操作"
+      }
     }
   },
   "pages": {

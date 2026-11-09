@@ -259,6 +259,28 @@
     },
     "product-card": {
       "created": "निर्मित"
+    },
+    "products-table": {
+      "images": {
+        "title": "तस्वीरें"
+      },
+      "name": {
+        "title": "नाम"
+      },
+      "description": {
+        "title": "विवरण"
+      },
+      "availability": {
+        "title": "उपलब्धता",
+        "available": "उपलब्ध",
+        "not-available": "उपलब्ध नहीं"
+      },
+      "created": {
+        "title": "बनाया गया"
+      },
+      "actions": {
+        "title": "क्रियाएं"
+      }
     }
   },
   "pages": {
