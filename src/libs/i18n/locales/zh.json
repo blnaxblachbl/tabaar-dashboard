@@ -270,6 +270,9 @@
       "description": {
         "title": "描述"
       },
+      "price": {
+        "title": "价格"
+      },
       "availability": {
         "title": "可用状态",
         "available": "可用",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "创建时间"
-      },
-      "actions": {
-        "title": "操作"
       }
     }
   },

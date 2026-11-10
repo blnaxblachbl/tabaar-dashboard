@@ -270,6 +270,9 @@
       "description": {
         "title": "Açıklama"
       },
+      "price": {
+        "title": "Fiyat"
+      },
       "availability": {
         "title": "Durum",
         "available": "Mevcut",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "Oluşturulma Tarihi"
-      },
-      "actions": {
-        "title": "İşlemler"
       }
     }
   },

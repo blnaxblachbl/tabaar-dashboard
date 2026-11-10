@@ -270,6 +270,9 @@
       "description": {
         "title": "विवरण"
       },
+      "price": {
+        "title": "कीमत"
+      },
       "availability": {
         "title": "उपलब्धता",
         "available": "उपलब्ध",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "बनाया गया"
-      },
-      "actions": {
-        "title": "क्रियाएं"
       }
     }
   },

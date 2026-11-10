@@ -1,7 +1,5 @@
 import { useCallback } from "react";
-import { Table, Image, Tag, Button, type TableProps, Typography } from "antd";
-import { Link } from "react-router";
-import { EditOutlined } from "@ant-design/icons";
+import { Table, Image, Tag, type TableProps, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 
 import type {
@@ -10,6 +8,7 @@ import type {
 } from "@/graphql/generated";
 import { extractImages } from "@/utils/product/extractImages";
 import { toLocaleDate } from "@/utils/date";
+import { Link } from "react-router";
 
 export function ProductsTable(props: TableProps<ProductFragment>) {
   const { t, i18n } = useTranslation("", {
@@ -46,7 +45,7 @@ export function ProductsTable(props: TableProps<ProductFragment>) {
         {
           title: t("name.title"),
           dataIndex: "name",
-          render: (name) => getContent(name),
+          render: (name, { id }) => <Link to={id}>{getContent(name)}</Link>,
           width: 200,
         },
         {
@@ -64,6 +63,13 @@ export function ProductsTable(props: TableProps<ProductFragment>) {
           minWidth: 400,
         },
         {
+          title: t("price.title"),
+          dataIndex: "minPrice",
+          render: (minPrice, { maxPrice }) =>
+            minPrice === maxPrice ? minPrice : `${minPrice} - ${maxPrice}`,
+          className: "text-nowrap",
+        },
+        {
           title: t("availability.title"),
           dataIndex: "available",
           render: (available) => (
@@ -79,15 +85,6 @@ export function ProductsTable(props: TableProps<ProductFragment>) {
           dataIndex: "createdAt",
           render: (createdAt) => toLocaleDate(createdAt, i18n.language),
           className: "text-nowrap",
-        },
-        {
-          title: t("actions.title"),
-          render: (obj) => (
-            <Link to={obj.id}>
-              <Button icon={<EditOutlined />} />
-            </Link>
-          ),
-          width: 10,
         },
       ]}
       {...props}

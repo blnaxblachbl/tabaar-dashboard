@@ -270,6 +270,9 @@
       "description": {
         "title": "الوصف"
       },
+      "price": {
+        "title": "السعر"
+      },
       "availability": {
         "title": "التوفر",
         "available": "متوفر",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "تاريخ الإنشاء"
-      },
-      "actions": {
-        "title": "الإجراءات"
       }
     }
   },

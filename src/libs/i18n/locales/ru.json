@@ -270,6 +270,9 @@
       "description": {
         "title": "Описание"
       },
+      "price": {
+        "title": "Цена"
+      },
       "availability": {
         "title": "Доступность",
         "available": "Доступно",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "Создано"
-      },
-      "actions": {
-        "title": "Действия"
       }
     }
   },

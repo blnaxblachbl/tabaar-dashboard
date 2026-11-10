@@ -2,7 +2,7 @@
   "name": "tabaar-dashboard",
   "description": "High-performance, open-source Product Information and Catalog Management service Dashboard",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",

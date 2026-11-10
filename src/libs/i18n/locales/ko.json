@@ -270,6 +270,9 @@
       "description": {
         "title": "설명"
       },
+      "price": {
+        "title": "가격"
+      },
       "availability": {
         "title": "재고 상태",
         "available": "재고 있음",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "생성일"
-      },
-      "actions": {
-        "title": "작업"
       }
     }
   },

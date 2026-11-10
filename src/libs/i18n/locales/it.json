@@ -270,6 +270,9 @@
       "description": {
         "title": "Descrizione"
       },
+      "price": {
+        "title": "Prezzo"
+      },
       "availability": {
         "title": "Disponibilità",
         "available": "Disponibile",
@@ -277,9 +280,6 @@
       },
       "created": {
         "title": "Data di creazione"
-      },
-      "actions": {
-        "title": "Azioni"
       }
     }
   },
