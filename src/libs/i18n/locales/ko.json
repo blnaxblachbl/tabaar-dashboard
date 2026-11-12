@@ -384,6 +384,12 @@
       "title": "삭제된 상품",
       "load-more-button": {
         "text": "더 보기"
+      },
+      "toasts": {
+        "restore": {
+          "success": "상품이 복원되었습니다",
+          "error": "상품 복원에 실패했습니다"
+        }
       }
     },
     "edit-product": {

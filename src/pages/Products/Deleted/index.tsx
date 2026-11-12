@@ -71,10 +71,10 @@ export default function DeletedProductsPage() {
     </PageLayout>
   );
   function onRestore() {
-    messageApi.success("Product restored", 1.5, refetch);
+    messageApi.success(t("toasts.restore.success"), 1.5, refetch);
   }
   function onRestoreError() {
-    messageApi.error("Failed to restore Product");
+    messageApi.error(t("toasts.restore.error"));
   }
   async function handleLoadMore() {
     if (!scrollId) {

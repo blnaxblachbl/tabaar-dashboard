@@ -374,6 +374,12 @@
       "title": "Silinmiş Ürünler",
       "load-more-button": {
         "text": "Daha fazla yükle"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Ürün geri yüklendi",
+          "error": "Ürün geri yüklenemedi"
+        }
       }
     },
     "create-product": {

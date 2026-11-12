@@ -374,6 +374,12 @@
       "title": "已删除产品",
       "load-more-button": {
         "text": "加载更多"
+      },
+      "toasts": {
+        "restore": {
+          "success": "产品已恢复",
+          "error": "产品恢复失败"
+        }
       }
     },
     "create-product": {

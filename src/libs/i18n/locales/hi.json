@@ -374,6 +374,12 @@
       "title": "हटाए गए उत्पाद",
       "load-more-button": {
         "text": "और लोड करें"
+      },
+      "toasts": {
+        "restore": {
+          "success": "प्रोडक्ट रीस्टोर हो गया",
+          "error": "प्रोडक्ट रीस्टोर करने में विफल"
+        }
       }
     },
     "create-product": {

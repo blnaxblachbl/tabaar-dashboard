@@ -374,6 +374,12 @@
       "title": "Удаленные товары",
       "load-more-button": {
         "text": "Загрузить еще"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Товар восстановлен",
+          "error": "Не удалось восстановить товар"
+        }
       }
     },
     "create-product": {

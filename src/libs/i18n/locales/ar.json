@@ -374,6 +374,12 @@
       "title": "المنتجات المحذوفة",
       "load-more-button": {
         "text": "تحميل المزيد"
+      },
+      "toasts": {
+        "restore": {
+          "success": "تمت استعادة المنتج",
+          "error": "فشلت استعادة المنتج"
+        }
       }
     },
     "create-product": {
