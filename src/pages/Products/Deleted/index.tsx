@@ -14,6 +14,7 @@ import { Title } from "@/components/Title";
 import { parseProductsSearchParams } from "@/utils/searchParams/products";
 import { CollapsibleProductsFilters } from "@/components/ProductsFilters";
 import { DeletedProductsTable } from "@/components/DeletedProductsTable";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export default function DeletedProductsPage() {
   const { t } = useTranslation("", {
@@ -28,6 +29,8 @@ export default function DeletedProductsPage() {
     fetchPolicy: "cache-and-network",
     notifyOnNetworkStatusChange: true,
   });
+  const [debounceRefetch] = useDebounce(refetch, 1500);
+
   const [scroll, { loading: scrollLoading, client }] =
     useScrollDeletedProductsLazyQuery({
       fetchPolicy: "no-cache",
@@ -71,7 +74,8 @@ export default function DeletedProductsPage() {
     </PageLayout>
   );
   function onRestore() {
-    messageApi.success(t("toasts.restore.success"), 1.5, refetch);
+    messageApi.success(t("toasts.restore.success"), 1.5);
+    debounceRefetch();
   }
   function onRestoreError() {
     messageApi.error(t("toasts.restore.error"));
