@@ -1,16 +1,20 @@
 import { useCallback } from "react";
-import { Table, Image, Tag, type TableProps, Typography } from "antd";
+import { Table, Image, Tag, Typography } from "antd";
 import { useTranslation } from "react-i18next";
-
-import type {
-  ProductFragment,
-  LocaleContentFragment,
-} from "@/graphql/generated";
-import { extractImages } from "@/utils/product/extractImages";
-import { toLocaleDate } from "@/utils/date";
 import { Link } from "react-router";
 
-export function ProductsTable(props: TableProps<ProductFragment>) {
+import type { LocaleContentFragment } from "@/graphql/generated";
+import { ProductActions } from "@/components/ProductActions";
+import { extractImages } from "@/utils/product/extractImages";
+import { toLocaleDate } from "@/utils/date";
+
+import type { ProductsTableProps } from "./types";
+
+export function ProductsTable({
+  onDeleteError,
+  onDeleted,
+  ...props
+}: ProductsTableProps) {
   const { t, i18n } = useTranslation("", {
     keyPrefix: "components.products-table",
   });
@@ -85,6 +89,17 @@ export function ProductsTable(props: TableProps<ProductFragment>) {
           dataIndex: "createdAt",
           render: (createdAt) => toLocaleDate(createdAt, i18n.language),
           className: "text-nowrap",
+        },
+        {
+          title: t("actions.title"),
+          render: (obj) => (
+            <ProductActions
+              product={obj}
+              onDeleted={onDeleted}
+              onDeleteError={onDeleteError}
+            />
+          ),
+          width: 10,
         },
       ]}
       {...props}

@@ -3,6 +3,7 @@
     "menu": {
       "home": "Strona główna",
       "products": "Produkty",
+      "archive": "Archiwum",
       "users": "Użytkownicy",
       "api-keys": "Klucze API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "Niedostępne"
           }
         },
-        "deleted": {
-          "label": "Status usunięcia",
-          "placeholder": "Wybierz status",
-          "options": {
-            "deleted": "Usunięto",
-            "not-deleted": "Nie usunięto"
-          }
-        },
         "min-price": {
           "label": "Cena min.",
           "placeholder-from": "Od",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Utworzono"
+      },
+      "actions": {
+        "title": "Działania"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Zdjęcia"
+      },
+      "name": {
+        "title": "Nazwa"
+      },
+      "description": {
+        "title": "Opis"
+      },
+      "price": {
+        "title": "Cena"
+      },
+      "deleted": {
+        "title": "Data usunięcia"
+      },
+      "actions": {
+        "title": "Działania",
+        "delete": {
+          "confirmations": "Przywrócić ten produkt?",
+          "okText": "Tak",
+          "cancelText": "Nie"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "Przywrócić ten produkt?",
+        "okText": "Tak",
+        "cancelText": "Nie"
+      },
+      "delete": {
+        "confirmations": "Czy chcesz usunąć ten produkt?",
+        "okText": "Tak",
+        "cancelText": "Nie"
       }
     }
   },
@@ -321,7 +354,11 @@
       },
       "toasts": {
         "success": "Produkty utworzone",
-        "error": "Nie udało się utworzyć produktów z pliku"
+        "error": "Nie udało się utworzyć produktów z pliku",
+        "delete": {
+          "success": "Produkt usunięty",
+          "error": "Nie udało się usunąć produktu"
+        }
       },
       "empty": {
         "description": "Nie znaleziono produktów",
@@ -331,6 +368,18 @@
       },
       "load-more-button": {
         "text": "Załaduj więcej"
+      }
+    },
+    "deleted-products": {
+      "title": "Usunięte produkty",
+      "load-more-button": {
+        "text": "Wczytaj więcej"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Produkt przywrócony",
+          "error": "Nie udało się przywrócić produktu"
+        }
       }
     },
     "create-product": {
@@ -356,11 +405,7 @@
       },
       "toasts": {
         "success": "Produkt zaktualizowany",
-        "error": "Nie udało się zaktualizować produktu",
-        "delete": {
-          "success": "Produkt usunięty",
-          "error": "Nie udało się usunąć produktu"
-        }
+        "error": "Nie udało się zaktualizować produktu"
       },
       "delete": {
         "title": "Czy chcesz usunąć ten produkt?",

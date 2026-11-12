@@ -3,6 +3,7 @@
     "menu": {
       "home": "Ana Sayfa",
       "products": "Ürünler",
+      "archive": "Arşiv",
       "users": "Kullanıcılar",
       "api-keys": "API Anahtarları",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "Mevcut Değil"
           }
         },
-        "deleted": {
-          "label": "Silinme Durumu",
-          "placeholder": "Durum Seçin",
-          "options": {
-            "deleted": "Silindi",
-            "not-deleted": "Silinmedi"
-          }
-        },
         "min-price": {
           "label": "Min Fiyat",
           "placeholder-from": "En az",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Oluşturulma Tarihi"
+      },
+      "actions": {
+        "title": "İşlemler"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Görseller"
+      },
+      "name": {
+        "title": "Ad"
+      },
+      "description": {
+        "title": "Açıklama"
+      },
+      "price": {
+        "title": "Fiyat"
+      },
+      "deleted": {
+        "title": "Silinme tarihi"
+      },
+      "actions": {
+        "title": "İşlemler",
+        "delete": {
+          "confirmations": "Bu ürünü geri yükle?",
+          "okText": "Evet",
+          "cancelText": "Hayır"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "Bu ürünü geri yükle?",
+        "okText": "Evet",
+        "cancelText": "Hayır"
+      },
+      "delete": {
+        "confirmations": "Bu ürünü silmek istiyor musunuz?",
+        "okText": "Evet",
+        "cancelText": "Hayır"
       }
     }
   },
@@ -321,7 +354,11 @@
       },
       "toasts": {
         "success": "Ürünler oluşturuldu",
-        "error": "Dosya ile ürünler oluşturulamadı"
+        "error": "Dosya ile ürünler oluşturulamadı",
+        "delete": {
+          "success": "Ürün silindi",
+          "error": "Ürün silinemedi"
+        }
       },
       "empty": {
         "description": "Ürün bulunamadı",
@@ -331,6 +368,18 @@
       },
       "load-more-button": {
         "text": "Daha fazla yükle"
+      }
+    },
+    "deleted-products": {
+      "title": "Silinmiş Ürünler",
+      "load-more-button": {
+        "text": "Daha fazla yükle"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Ürün geri yüklendi",
+          "error": "Ürün geri yüklenemedi"
+        }
       }
     },
     "create-product": {
@@ -356,11 +405,7 @@
       },
       "toasts": {
         "success": "Ürün güncellendi",
-        "error": "Ürün güncellenemedi",
-        "delete": {
-          "success": "Ürün silindi",
-          "error": "Ürün silinemedi"
-        }
+        "error": "Ürün güncellenemedi"
       },
       "delete": {
         "title": "Bu ürünü silmek istiyor musunuz?",

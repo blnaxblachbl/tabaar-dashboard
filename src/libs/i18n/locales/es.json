@@ -3,6 +3,7 @@
     "menu": {
       "home": "Inicio",
       "products": "Productos",
+      "archive": "Archivo",
       "users": "Usuarios",
       "api-keys": "Claves API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "No disponible"
           }
         },
-        "deleted": {
-          "label": "Eliminado",
-          "placeholder": "Seleccionar estado",
-          "options": {
-            "deleted": "Eliminado",
-            "not-deleted": "No eliminado"
-          }
-        },
         "min-price": {
           "label": "Precio mínimo",
           "placeholder-from": "Desde",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Creado"
+      },
+      "actions": {
+        "title": "Acciones"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Imágenes"
+      },
+      "name": {
+        "title": "Nombre"
+      },
+      "description": {
+        "title": "Descripción"
+      },
+      "price": {
+        "title": "Precio"
+      },
+      "deleted": {
+        "title": "Eliminado el"
+      },
+      "actions": {
+        "title": "Acciones",
+        "delete": {
+          "confirmations": "¿Restaurar este producto?",
+          "okText": "Sí",
+          "cancelText": "No"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "¿Restaurar este producto?",
+        "okText": "Sí",
+        "cancelText": "No"
+      },
+      "delete": {
+        "confirmations": "¿Deseas eliminar este producto?",
+        "okText": "Sí",
+        "cancelText": "No"
       }
     }
   },
@@ -321,7 +354,11 @@
       },
       "toasts": {
         "success": "Productos creados",
-        "error": "Error al crear productos con archivo"
+        "error": "Error al crear productos con archivo",
+        "delete": {
+          "success": "Producto eliminado",
+          "error": "Error al eliminar el producto"
+        }
       },
       "empty": {
         "description": "No se encontraron productos",
@@ -331,6 +368,18 @@
       },
       "load-more-button": {
         "text": "Cargar más"
+      }
+    },
+    "deleted-products": {
+      "title": "Productos eliminados",
+      "load-more-button": {
+        "text": "Cargar más"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Producto restaurado",
+          "error": "Error al restaurar el producto"
+        }
       }
     },
     "create-product": {
@@ -356,11 +405,7 @@
       },
       "toasts": {
         "success": "Producto actualizado",
-        "error": "Error al actualizar el producto",
-        "delete": {
-          "success": "Producto eliminado",
-          "error": "Error al eliminar el producto"
-        }
+        "error": "Error al actualizar el producto"
       },
       "delete": {
         "title": "¿Deseas eliminar este producto?",

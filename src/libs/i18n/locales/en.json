@@ -3,6 +3,7 @@
     "menu": {
       "home": "Home",
       "products": "Products",
+      "archive": "Archive",
       "users": "Users",
       "api-keys": "API Keys",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "Not Available"
           }
         },
-        "deleted": {
-          "label": "Deleted",
-          "placeholder": "Select Deleted",
-          "options": {
-            "deleted": "Deleted",
-            "not-deleted": "Not Deleted"
-          }
-        },
         "min-price": {
           "label": "Min Price",
           "placeholder-from": "From",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Created"
+      },
+      "actions": {
+        "title": "Actions"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Images"
+      },
+      "name": {
+        "title": "Name"
+      },
+      "description": {
+        "title": "Description"
+      },
+      "price": {
+        "title": "Price"
+      },
+      "deleted": {
+        "title": "Deleted at"
+      },
+      "actions": {
+        "title": "Actions",
+        "delete": {
+          "confirmations": "Restore this Product?",
+          "okText": "Yes",
+          "cancelText": "No"
+        }
+      }
+    },
+    "product-actions": {
+      "delete": {
+        "confirmations": "Do you wnt to delete this Product?",
+        "okText": "Yes",
+        "cancelText": "No"
+      },
+      "restore": {
+        "confirmations": "Restore this Product?",
+        "okText": "Yes",
+        "cancelText": "No"
       }
     }
   },
@@ -321,7 +354,11 @@
       },
       "toasts": {
         "success": "Products created",
-        "error": "Failed to create Products with file"
+        "error": "Failed to create Products with file",
+        "delete": {
+          "success": "Product deleted",
+          "error": "Failed to delete product"
+        }
       },
       "empty": {
         "description": "Products not found",
@@ -331,6 +368,18 @@
       },
       "load-more-button": {
         "text": "Load more"
+      }
+    },
+    "deleted-products": {
+      "title": "Deleted Products",
+      "load-more-button": {
+        "text": "Load more"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Product restored",
+          "error": "Failed to restore Product"
+        }
       }
     },
     "create-product": {
@@ -356,11 +405,7 @@
       },
       "toasts": {
         "success": "Product updated",
-        "error": "Failed to update product",
-        "delete": {
-          "success": "Product deleted",
-          "error": "Failed to delete product"
-        }
+        "error": "Failed to update product"
       },
       "delete": {
         "title": "Do you wnt to delete this Product?",

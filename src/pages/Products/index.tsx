@@ -25,6 +25,7 @@ import { parseProductsSearchParams } from "@/utils/searchParams/products";
 import { CollapsibleProductsFilters } from "@/components/ProductsFilters";
 import { useBulkCreate } from "@/hooks/useBulkCreate";
 import { ProductsTable } from "@/components/ProductsTable";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export default function ProductsPage() {
   const { t } = useTranslation("", {
@@ -40,6 +41,8 @@ export default function ProductsPage() {
     fetchPolicy: "cache-and-network",
     notifyOnNetworkStatusChange: true,
   });
+  const [debounceRefetch] = useDebounce(refetch, 1500);
+
   const [scroll, { loading: scrollLoading, client }] =
     useScrollProductsLazyQuery({
       fetchPolicy: "no-cache",
@@ -128,7 +131,12 @@ export default function ProductsPage() {
         />
       </div>
       <Divider />
-      <ProductsTable loading={loading} dataSource={products} />
+      <ProductsTable
+        loading={loading}
+        dataSource={products}
+        onDeleted={onDeleted}
+        onDeleteError={onDeleteError}
+      />
       {products.length < productsCount && (
         <div className="mx-auto mt-6 w-fit">
           <Button onClick={handleLoadMore} loading={scrollLoading}>
@@ -138,6 +146,13 @@ export default function ProductsPage() {
       )}
     </PageLayout>
   );
+  function onDeleted() {
+    messageApi.success(t("toasts.delete.success"), 1.5);
+    debounceRefetch();
+  }
+  function onDeleteError() {
+    messageApi.error(t("toasts.delete.error"));
+  }
   async function handleLoadMore() {
     if (!scrollId) {
       return;

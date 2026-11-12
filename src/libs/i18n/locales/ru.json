@@ -3,6 +3,7 @@
     "menu": {
       "home": "Главная",
       "products": "Товары",
+      "archive": "Архив",
       "users": "Пользователи",
       "api-keys": "Ключи API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "Не доступно"
           }
         },
-        "deleted": {
-          "label": "Архив",
-          "placeholder": "Выберите статус",
-          "options": {
-            "deleted": "Удалён",
-            "not-deleted": "Не удалён"
-          }
-        },
         "min-price": {
           "label": "Мин. цена",
           "placeholder-from": "От",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Создано"
+      },
+      "actions": {
+        "title": "Действия"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Изображения"
+      },
+      "name": {
+        "title": "Наименование"
+      },
+      "description": {
+        "title": "Описание"
+      },
+      "price": {
+        "title": "Цена"
+      },
+      "deleted": {
+        "title": "Дата удаления"
+      },
+      "actions": {
+        "title": "Действия",
+        "delete": {
+          "confirmations": "Восстановить этот товар?",
+          "okText": "Да",
+          "cancelText": "Нет"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "Восстановить этот товар?",
+        "okText": "Да",
+        "cancelText": "Нет"
+      },
+      "delete": {
+        "confirmations": "Хотите удалить этот товар?",
+        "okText": "Да",
+        "cancelText": "Нет"
       }
     }
   },
@@ -321,7 +354,11 @@
       },
       "toasts": {
         "success": "Товары созданы",
-        "error": "Произошла ошибка при созании товаров с помошью файла"
+        "error": "Произошла ошибка при созании товаров с помошью файла",
+        "delete": {
+          "success": "Товар удалён",
+          "error": "Произошла ошибка при удалении товара"
+        }
       },
       "empty": {
         "description": "Товары не найдены",
@@ -331,6 +368,18 @@
       },
       "load-more-button": {
         "text": "Загрузить ещё"
+      }
+    },
+    "deleted-products": {
+      "title": "Удаленные товары",
+      "load-more-button": {
+        "text": "Загрузить еще"
+      },
+      "toasts": {
+        "restore": {
+          "success": "Товар восстановлен",
+          "error": "Не удалось восстановить товар"
+        }
       }
     },
     "create-product": {
@@ -356,11 +405,7 @@
       },
       "toasts": {
         "success": "Товар обновлён",
-        "error": "Произошла ошибка при обновлении товара",
-        "delete": {
-          "success": "Товар удалён",
-          "error": "Произошла ошибка при удалении товара"
-        }
+        "error": "Произошла ошибка при обновлении товара"
       },
       "delete": {
         "title": "Хотите удалить этот товар?",

@@ -3,6 +3,7 @@
     "menu": {
       "home": "الرئيسية",
       "products": "المنتجات",
+      "archive": "أرشيف",
       "users": "المستخدمون",
       "api-keys": "مفاتيح API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "غير متوفر"
           }
         },
-        "deleted": {
-          "label": "حالة الحذف",
-          "placeholder": "حدد الحالة",
-          "options": {
-            "deleted": "محذوف",
-            "not-deleted": "غير محذوف"
-          }
-        },
         "min-price": {
           "label": "أدنى سعر",
           "placeholder-from": "من",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "تاريخ الإنشاء"
+      },
+      "actions": {
+        "title": "الإجراءات"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "الصور"
+      },
+      "name": {
+        "title": "الاسم"
+      },
+      "description": {
+        "title": "الوصف"
+      },
+      "price": {
+        "title": "السعر"
+      },
+      "deleted": {
+        "title": "تاريخ الحذف"
+      },
+      "actions": {
+        "title": "الإجراءات",
+        "delete": {
+          "confirmations": "هل تود استعادة هذا المنتج؟",
+          "okText": "نعم",
+          "cancelText": "لا"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "هل تود استعادة هذا المنتج؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      },
+      "delete": {
+        "confirmations": "هل تريد حذف هذا المنتج؟",
+        "okText": "نعم",
+        "cancelText": "لا"
       }
     }
   },
@@ -321,7 +354,11 @@
       },
       "toasts": {
         "success": "تم إنشاء المنتجات",
-        "error": "فشل إنشاء المنتجات بواسطة الملف"
+        "error": "فشل إنشاء المنتجات بواسطة الملف",
+        "delete": {
+          "success": "تم حذف المنتج",
+          "error": "فشل حذف المنتج"
+        }
       },
       "empty": {
         "description": "لم يتم العثور على منتجات",
@@ -331,6 +368,18 @@
       },
       "load-more-button": {
         "text": "تحميل المزيد"
+      }
+    },
+    "deleted-products": {
+      "title": "المنتجات المحذوفة",
+      "load-more-button": {
+        "text": "تحميل المزيد"
+      },
+      "toasts": {
+        "restore": {
+          "success": "تمت استعادة المنتج",
+          "error": "فشلت استعادة المنتج"
+        }
       }
     },
     "create-product": {
@@ -356,11 +405,7 @@
       },
       "toasts": {
         "success": "تم تحديث المنتج",
-        "error": "فشل تحديث المنتج",
-        "delete": {
-          "success": "تم حذف المنتج",
-          "error": "فشل حذف المنتج"
-        }
+        "error": "فشل تحديث المنتج"
       },
       "delete": {
         "title": "هل تريد حذف هذا المنتج؟",
