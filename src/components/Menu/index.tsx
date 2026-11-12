@@ -6,6 +6,7 @@ import {
   HomeOutlined,
   UserOutlined,
   LogoutOutlined,
+  DeleteRowOutlined
 } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import {
@@ -39,6 +40,12 @@ export function Menu() {
             label: t("products"),
             icon: <ProductOutlined />,
             onClick: () => navigate("/products"),
+          },
+          {
+            key: "/products/deleted",
+            label: t("archive"),
+            icon: <DeleteRowOutlined />,
+            onClick: () => navigate("/products/deleted"),
           },
           {
             key: "/users",

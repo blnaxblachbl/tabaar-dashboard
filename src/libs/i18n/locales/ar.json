@@ -3,6 +3,7 @@
     "menu": {
       "home": "الرئيسية",
       "products": "المنتجات",
+      "archive": "أرشيف",
       "users": "المستخدمون",
       "api-keys": "مفاتيح API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "غير متوفر"
           }
         },
-        "deleted": {
-          "label": "حالة الحذف",
-          "placeholder": "حدد الحالة",
-          "options": {
-            "deleted": "محذوف",
-            "not-deleted": "غير محذوف"
-          }
-        },
         "min-price": {
           "label": "أدنى سعر",
           "placeholder-from": "من",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "تاريخ الإنشاء"
+      },
+      "actions": {
+        "title": "الإجراءات"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "الصور"
+      },
+      "name": {
+        "title": "الاسم"
+      },
+      "description": {
+        "title": "الوصف"
+      },
+      "price": {
+        "title": "السعر"
+      },
+      "deleted": {
+        "title": "تاريخ الحذف"
+      },
+      "actions": {
+        "title": "الإجراءات",
+        "delete": {
+          "confirmations": "هل تود استعادة هذا المنتج؟",
+          "okText": "نعم",
+          "cancelText": "لا"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "هل تود استعادة هذا المنتج؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      },
+      "delete": {
+        "confirmations": "هل تريد حذف هذا المنتج؟",
+        "okText": "نعم",
+        "cancelText": "لا"
       }
     }
   },
@@ -329,6 +362,12 @@
           "text": "إنشاء منتج جديد"
         }
       },
+      "load-more-button": {
+        "text": "تحميل المزيد"
+      }
+    },
+    "deleted-products": {
+      "title": "المنتجات المحذوفة",
       "load-more-button": {
         "text": "تحميل المزيد"
       }

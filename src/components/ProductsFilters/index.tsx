@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { Activity, useEffect, useMemo } from "react";
 import {
   Button,
   Col,
@@ -24,6 +24,7 @@ import {
   createFormCharacteristics,
 } from "@/utils/product/parseFormData";
 import type { ProductsFiltersProps, ProductsFiltersFormData } from "./types";
+import { DEFAULT_PRODUCT_FILTER_VISBILE } from "@/utils/constants";
 
 function getFiltersCount(variables: FindProductsQueryVariables) {
   let count = 0;
@@ -32,9 +33,6 @@ function getFiltersCount(variables: FindProductsQueryVariables) {
   }
   if (variables.filters) {
     if (typeof variables.filters.available === "boolean") {
-      count++;
-    }
-    if (variables.filters.deleted) {
       count++;
     }
     if (Object.keys(variables.filters.minPrice ?? {}).length > 0) {
@@ -97,6 +95,7 @@ export function CollapsibleProductsFilters({
 export function ProductsFilters({
   variables,
   onChange = () => {},
+  filtersVisible = DEFAULT_PRODUCT_FILTER_VISBILE,
 }: ProductsFiltersProps) {
   const filtersCount = useMemo(() => getFiltersCount(variables), [variables]);
   const [form] = Form.useForm();
@@ -108,7 +107,6 @@ export function ProductsFilters({
     form.setFieldsValue({
       ...variables,
       filters: {
-        deleted: false,
         ...variables.filters,
         characterstics: variables.filters?.characterstics
           ? createFormCharacteristics(variables.filters?.characterstics)[0]
@@ -125,335 +123,398 @@ export function ProductsFilters({
     });
   }, []);
 
+  const productsVisible = useMemo(() => {
+    if (!filtersVisible.prodcuts) {
+      return true;
+    }
+    return Object.values(filtersVisible.prodcuts).length > 0;
+  }, [filtersVisible.prodcuts]);
+
+  const variantsVisible = useMemo(() => {
+    if (!filtersVisible.variants) {
+      return true;
+    }
+    return Object.values(filtersVisible.variants).length > 0;
+  }, [filtersVisible.variants]);
+
   return (
-    <Form
-      initialValues={{
-        filters: {
-          deleted: false,
-        },
-      }}
-      form={form}
-      onFinish={onSubmit}
-    >
+    <Form form={form} onFinish={onSubmit}>
       <Row gutter={[12, 12]}>
-        <Col span={24}>
-          <Divider size="small">{t("products.title")}</Divider>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            name="query"
-            label={t("products.query.label")}
-            layout="vertical"
-            rootClassName="m-0!"
+        <Activity mode={productsVisible ? "visible" : "hidden"}>
+          <Col span={24}>
+            <Divider size="small">{t("products.title")}</Divider>
+          </Col>
+          <Activity
+            mode={
+              filtersVisible.prodcuts?.query === false ? "hidden" : "visible"
+            }
           >
-            <Input
-              placeholder={t("products.query.placeholder")}
-              onChange={(e) => {
-                if (!e.currentTarget.value) {
-                  form.submit();
-                }
-              }}
-              allowClear
-              onClear={form.submit}
-            />
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("products.availability.label")}
-            name={["filters", "available"]}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Select
-              placeholder={t("products.availability.placeholder")}
-              options={[
-                {
-                  label: t("products.availability.options.available"),
-                  value: true,
-                },
-                {
-                  label: t("products.availability.options.not-available"),
-                  value: false,
-                },
-              ]}
-              allowClear
-              onChange={form.submit}
-              onClear={form.submit}
-            />
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            name={["filters", "deleted"]}
-            label={t("products.deleted.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Select
-              placeholder={t("products.deleted.placeholder")}
-              options={[
-                {
-                  label: t("products.deleted.options.deleted"),
-                  value: true,
-                },
-                {
-                  label: t("products.deleted.options.not-deleted"),
-                  value: false,
-                },
-              ]}
-              onChange={form.submit}
-            />
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("products.min-price.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Space.Compact rootClassName="w-full!">
-              <Form.Item name={["filters", "minPrice", "gte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("products.min-price.placeholder-from")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-              <Button
-                icon={<MinusOutlined />}
-                className="pointer-events-none! text-xs!"
-              />
-              <Form.Item name={["filters", "minPrice", "lte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("products.min-price.placeholder-to")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-            </Space.Compact>
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("products.max-price.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Space.Compact rootClassName="w-full!">
-              <Form.Item name={["filters", "maxPrice", "gte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("products.max-price.placeholder-from")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-              <Button
-                icon={<MinusOutlined />}
-                className="pointer-events-none! text-xs!"
-              />
-              <Form.Item name={["filters", "maxPrice", "lte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("products.max-price.placeholder-to")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-            </Space.Compact>
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("products.characterstics.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Space.Compact>
+            <Col xs={24} md={12} lg={8}>
               <Form.Item
-                name={["filters", "characterstics", "key"]}
-                noStyle
-                rules={[
-                  {
-                    validator: (_, value: string | undefined) => {
-                      return charValidator(
-                        value,
-                        "value",
-                        t("products.characterstics.errors.key-required"),
-                      );
-                    },
-                  },
-                ]}
+                name="query"
+                label={t("products.query.label")}
+                layout="vertical"
+                rootClassName="m-0!"
               >
                 <Input
-                  placeholder={t("products.characterstics.placeholder-key")}
+                  placeholder={t("products.query.placeholder")}
+                  onChange={(e) => {
+                    if (!e.currentTarget.value) {
+                      form.submit();
+                    }
+                  }}
+                  allowClear
+                  onClear={form.submit}
                 />
               </Form.Item>
-              <Button className="pointer-events-none! text-xs!">:</Button>
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.prodcuts?.available === false
+                ? "hidden"
+                : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
               <Form.Item
-                name={["filters", "characterstics", "value"]}
-                noStyle
-                rules={[
-                  {
-                    validator: (_, value: string | undefined) => {
-                      return charValidator(
-                        value,
-                        "key",
-                        t("products.characterstics.errors.value-required"),
-                      );
+                label={t("products.availability.label")}
+                name={["filters", "available"]}
+                layout="vertical"
+                rootClassName="m-0!"
+              >
+                <Select
+                  placeholder={t("products.availability.placeholder")}
+                  options={[
+                    {
+                      label: t("products.availability.options.available"),
+                      value: true,
                     },
-                  },
-                ]}
+                    {
+                      label: t("products.availability.options.not-available"),
+                      value: false,
+                    },
+                  ]}
+                  allowClear
+                  onChange={form.submit}
+                  onClear={form.submit}
+                />
+              </Form.Item>
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.prodcuts?.characterstics === false
+                ? "hidden"
+                : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
+              <Form.Item
+                label={t("products.characterstics.label")}
+                layout="vertical"
+                rootClassName="m-0!"
+              >
+                <Space.Compact>
+                  <Form.Item
+                    name={["filters", "characterstics", "key"]}
+                    noStyle
+                    rules={[
+                      {
+                        validator: (_, value: string | undefined) => {
+                          return charValidator(
+                            value,
+                            "value",
+                            t("products.characterstics.errors.key-required"),
+                          );
+                        },
+                      },
+                    ]}
+                  >
+                    <Input
+                      placeholder={t("products.characterstics.placeholder-key")}
+                    />
+                  </Form.Item>
+                  <Button className="pointer-events-none! text-xs!">:</Button>
+                  <Form.Item
+                    name={["filters", "characterstics", "value"]}
+                    noStyle
+                    rules={[
+                      {
+                        validator: (_, value: string | undefined) => {
+                          return charValidator(
+                            value,
+                            "key",
+                            t("products.characterstics.errors.value-required"),
+                          );
+                        },
+                      },
+                    ]}
+                  >
+                    <Input
+                      placeholder={t(
+                        "products.characterstics.placeholder-value",
+                      )}
+                    />
+                  </Form.Item>
+                </Space.Compact>
+              </Form.Item>
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.prodcuts?.minPrice === false ? "hidden" : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
+              <Form.Item
+                label={t("products.min-price.label")}
+                layout="vertical"
+                rootClassName="m-0!"
+              >
+                <Space.Compact rootClassName="w-full!">
+                  <Form.Item name={["filters", "minPrice", "gte"]} noStyle>
+                    <InputNumber
+                      min={0}
+                      placeholder={t("products.min-price.placeholder-from")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                  <Button
+                    icon={<MinusOutlined />}
+                    className="pointer-events-none! text-xs!"
+                  />
+                  <Form.Item name={["filters", "minPrice", "lte"]} noStyle>
+                    <InputNumber
+                      min={0}
+                      placeholder={t("products.min-price.placeholder-to")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                </Space.Compact>
+              </Form.Item>
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.prodcuts?.maxPrice === false ? "hidden" : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
+              <Form.Item
+                label={t("products.max-price.label")}
+                layout="vertical"
+                rootClassName="m-0!"
+              >
+                <Space.Compact rootClassName="w-full!">
+                  <Form.Item name={["filters", "maxPrice", "gte"]} noStyle>
+                    <InputNumber
+                      min={0}
+                      placeholder={t("products.max-price.placeholder-from")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                  <Button
+                    icon={<MinusOutlined />}
+                    className="pointer-events-none! text-xs!"
+                  />
+                  <Form.Item name={["filters", "maxPrice", "lte"]} noStyle>
+                    <InputNumber
+                      min={0}
+                      placeholder={t("products.max-price.placeholder-to")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                </Space.Compact>
+              </Form.Item>
+            </Col>
+          </Activity>
+        </Activity>
+        <Activity mode={variantsVisible ? "visible" : "hidden"}>
+          <Col span={24} className="mt-3">
+            <Divider size="small">{t("variants.title")}</Divider>
+          </Col>
+          <Activity
+            mode={
+              filtersVisible.variants?.currency === false ? "hidden" : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
+              <Form.Item
+                name={["filters", "variants", "currency"]}
+                label={t("variants.currency.label")}
+                layout="vertical"
+                rootClassName="m-0!"
               >
                 <Input
-                  placeholder={t("products.characterstics.placeholder-value")}
+                  placeholder={t("variants.currency.placeholder")}
+                  onChange={(e) => {
+                    if (!e.currentTarget.value) {
+                      form.submit();
+                    }
+                  }}
+                  allowClear
+                  onClear={form.submit}
                 />
               </Form.Item>
-            </Space.Compact>
-          </Form.Item>
-        </Col>
-        <Col span={24} className="mt-3">
-          <Divider size="small">{t("variants.title")}</Divider>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            name={["filters", "variants", "currency"]}
-            label={t("variants.currency.label")}
-            layout="vertical"
-            rootClassName="m-0!"
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.variants?.price === false ? "hidden" : "visible"
+            }
           >
-            <Input
-              placeholder={t("variants.currency.placeholder")}
-              onChange={(e) => {
-                if (!e.currentTarget.value) {
-                  form.submit();
-                }
-              }}
-              allowClear
-              onClear={form.submit}
-            />
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("variants.price.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Space.Compact rootClassName="w-full!">
-              <Form.Item name={["filters", "variants", "price", "gte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("variants.price.placeholder-from")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-              <Button
-                icon={<MinusOutlined />}
-                className="pointer-events-none! text-xs!"
-              />
-              <Form.Item name={["filters", "variants", "price", "lte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("variants.price.placeholder-to")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-            </Space.Compact>
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("variants.count.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Space.Compact rootClassName="w-full!">
-              <Form.Item name={["filters", "variants", "count", "gte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("variants.count.placeholder-to")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-              <Button
-                icon={<MinusOutlined />}
-                className="pointer-events-none! text-xs!"
-              />
-              <Form.Item name={["filters", "variants", "count", "lte"]} noStyle>
-                <InputNumber
-                  min={0}
-                  placeholder={t("variants.count.placeholder-to")}
-                  rootClassName="w-full!"
-                />
-              </Form.Item>
-            </Space.Compact>
-          </Form.Item>
-        </Col>
-        <Col xs={24} md={12} lg={8}>
-          <Form.Item
-            label={t("products.characterstics.label")}
-            layout="vertical"
-            rootClassName="m-0!"
-          >
-            <Space.Compact>
+            <Col xs={24} md={12} lg={8}>
               <Form.Item
-                name={["filters", "variants", "characterstics", "key"]}
-                noStyle
-                rules={[
-                  {
-                    validator: (_, value: string | undefined) => {
-                      return variantCharValidator(
-                        value,
-                        "value",
-                        t("variants.characterstics.errors.key-required"),
-                      );
-                    },
-                  },
-                ]}
+                label={t("variants.price.label")}
+                layout="vertical"
+                rootClassName="m-0!"
               >
-                <Input
-                  placeholder={t("products.characterstics.placeholder-key")}
-                />
+                <Space.Compact rootClassName="w-full!">
+                  <Form.Item
+                    name={["filters", "variants", "price", "gte"]}
+                    noStyle
+                  >
+                    <InputNumber
+                      min={0}
+                      placeholder={t("variants.price.placeholder-from")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                  <Button
+                    icon={<MinusOutlined />}
+                    className="pointer-events-none! text-xs!"
+                  />
+                  <Form.Item
+                    name={["filters", "variants", "price", "lte"]}
+                    noStyle
+                  >
+                    <InputNumber
+                      min={0}
+                      placeholder={t("variants.price.placeholder-to")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                </Space.Compact>
               </Form.Item>
-              <Button className="pointer-events-none! text-xs!">:</Button>
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.variants?.count === false ? "hidden" : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
               <Form.Item
-                name={["filters", "variants", "characterstics", "value"]}
-                noStyle
-                rules={[
-                  {
-                    validator: (_, value: string | undefined) => {
-                      return variantCharValidator(
-                        value,
-                        "key",
-                        t("variants.characterstics.errors.value-required"),
-                      );
-                    },
-                  },
-                ]}
+                label={t("variants.count.label")}
+                layout="vertical"
+                rootClassName="m-0!"
               >
-                <Input
-                  placeholder={t("products.characterstics.placeholder-value")}
-                />
+                <Space.Compact rootClassName="w-full!">
+                  <Form.Item
+                    name={["filters", "variants", "count", "gte"]}
+                    noStyle
+                  >
+                    <InputNumber
+                      min={0}
+                      placeholder={t("variants.count.placeholder-to")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                  <Button
+                    icon={<MinusOutlined />}
+                    className="pointer-events-none! text-xs!"
+                  />
+                  <Form.Item
+                    name={["filters", "variants", "count", "lte"]}
+                    noStyle
+                  >
+                    <InputNumber
+                      min={0}
+                      placeholder={t("variants.count.placeholder-to")}
+                      rootClassName="w-full!"
+                    />
+                  </Form.Item>
+                </Space.Compact>
               </Form.Item>
-            </Space.Compact>
-          </Form.Item>
-        </Col>
-        <Col span={24}>
-          <div className="flex justify-end">
-            <Space.Compact rootClassName="w-full md:max-w-md!">
-              <Button
-                disabled={filtersCount === 0}
-                onClick={resetFilters}
-                block
+            </Col>
+          </Activity>
+          <Activity
+            mode={
+              filtersVisible.variants?.characterstics === false
+                ? "hidden"
+                : "visible"
+            }
+          >
+            <Col xs={24} md={12} lg={8}>
+              <Form.Item
+                label={t("products.characterstics.label")}
+                layout="vertical"
+                rootClassName="m-0!"
               >
-                {t("reset-button.text")}
-              </Button>
-              <Button htmlType="submit" type={"primary"} block>
-                {t("submit-button.text")}
-              </Button>
-            </Space.Compact>
-          </div>
-        </Col>
+                <Space.Compact>
+                  <Form.Item
+                    name={["filters", "variants", "characterstics", "key"]}
+                    noStyle
+                    rules={[
+                      {
+                        validator: (_, value: string | undefined) => {
+                          return variantCharValidator(
+                            value,
+                            "value",
+                            t("variants.characterstics.errors.key-required"),
+                          );
+                        },
+                      },
+                    ]}
+                  >
+                    <Input
+                      placeholder={t("products.characterstics.placeholder-key")}
+                    />
+                  </Form.Item>
+                  <Button className="pointer-events-none! text-xs!">:</Button>
+                  <Form.Item
+                    name={["filters", "variants", "characterstics", "value"]}
+                    noStyle
+                    rules={[
+                      {
+                        validator: (_, value: string | undefined) => {
+                          return variantCharValidator(
+                            value,
+                            "key",
+                            t("variants.characterstics.errors.value-required"),
+                          );
+                        },
+                      },
+                    ]}
+                  >
+                    <Input
+                      placeholder={t(
+                        "products.characterstics.placeholder-value",
+                      )}
+                    />
+                  </Form.Item>
+                </Space.Compact>
+              </Form.Item>
+            </Col>
+          </Activity>
+          <Col span={24}>
+            <div className="flex justify-end">
+              <Space.Compact rootClassName="w-full md:max-w-md!">
+                <Button
+                  disabled={filtersCount === 0}
+                  onClick={resetFilters}
+                  block
+                >
+                  {t("reset-button.text")}
+                </Button>
+                <Button htmlType="submit" type={"primary"} block>
+                  {t("submit-button.text")}
+                </Button>
+              </Space.Compact>
+            </div>
+          </Col>
+        </Activity>
       </Row>
     </Form>
   );
@@ -462,9 +523,6 @@ export function ProductsFilters({
     if (filters) {
       if (typeof filters.available === "boolean") {
         filtersInput.available = filters.available;
-      }
-      if (filters.deleted) {
-        filtersInput.deleted = filters.deleted;
       }
       if (filters.maxPrice?.gte || filters.maxPrice?.lte) {
         filtersInput.maxPrice = filters.maxPrice;

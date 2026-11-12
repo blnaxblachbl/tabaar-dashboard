@@ -3,6 +3,7 @@
     "menu": {
       "home": "首页",
       "products": "商品",
+      "archive": "档案",
       "users": "用户",
       "api-keys": "API 密钥",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "缺货"
           }
         },
-        "deleted": {
-          "label": "删除状态",
-          "placeholder": "选择状态",
-          "options": {
-            "deleted": "已删除",
-            "not-deleted": "未删除"
-          }
-        },
         "min-price": {
           "label": "最低价格",
           "placeholder-from": "从",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "创建时间"
+      },
+      "actions": {
+        "title": "操作"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "图片"
+      },
+      "name": {
+        "title": "名称"
+      },
+      "description": {
+        "title": "描述"
+      },
+      "price": {
+        "title": "价格"
+      },
+      "deleted": {
+        "title": "删除时间"
+      },
+      "actions": {
+        "title": "操作",
+        "delete": {
+          "confirmations": "恢复此产品？",
+          "okText": "是",
+          "cancelText": "否"
+        }
+      }
+    },
+    "product-actions": {
+      "restoew": {
+        "confirmations": "恢复此产品？",
+        "okText": "是",
+        "cancelText": "否"
+      },
+      "delete": {
+        "confirmations": "您确定要删除此商品吗？",
+        "okText": "确定",
+        "cancelText": "取消"
       }
     }
   },
@@ -329,6 +362,12 @@
           "text": "创建新商品"
         }
       },
+      "load-more-button": {
+        "text": "加载更多"
+      }
+    },
+    "deleted-products": {
+      "title": "已删除产品",
       "load-more-button": {
         "text": "加载更多"
       }

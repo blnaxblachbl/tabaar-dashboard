@@ -3,6 +3,7 @@
     "menu": {
       "home": "홈",
       "products": "상품",
+      "archive": "보관소",
       "users": "사용자",
       "api-keys": "API 키",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "품절"
           }
         },
-        "deleted": {
-          "label": "삭제 상태",
-          "placeholder": "상태 선택",
-          "options": {
-            "deleted": "삭제됨",
-            "not-deleted": "삭제되지 않음"
-          }
-        },
         "min-price": {
           "label": "최소 가격",
           "placeholder-from": "최소",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "생성일"
+      },
+      "actions": {
+        "title": "작업"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "이미지"
+      },
+      "name": {
+        "title": "이름"
+      },
+      "description": {
+        "title": "설명"
+      },
+      "price": {
+        "title": "가격"
+      },
+      "deleted": {
+        "title": "삭제 일시"
+      },
+      "actions": {
+        "title": "작업",
+        "delete": {
+          "confirmations": "이 상품을 복구하시겠습니까?",
+          "okText": "예",
+          "cancelText": "아니요"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "이 상품을 복구하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
+      },
+      "delete": {
+        "confirmations": "이 상품을 삭제하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
       }
     }
   },
@@ -341,6 +374,12 @@
       "toasts": {
         "success": "상품이 생성되었습니다",
         "error": "상품 생성에 실패했습니다"
+      }
+    },
+    "deleted-products": {
+      "title": "삭제된 상품",
+      "load-more-button": {
+        "text": "더 보기"
       }
     },
     "edit-product": {

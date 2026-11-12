@@ -7,8 +7,26 @@ query FindProducts($query: String, $take: Int, $filters: FiltersInput) {
         scrollId
     }
 }
+query FindDeletedProducts($query: String, $take: Int, $filters: FiltersInput) {
+    findDeletedProducts(query: $query, take: $take, filters: $filters) {
+        products {
+            ...Product
+        }
+        productsCount
+        scrollId
+    }
+}
 query ScrollProducts($scrollId: String) {
     scrollProducts(scrollId: $scrollId) {
+        products {
+            ...Product
+        }
+        productsCount
+        scrollId
+    }
+}
+query ScrollDeletedProducts($scrollId: String) {
+    scrollDeletedProducts(scrollId: $scrollId) {
         products {
             ...Product
         }
@@ -33,6 +51,11 @@ mutation UpdateProduct($id: String!, $data: UpdateProductInput!) {
 }
 mutation DeleteProduct($id: String!) {
     deleteProduct(id: $id) {
+        ...Product
+    }
+}
+mutation RestoreProduct($id: String!) {
+    restoreProduct(id: $id) {
         ...Product
     }
 }

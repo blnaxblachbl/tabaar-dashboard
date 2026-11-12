@@ -128,7 +128,12 @@ export default function ProductsPage() {
         />
       </div>
       <Divider />
-      <ProductsTable loading={loading} dataSource={products} />
+      <ProductsTable
+        loading={loading}
+        dataSource={products}
+        onDeleted={onDeleted}
+        onDeleteError={onDeleteError}
+      />
       {products.length < productsCount && (
         <div className="mx-auto mt-6 w-fit">
           <Button onClick={handleLoadMore} loading={scrollLoading}>
@@ -138,6 +143,12 @@ export default function ProductsPage() {
       )}
     </PageLayout>
   );
+  function onDeleted() {
+    messageApi.success(t("toasts.delete.success"), 1.5, refetch);
+  }
+  function onDeleteError() {
+    messageApi.error(t("toasts.delete.error"));
+  }
   async function handleLoadMore() {
     if (!scrollId) {
       return;

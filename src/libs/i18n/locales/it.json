@@ -3,6 +3,7 @@
     "menu": {
       "home": "Home",
       "products": "Prodotti",
+      "archive": "Archivio",
       "users": "Utenti",
       "api-keys": "Chiavi API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "Non disponibile"
           }
         },
-        "deleted": {
-          "label": "Eliminato",
-          "placeholder": "Seleziona stato",
-          "options": {
-            "deleted": "Eliminato",
-            "not-deleted": "Non eliminato"
-          }
-        },
         "min-price": {
           "label": "Prezzo minimo",
           "placeholder-from": "Da",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Data di creazione"
+      },
+      "actions": {
+        "title": "Azioni"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Immagini"
+      },
+      "name": {
+        "title": "Nome"
+      },
+      "description": {
+        "title": "Descrizione"
+      },
+      "price": {
+        "title": "Prezzo"
+      },
+      "deleted": {
+        "title": "Eliminato il"
+      },
+      "actions": {
+        "title": "Azioni",
+        "delete": {
+          "confirmations": "Ripristinare questo prodotto?",
+          "okText": "Sì",
+          "cancelText": "No"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "Ripristinare questo prodotto?",
+        "okText": "Sì",
+        "cancelText": "No"
+      },
+      "delete": {
+        "confirmations": "Vuoi eliminare questo prodotto?",
+        "okText": "Sì",
+        "cancelText": "No"
       }
     }
   },
@@ -331,6 +364,12 @@
       },
       "load-more-button": {
         "text": "Carica altri"
+      }
+    },
+    "deleted-products": {
+      "title": "हटाए गए उत्पाद",
+      "load-more-button": {
+        "text": "और लोड करें"
       }
     },
     "create-product": {

@@ -34,7 +34,6 @@ export type CreateVariantInput = {
 export type FiltersInput = {
   available?: boolean | null | undefined;
   characterstics?: Record<string, string | number | boolean> | null | undefined;
-  deleted?: boolean | null | undefined;
   maxPrice?: FloatRangeInput | null | undefined;
   minPrice?: FloatRangeInput | null | undefined;
   variants?: VariantFilterInput | null | undefined;
@@ -146,12 +145,28 @@ export type FindProductsQueryVariables = Exact<{
 
 export type FindProductsQuery = { findProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
 
+export type FindDeletedProductsQueryVariables = Exact<{
+  query?: string | null | undefined;
+  take?: number | null | undefined;
+  filters?: FiltersInput | null | undefined;
+}>;
+
+
+export type FindDeletedProductsQuery = { findDeletedProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
+
 export type ScrollProductsQueryVariables = Exact<{
   scrollId?: string | null | undefined;
 }>;
 
 
 export type ScrollProductsQuery = { scrollProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
+
+export type ScrollDeletedProductsQueryVariables = Exact<{
+  scrollId?: string | null | undefined;
+}>;
+
+
+export type ScrollDeletedProductsQuery = { scrollDeletedProducts: { productsCount: number, scrollId: string, products: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> }> } };
 
 export type FindOneProductQueryVariables = Exact<{
   id?: string | null | undefined;
@@ -181,6 +196,13 @@ export type DeleteProductMutationVariables = Exact<{
 
 
 export type DeleteProductMutation = { deleteProduct: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
+
+export type RestoreProductMutationVariables = Exact<{
+  id: string;
+}>;
+
+
+export type RestoreProductMutation = { restoreProduct: { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> } };
 
 export type DeleteVariantMutationVariables = Exact<{
   id: string;
@@ -554,6 +576,57 @@ export type FindProductsQueryHookResult = ReturnType<typeof useFindProductsQuery
 export type FindProductsLazyQueryHookResult = ReturnType<typeof useFindProductsLazyQuery>;
 export type FindProductsSuspenseQueryHookResult = ReturnType<typeof useFindProductsSuspenseQuery>;
 export type FindProductsQueryResult = ApolloReactCommon.QueryResult<FindProductsQuery, FindProductsQueryVariables>;
+export const FindDeletedProductsDocument = gql`
+    query FindDeletedProducts($query: String, $take: Int, $filters: FiltersInput) {
+  findDeletedProducts(query: $query, take: $take, filters: $filters) {
+    products {
+      ...Product
+    }
+    productsCount
+    scrollId
+  }
+}
+    ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
+${VariantFragmentDoc}`;
+
+/**
+ * __useFindDeletedProductsQuery__
+ *
+ * To run a query within a React component, call `useFindDeletedProductsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindDeletedProductsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindDeletedProductsQuery({
+ *   variables: {
+ *      query: // value for 'query'
+ *      take: // value for 'take'
+ *      filters: // value for 'filters'
+ *   },
+ * });
+ */
+export function useFindDeletedProductsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>(FindDeletedProductsDocument, options);
+      }
+export function useFindDeletedProductsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>(FindDeletedProductsDocument, options);
+        }
+// @ts-ignore
+export function useFindDeletedProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>;
+export function useFindDeletedProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<FindDeletedProductsQuery | undefined, FindDeletedProductsQueryVariables>;
+export function useFindDeletedProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>(FindDeletedProductsDocument, options);
+        }
+export type FindDeletedProductsQueryHookResult = ReturnType<typeof useFindDeletedProductsQuery>;
+export type FindDeletedProductsLazyQueryHookResult = ReturnType<typeof useFindDeletedProductsLazyQuery>;
+export type FindDeletedProductsSuspenseQueryHookResult = ReturnType<typeof useFindDeletedProductsSuspenseQuery>;
+export type FindDeletedProductsQueryResult = ApolloReactCommon.QueryResult<FindDeletedProductsQuery, FindDeletedProductsQueryVariables>;
 export const ScrollProductsDocument = gql`
     query ScrollProducts($scrollId: String) {
   scrollProducts(scrollId: $scrollId) {
@@ -603,6 +676,55 @@ export type ScrollProductsQueryHookResult = ReturnType<typeof useScrollProductsQ
 export type ScrollProductsLazyQueryHookResult = ReturnType<typeof useScrollProductsLazyQuery>;
 export type ScrollProductsSuspenseQueryHookResult = ReturnType<typeof useScrollProductsSuspenseQuery>;
 export type ScrollProductsQueryResult = ApolloReactCommon.QueryResult<ScrollProductsQuery, ScrollProductsQueryVariables>;
+export const ScrollDeletedProductsDocument = gql`
+    query ScrollDeletedProducts($scrollId: String) {
+  scrollDeletedProducts(scrollId: $scrollId) {
+    products {
+      ...Product
+    }
+    productsCount
+    scrollId
+  }
+}
+    ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
+${VariantFragmentDoc}`;
+
+/**
+ * __useScrollDeletedProductsQuery__
+ *
+ * To run a query within a React component, call `useScrollDeletedProductsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useScrollDeletedProductsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useScrollDeletedProductsQuery({
+ *   variables: {
+ *      scrollId: // value for 'scrollId'
+ *   },
+ * });
+ */
+export function useScrollDeletedProductsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>(ScrollDeletedProductsDocument, options);
+      }
+export function useScrollDeletedProductsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>(ScrollDeletedProductsDocument, options);
+        }
+// @ts-ignore
+export function useScrollDeletedProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SuspenseQueryHookOptions<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>;
+export function useScrollDeletedProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>): ApolloReactHooks.UseSuspenseQueryResult<ScrollDeletedProductsQuery | undefined, ScrollDeletedProductsQueryVariables>;
+export function useScrollDeletedProductsSuspenseQuery(baseOptions?: ApolloReactHooks.SkipToken | ApolloReactHooks.SuspenseQueryHookOptions<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>) {
+          const options = baseOptions === ApolloReactHooks.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useSuspenseQuery<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>(ScrollDeletedProductsDocument, options);
+        }
+export type ScrollDeletedProductsQueryHookResult = ReturnType<typeof useScrollDeletedProductsQuery>;
+export type ScrollDeletedProductsLazyQueryHookResult = ReturnType<typeof useScrollDeletedProductsLazyQuery>;
+export type ScrollDeletedProductsSuspenseQueryHookResult = ReturnType<typeof useScrollDeletedProductsSuspenseQuery>;
+export type ScrollDeletedProductsQueryResult = ApolloReactCommon.QueryResult<ScrollDeletedProductsQuery, ScrollDeletedProductsQueryVariables>;
 export const FindOneProductDocument = gql`
     query FindOneProduct($id: String) {
   findOneProduct(id: $id) {
@@ -754,6 +876,41 @@ export function useDeleteProductMutation(baseOptions?: ApolloReactHooks.Mutation
 export type DeleteProductMutationHookResult = ReturnType<typeof useDeleteProductMutation>;
 export type DeleteProductMutationResult = ApolloReactCommon.MutationResult<DeleteProductMutation>;
 export type DeleteProductMutationOptions = ApolloReactCommon.BaseMutationOptions<DeleteProductMutation, DeleteProductMutationVariables>;
+export const RestoreProductDocument = gql`
+    mutation RestoreProduct($id: String!) {
+  restoreProduct(id: $id) {
+    ...Product
+  }
+}
+    ${ProductFragmentDoc}
+${LocaleContentFragmentDoc}
+${VariantFragmentDoc}`;
+export type RestoreProductMutationFn = ApolloReactCommon.MutationFunction<RestoreProductMutation, RestoreProductMutationVariables>;
+
+/**
+ * __useRestoreProductMutation__
+ *
+ * To run a mutation, you first call `useRestoreProductMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRestoreProductMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [restoreProductMutation, { data, loading, error }] = useRestoreProductMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useRestoreProductMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<RestoreProductMutation, RestoreProductMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<RestoreProductMutation, RestoreProductMutationVariables>(RestoreProductDocument, options);
+      }
+export type RestoreProductMutationHookResult = ReturnType<typeof useRestoreProductMutation>;
+export type RestoreProductMutationResult = ApolloReactCommon.MutationResult<RestoreProductMutation>;
+export type RestoreProductMutationOptions = ApolloReactCommon.BaseMutationOptions<RestoreProductMutation, RestoreProductMutationVariables>;
 export const DeleteVariantDocument = gql`
     mutation DeleteVariant($id: String!, $variantId: String!) {
   deleteVariant(id: $id, variantId: $variantId) {

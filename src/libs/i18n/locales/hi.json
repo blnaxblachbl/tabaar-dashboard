@@ -3,6 +3,7 @@
     "menu": {
       "home": "होम",
       "products": "उत्पाद",
+      "archive": "पुरालेख",
       "users": "उपयोगकर्ता",
       "api-keys": "एपीआई कुंजियाँ",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "उपलब्ध नहीं"
           }
         },
-        "deleted": {
-          "label": "हटाया गया",
-          "placeholder": "स्थिति चुनें",
-          "options": {
-            "deleted": "हटाया गया",
-            "not-deleted": "नहीं हटाया गया"
-          }
-        },
         "min-price": {
           "label": "न्यूनतम कीमत",
           "placeholder-from": "से",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "बनाया गया"
+      },
+      "actions": {
+        "title": "कार्रवाइयाँ"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "तस्वीरें"
+      },
+      "name": {
+        "title": "नाम"
+      },
+      "description": {
+        "title": "विवरण"
+      },
+      "price": {
+        "title": "कीमत"
+      },
+      "deleted": {
+        "title": "हटवल्याची वेळ"
+      },
+      "actions": {
+        "title": "कार्रवाइयाँ",
+        "delete": {
+          "confirmations": "हे उत्पादन पुनर्संचयित (restore) करायचे आहे का?",
+          "okText": "हो",
+          "cancelText": "नाही"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "हे उत्पादन पुनर्संचयित (restore) करायचे आहे का?",
+        "okText": "हो",
+        "cancelText": "नाही"
+      },
+      "delete": {
+        "confirmations": "क्या आप इस उत्पाद को हटाना चाहते हैं?",
+        "okText": "हाँ",
+        "cancelText": "नहीं"
       }
     }
   },
@@ -329,6 +362,12 @@
           "text": "नया उत्पाद बनाएं"
         }
       },
+      "load-more-button": {
+        "text": "और लोड करें"
+      }
+    },
+    "deleted-products": {
+      "title": "हटाए गए उत्पाद",
       "load-more-button": {
         "text": "और लोड करें"
       }

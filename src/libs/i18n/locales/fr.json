@@ -3,6 +3,7 @@
     "menu": {
       "home": "Accueil",
       "products": "Produits",
+      "archive": "Archive",
       "users": "Utilisateurs",
       "api-keys": "Clés API",
       "logout": {
@@ -152,14 +153,6 @@
             "not-available": "Non disponible"
           }
         },
-        "deleted": {
-          "label": "Statut de suppression",
-          "placeholder": "Sélectionner le statut",
-          "options": {
-            "deleted": "Supprimé",
-            "not-deleted": "Non supprimé"
-          }
-        },
         "min-price": {
           "label": "Prix minimum",
           "placeholder-from": "De",
@@ -280,6 +273,46 @@
       },
       "created": {
         "title": "Date de création"
+      },
+      "actions": {
+        "title": "Actions"
+      }
+    },
+    "deleted-products-table": {
+      "images": {
+        "title": "Images"
+      },
+      "name": {
+        "title": "Nom"
+      },
+      "description": {
+        "title": "Description"
+      },
+      "price": {
+        "title": "Prix"
+      },
+      "deleted": {
+        "title": "Supprimé le"
+      },
+      "actions": {
+        "title": "Actions",
+        "delete": {
+          "confirmations": "Restaurer ce produit ?",
+          "okText": "Oui",
+          "cancelText": "Non"
+        }
+      }
+    },
+    "product-actions": {
+      "restore": {
+        "confirmations": "Restaurer ce produit ?",
+        "okText": "Oui",
+        "cancelText": "Non"
+      },
+      "delete": {
+        "confirmations": "Voulez-vous supprimer ce produit ?",
+        "okText": "Oui",
+        "cancelText": "Non"
       }
     }
   },
@@ -329,6 +362,12 @@
           "text": "Créer un nouveau produit"
         }
       },
+      "load-more-button": {
+        "text": "Charger plus"
+      }
+    },
+    "deleted-products": {
+      "title": "Produits supprimés",
       "load-more-button": {
         "text": "Charger plus"
       }
