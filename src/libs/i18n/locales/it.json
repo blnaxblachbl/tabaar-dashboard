@@ -354,7 +354,11 @@
       },
       "toasts": {
         "success": "Prodotti creati",
-        "error": "Impossibile creare i prodotti con il file"
+        "error": "Impossibile creare i prodotti con il file",
+        "delete": {
+          "success": "Prodotto eliminato",
+          "error": "Impossibile eliminare il prodotto"
+        }
       },
       "empty": {
         "description": "Nessun prodotto trovato",
@@ -395,11 +399,7 @@
       },
       "toasts": {
         "success": "Prodotto aggiornato",
-        "error": "Impossibile aggiornare il prodotto",
-        "delete": {
-          "success": "Prodotto eliminato",
-          "error": "Impossibile eliminare il prodotto"
-        }
+        "error": "Impossibile aggiornare il prodotto"
       },
       "delete": {
         "title": "Vuoi eliminare questo prodotto?",

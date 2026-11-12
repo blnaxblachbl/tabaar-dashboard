@@ -354,7 +354,11 @@
       },
       "toasts": {
         "success": "商品已创建",
-        "error": "通过文件创建商品失败"
+        "error": "通过文件创建商品失败",
+        "delete": {
+          "success": "商品已删除",
+          "error": "删除商品失败"
+        }
       },
       "empty": {
         "description": "未找到商品",
@@ -395,11 +399,7 @@
       },
       "toasts": {
         "success": "商品更新成功",
-        "error": "更新商品失败",
-        "delete": {
-          "success": "商品已删除",
-          "error": "删除商品失败"
-        }
+        "error": "更新商品失败"
       },
       "delete": {
         "title": "您确定要删除此商品吗？",

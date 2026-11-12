@@ -354,7 +354,11 @@
       },
       "toasts": {
         "success": "Ürünler oluşturuldu",
-        "error": "Dosya ile ürünler oluşturulamadı"
+        "error": "Dosya ile ürünler oluşturulamadı",
+        "delete": {
+          "success": "Ürün silindi",
+          "error": "Ürün silinemedi"
+        }
       },
       "empty": {
         "description": "Ürün bulunamadı",
@@ -395,11 +399,7 @@
       },
       "toasts": {
         "success": "Ürün güncellendi",
-        "error": "Ürün güncellenemedi",
-        "delete": {
-          "success": "Ürün silindi",
-          "error": "Ürün silinemedi"
-        }
+        "error": "Ürün güncellenemedi"
       },
       "delete": {
         "title": "Bu ürünü silmek istiyor musunuz?",

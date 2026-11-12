@@ -354,7 +354,11 @@
       },
       "toasts": {
         "success": "Products created",
-        "error": "Failed to create Products with file"
+        "error": "Failed to create Products with file",
+        "delete": {
+          "success": "Product deleted",
+          "error": "Failed to delete product"
+        }
       },
       "empty": {
         "description": "Products not found",
@@ -395,11 +399,7 @@
       },
       "toasts": {
         "success": "Product updated",
-        "error": "Failed to update product",
-        "delete": {
-          "success": "Product deleted",
-          "error": "Failed to delete product"
-        }
+        "error": "Failed to update product"
       },
       "delete": {
         "title": "Do you wnt to delete this Product?",

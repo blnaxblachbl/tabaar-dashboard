@@ -354,7 +354,11 @@
       },
       "toasts": {
         "success": "Productos creados",
-        "error": "Error al crear productos con archivo"
+        "error": "Error al crear productos con archivo",
+        "delete": {
+          "success": "Producto eliminado",
+          "error": "Error al eliminar el producto"
+        }
       },
       "empty": {
         "description": "No se encontraron productos",
@@ -395,11 +399,7 @@
       },
       "toasts": {
         "success": "Producto actualizado",
-        "error": "Error al actualizar el producto",
-        "delete": {
-          "success": "Producto eliminado",
-          "error": "Error al eliminar el producto"
-        }
+        "error": "Error al actualizar el producto"
       },
       "delete": {
         "title": "¿Deseas eliminar este producto?",
