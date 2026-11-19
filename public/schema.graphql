@@ -2,177 +2,245 @@ scalar DateTime
 
 scalar Json
 
-"""Characterstic custom JSON scalar type"""
+"""
+Characterstic custom JSON scalar type
+"""
 scalar Characterstic
 
 input IntRangeInput {
-  lte: Int
-  gte: Int
+    lte: Int
+    gte: Int
 }
 
 input FloatRangeInput {
-  lte: Float
-  gte: Float
+    lte: Float
+    gte: Float
 }
 
 input CreateUserInput {
-  email: String!
-  name: String!
+    email: String!
+    name: String!
 }
 
 input UpdateUserInput {
-  name: String
-  email: String
+    name: String
+    email: String
 }
 
 input LoginUserInput {
-  email: String!
-  password: String!
+    email: String!
+    password: String!
 }
 
 input RefreshTokenInput {
-  refreshToken: String!
+    refreshToken: String!
 }
 
 input CreateApiKeyInput {
-  name: String!
-  expiredAt: DateTime!
+    name: String!
+    expiredAt: DateTime!
 }
 
 input UpdateApiKeyInput {
-  name: String
-  expiredAt: DateTime
+    name: String
+    expiredAt: DateTime
+}
+
+input LocaleContentInput {
+    locale: String!
+    content: String!
 }
 
 input CreateProductInput {
-  name: String!
-  description: String!
-  characterstics: Characterstic
+    name: [LocaleContentInput!]!
+    description: [LocaleContentInput!]!
+    characterstics: Characterstic
 }
 
 input UpdateProductInput {
-  name: String
-  description: String
-  characterstics: Characterstic
+    name: [LocaleContentInput!]
+    description: [LocaleContentInput!]
+    characterstics: Characterstic
 }
 
 input CreateVariantInput {
-  characterstics: Characterstic!
-  price: Float!
-  count: Int!
-  currency: String!
+    characterstics: Characterstic!
+    price: Float!
+    count: Int!
+    currency: String!
 }
 
 input UpdateVariantInput {
-  characterstics: Characterstic
-  price: Float
-  count: Int
-  currency: String
+    characterstics: Characterstic
+    price: Float
+    count: Int
+    currency: String
 }
 
 input FiltersInput {
-  deleted: Boolean
-  available: Boolean
-  minPrice: FloatRangeInput
-  maxPrice: FloatRangeInput
-  characterstics: Characterstic
-  variants: VariantFilterInput
+    available: Boolean
+    minPrice: FloatRangeInput
+    maxPrice: FloatRangeInput
+    characterstics: Characterstic
+    variants: VariantFilterInput
 }
 
 input VariantFilterInput {
-  characterstics: Characterstic
-  currency: String
-  price: FloatRangeInput
-  count: IntRangeInput
+    characterstics: Characterstic
+    currency: String
+    price: FloatRangeInput
+    count: IntRangeInput
+}
+
+input UpdateVariantsCountInput {
+    """
+    Product ID
+    """
+    id: String!
+
+    """
+    Variant ID
+    """
+    variantId: String!
+
+    """
+    Pass a value greater than 0 to increase, or a value less than 0 to decrease.
+    """
+    value: Int!
 }
 
 type User {
-  id: Int!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  name: String!
-  email: String!
+    id: Int!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    name: String!
+    email: String!
 }
 
 type FindUsersResult {
-  users: [User!]!
-  usersCount: Int!
+    users: [User!]!
+    usersCount: Int!
 }
 
 type LoginUserResult {
-  user: User!
-  accessToken: String!
-  refreshToken: String!
+    user: User!
+    accessToken: String!
+    refreshToken: String!
 }
 
 type Query {
-  findUsers(skip: Int, take: Int): FindUsersResult!
-  findOneUser(id: Int!): User!
-  findMe: User
-  findApiKeys(skip: Int, take: Int): ApiKeysResult!
-  findOneApiKey(id: Int!): ApiKey!
-  findProducts(query: String, take: Int, filters: FiltersInput): ProductResult!
-  scrollProducts(scrollId: String): ProductResult!
-  findOneProduct(id: String): Product!
+    findUsers(skip: Int, take: Int): FindUsersResult!
+    findOneUser(id: Int!): User!
+    findMe: User
+    findApiKeys(skip: Int, take: Int): ApiKeysResult!
+    findOneApiKey(id: Int!): ApiKey!
+    findProducts(
+        query: String
+        take: Int
+        filters: FiltersInput
+    ): ProductResult!
+    scrollProducts(scrollId: String): ProductResult!
+    findOneProduct(id: String): Product!
+    findDeletedProducts(
+        query: String
+        take: Int
+        filters: FiltersInput
+    ): ProductResult!
+    scrollDeletedProducts(scrollId: String): ProductResult!
 }
 
 type Mutation {
-  createUser(data: CreateUserInput!): User!
-  updateUser(id: Int!, data: UpdateUserInput!): User!
-  loginUser(data: LoginUserInput!): LoginUserResult!
-  refreshToken(data: RefreshTokenInput!): LoginUserResult!
-  deleteUser(id: Int!): User!
-  createApiKey(data: CreateApiKeyInput!): ApiKey!
-  updateApiKey(id: Int!, data: UpdateApiKeyInput!): ApiKey!
-  deleteApiKey(id: Int!): ApiKey!
-  createProduct(data: CreateProductInput!): Product!
-  updateProduct(id: String!, data: UpdateProductInput!): Product!
-  deleteProduct(id: String!): Product!
-  appendVariant(id: String!, data: CreateVariantInput!): Product!
-  deleteVariant(id: String!, variantId: String!): Product!
-  updateVariant(id: String!, variantId: String!, data: UpdateVariantInput!): Product!
+    createUser(data: CreateUserInput!): User!
+    updateUser(id: Int!, data: UpdateUserInput!): User!
+    loginUser(data: LoginUserInput!): LoginUserResult!
+    refreshToken(data: RefreshTokenInput!): LoginUserResult!
+    deleteUser(id: Int!): User!
+    createApiKey(data: CreateApiKeyInput!): ApiKey!
+    updateApiKey(id: Int!, data: UpdateApiKeyInput!): ApiKey!
+    deleteApiKey(id: Int!): ApiKey!
+    createProduct(data: CreateProductInput!): Product!
+    updateProduct(id: String!, data: UpdateProductInput!): Product!
+    deleteProduct(id: String!): Product!
+    restoreProduct(id: String!): Product!
+    appendVariant(id: String!, data: CreateVariantInput!): Product!
+    deleteVariant(id: String!, variantId: String!): Product!
+    updateVariant(
+        id: String!
+        variantId: String!
+        data: UpdateVariantInput!
+    ): Product!
+
+    """
+    The "updateVariantsCount" allows update multiple pruduct variants count.
+    Usefull for update count on creating orders or refunds
+    """
+    updateVariantsCount(
+        data: [UpdateVariantsCountInput!]!
+    ): [UpdateVariantsCountResponse!]!
 }
 
 type ApiKey {
-  id: Int!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  key: String!
-  name: String!
-  expiredAt: DateTime
+    id: Int!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    key: String!
+    name: String!
+    expiredAt: DateTime
 }
 
 type ApiKeysResult {
-  apiKeys: [ApiKey!]!
-  apiKeysCount: Int!
+    apiKeys: [ApiKey!]!
+    apiKeysCount: Int!
 }
 
 type Product {
-  id: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  name: String!
-  description: String!
-  characterstics: Characterstic
-  variants: [Variant!]!
-  minPrice: Float!
-  maxPrice: Float!
-  available: Boolean!
+    id: String!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    name: [LocaleContent!]!
+    description: [LocaleContent!]!
+    characterstics: Characterstic
+    variants: [Variant!]!
+    minPrice: Float!
+    maxPrice: Float!
+    available: Boolean!
+}
+
+type LocaleContent {
+    locale: String!
+    content: String!
 }
 
 type Variant {
-  id: String!
-  createdAt: DateTime!
-  updatedAt: DateTime!
-  characterstics: Characterstic!
-  price: Float!
-  count: Int!
-  currency: String!
-  images: [String!]!
+    id: String!
+    createdAt: DateTime!
+    updatedAt: DateTime!
+    characterstics: Characterstic!
+    price: Float!
+    count: Int!
+    currency: String!
+    images: [String!]!
 }
 
 type ProductResult {
-  products: [Product!]!
-  productsCount: Int!
-  scrollId: String!
+    products: [Product!]!
+    productsCount: Int!
+    scrollId: String!
+}
+
+type UpdateVariantsCountResponse {
+    id: String!
+    variantId: String!
+    value: Int!
+
+    """
+    The "Status" field may be an "error" or "success".
+    """
+    status: String!
+
+    """
+    The "Error" field may contain the message "Update conflict"
+    if the conflict was not resolved automatically.
+    """
+    error: String
 }
