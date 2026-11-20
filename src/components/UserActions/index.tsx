@@ -17,7 +17,7 @@ export function UserActions({
   user,
 }: UserActionsProps) {
   const { t } = useTranslation("", {
-    keyPrefix: `components.product-actions.${user.deleted ? "restore" : "delete"}`,
+    keyPrefix: `components.user-actions.${user.deleted ? "restore" : "delete"}`,
   });
 
   const [deleteUser, { data: deleteData, loading: deleteLoading }] =

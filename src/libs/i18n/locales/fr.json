@@ -314,6 +314,38 @@
         "okText": "Oui",
         "cancelText": "Non"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "Voulez-vous supprimer cet utilisateur ?",
+        "okText": "Oui",
+        "cancelText": "Non"
+      },
+      "restore": {
+        "confirmations": "Restaurer cet utilisateur ?",
+        "okText": "Oui",
+        "cancelText": "Non"
+      }
+    },
+    "user-filters": {
+      "title": "Filtres",
+      "search": {
+        "label": "Recherche",
+        "placeholder": "John Doe..."
+      },
+      "status": {
+        "label": "Statut",
+        "options": {
+          "deleted": "Supprimé",
+          "not-deleted": "Actif"
+        }
+      },
+      "reset-button": {
+        "text": "Réinitialiser"
+      },
+      "submit-button": {
+        "text": "Valider"
+      }
     }
   },
   "pages": {
@@ -457,7 +489,9 @@
       },
       "toasts": {
         "deleted": "Utilisateur supprimé",
-        "delete-error": "Échec de la suppression de l'utilisateur"
+        "delete-error": "Échec de la suppression de l'utilisateur",
+        "restored": "Utilisateur restauré",
+        "restore-error": "Échec de la restauration de l'utilisateur"
       }
     },
     "create-user": {

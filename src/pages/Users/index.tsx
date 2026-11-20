@@ -11,6 +11,7 @@ import { toLocaleDate } from "@/utils/date";
 import { CollapsibleUserFilters } from "@/components/UserFilters";
 import type { UserFiltersData } from "@/components/UserFilters/types";
 import { UserActions } from "@/components/UserActions";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export default function UsersPage() {
   const [messageApi, mContext] = message.useMessage();
@@ -40,6 +41,8 @@ export default function UsersPage() {
     fetchPolicy: "cache-and-network",
     variables,
   });
+
+  const [debounceRefetch] = useDebounce(refetch, 1500);
 
   const users = data?.findUsers.users ?? [];
   const usersCount = data?.findUsers.usersCount ?? 0;
@@ -87,16 +90,18 @@ export default function UsersPage() {
               <UserActions
                 user={obj}
                 onDeleted={() => {
-                  messageApi.success(t("toasts.deleted"), 1, refetch);
+                  messageApi.success(t("toasts.deleted"), 1.5);
+                  debounceRefetch();
                 }}
                 onDeleteError={() => {
                   messageApi.error(t("toasts.delete-error"));
                 }}
                 onRestore={() => {
-                  messageApi.success("User restpred", 1, refetch);
+                  messageApi.success(t("toasts.restored"), 1.5);
+                  debounceRefetch();
                 }}
                 onRestoreError={() => {
-                  messageApi.error("Failed to restore User");
+                  messageApi.error(t("toasts.restore-error"));
                 }}
               />
             ),

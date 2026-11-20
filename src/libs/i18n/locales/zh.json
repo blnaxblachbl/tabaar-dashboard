@@ -314,6 +314,38 @@
         "okText": "确定",
         "cancelText": "取消"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "确定要删除此用户吗？",
+        "okText": "确定",
+        "cancelText": "取消"
+      },
+      "restore": {
+        "confirmations": "确定要恢复此用户吗？",
+        "okText": "确定",
+        "cancelText": "取消"
+      }
+    },
+    "user-filters": {
+      "title": "筛选条件",
+      "search": {
+        "label": "搜索",
+        "placeholder": "例如：John Doe..."
+      },
+      "status": {
+        "label": "状态",
+        "options": {
+          "deleted": "已删除",
+          "not-deleted": "活跃"
+        }
+      },
+      "reset-button": {
+        "text": "重置"
+      },
+      "submit-button": {
+        "text": "提交"
+      }
     }
   },
   "pages": {
@@ -457,7 +489,9 @@
       },
       "toasts": {
         "deleted": "用户已删除",
-        "delete-error": "删除用户失败"
+        "delete-error": "删除用户失败",
+        "restored": "用户已恢复",
+        "restore-error": "恢复用户失败"
       }
     },
     "create-user": {

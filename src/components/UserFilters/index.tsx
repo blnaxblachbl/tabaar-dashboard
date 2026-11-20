@@ -12,11 +12,15 @@ import {
 import { FilterOutlined } from "@ant-design/icons";
 import type { UserFiltersProps } from "./types";
 import { useEffect, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 
 export function CollapsibleUserFilters({
   initialValues,
   ...props
 }: UserFiltersProps) {
+  const { t } = useTranslation("", {
+    keyPrefix: "components.user-filters",
+  });
   const filtersCount = useMemo(() => {
     let count = 0;
     if (initialValues.deleted) {
@@ -33,7 +37,7 @@ export function CollapsibleUserFilters({
       items={[
         {
           key: 0,
-          label: "Users Filter",
+          label: t("title"),
           children: <UserFilters initialValues={initialValues} {...props} />,
           classNames: {
             body: "bg-transparent!",
@@ -53,6 +57,10 @@ export function UserFilters({
   initialValues,
   onSubmit = () => {},
 }: UserFiltersProps) {
+  const { t } = useTranslation("", {
+    keyPrefix: "components.user-filters",
+  });
+
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -71,12 +79,12 @@ export function UserFilters({
         <Col xs={24} md={12} lg={8}>
           <Form.Item
             name="search"
-            label="Search"
+            label={t("search.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
             <Input
-              placeholder="Email or Name"
+              placeholder={t("search.placeholder")}
               onChange={(e) => {
                 if (!e.currentTarget.value) {
                   form.submit();
@@ -90,18 +98,18 @@ export function UserFilters({
         <Col xs={24} md={12} lg={8}>
           <Form.Item
             name="deleted"
-            label="Status"
+            label={t("status.label")}
             layout="vertical"
             rootClassName="m-0!"
           >
             <Select
               options={[
                 {
-                  label: "Deleted",
+                  label: t("status.options.deleted"),
                   value: true,
                 },
                 {
-                  label: "Active",
+                  label: t("status.options.not-deleted"),
                   value: false,
                 },
               ]}
@@ -112,10 +120,10 @@ export function UserFilters({
           <div className="flex justify-end items-end h-full">
             <Space.Compact rootClassName="w-full md:max-w-md!">
               <Button disabled={false} onClick={resetFilters} block>
-                Reset
+                {t("reset-button.text")}
               </Button>
               <Button htmlType="submit" type={"primary"} block>
-                Submit
+                {t("submit-button.text")}
               </Button>
             </Space.Compact>
           </div>

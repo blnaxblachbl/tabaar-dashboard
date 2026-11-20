@@ -314,6 +314,38 @@
         "okText": "예",
         "cancelText": "아니요"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "이 사용자를 삭제하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
+      },
+      "restore": {
+        "confirmations": "이 사용자를 복구하시겠습니까?",
+        "okText": "예",
+        "cancelText": "아니요"
+      }
+    },
+    "user-filters": {
+      "title": "필터",
+      "search": {
+        "label": "검색",
+        "placeholder": "John Doe..."
+      },
+      "status": {
+        "label": "상태",
+        "options": {
+          "deleted": "삭제됨",
+          "not-deleted": "활성"
+        }
+      },
+      "reset-button": {
+        "text": "초기화"
+      },
+      "submit-button": {
+        "text": "적용"
+      }
     }
   },
   "pages": {
@@ -457,7 +489,9 @@
       },
       "toasts": {
         "deleted": "사용자가 삭제되었습니다",
-        "delete-error": "사용자 삭제에 실패했습니다"
+        "delete-error": "사용자 삭제에 실패했습니다",
+        "restored": "사용자 복원됨",
+        "restore-error": "사용자 복원 실패"
       }
     },
     "create-user": {
