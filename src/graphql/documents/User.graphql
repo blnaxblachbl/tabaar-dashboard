@@ -12,8 +12,8 @@ query FindMe {
         ...User
     }
 }
-query FindUsers($skip: Int, $take: Int) {
-    findUsers(skip: $skip, take: $take) {
+query FindUsers($skip: Int, $take: Int, $filters: FindUsersFilters) {
+    findUsers(skip: $skip, take: $take, filters: $filters) {
         users {
             ...User
         }
@@ -37,6 +37,11 @@ mutation UpdateUser($id: Int!, $data: UpdateUserInput!) {
 }
 mutation DeleteUser($id: Int!) {
     deleteUser(id: $id) {
+        ...User
+    }
+}
+mutation RestoreUser($id: Int!) {
+    restoreUser(id: $id) {
         ...User
     }
 }

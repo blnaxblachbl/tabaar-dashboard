@@ -1,18 +1,16 @@
-import { Button, Divider, message, Popconfirm, Table } from "antd";
+import { Button, Divider, message, Table } from "antd";
 import { useTranslation } from "react-i18next";
 import { Link, useSearchParams } from "react-router";
-import { DeleteOutlined, PlusOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 
 import { PageLayout } from "@/components/PageLayout";
 import { Title } from "@/components/Title";
-import {
-  FindUsersDocument,
-  useDeleteUserMutation,
-  useFindUsersQuery,
-  type FindUsersQuery,
-} from "@/graphql/generated";
+import { useFindUsersQuery, type FindUsersFilters } from "@/graphql/generated";
 import { DEFAULT_USERS_VARIABLES } from "@/utils/constants";
 import { toLocaleDate } from "@/utils/date";
+import { CollapsibleUserFilters } from "@/components/UserFilters";
+import type { UserFiltersData } from "@/components/UserFilters/types";
+import { UserActions } from "@/components/UserActions";
 
 export default function UsersPage() {
   const [messageApi, mContext] = message.useMessage();
@@ -20,45 +18,31 @@ export default function UsersPage() {
     page: "1",
   });
   const page = Number(searchParams.get("page"));
+  const search = searchParams.get("search") ?? undefined;
+  const deleted = searchParams.get("deleted") === "true";
+
   const { t, i18n } = useTranslation("", {
     keyPrefix: "pages.users",
   });
 
+  const filters: FindUsersFilters = {
+    search,
+    deleted,
+  };
+
   const variables = {
     ...DEFAULT_USERS_VARIABLES,
+    filters,
     skip: (page - 1) * DEFAULT_USERS_VARIABLES.take!,
   };
 
-  const { data, loading } = useFindUsersQuery({
+  const { data, loading, refetch } = useFindUsersQuery({
     fetchPolicy: "cache-and-network",
     variables,
   });
 
   const users = data?.findUsers.users ?? [];
   const usersCount = data?.findUsers.usersCount ?? 0;
-
-  const [deleteUser, { loading: deleteloading }] = useDeleteUserMutation({
-    onCompleted() {
-      messageApi.success(t("toasts.deleted"));
-    },
-    onError() {
-      messageApi.error(t("toasts.delete-error"));
-    },
-    update(client, { data }) {
-      if (data?.deleteUser) {
-        client.writeQuery<FindUsersQuery>({
-          query: FindUsersDocument,
-          variables,
-          data: {
-            findUsers: {
-              users: users.filter((u) => u.id !== data.deleteUser.id),
-              usersCount: usersCount - 1,
-            },
-          },
-        });
-      }
-    },
-  });
 
   return (
     <PageLayout>
@@ -71,6 +55,12 @@ export default function UsersPage() {
           </Link>
         }
       />
+      <div className="mt-6">
+        <CollapsibleUserFilters
+          initialValues={{ search, deleted }}
+          onSubmit={onFiltersSubmit}
+        />
+      </div>
       <Divider />
       <Table
         dataSource={users}
@@ -92,24 +82,23 @@ export default function UsersPage() {
             render: (createdAt) => toLocaleDate(createdAt, i18n.language),
           },
           {
-            dataIndex: "id",
             title: t("columns.actions.title"),
-            render: (id: number) => (
-              <Popconfirm
-                title={t("delete.title")}
-                okText={t("delete.okText")}
-                cancelText={t("delete.cancelText")}
-                onConfirm={deleteUser.bind(null, {
-                  variables: { id },
-                })}
-                disabled={deleteloading}
-              >
-                <Button
-                  loading={deleteloading}
-                  danger
-                  icon={<DeleteOutlined />}
-                />
-              </Popconfirm>
+            render: (obj) => (
+              <UserActions
+                user={obj}
+                onDeleted={() => {
+                  messageApi.success(t("toasts.deleted"), 1, refetch);
+                }}
+                onDeleteError={() => {
+                  messageApi.error(t("toasts.delete-error"));
+                }}
+                onRestore={() => {
+                  messageApi.success("User restpred", 1, refetch);
+                }}
+                onRestoreError={() => {
+                  messageApi.error("Failed to restore User");
+                }}
+              />
             ),
           },
         ]}
@@ -126,6 +115,19 @@ export default function UsersPage() {
   );
   async function onPageChange(page: number) {
     searchParams.set("page", String(page));
+    setSearchParams(searchParams);
+  }
+  function onFiltersSubmit({ search, deleted }: UserFiltersData) {
+    if (deleted) {
+      searchParams.set("deleted", String(deleted));
+    } else {
+      searchParams.delete("deleted");
+    }
+    if (search) {
+      searchParams.set("search", search);
+    } else {
+      searchParams.delete("search");
+    }
     setSearchParams(searchParams);
   }
 }

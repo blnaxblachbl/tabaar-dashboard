@@ -6,7 +6,8 @@ import {
   HomeOutlined,
   UserOutlined,
   LogoutOutlined,
-  DeleteRowOutlined
+  DeleteRowOutlined,
+  KeyOutlined
 } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import {
@@ -56,7 +57,7 @@ export function Menu() {
           {
             key: "/keys",
             label: t("api-keys"),
-            icon: <UserOutlined />,
+            icon: <KeyOutlined />,
             onClick: () => navigate("/keys"),
           },
           {

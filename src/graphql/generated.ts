@@ -39,6 +39,11 @@ export type FiltersInput = {
   variants?: VariantFilterInput | null | undefined;
 };
 
+export type FindUsersFilters = {
+  deleted?: boolean | null | undefined;
+  search?: string | null | undefined;
+};
+
 export type FloatRangeInput = {
   gte?: number | null | undefined;
   lte?: number | null | undefined;
@@ -126,7 +131,7 @@ export type FindOneApiKeyQueryVariables = Exact<{
 
 export type FindOneApiKeyQuery = { findOneApiKey: { id: number, createdAt: Date, updatedAt: Date, key: string, name: string, expiredAt: Date | null } };
 
-export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string };
+export type UserFragment = { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean };
 
 export type ProductFragment = { id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean> | null, minPrice: number, maxPrice: number, available: boolean, name: Array<{ locale: string, content: string }>, description: Array<{ locale: string, content: string }>, variants: Array<{ id: string, createdAt: Date, updatedAt: Date, characterstics: Record<string, string | number | boolean>, price: number, count: number, currency: string, images: Array<string> }> };
 
@@ -234,34 +239,35 @@ export type LoginUserMutationVariables = Exact<{
 }>;
 
 
-export type LoginUserMutation = { loginUser: { accessToken: string, refreshToken: string, user: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } } };
+export type LoginUserMutation = { loginUser: { accessToken: string, refreshToken: string, user: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } } };
 
 export type FindMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindMeQuery = { findMe: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } | null };
+export type FindMeQuery = { findMe: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } | null };
 
 export type FindUsersQueryVariables = Exact<{
   skip?: number | null | undefined;
   take?: number | null | undefined;
+  filters?: FindUsersFilters | null | undefined;
 }>;
 
 
-export type FindUsersQuery = { findUsers: { usersCount: number, users: Array<{ id: number, createdAt: Date, updatedAt: Date, name: string, email: string }> } };
+export type FindUsersQuery = { findUsers: { usersCount: number, users: Array<{ id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean }> } };
 
 export type CreateUserMutationVariables = Exact<{
   data: CreateUserInput;
 }>;
 
 
-export type CreateUserMutation = { createUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
+export type CreateUserMutation = { createUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } };
 
 export type FindOneUserQueryVariables = Exact<{
   id: number;
 }>;
 
 
-export type FindOneUserQuery = { findOneUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
+export type FindOneUserQuery = { findOneUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } };
 
 export type UpdateUserMutationVariables = Exact<{
   id: number;
@@ -269,14 +275,21 @@ export type UpdateUserMutationVariables = Exact<{
 }>;
 
 
-export type UpdateUserMutation = { updateUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
+export type UpdateUserMutation = { updateUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } };
 
 export type DeleteUserMutationVariables = Exact<{
   id: number;
 }>;
 
 
-export type DeleteUserMutation = { deleteUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string } };
+export type DeleteUserMutation = { deleteUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } };
+
+export type RestoreUserMutationVariables = Exact<{
+  id: number;
+}>;
+
+
+export type RestoreUserMutation = { restoreUser: { id: number, createdAt: Date, updatedAt: Date, name: string, email: string, deleted: boolean } };
 
 export const UserFragmentDoc = gql`
     fragment User on User {
@@ -285,6 +298,7 @@ export const UserFragmentDoc = gql`
   updatedAt
   name
   email
+  deleted
 }
     `;
 export const LocaleContentFragmentDoc = gql`
@@ -1100,8 +1114,8 @@ export type FindMeLazyQueryHookResult = ReturnType<typeof useFindMeLazyQuery>;
 export type FindMeSuspenseQueryHookResult = ReturnType<typeof useFindMeSuspenseQuery>;
 export type FindMeQueryResult = ApolloReactCommon.QueryResult<FindMeQuery, FindMeQueryVariables>;
 export const FindUsersDocument = gql`
-    query FindUsers($skip: Int, $take: Int) {
-  findUsers(skip: $skip, take: $take) {
+    query FindUsers($skip: Int, $take: Int, $filters: FindUsersFilters) {
+  findUsers(skip: $skip, take: $take, filters: $filters) {
     users {
       ...User
     }
@@ -1124,6 +1138,7 @@ export const FindUsersDocument = gql`
  *   variables: {
  *      skip: // value for 'skip'
  *      take: // value for 'take'
+ *      filters: // value for 'filters'
  *   },
  * });
  */
@@ -1289,3 +1304,36 @@ export function useDeleteUserMutation(baseOptions?: ApolloReactHooks.MutationHoo
 export type DeleteUserMutationHookResult = ReturnType<typeof useDeleteUserMutation>;
 export type DeleteUserMutationResult = ApolloReactCommon.MutationResult<DeleteUserMutation>;
 export type DeleteUserMutationOptions = ApolloReactCommon.BaseMutationOptions<DeleteUserMutation, DeleteUserMutationVariables>;
+export const RestoreUserDocument = gql`
+    mutation RestoreUser($id: Int!) {
+  restoreUser(id: $id) {
+    ...User
+  }
+}
+    ${UserFragmentDoc}`;
+export type RestoreUserMutationFn = ApolloReactCommon.MutationFunction<RestoreUserMutation, RestoreUserMutationVariables>;
+
+/**
+ * __useRestoreUserMutation__
+ *
+ * To run a mutation, you first call `useRestoreUserMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRestoreUserMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [restoreUserMutation, { data, loading, error }] = useRestoreUserMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useRestoreUserMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<RestoreUserMutation, RestoreUserMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<RestoreUserMutation, RestoreUserMutationVariables>(RestoreUserDocument, options);
+      }
+export type RestoreUserMutationHookResult = ReturnType<typeof useRestoreUserMutation>;
+export type RestoreUserMutationResult = ApolloReactCommon.MutationResult<RestoreUserMutation>;
+export type RestoreUserMutationOptions = ApolloReactCommon.BaseMutationOptions<RestoreUserMutation, RestoreUserMutationVariables>;
