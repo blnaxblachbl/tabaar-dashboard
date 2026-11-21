@@ -1,5 +1,5 @@
-query FindApiKeys($skip: Int, $take: Int) {
-    findApiKeys(skip: $skip, take: $take) {
+query FindApiKeys($skip: Int, $take: Int, $filters: FindApiKeysFilters) {
+    findApiKeys(skip: $skip, take: $take, filters: $filters) {
         apiKeys {
             ...ApiKey
         }

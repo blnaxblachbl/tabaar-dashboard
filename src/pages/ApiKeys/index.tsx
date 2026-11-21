@@ -17,11 +17,14 @@ import {
   FindApiKeysDocument,
   useDeleteApiKeyMutation,
   useFindApiKeysQuery,
+  type FindApiKeysFilters,
   type FindApiKeysQuery,
 } from "@/graphql/generated";
 import { useTranslation } from "react-i18next";
 import dayjs from "dayjs";
 import { CopyOutlined, DeleteOutlined, PlusOutlined } from "@ant-design/icons";
+import { CollapsibleApiKeyFilters } from "@/components/ApiKeyFilters";
+import type { ApiKeyFiltersData } from "@/components/ApiKeyFilters/types";
 
 export default function ApiKeysPage() {
   const [searchParams, setSearchParams] = useSearchParams({
@@ -32,9 +35,17 @@ export default function ApiKeysPage() {
   });
   const [messageApi, messageContext] = message.useMessage();
   const page = Number(searchParams.get("page"));
+  const search = searchParams.get("search") ?? undefined;
+  const expired = searchParams.get("expired") === "true";
+
+  const filters: FindApiKeysFilters = {
+    search,
+    expired,
+  };
 
   const variables = {
     ...DEFAULT_API_KEYS_VARIABLES,
+    filters,
     skip: (page - 1) * DEFAULT_API_KEYS_VARIABLES.take!,
   };
 
@@ -80,6 +91,12 @@ export default function ApiKeysPage() {
           </Link>
         }
       />
+      <div className="mt-6">
+        <CollapsibleApiKeyFilters
+          initialValues={{ search, expired }}
+          onSubmit={onFiltersSubmit}
+        />
+      </div>
       <Divider />
       <Table
         dataSource={apiKeys}
@@ -162,5 +179,18 @@ export default function ApiKeysPage() {
   async function copyKey(key: string) {
     await navigator.clipboard.writeText(key);
     messageApi.success(t("toasts.copied"));
+  }
+  function onFiltersSubmit({ search, expired }: ApiKeyFiltersData) {
+    if (expired) {
+      searchParams.set("expired", String(expired));
+    } else {
+      searchParams.delete("expired");
+    }
+    if (search) {
+      searchParams.set("search", search);
+    } else {
+      searchParams.delete("search");
+    }
+    setSearchParams(searchParams);
   }
 }

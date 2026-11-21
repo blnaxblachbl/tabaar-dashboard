@@ -314,6 +314,58 @@
         "okText": "Tak",
         "cancelText": "Nie"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "Czy na pewno chcesz usunąć tego użytkownika?",
+        "okText": "Tak",
+        "cancelText": "Nie"
+      },
+      "restore": {
+        "confirmations": "Przywrócić tego użytkownika?",
+        "okText": "Tak",
+        "cancelText": "Nie"
+      }
+    },
+    "user-filters": {
+      "title": "Filtry",
+      "search": {
+        "label": "Szukaj",
+        "placeholder": "John Doe..."
+      },
+      "status": {
+        "label": "Status",
+        "options": {
+          "deleted": "Usunięty",
+          "not-deleted": "Aktywny"
+        }
+      },
+      "reset-button": {
+        "text": "Resetuj"
+      },
+      "submit-button": {
+        "text": "Zastosuj"
+      }
+    },
+    "api-key-filters": {
+      "title": "Filtry",
+      "search": {
+        "label": "Wyszukiwanie",
+        "placeholder": "Aplikacja internetowa..."
+      },
+      "status": {
+        "label": "Status",
+        "options": {
+          "expired": "Wygasłe",
+          "not-expired": "Aktywne"
+        }
+      },
+      "reset-button": {
+        "text": "Resetuj"
+      },
+      "submit-button": {
+        "text": "Zastosuj"
+      }
     }
   },
   "pages": {
@@ -457,7 +509,9 @@
       },
       "toasts": {
         "deleted": "Użytkownik usunięty",
-        "delete-error": "Nie udało się usunąć użytkownika"
+        "delete-error": "Nie udało się usunąć użytkownika",
+        "restored": "Użytkownik został przywrócony",
+        "restore-error": "Nie udało się przywrócić użytkownika"
       }
     },
     "create-user": {

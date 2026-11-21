@@ -4,6 +4,7 @@ fragment User on User {
     updatedAt
     name
     email
+    deleted
 }
 fragment Product on Product {
     id

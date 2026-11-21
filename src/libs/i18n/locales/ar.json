@@ -314,6 +314,58 @@
         "okText": "نعم",
         "cancelText": "لا"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "هل ترغب في حذف هذا المستخدم؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      },
+      "restore": {
+        "confirmations": "هل ترغب في استعادة هذا المستخدم؟",
+        "okText": "نعم",
+        "cancelText": "لا"
+      }
+    },
+    "user-filters": {
+      "title": "عوامل التصفية",
+      "search": {
+        "label": "بحث",
+        "placeholder": "جون دو..."
+      },
+      "status": {
+        "label": "الحالة",
+        "options": {
+          "deleted": "محذوف",
+          "not-deleted": "نشط"
+        }
+      },
+      "reset-button": {
+        "text": "إعادة تعيين"
+      },
+      "submit-button": {
+        "text": "إرسال"
+      }
+    },
+    "api-key-filters": {
+      "title": "عوامل التصفية",
+      "search": {
+        "label": "بحث",
+        "placeholder": "تطبيق ويب..."
+      },
+      "status": {
+        "label": "الحالة",
+        "options": {
+          "expired": "منتهية الصلاحية",
+          "not-expired": "نشطة"
+        }
+      },
+      "reset-button": {
+        "text": "إعادة تعيين"
+      },
+      "submit-button": {
+        "text": "إرسال"
+      }
     }
   },
   "pages": {
@@ -457,7 +509,9 @@
       },
       "toasts": {
         "deleted": "تم حذف المستخدم",
-        "delete-error": "فشل حذف المستخدم"
+        "delete-error": "فشل حذف المستخدم",
+        "restored": "تمت استعادة المستخدم",
+        "restore-error": "فشلت استعادة المستخدم"
       }
     },
     "create-user": {

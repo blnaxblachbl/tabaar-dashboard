@@ -314,6 +314,58 @@
         "okText": "Да",
         "cancelText": "Нет"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "Вы действительно хотите удалить этого пользователя?",
+        "okText": "Да",
+        "cancelText": "Нет"
+      },
+      "restore": {
+        "confirmations": "Восстановить этого пользователя?",
+        "okText": "Да",
+        "cancelText": "Нет"
+      }
+    },
+    "user-filters": {
+      "title": "Фильтры",
+      "search": {
+        "label": "Поиск",
+        "placeholder": "Иван Иванов..."
+      },
+      "status": {
+        "label": "Статус",
+        "options": {
+          "deleted": "Удален",
+          "not-deleted": "Активен"
+        }
+      },
+      "reset-button": {
+        "text": "Сбросить"
+      },
+      "submit-button": {
+        "text": "Применить"
+      }
+    },
+    "api-key-filters": {
+      "title": "Фильтры",
+      "search": {
+        "label": "Поиск",
+        "placeholder": "Веб-приложение..."
+      },
+      "status": {
+        "label": "Статус",
+        "options": {
+          "expired": "Истекший",
+          "not-expired": "Активный"
+        }
+      },
+      "reset-button": {
+        "text": "Сбросить"
+      },
+      "submit-button": {
+        "text": "Применить"
+      }
     }
   },
   "pages": {
@@ -457,7 +509,9 @@
       },
       "toasts": {
         "deleted": "Пользователь удалён",
-        "delete-error": "Произошла ошибка при удалении пользователя"
+        "delete-error": "Произошла ошибка при удалении пользователя",
+        "restored": "Пользователь восстановлен",
+        "restore-error": "Не удалось восстановить пользователя"
       }
     },
     "create-user": {

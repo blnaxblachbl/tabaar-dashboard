@@ -314,6 +314,58 @@
         "okText": "हाँ",
         "cancelText": "नहीं"
       }
+    },
+    "user-actions": {
+      "delete": {
+        "confirmations": "क्या आप इस यूज़र को हटाना चाहते हैं?",
+        "okText": "हाँ",
+        "cancelText": "नहीं"
+      },
+      "restore": {
+        "confirmations": "क्या इस यूज़र को रिस्टोर करें?",
+        "okText": "हाँ",
+        "cancelText": "नहीं"
+      }
+    },
+    "user-filters": {
+      "title": "फ़िल्टर",
+      "search": {
+        "label": "खोजें",
+        "placeholder": "जॉन डो..."
+      },
+      "status": {
+        "label": "स्थिति",
+        "options": {
+          "deleted": "हटाया गया",
+          "not-deleted": "सक्रिय"
+        }
+      },
+      "reset-button": {
+        "text": "रीसेट"
+      },
+      "submit-button": {
+        "text": "सबमिट"
+      }
+    },
+    "api-key-filters": {
+      "title": "फ़िल्टर",
+      "search": {
+        "label": "खोजें",
+        "placeholder": "वेब ऐप..."
+      },
+      "status": {
+        "label": "स्थिति",
+        "options": {
+          "expired": "समाप्त",
+          "not-expired": "सक्रिय"
+        }
+      },
+      "reset-button": {
+        "text": "रीसेट"
+      },
+      "submit-button": {
+        "text": "सबमिट"
+      }
     }
   },
   "pages": {
@@ -457,7 +509,9 @@
       },
       "toasts": {
         "deleted": "उपयोगकर्ता हटा दिया गया",
-        "delete-error": "उपयोगकर्ता हटाने में विफल"
+        "delete-error": "उपयोगकर्ता हटाने में विफल",
+        "restored": "यूज़र को रिस्टोर किया गया",
+        "restore-error": "यूज़र को रिस्टोर करने में फ़ेल"
       }
     },
     "create-user": {
