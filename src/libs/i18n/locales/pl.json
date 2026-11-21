@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "Zastosuj"
       }
+    },
+    "api-key-filters": {
+      "title": "Filtry",
+      "search": {
+        "label": "Wyszukiwanie",
+        "placeholder": "Aplikacja internetowa..."
+      },
+      "status": {
+        "label": "Status",
+        "options": {
+          "expired": "Wygasłe",
+          "not-expired": "Aktywne"
+        }
+      },
+      "reset-button": {
+        "text": "Resetuj"
+      },
+      "submit-button": {
+        "text": "Zastosuj"
+      }
     }
   },
   "pages": {

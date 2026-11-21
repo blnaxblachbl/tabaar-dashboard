@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "Uygula"
       }
+    },
+    "api-key-filters": {
+      "title": "Filtreler",
+      "search": {
+        "label": "Arama",
+        "placeholder": "Web Uygulaması..."
+      },
+      "status": {
+        "label": "Durum",
+        "options": {
+          "expired": "Süresi Dolmuş",
+          "not-expired": "Aktif"
+        }
+      },
+      "reset-button": {
+        "text": "Sıfırla"
+      },
+      "submit-button": {
+        "text": "Uygula"
+      }
     }
   },
   "pages": {

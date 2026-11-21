@@ -36,6 +36,11 @@ input RefreshTokenInput {
     refreshToken: String!
 }
 
+input FindUsersFilters {
+    search: String
+    deleted: Boolean
+}
+
 input CreateApiKeyInput {
     name: String!
     expiredAt: DateTime!
@@ -44,6 +49,11 @@ input CreateApiKeyInput {
 input UpdateApiKeyInput {
     name: String
     expiredAt: DateTime
+}
+
+input FindApiKeysFilters {
+    search: String
+    expired: Boolean
 }
 
 input LocaleContentInput {
@@ -115,6 +125,7 @@ type User {
     updatedAt: DateTime!
     name: String!
     email: String!
+    deleted: Boolean!
 }
 
 type FindUsersResult {
@@ -129,10 +140,14 @@ type LoginUserResult {
 }
 
 type Query {
-    findUsers(skip: Int, take: Int): FindUsersResult!
+    findUsers(skip: Int, take: Int, filters: FindUsersFilters): FindUsersResult!
     findOneUser(id: Int!): User!
     findMe: User
-    findApiKeys(skip: Int, take: Int): ApiKeysResult!
+    findApiKeys(
+        skip: Int
+        take: Int
+        filters: FindApiKeysFilters
+    ): ApiKeysResult!
     findOneApiKey(id: Int!): ApiKey!
     findProducts(
         query: String
@@ -155,6 +170,7 @@ type Mutation {
     loginUser(data: LoginUserInput!): LoginUserResult!
     refreshToken(data: RefreshTokenInput!): LoginUserResult!
     deleteUser(id: Int!): User!
+    restoreUser(id: Int!): User!
     createApiKey(data: CreateApiKeyInput!): ApiKey!
     updateApiKey(id: Int!, data: UpdateApiKeyInput!): ApiKey!
     deleteApiKey(id: Int!): ApiKey!

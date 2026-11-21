@@ -39,6 +39,11 @@ export type FiltersInput = {
   variants?: VariantFilterInput | null | undefined;
 };
 
+export type FindApiKeysFilters = {
+  expired?: boolean | null | undefined;
+  search?: string | null | undefined;
+};
+
 export type FindUsersFilters = {
   deleted?: boolean | null | undefined;
   search?: string | null | undefined;
@@ -97,6 +102,7 @@ export type VariantFilterInput = {
 export type FindApiKeysQueryVariables = Exact<{
   skip?: number | null | undefined;
   take?: number | null | undefined;
+  filters?: FindApiKeysFilters | null | undefined;
 }>;
 
 
@@ -350,8 +356,8 @@ export const ApiKeyFragmentDoc = gql`
 }
     `;
 export const FindApiKeysDocument = gql`
-    query FindApiKeys($skip: Int, $take: Int) {
-  findApiKeys(skip: $skip, take: $take) {
+    query FindApiKeys($skip: Int, $take: Int, $filters: FindApiKeysFilters) {
+  findApiKeys(skip: $skip, take: $take, filters: $filters) {
     apiKeys {
       ...ApiKey
     }
@@ -374,6 +380,7 @@ export const FindApiKeysDocument = gql`
  *   variables: {
  *      skip: // value for 'skip'
  *      take: // value for 'take'
+ *      filters: // value for 'filters'
  *   },
  * });
  */

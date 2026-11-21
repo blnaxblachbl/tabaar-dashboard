@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "Enviar"
       }
+    },
+    "api-key-filters": {
+      "title": "Filtros",
+      "search": {
+        "label": "Buscar",
+        "placeholder": "Aplicación web..."
+      },
+      "status": {
+        "label": "Estado",
+        "options": {
+          "expired": "Caducado",
+          "not-expired": "Activo"
+        }
+      },
+      "reset-button": {
+        "text": "Restablecer"
+      },
+      "submit-button": {
+        "text": "Enviar"
+      }
     }
   },
   "pages": {

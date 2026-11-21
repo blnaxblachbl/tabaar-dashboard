@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "提交"
       }
+    },
+    "api-key-filters": {
+      "title": "筛选条件",
+      "search": {
+        "label": "搜索",
+        "placeholder": "Web 应用..."
+      },
+      "status": {
+        "label": "状态",
+        "options": {
+          "expired": "已过期",
+          "not-expired": "有效"
+        }
+      },
+      "reset-button": {
+        "text": "重置"
+      },
+      "submit-button": {
+        "text": "提交"
+      }
     }
   },
   "pages": {

@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "Applica"
       }
+    },
+    "api-key-filters": {
+      "title": "Filtri",
+      "search": {
+        "label": "Cerca",
+        "placeholder": "Web App..."
+      },
+      "status": {
+        "label": "Stato",
+        "options": {
+          "expired": "Scaduto",
+          "not-expired": "Attivo"
+        }
+      },
+      "reset-button": {
+        "text": "Reimposta"
+      },
+      "submit-button": {
+        "text": "Applica"
+      }
     }
   },
   "pages": {

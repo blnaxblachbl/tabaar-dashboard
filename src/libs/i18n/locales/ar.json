@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "إرسال"
       }
+    },
+    "api-key-filters": {
+      "title": "عوامل التصفية",
+      "search": {
+        "label": "بحث",
+        "placeholder": "تطبيق ويب..."
+      },
+      "status": {
+        "label": "الحالة",
+        "options": {
+          "expired": "منتهية الصلاحية",
+          "not-expired": "نشطة"
+        }
+      },
+      "reset-button": {
+        "text": "إعادة تعيين"
+      },
+      "submit-button": {
+        "text": "إرسال"
+      }
     }
   },
   "pages": {

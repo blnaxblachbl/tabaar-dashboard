@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "적용"
       }
+    },
+    "api-key-filters": {
+      "title": "필터",
+      "search": {
+        "label": "검색",
+        "placeholder": "웹 앱..."
+      },
+      "status": {
+        "label": "상태",
+        "options": {
+          "expired": "만료됨",
+          "not-expired": "활성"
+        }
+      },
+      "reset-button": {
+        "text": "초기화"
+      },
+      "submit-button": {
+        "text": "적용"
+      }
     }
   },
   "pages": {

@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "Применить"
       }
+    },
+    "api-key-filters": {
+      "title": "Фильтры",
+      "search": {
+        "label": "Поиск",
+        "placeholder": "Веб-приложение..."
+      },
+      "status": {
+        "label": "Статус",
+        "options": {
+          "expired": "Истекший",
+          "not-expired": "Активный"
+        }
+      },
+      "reset-button": {
+        "text": "Сбросить"
+      },
+      "submit-button": {
+        "text": "Применить"
+      }
     }
   },
   "pages": {

@@ -346,6 +346,26 @@
       "submit-button": {
         "text": "सबमिट"
       }
+    },
+    "api-key-filters": {
+      "title": "फ़िल्टर",
+      "search": {
+        "label": "खोजें",
+        "placeholder": "वेब ऐप..."
+      },
+      "status": {
+        "label": "स्थिति",
+        "options": {
+          "expired": "समाप्त",
+          "not-expired": "सक्रिय"
+        }
+      },
+      "reset-button": {
+        "text": "रीसेट"
+      },
+      "submit-button": {
+        "text": "सबमिट"
+      }
     }
   },
   "pages": {
