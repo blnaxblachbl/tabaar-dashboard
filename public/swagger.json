@@ -75,6 +75,27 @@
               "maximum": 10000,
               "default": 50
             }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Search string to filter users by name or email",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "John Doe"
+            }
+          },
+          {
+            "name": "deleted",
+            "in": "query",
+            "description": "Boolean filter to filter users by deleted status",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "false",
+              "enum": ["true", "false"]
+            }
           }
         ],
         "responses": {
@@ -2170,6 +2191,10 @@
             "type": "string",
             "format": "email",
             "example": "admin@tabaar.com"
+          },
+          "deleted": {
+            "type": "boolean",
+            "example": false
           }
         }
       },
