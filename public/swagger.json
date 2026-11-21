@@ -606,6 +606,27 @@
               "maximum": 10000,
               "default": 50
             }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Search string to filter users by name or email",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "example": "Web App"
+            }
+          },
+          {
+            "name": "expired",
+            "in": "query",
+            "description": "Boolean filter to filter users by expired status",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "false",
+              "enum": ["true", "false"]
+            }
           }
         ],
         "responses": {
