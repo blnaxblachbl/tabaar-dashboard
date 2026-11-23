@@ -64,7 +64,13 @@ export function VariantsTable({ productId, ...props }: VariantsTableProps) {
               const sources = extractImages(productId, [obj]);
               return (
                 <Image.PreviewGroup items={sources}>
-                  <Image src={sources[0]} />
+                  <Image
+                    src={sources[0]}
+                    classNames={{
+                      root: "w-full!",
+                      image: "w-full! aspect-square! object-contain!",
+                    }}
+                  />
                 </Image.PreviewGroup>
               );
             },

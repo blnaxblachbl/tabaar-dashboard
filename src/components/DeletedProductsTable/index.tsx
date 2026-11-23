@@ -39,7 +39,13 @@ export function DeletedProductsTable({
             const sources = extractImages(product.id, variants);
             return (
               <Image.PreviewGroup items={sources}>
-                <Image src={sources[0]} classNames={{ root: "max-w-15" }} />
+                <Image
+                  src={sources[0]}
+                  classNames={{
+                    root: "w-full!",
+                    image: "w-full! aspect-square! object-contain!",
+                  }}
+                />
               </Image.PreviewGroup>
             );
           },
